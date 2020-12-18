@@ -2674,6 +2674,10 @@ namespace SchiffeVersenken
 
         #region enable coordinates
 
+        /// <summary>
+        /// Entsperrt die Koordinaten der Spieler, um Schiffe zu platzieren oder sie zu beschießen
+        /// </summary>
+        /// <param name="Player">0 entsperrt alle Koordinaten. 1 enstperrt nur die Koordinaten des 1. Spielers und 2 die des 2.</param>
         public void Enablecoordinates(int Player)
         {
             if (Player == 0)
@@ -3016,7 +3020,10 @@ namespace SchiffeVersenken
         #endregion
 
         #region disable coordinates
-
+        /// <summary>
+        /// Sperrt die Koordinaten der Spieler, um Schiffe zu platzieren oder sie zu beschießen
+        /// </summary>
+        /// <param name="Player">0 sperrt alle Koordinaten. 1 sperrt nur die Koordinaten des 1. Spielers und 2 die des 2.</param>
         public void Disablecoordinates(int Player)
         {
             if (Player == 0)
@@ -3359,6 +3366,11 @@ namespace SchiffeVersenken
         #endregion
 
         #region blank field
+
+        /// <summary>
+        /// Blendet alles aus, was in den Koordinaten des Spielfeldes steht
+        /// </summary>
+        /// <param name="Player">0 blendet alle Koordinaten aus. 1 blendet nur die Koordinaten des 1. Spielers aus und 2 die des 2.</param>
         public void Unshow(int Player)
         {
             if (Player == 0)
@@ -3702,6 +3714,9 @@ namespace SchiffeVersenken
 
         #region hide ships
 
+        /// <summary>
+        /// Blendet alle Schiffe auf dem Spielfeld aus
+        /// </summary>
         public void HideShips()
         {
             if (player1._BattleArea[0, 0] == "O")
@@ -4375,6 +4390,10 @@ namespace SchiffeVersenken
 
         #region show ships and all data 
 
+        /// <summary>
+        /// Blendet alles ein, was in den Koordinaten eines Spielers steht
+        /// </summary>
+        /// <param name="Player">0 blendet alle Koordinaten ein. 1 blendet nur die Koordinaten des 1. Spielers ein und 2 die des 2.</param>
         public void ShowAllData(int Player)
         {
             if (Player == 1)    //Dem Array des Spieler 1 werden seine Koordinaten zugewiesen
@@ -4569,6 +4588,9 @@ namespace SchiffeVersenken
 
         #region button locks
 
+        /// <summary>
+        /// Enthält alle Vorgänge um von der Auswahl der Anzahl Schiffe zur Auswahl der Länge der Schiffe zu gelangen
+        /// </summary>
         public void buttonlock_AdS()    //button lock nach Festlegung der Spieler (AdS - Anzahl der Spieler)
         {
             player2.AmountOfShipsInTotal = player1.AmountOfShipsInTotal;  //Weißt dem 2. Spieler ebensoviel Schiffe zu wie dem 1. Spieler
@@ -4585,9 +4607,12 @@ namespace SchiffeVersenken
             GdS_5.Enabled = true;
         }
 
+        /// <summary>
+        /// Enhält alle Vorgänge um von der Auswahl der länge der Schiff zur Platzierung der Schiffe des 1. Spielers zu gelangen
+        /// </summary>
         public void buttonlock_GdS()    //button lock nach Festlegung der Größen der Schiffe (GdS - Größe der Schiffe)
         {
-            Ausgabe.Text = "Spieler 1, platziere nun deine Schiffe auf deinem Spielfeld.\n";
+            Ausgabe.Text = AnzeigePlayer1.Text + ", platziere nun deine Schiffe auf deinem Spielfeld.\n";
             if (counter.AmountOfShipsLength3 == 0 && counter.AmountOfShipsLength4 == 0)
             {
                 Ausgabe.Text = Ausgabe.Text + "Zunächst ein 5 Feld Schiff.\n Verwenden sie die Optionen 'vertikal nach unten' und 'horizontal nach rechts' um die Orientierung fest zu legen.\n";
@@ -4600,7 +4625,7 @@ namespace SchiffeVersenken
             {
                 Ausgabe.Text = Ausgabe.Text + "Zunächst ein 3 Feld Schiff.\n Verwenden sie die Optionen 'vertikal nach unten' und 'horizontal nach rechts' um die Orientierung fest zu legen.\n";
             }
-            Ausgabe.Text = Ausgabe.Text + "\nSpieler 2 wegschauen!";
+            Ausgabe.Text = Ausgabe.Text + "\n" + AnzeigePlayer2.Text + " wegschauen!";
             GdS_3.Enabled = false;  //Buttons werden geperrt
             GdS_4.Enabled = false;
             GdS_5.Enabled = false;
@@ -4611,9 +4636,12 @@ namespace SchiffeVersenken
             option2_button.Text = "vertikal nach unten";
         }
 
+        /// <summary>
+        /// Ändert den Spieler der seine Schiffe platzieren kann von Spieler 1 auf Spieler 2
+        /// </summary>
         public void buttonlock_SPP1()   //button lock nach Platzierung der Schiffe des Spieler 1 (SPP1 - Schiffe platziert Player 1)
         {
-            Ausgabe.Text = "Spieler 2, platziere nun deine Schiffe auf deinem Spielfeld.\n";
+            Ausgabe.Text = AnzeigePlayer2.Text + ", platziere nun deine Schiffe auf deinem Spielfeld.\n";
             if (counter.AmountOfShipsLength3 == 0 && counter.AmountOfShipsLength4 == 0)
             {
                 Ausgabe.Text = Ausgabe.Text + "Zunächst ein 5 Feld Schiff.\n Verwenden sie die Optionen 'vertikal nach unten' und 'horizontal nach rechts' um die Orientierung fest zu legen.\n";
@@ -4626,16 +4654,19 @@ namespace SchiffeVersenken
             {
                 Ausgabe.Text = Ausgabe.Text + "Zunächst ein 3 Feld Schiff.\n Verwenden sie die Optionen 'vertikal nach unten' und 'horizontal nach rechts' um die Orientierung fest zu legen.\n";
             }
-            Ausgabe.Text = Ausgabe.Text + "\nSpieler 1 wegschauen!";
+            Ausgabe.Text = Ausgabe.Text + "\n" + AnzeigePlayer1.Text + " wegschauen!";
             Disablecoordinates(1);
             Enablecoordinates(2);
         }
 
+        /// <summary>
+        /// Lässt das Spiel in die Beschussphase starten
+        /// </summary>
         public void buttonlock_GS()   //button lock nach Platzierung der Schiffe des Spieler 2 (GS - Game Start)
         {
             Unshow(0);
             Disablecoordinates(0);
-            Ausgabe.Text = "Beschussphase startet!\nSpieler 1 beginnt!\nDrücke auf 'Zug beginnen' um zu starten\nSpieler 2 wegschauen!";
+            Ausgabe.Text = "Beschussphase startet!\n" + AnzeigePlayer1.Text + " beginnt!\nDrücke auf 'Zug beginnen' um zu starten\n" + AnzeigePlayer2.Text + " wegschauen!";
             option2_button.BackColor = System.Drawing.Color.White;  
             option1_button.BackColor = System.Drawing.Color.White;    
             option1_button.Text = "Zug beginnen";
@@ -4649,9 +4680,13 @@ namespace SchiffeVersenken
 
         #region ship placement & game operation
 
+        /// <summary>
+        /// Speichert die Längen der Schiffe
+        /// </summary>
+        /// <param name="Länge">Ist die Länge eines Schiffes</param>
         private void SetLengthOfShip(int Länge)
         {
-            Ausgabe.Text = "Wähle die länge des " + (player1.AmountOfShipsLength3 + player1.AmountOfShipsLength4 + player1.AmountOfShipsLength5 + 1) + ". Schiffes aus.";   //Neue Anweisung im Ausgabe Fenster
+            Ausgabe.Text = "Wähle die länge des " + (player1.AmountOfShipsLength3 + player1.AmountOfShipsLength4 + player1.AmountOfShipsLength5 + 1) + ". Schiffes aus.";   //Neue Anweisungim Ausgabe Fenster
             switch (Länge)
             {
                 case 3:
@@ -4687,6 +4722,10 @@ namespace SchiffeVersenken
             }
         }
 
+        /// <summary>
+        /// Sucht die Länge des als nächstes zu platzierenden Schiffs (von klein nach groß - also zuerst die 3 Feld, dann die 4 Feld und zuletzt die 5 Feld Schiffe)
+        /// </summary>
+        /// <returns>Ist die Länge des zu platzierenden Schiffes</returns>
         private int GetLengthOfShip()
         {
             if (counter.AmountOfShipsLength3 == 0 && counter.AmountOfShipsLength4 == 0)
@@ -4703,14 +4742,22 @@ namespace SchiffeVersenken
             }
         }
 
-        private int PlacingAttempt(int X, int Y, int Player, int Länge)
+        /// <summary>
+        /// Hier wird versucht das Schiff zu platzieren
+        /// </summary>
+        /// <param name="X">Ist die X Koordinate (Buchstaben) des ausgewählten Feldes</param>
+        /// <param name="Y">Ist die Y Koordinate (Zahlen) des ausgewählten Feldes</param>
+        /// <param name="Player">Ist der Spieler, auf dessen Feld die Koordinate ausgewählt wurde</param>
+        /// <param name="Länge">Ist die Länge des Schiffes, welches platziert werden soll</param>
+        /// <returns>Gibt zurück, ob die Platzierung erfolgreich war (true = erfolgreich, false = nicht erfolgreich)</returns>
+        private bool PlacingAttempt(int X, int Y, int Player, int Länge)
         {
             if (CollisionCheck(X, Y, Player, Länge) == true)
             {
                 if (horizontalvertical.number == 0)
                 {
                     Ausgabe.Text = "Wähle zuerst aus, ob du dein Schiff vertikal oder horizontal platzieren möchtest.";
-                    return 0;
+                    return false;
                 }
                 else if (horizontalvertical.number == 1)
                 {
@@ -4750,14 +4797,22 @@ namespace SchiffeVersenken
                         }
                     }
                 }
-                return 1;
+                return true;
             }
             else
             {
-                return 0;
+                return false;
             }
         }
 
+        /// <summary>
+        /// Hier wird überprüft, ob das Schiff platziert werden kann, oder ob ein anderes Schiff im Weg steht, oder das Spielfeld verlassen wird 
+        /// </summary>
+        /// <param name="X">Ist die X Koordinate (Buchstaben) des ausgewählten Feldes</param>
+        /// <param name="Y">Ist die Y Koordinate (Zahlen) des ausgewählten Feldes</param>
+        /// <param name="Player">Ist der Spieler, auf dessen Feld die Koordinate ausgewählt wurde</param>
+        /// <param name="Länge">Ist die Länge des Schiffes, welches platziert werden soll</param>
+        /// <returns>Gibt zurück, ob das Schiff platziert werden kann oder nicht (true = passt, false = passt nicht) </returns>
         public bool CollisionCheck(int X, int Y, int Player, int Länge)
         {
             if (horizontalvertical.number == 1) //horizontale Platzierung
@@ -4830,6 +4885,12 @@ namespace SchiffeVersenken
             return true;
         }
 
+        /// <summary>
+        /// Verwaltet je nach Spielphase ob und wie ein bestimmtes Schiff platziert wird
+        /// </summary>
+        /// <param name="X">Ist die X Koordinate (Buchstaben) des ausgewählten Feldes</param>
+        /// <param name="Y">Ist die Y Koordinate (Zahlen) des ausgewählten Feldes</param>
+        /// <param name="Player">Ist der Spieler, auf dessen Feld die Koordinate ausgewählt wurde</param>
         private void CoordinateScanner(int X, int Y, int Player)
         {
             if (gamestage.number == 0)
@@ -4837,7 +4898,7 @@ namespace SchiffeVersenken
                 switch (GetLengthOfShip())
                 {
                     case 3:
-                        if (PlacingAttempt(X, Y, Player, 3) == 1) //Wenn 1 zurückgegeben, Platzierung erfolgreich
+                        if (PlacingAttempt(X, Y, Player, 3) == true) //Wenn 1 zurückgegeben, Platzierung erfolgreich
                         {
                             counter.AmountOfShipsInTotal -= 1;
                             counter.AmountOfShipsLength3 -= 1;
@@ -4868,7 +4929,7 @@ namespace SchiffeVersenken
                         }
                         break;
                     case 4:
-                        if (PlacingAttempt(X, Y, Player, 4) == 1)
+                        if (PlacingAttempt(X, Y, Player, 4) == true)
                         {
                             counter.AmountOfShipsInTotal -= 1;
                             counter.AmountOfShipsLength4 -= 1;
@@ -4901,7 +4962,7 @@ namespace SchiffeVersenken
                         ShowAllData(2);
                         break;
                     case 5:
-                        if (PlacingAttempt(X, Y, Player, 5) == 1)
+                        if (PlacingAttempt(X, Y, Player, 5) == true)
                         {
                             counter.AmountOfShipsInTotal -= 1;
                             counter.AmountOfShipsLength5 -= 1;
@@ -4942,7 +5003,7 @@ namespace SchiffeVersenken
                     counter.AmountOfShipsInTotal = player1.AmountOfShipsInTotal;
                     if (Player == 1)
                     {
-                        Ausgabe.Text = "Spieler 2 darf nun seine Schiffe platzieren.";
+                        Ausgabe.Text = AnzeigePlayer2.Text + " darf nun seine Schiffe platzieren.";
                         HideShips();
                         buttonlock_SPP1();
                     }
@@ -5001,6 +5062,10 @@ namespace SchiffeVersenken
 
         #region ending phase
 
+        /// <summary>
+        /// Überprüft ob die Spieler noch ein Schiff auf dem Spielfeld haben
+        /// </summary>
+        /// <param name="Player">Gibt an welcher Spieler überprüft wird</param>
         public void Endgame(int Player)
         {
             if(Player==1)
@@ -5015,7 +5080,7 @@ namespace SchiffeVersenken
                         }
                     }
                 }
-                Ausgabe.Text = "Spielende!\nSpieler 2 hat gewonnen!\nMöchtet ihr ein weiteres Spiel spielen oder beenden?";
+                Ausgabe.Text = "Spielende!\n" + AnzeigePlayer2.Text + " hat gewonnen!\nMöchtet ihr ein weiteres Spiel spielen oder beenden?";
                 option1_button.Enabled = true;
                 option2_button.Enabled = true;
                 option1_button.Text = "Erneut spielen?";
@@ -5035,7 +5100,7 @@ namespace SchiffeVersenken
                         }
                     }
                 }
-                Ausgabe.Text = "Spielende!\nSpieler 1 hat gewonnen!\nMöchtet ihr ein weiteres Spiel spielen oder beenden?";
+                Ausgabe.Text = "Spielende!\n" + AnzeigePlayer1.Text + " hat gewonnen!\nMöchtet ihr ein weiteres Spiel spielen oder beenden?";
                 option1_button.Enabled = true;
                 option2_button.Enabled = true;
                 option1_button.Text = "Erneut spielen?";
@@ -5045,6 +5110,9 @@ namespace SchiffeVersenken
             }
         }
 
+        /// <summary>
+        /// Setzt die Spielrunde und sämtliche Informationen zurück, wie zu Beginn des Spiels
+        /// </summary>
         public void Reset()
         {
             player1.AmountOfShipsInTotal = 0;

@@ -19,3 +19,4 @@ D:\_Dokumente\• Studium\3. Semester\Datenverarbeitung und Programmierung\Proje
 D:\_Dokumente\• Studium\3. Semester\Datenverarbeitung und Programmierung\Projekt\3.Semester-Projekt-Spielesammlung-\SchiffVersenkenVerzeichnis\SchiffeVersenken\obj\Debug\SchiffeVersenken.exe
 D:\_Dokumente\• Studium\3. Semester\Datenverarbeitung und Programmierung\Projekt\3.Semester-Projekt-Spielesammlung-\SchiffVersenkenVerzeichnis\SchiffeVersenken\obj\Debug\SchiffeVersenken.pdb
 D:\_Dokumente\• Studium\3. Semester\Datenverarbeitung und Programmierung\Projekt\3.Semester-Projekt-Spielesammlung-\SchiffVersenkenVerzeichnis\SchiffeVersenken\obj\Debug\SchiffeVersenken.Info.resources
+D:\_Dokumente\• Studium\3. Semester\Datenverarbeitung und Programmierung\Projekt\3.Semester-Projekt-Spielesammlung-\SchiffVersenkenVerzeichnis\SchiffeVersenken\bin\Debug\SchiffeVersenken.xml

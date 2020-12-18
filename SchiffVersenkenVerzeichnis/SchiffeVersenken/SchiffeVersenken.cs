@@ -3,59 +3,106 @@ using System.Windows.Forms;
 
 namespace SchiffeVersenken
 {
+    /// <summary>
+    /// Enthält das Spiel "Schiffe versenken"
+    /// </summary>
     public partial class SchiffeVersenken : Form
     {
         //Konstruktor
+        /// <summary>
+        /// Übergibt die Standardnamen der Spieler, wenn kein Name eingegeben wurde
+        /// </summary>
         public SchiffeVersenken():this ("Spieler 1", "Spieler 2")
         { }
+        /// <summary>
+        /// Übergibt die Namen der Spieler, wenn ein Name eingegeben wurde
+        /// </summary>
+        /// <param name="Name_Player1">Name des 1.Spielers</param>
+        /// <param name="Name_Player2">Name des 2.Spielers</param>
         public SchiffeVersenken(string Name_Player1, string Name_Player2)
         {
             InitializeComponent();
             AnzeigePlayer1.Text = Name_Player1;
             AnzeigePlayer2.Text = Name_Player2;
-        }
+    }
 
         //Klassen
+        /// <summary>
+        /// Enthällt allgemeine Daten einer Spielrunde
+        /// </summary>
         class GameData
         {
+            /// <summary>
+            /// Enthällt die Anzahl der Schiffe eines Spielers in einer Spielrunde, unabhängig von der Größe 
+            /// </summary>
             private int _AmountOfShipsInTotal;   //Gibt die Anzahl der Schiffe an (Größenunabhängig)
+            /// <summary>
+            /// Enthällt die Anzahl der 3 Feld großen Schiffe eines Spielers in einer Spielrunde
+            /// </summary>
             private int _AmountOfShipsLength3; //Gibt die Anzahl der 3 Feld großen Schiffe an
+            /// <summary>
+            /// Enthällt die Anzahl der 4 Feld großen Schiffe eines Spielers in einer Spielrunde
+            /// </summary>
             private int _AmountOfShipsLength4; //Gibt die Anzahl der 4 Feld großen Schiffe an
+            /// <summary>
+            /// Enthällt die Anzahl der 5 Feld großen Schiffe eines Spielers in einer Spielrunde
+            /// </summary>
             private int _AmountOfShipsLength5; //Gibt die Anzahl der 5 Feld großen Schiffe an
+            /// <summary>
+            /// set-get von _AmountOfShipsInTotal (Enthällt die Anzahl der Schiffe eines Spielers in einer Spielrunde, unabhängig von der Größe)
+            /// </summary>
             public int AmountOfShipsInTotal  //Zugriff auf die Anzahl der Schiffe
             {
                 set { _AmountOfShipsInTotal = value; }
                 get { return _AmountOfShipsInTotal; }
             }
+            /// <summary>
+            /// set-get von _AmountOfShipsInTotal (Enthällt die Anzahl der 3 Feld großen Schiffe eines Spielers in einer Spielrunde)
+            /// </summary>
             public int AmountOfShipsLength3    //Zugriff auf die Anzahl der 3 Feld großen Schiffe an
             {
                 set { _AmountOfShipsLength3 = value; }
                 get { return _AmountOfShipsLength3; }
             }
+            /// <summary>
+            /// set-get von _AmountOfShipsInTotal (Enthällt die Anzahl der 4 Feld großen Schiffe eines Spielers in einer Spielrunde)
+            /// </summary>
             public int AmountOfShipsLength4    //Zugriff auf die Anzahl der 4 Feld großen Schiffe an
             {
                 set { _AmountOfShipsLength4 = value; }
                 get { return _AmountOfShipsLength4; }
             }
+            /// <summary>
+            /// set-get von _AmountOfShipsInTotal (Enthällt die Anzahl der 5 Feld großen Schiffe eines Spielers in einer Spielrunde)
+            /// </summary>
             public int AmountOfShipsLength5    //Zugriff auf die Anzahl der 5 Feld großen Schiffe an
             {
                 set { _AmountOfShipsLength5 = value; }
                 get { return _AmountOfShipsLength5; }
             }
-        }   //Erstellt einige Informationen über das Spiel
-
-        class Player:GameData    //Bauplan für das Profil eines Spielers
+        }
+        /// <summary>
+        /// Erstellt die Daten eines Spielers, abgeleitet von den allgemeinen Daten einer Spielrunde
+        /// </summary>
+        class Player:GameData
         {
-
-            //VORERST PUBLIC!!!
-            public string[,] _BattleArea = new string[9, 9];  //Erstellt ein Array, welches das Spielfeld eines Spielers repräsentiert
-  
-        }   //Einen Mitspieler + dessen Informationen
-
-        class Property   //Um einen einzigen Einstellungswert zu verwenden
+            /// <summary>
+            /// Ist das Spielfeld (Koordinaten) eines Spielers
+            /// </summary>
+            public string[,] _BattleArea { get; set; } = new string[9, 9];  //Erstellt ein Array, welches das Spielfeld eines Spielers repräsentiert
+        }  
+        /// <summary>
+        /// Erstellt eine int Variable, die im Laufe des Spiels geändert werden kann
+        /// </summary>
+        class Property
         {
+            /// <summary>
+            /// Ist die int Variable die verwendet werden kann
+            /// </summary>
             private int _number = 0;  //Der Wert, den die Einstellung haben soll
-
+            /// <summary>
+            /// set-get einer Variable 
+            /// </summary>
             public int number //Zugriff auf den Wert
             {
                 set { _number = value; }
@@ -64,15 +111,33 @@ namespace SchiffeVersenken
         }
 
         //Instanzierungen & Referenzierungen
-        GameData counter = new GameData();  //Wird verwendet um Rechnungen durchzuführen
-
-        Player player1 = new Player();  
+        /// <summary>
+        /// Eine erste Spielrunde wird erstellt
+        /// </summary>
+        GameData counter = new GameData();
+        /// <summary>
+        /// Spieler1 wird erstellt
+        /// </summary>
+        Player player1 = new Player();
+        /// <summary>
+        /// Spieler2 wird erstellt
+        /// </summary>
         Player player2 = new Player();
-
-        Property horizontalvertical = new Property(); //gibt an ob etwas horizontal, oder vertikal platziert werden soll
-        Property gamestage = new Property();  //gibt an in welcher Phase des Spiels sich gerade befunden wird
-        Property turn = new Property(); //legt fest, wer am Zug ist
-
+        /// <summary>
+        /// Stellt beim Schiffeplatzieren ein ob horizontal oder vertikal platziert werden soll
+        /// </summary>
+        Property horizontalvertical = new Property();
+        /// <summary>
+        /// Gibt in welcher Phase sich das Spiel gerade befindet
+        /// </summary>
+        Property gamestage = new Property();
+        /// <summary>
+        /// Gibt an welcher Spieler gerade an der Reihe ist
+        /// </summary>
+        Property turn = new Property(); 
+        /// <summary>
+        /// Erstellt ein Infofenster
+        /// </summary>
         Info infowindow = new Info();
 
         #region set amount of ships
@@ -191,12 +256,12 @@ namespace SchiffeVersenken
                 if(turn.number == 1)
                 {
                     turn.number = 2;
-                    Ausgabe.Text = Ausgabe.Text + "\nSpieler 2 ist nun an der Reihe\nSpieler 1 wegschauen.";
+                    Ausgabe.Text = Ausgabe.Text + "\n" + AnzeigePlayer2.Text + " ist nun an der Reihe\n " + AnzeigePlayer1.Text + " wegschauen.";
                 }
                 else if (turn.number == 2)
                 {
                     turn.number = 1;
-                    Ausgabe.Text = Ausgabe.Text + "\nSpieler 1 ist nun an der Reihe\nSpieler 2 wegschauen.";
+                    Ausgabe.Text = Ausgabe.Text + "\n" + AnzeigePlayer1.Text + " ist nun an der Reihe\nSpieler 2 wegschauen.";
                 }
             }
             else if (gamestage.number == 2)

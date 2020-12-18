@@ -1,0 +1,284 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>SchiffeVersenken</name>
+    </assembly>
+    <members>
+        <member name="F:SchiffeVersenken.Info.components">
+            <summary>
+            Erforderliche Designervariable.
+            </summary>
+        </member>
+        <member name="M:SchiffeVersenken.Info.Dispose(System.Boolean)">
+            <summary>
+            Verwendete Ressourcen bereinigen.
+            </summary>
+        </member>
+        <member name="M:SchiffeVersenken.Info.InitializeComponent">
+            <summary>
+            Erforderliche Methode für die Designerunterstützung.
+            Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
+            </summary>
+        </member>
+        <member name="T:SchiffeVersenken.SchiffeVersenken">
+            <summary>
+            Enthält das Spiel "Schiffe versenken"
+            </summary>
+        </member>
+        <member name="M:SchiffeVersenken.SchiffeVersenken.#ctor">
+            <summary>
+            Übergibt die Standardnamen der Spieler, wenn kein Name eingegeben wurde
+            </summary>
+        </member>
+        <member name="M:SchiffeVersenken.SchiffeVersenken.#ctor(System.String,System.String)">
+            <summary>
+            Übergibt die Namen der Spieler, wenn ein Name eingegeben wurde
+            </summary>
+            <param name="Name_Player1">Name des 1.Spielers</param>
+            <param name="Name_Player2">Name des 2.Spielers</param>
+        </member>
+        <member name="T:SchiffeVersenken.SchiffeVersenken.GameData">
+            <summary>
+            Enthällt allgemeine Daten einer Spielrunde
+            </summary>
+        </member>
+        <member name="F:SchiffeVersenken.SchiffeVersenken.GameData._AmountOfShipsInTotal">
+            <summary>
+            Enthällt die Anzahl der Schiffe eines Spielers in einer Spielrunde, unabhängig von der Größe 
+            </summary>
+        </member>
+        <member name="F:SchiffeVersenken.SchiffeVersenken.GameData._AmountOfShipsLength3">
+            <summary>
+            Enthällt die Anzahl der 3 Feld großen Schiffe eines Spielers in einer Spielrunde
+            </summary>
+        </member>
+        <member name="F:SchiffeVersenken.SchiffeVersenken.GameData._AmountOfShipsLength4">
+            <summary>
+            Enthällt die Anzahl der 4 Feld großen Schiffe eines Spielers in einer Spielrunde
+            </summary>
+        </member>
+        <member name="F:SchiffeVersenken.SchiffeVersenken.GameData._AmountOfShipsLength5">
+            <summary>
+            Enthällt die Anzahl der 5 Feld großen Schiffe eines Spielers in einer Spielrunde
+            </summary>
+        </member>
+        <member name="P:SchiffeVersenken.SchiffeVersenken.GameData.AmountOfShipsInTotal">
+            <summary>
+            set-get von _AmountOfShipsInTotal (Enthällt die Anzahl der Schiffe eines Spielers in einer Spielrunde, unabhängig von der Größe)
+            </summary>
+        </member>
+        <member name="P:SchiffeVersenken.SchiffeVersenken.GameData.AmountOfShipsLength3">
+            <summary>
+            set-get von _AmountOfShipsInTotal (Enthällt die Anzahl der 3 Feld großen Schiffe eines Spielers in einer Spielrunde)
+            </summary>
+        </member>
+        <member name="P:SchiffeVersenken.SchiffeVersenken.GameData.AmountOfShipsLength4">
+            <summary>
+            set-get von _AmountOfShipsInTotal (Enthällt die Anzahl der 4 Feld großen Schiffe eines Spielers in einer Spielrunde)
+            </summary>
+        </member>
+        <member name="P:SchiffeVersenken.SchiffeVersenken.GameData.AmountOfShipsLength5">
+            <summary>
+            set-get von _AmountOfShipsInTotal (Enthällt die Anzahl der 5 Feld großen Schiffe eines Spielers in einer Spielrunde)
+            </summary>
+        </member>
+        <member name="T:SchiffeVersenken.SchiffeVersenken.Player">
+            <summary>
+            Erstellt die Daten eines Spielers, abgeleitet von den allgemeinen Daten einer Spielrunde
+            </summary>
+        </member>
+        <member name="P:SchiffeVersenken.SchiffeVersenken.Player._BattleArea">
+            <summary>
+            Ist das Spielfeld (Koordinaten) eines Spielers
+            </summary>
+        </member>
+        <member name="T:SchiffeVersenken.SchiffeVersenken.Property">
+            <summary>
+            Erstellt eine int Variable, die im Laufe des Spiels geändert werden kann
+            </summary>
+        </member>
+        <member name="F:SchiffeVersenken.SchiffeVersenken.Property._number">
+            <summary>
+            Ist die int Variable die verwendet werden kann
+            </summary>
+        </member>
+        <member name="P:SchiffeVersenken.SchiffeVersenken.Property.number">
+            <summary>
+            set-get einer Variable 
+            </summary>
+        </member>
+        <member name="F:SchiffeVersenken.SchiffeVersenken.counter">
+            <summary>
+            Eine erste Spielrunde wird erstellt
+            </summary>
+        </member>
+        <member name="F:SchiffeVersenken.SchiffeVersenken.player1">
+            <summary>
+            Spieler1 wird erstellt
+            </summary>
+        </member>
+        <member name="F:SchiffeVersenken.SchiffeVersenken.player2">
+            <summary>
+            Spieler2 wird erstellt
+            </summary>
+        </member>
+        <member name="F:SchiffeVersenken.SchiffeVersenken.horizontalvertical">
+            <summary>
+            Stellt beim Schiffeplatzieren ein ob horizontal oder vertikal platziert werden soll
+            </summary>
+        </member>
+        <member name="F:SchiffeVersenken.SchiffeVersenken.gamestage">
+            <summary>
+            Gibt in welcher Phase sich das Spiel gerade befindet
+            </summary>
+        </member>
+        <member name="F:SchiffeVersenken.SchiffeVersenken.turn">
+            <summary>
+            Gibt an welcher Spieler gerade an der Reihe ist
+            </summary>
+        </member>
+        <member name="F:SchiffeVersenken.SchiffeVersenken.infowindow">
+            <summary>
+            Erstellt ein Infofenster
+            </summary>
+        </member>
+        <member name="F:SchiffeVersenken.SchiffeVersenken.components">
+            <summary>
+            Erforderliche Designervariable.
+            </summary>
+        </member>
+        <member name="M:SchiffeVersenken.SchiffeVersenken.Dispose(System.Boolean)">
+            <summary>
+            Verwendete Ressourcen bereinigen.
+            </summary>
+            <param name="disposing">True, wenn verwaltete Ressourcen gelöscht werden sollen; andernfalls False.</param>
+        </member>
+        <member name="M:SchiffeVersenken.SchiffeVersenken.InitializeComponent">
+            <summary>
+            Erforderliche Methode für die Designerunterstützung.
+            Der Inhalt der Methode darf nicht mit dem Code-Editor geändert werden.
+            </summary>
+        </member>
+        <member name="M:SchiffeVersenken.SchiffeVersenken.Enablecoordinates(System.Int32)">
+            <summary>
+            Entsperrt die Koordinaten der Spieler, um Schiffe zu platzieren oder sie zu beschießen
+            </summary>
+            <param name="Player">0 entsperrt alle Koordinaten. 1 enstperrt nur die Koordinaten des 1. Spielers und 2 die des 2.</param>
+        </member>
+        <member name="M:SchiffeVersenken.SchiffeVersenken.Disablecoordinates(System.Int32)">
+            <summary>
+            Sperrt die Koordinaten der Spieler, um Schiffe zu platzieren oder sie zu beschießen
+            </summary>
+            <param name="Player">0 sperrt alle Koordinaten. 1 sperrt nur die Koordinaten des 1. Spielers und 2 die des 2.</param>
+        </member>
+        <member name="M:SchiffeVersenken.SchiffeVersenken.Unshow(System.Int32)">
+            <summary>
+            Blendet alles aus, was in den Koordinaten des Spielfeldes steht
+            </summary>
+            <param name="Player">0 blendet alle Koordinaten aus. 1 blendet nur die Koordinaten des 1. Spielers aus und 2 die des 2.</param>
+        </member>
+        <member name="M:SchiffeVersenken.SchiffeVersenken.HideShips">
+            <summary>
+            Blendet alle Schiffe auf dem Spielfeld aus
+            </summary>
+        </member>
+        <member name="M:SchiffeVersenken.SchiffeVersenken.ShowAllData(System.Int32)">
+            <summary>
+            Blendet alles ein, was in den Koordinaten eines Spielers steht
+            </summary>
+            <param name="Player">0 blendet alle Koordinaten ein. 1 blendet nur die Koordinaten des 1. Spielers ein und 2 die des 2.</param>
+        </member>
+        <member name="M:SchiffeVersenken.SchiffeVersenken.buttonlock_AdS">
+            <summary>
+            Enthält alle Vorgänge um von der Auswahl der Anzahl Schiffe zur Auswahl der Länge der Schiffe zu gelangen
+            </summary>
+        </member>
+        <member name="M:SchiffeVersenken.SchiffeVersenken.buttonlock_GdS">
+            <summary>
+            Enhält alle Vorgänge um von der Auswahl der länge der Schiff zur Platzierung der Schiffe des 1. Spielers zu gelangen
+            </summary>
+        </member>
+        <member name="M:SchiffeVersenken.SchiffeVersenken.buttonlock_SPP1">
+            <summary>
+            Ändert den Spieler der seine Schiffe platzieren kann von Spieler 1 auf Spieler 2
+            </summary>
+        </member>
+        <member name="M:SchiffeVersenken.SchiffeVersenken.buttonlock_GS">
+            <summary>
+            Lässt das Spiel in die Beschussphase starten
+            </summary>
+        </member>
+        <member name="M:SchiffeVersenken.SchiffeVersenken.SetLengthOfShip(System.Int32)">
+            <summary>
+            Speichert die Längen der Schiffe
+            </summary>
+            <param name="Länge">Ist die Länge eines Schiffes</param>
+        </member>
+        <member name="M:SchiffeVersenken.SchiffeVersenken.GetLengthOfShip">
+            <summary>
+            Sucht die Länge des als nächstes zu platzierenden Schiffs (von klein nach groß - also zuerst die 3 Feld, dann die 4 Feld und zuletzt die 5 Feld Schiffe)
+            </summary>
+            <returns>Ist die Länge des zu platzierenden Schiffes</returns>
+        </member>
+        <member name="M:SchiffeVersenken.SchiffeVersenken.PlacingAttempt(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Hier wird versucht das Schiff zu platzieren
+            </summary>
+            <param name="X">Ist die X Koordinate (Buchstaben) des ausgewählten Feldes</param>
+            <param name="Y">Ist die Y Koordinate (Zahlen) des ausgewählten Feldes</param>
+            <param name="Player">Ist der Spieler, auf dessen Feld die Koordinate ausgewählt wurde</param>
+            <param name="Länge">Ist die Länge des Schiffes, welches platziert werden soll</param>
+            <returns>Gibt zurück, ob die Platzierung erfolgreich war (true = erfolgreich, false = nicht erfolgreich)</returns>
+        </member>
+        <member name="M:SchiffeVersenken.SchiffeVersenken.CollisionCheck(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Hier wird überprüft, ob das Schiff platziert werden kann, oder ob ein anderes Schiff im Weg steht, oder das Spielfeld verlassen wird 
+            </summary>
+            <param name="X">Ist die X Koordinate (Buchstaben) des ausgewählten Feldes</param>
+            <param name="Y">Ist die Y Koordinate (Zahlen) des ausgewählten Feldes</param>
+            <param name="Player">Ist der Spieler, auf dessen Feld die Koordinate ausgewählt wurde</param>
+            <param name="Länge">Ist die Länge des Schiffes, welches platziert werden soll</param>
+            <returns>Gibt zurück, ob das Schiff platziert werden kann oder nicht (true = passt, false = passt nicht) </returns>
+        </member>
+        <member name="M:SchiffeVersenken.SchiffeVersenken.CoordinateScanner(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            Verwaltet je nach Spielphase ob und wie ein bestimmtes Schiff platziert wird
+            </summary>
+            <param name="X">Ist die X Koordinate (Buchstaben) des ausgewählten Feldes</param>
+            <param name="Y">Ist die Y Koordinate (Zahlen) des ausgewählten Feldes</param>
+            <param name="Player">Ist der Spieler, auf dessen Feld die Koordinate ausgewählt wurde</param>
+        </member>
+        <member name="M:SchiffeVersenken.SchiffeVersenken.Endgame(System.Int32)">
+            <summary>
+            Überprüft ob die Spieler noch ein Schiff auf dem Spielfeld haben
+            </summary>
+            <param name="Player">Gibt an welcher Spieler überprüft wird</param>
+        </member>
+        <member name="M:SchiffeVersenken.SchiffeVersenken.Reset">
+            <summary>
+            Setzt die Spielrunde und sämtliche Informationen zurück, wie zu Beginn des Spiels
+            </summary>
+        </member>
+        <member name="M:SchiffeVersenken.Program.Main">
+            <summary>
+            Der Haupteinstiegspunkt für die Anwendung.
+            </summary>
+        </member>
+        <member name="T:SchiffeVersenken.Properties.Resources">
+            <summary>
+              Eine stark typisierte Ressourcenklasse zum Suchen von lokalisierten Zeichenfolgen usw.
+            </summary>
+        </member>
+        <member name="P:SchiffeVersenken.Properties.Resources.ResourceManager">
+            <summary>
+              Gibt die zwischengespeicherte ResourceManager-Instanz zurück, die von dieser Klasse verwendet wird.
+            </summary>
+        </member>
+        <member name="P:SchiffeVersenken.Properties.Resources.Culture">
+            <summary>
+              Überschreibt die CurrentUICulture-Eigenschaft des aktuellen Threads für alle
+              Ressourcenlookups, die diese stark typisierte Ressourcenklasse verwenden.
+            </summary>
+        </member>
+    </members>
+</doc>
