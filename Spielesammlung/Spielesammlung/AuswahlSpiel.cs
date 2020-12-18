@@ -54,8 +54,18 @@ namespace Spielesammlung
 
         private void B_Schiffeversenken_Click(object sender, EventArgs e)
         {
+            string Spieler1 = TB_Name1.Text;
+            string Spieler2 = TB_Name2.Text;
+            if (CheckNamen() == 1)
+            {
 
-     
+                this.Hide();
+
+                SchiffeVersenken schiffeVersenken = new SchiffeVersenken(Spieler1, Spieler2);
+                schiffeVersenken.ShowDialog();   //Macht die Form sichtbar
+                this.Show();
+            }
+            else { }
         }
 
    
