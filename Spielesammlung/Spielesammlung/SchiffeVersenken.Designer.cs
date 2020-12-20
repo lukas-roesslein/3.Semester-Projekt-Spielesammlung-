@@ -1,4 +1,7 @@
-﻿namespace Spielesammlung
+﻿using System;
+using System.Windows.Forms;
+
+namespace Spielesammlung
 {
     partial class SchiffeVersenken
     {
@@ -208,8 +211,8 @@
             this.GdS_4 = new System.Windows.Forms.Button();
             this.GdS_3 = new System.Windows.Forms.Button();
             this.GrößeDerSchiffeInFelder = new System.Windows.Forms.Label();
-            this.vertikal = new System.Windows.Forms.Button();
-            this.horizontal = new System.Windows.Forms.Button();
+            this.option1_button = new System.Windows.Forms.Button();
+            this.option2_button = new System.Windows.Forms.Button();
             this.Feld3P1 = new System.Windows.Forms.Label();
             this.Feld4P1 = new System.Windows.Forms.Label();
             this.Feld5P1 = new System.Windows.Forms.Label();
@@ -224,9 +227,10 @@
             this.Schiff3FP2 = new System.Windows.Forms.Label();
             this.Schiff3FP1 = new System.Windows.Forms.Label();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.dateiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ansichtToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.beendenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.spielToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.spielBeendenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.spielBeendenToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -269,6 +273,7 @@
             this.B11.Size = new System.Drawing.Size(30, 30);
             this.B11.TabIndex = 3;
             this.B11.UseVisualStyleBackColor = true;
+            this.B11.Click += new System.EventHandler(this.B11_Click);
             // 
             // C11
             // 
@@ -278,6 +283,7 @@
             this.C11.Size = new System.Drawing.Size(30, 30);
             this.C11.TabIndex = 4;
             this.C11.UseVisualStyleBackColor = true;
+            this.C11.Click += new System.EventHandler(this.C11_Click);
             // 
             // D11
             // 
@@ -287,6 +293,7 @@
             this.D11.Size = new System.Drawing.Size(30, 30);
             this.D11.TabIndex = 5;
             this.D11.UseVisualStyleBackColor = true;
+            this.D11.Click += new System.EventHandler(this.D11_Click);
             // 
             // E11
             // 
@@ -296,6 +303,7 @@
             this.E11.Size = new System.Drawing.Size(30, 30);
             this.E11.TabIndex = 6;
             this.E11.UseVisualStyleBackColor = true;
+            this.E11.Click += new System.EventHandler(this.E11_Click);
             // 
             // F11
             // 
@@ -305,6 +313,7 @@
             this.F11.Size = new System.Drawing.Size(30, 30);
             this.F11.TabIndex = 7;
             this.F11.UseVisualStyleBackColor = true;
+            this.F11.Click += new System.EventHandler(this.F11_Click);
             // 
             // G11
             // 
@@ -314,6 +323,7 @@
             this.G11.Size = new System.Drawing.Size(30, 30);
             this.G11.TabIndex = 8;
             this.G11.UseVisualStyleBackColor = true;
+            this.G11.Click += new System.EventHandler(this.G11_Click);
             // 
             // H11
             // 
@@ -323,6 +333,7 @@
             this.H11.Size = new System.Drawing.Size(30, 30);
             this.H11.TabIndex = 9;
             this.H11.UseVisualStyleBackColor = true;
+            this.H11.Click += new System.EventHandler(this.H11_Click);
             // 
             // I11
             // 
@@ -332,6 +343,7 @@
             this.I11.Size = new System.Drawing.Size(30, 30);
             this.I11.TabIndex = 10;
             this.I11.UseVisualStyleBackColor = true;
+            this.I11.Click += new System.EventHandler(this.I11_Click);
             // 
             // I21
             // 
@@ -341,6 +353,7 @@
             this.I21.Size = new System.Drawing.Size(30, 30);
             this.I21.TabIndex = 20;
             this.I21.UseVisualStyleBackColor = true;
+            this.I21.Click += new System.EventHandler(this.I21_Click);
             // 
             // H21
             // 
@@ -350,6 +363,7 @@
             this.H21.Size = new System.Drawing.Size(30, 30);
             this.H21.TabIndex = 19;
             this.H21.UseVisualStyleBackColor = true;
+            this.H21.Click += new System.EventHandler(this.H21_Click);
             // 
             // G21
             // 
@@ -359,6 +373,7 @@
             this.G21.Size = new System.Drawing.Size(30, 30);
             this.G21.TabIndex = 18;
             this.G21.UseVisualStyleBackColor = true;
+            this.G21.Click += new System.EventHandler(this.G21_Click);
             // 
             // F21
             // 
@@ -368,6 +383,7 @@
             this.F21.Size = new System.Drawing.Size(30, 30);
             this.F21.TabIndex = 17;
             this.F21.UseVisualStyleBackColor = true;
+            this.F21.Click += new System.EventHandler(this.F21_Click);
             // 
             // E21
             // 
@@ -377,6 +393,7 @@
             this.E21.Size = new System.Drawing.Size(30, 30);
             this.E21.TabIndex = 16;
             this.E21.UseVisualStyleBackColor = true;
+            this.E21.Click += new System.EventHandler(this.E21_Click);
             // 
             // D21
             // 
@@ -386,6 +403,7 @@
             this.D21.Size = new System.Drawing.Size(30, 30);
             this.D21.TabIndex = 15;
             this.D21.UseVisualStyleBackColor = true;
+            this.D21.Click += new System.EventHandler(this.D21_Click);
             // 
             // C21
             // 
@@ -395,6 +413,7 @@
             this.C21.Size = new System.Drawing.Size(30, 30);
             this.C21.TabIndex = 14;
             this.C21.UseVisualStyleBackColor = true;
+            this.C21.Click += new System.EventHandler(this.C21_Click);
             // 
             // B21
             // 
@@ -404,6 +423,7 @@
             this.B21.Size = new System.Drawing.Size(30, 30);
             this.B21.TabIndex = 13;
             this.B21.UseVisualStyleBackColor = true;
+            this.B21.Click += new System.EventHandler(this.B21_Click);
             // 
             // A21
             // 
@@ -413,6 +433,7 @@
             this.A21.Size = new System.Drawing.Size(30, 30);
             this.A21.TabIndex = 12;
             this.A21.UseVisualStyleBackColor = true;
+            this.A21.Click += new System.EventHandler(this.A21_Click);
             // 
             // I31
             // 
@@ -422,6 +443,7 @@
             this.I31.Size = new System.Drawing.Size(30, 30);
             this.I31.TabIndex = 30;
             this.I31.UseVisualStyleBackColor = true;
+            this.I31.Click += new System.EventHandler(this.I31_Click);
             // 
             // H31
             // 
@@ -431,6 +453,7 @@
             this.H31.Size = new System.Drawing.Size(30, 30);
             this.H31.TabIndex = 29;
             this.H31.UseVisualStyleBackColor = true;
+            this.H31.Click += new System.EventHandler(this.H31_Click);
             // 
             // G31
             // 
@@ -440,6 +463,7 @@
             this.G31.Size = new System.Drawing.Size(30, 30);
             this.G31.TabIndex = 28;
             this.G31.UseVisualStyleBackColor = true;
+            this.G31.Click += new System.EventHandler(this.G31_Click);
             // 
             // F31
             // 
@@ -449,6 +473,7 @@
             this.F31.Size = new System.Drawing.Size(30, 30);
             this.F31.TabIndex = 27;
             this.F31.UseVisualStyleBackColor = true;
+            this.F31.Click += new System.EventHandler(this.F31_Click);
             // 
             // E31
             // 
@@ -458,6 +483,7 @@
             this.E31.Size = new System.Drawing.Size(30, 30);
             this.E31.TabIndex = 26;
             this.E31.UseVisualStyleBackColor = true;
+            this.E31.Click += new System.EventHandler(this.E31_Click);
             // 
             // D31
             // 
@@ -467,6 +493,7 @@
             this.D31.Size = new System.Drawing.Size(30, 30);
             this.D31.TabIndex = 25;
             this.D31.UseVisualStyleBackColor = true;
+            this.D31.Click += new System.EventHandler(this.D31_Click);
             // 
             // C31
             // 
@@ -476,6 +503,7 @@
             this.C31.Size = new System.Drawing.Size(30, 30);
             this.C31.TabIndex = 24;
             this.C31.UseVisualStyleBackColor = true;
+            this.C31.Click += new System.EventHandler(this.C31_Click);
             // 
             // B31
             // 
@@ -485,6 +513,7 @@
             this.B31.Size = new System.Drawing.Size(30, 30);
             this.B31.TabIndex = 23;
             this.B31.UseVisualStyleBackColor = true;
+            this.B31.Click += new System.EventHandler(this.B31_Click);
             // 
             // A31
             // 
@@ -494,6 +523,7 @@
             this.A31.Size = new System.Drawing.Size(30, 30);
             this.A31.TabIndex = 22;
             this.A31.UseVisualStyleBackColor = true;
+            this.A31.Click += new System.EventHandler(this.A31_Click);
             // 
             // I41
             // 
@@ -503,6 +533,7 @@
             this.I41.Size = new System.Drawing.Size(30, 30);
             this.I41.TabIndex = 40;
             this.I41.UseVisualStyleBackColor = true;
+            this.I41.Click += new System.EventHandler(this.I41_Click);
             // 
             // H41
             // 
@@ -512,6 +543,7 @@
             this.H41.Size = new System.Drawing.Size(30, 30);
             this.H41.TabIndex = 39;
             this.H41.UseVisualStyleBackColor = true;
+            this.H41.Click += new System.EventHandler(this.H41_Click);
             // 
             // G41
             // 
@@ -521,6 +553,7 @@
             this.G41.Size = new System.Drawing.Size(30, 30);
             this.G41.TabIndex = 38;
             this.G41.UseVisualStyleBackColor = true;
+            this.G41.Click += new System.EventHandler(this.G41_Click);
             // 
             // F41
             // 
@@ -530,6 +563,7 @@
             this.F41.Size = new System.Drawing.Size(30, 30);
             this.F41.TabIndex = 37;
             this.F41.UseVisualStyleBackColor = true;
+            this.F41.Click += new System.EventHandler(this.F41_Click);
             // 
             // E41
             // 
@@ -539,6 +573,7 @@
             this.E41.Size = new System.Drawing.Size(30, 30);
             this.E41.TabIndex = 36;
             this.E41.UseVisualStyleBackColor = true;
+            this.E41.Click += new System.EventHandler(this.E41_Click);
             // 
             // D41
             // 
@@ -548,6 +583,7 @@
             this.D41.Size = new System.Drawing.Size(30, 30);
             this.D41.TabIndex = 35;
             this.D41.UseVisualStyleBackColor = true;
+            this.D41.Click += new System.EventHandler(this.D41_Click);
             // 
             // C41
             // 
@@ -557,6 +593,7 @@
             this.C41.Size = new System.Drawing.Size(30, 30);
             this.C41.TabIndex = 34;
             this.C41.UseVisualStyleBackColor = true;
+            this.C41.Click += new System.EventHandler(this.C41_Click);
             // 
             // B41
             // 
@@ -566,6 +603,7 @@
             this.B41.Size = new System.Drawing.Size(30, 30);
             this.B41.TabIndex = 33;
             this.B41.UseVisualStyleBackColor = true;
+            this.B41.Click += new System.EventHandler(this.B41_Click);
             // 
             // A41
             // 
@@ -575,6 +613,7 @@
             this.A41.Size = new System.Drawing.Size(30, 30);
             this.A41.TabIndex = 32;
             this.A41.UseVisualStyleBackColor = true;
+            this.A41.Click += new System.EventHandler(this.A41_Click);
             // 
             // I51
             // 
@@ -584,6 +623,7 @@
             this.I51.Size = new System.Drawing.Size(30, 30);
             this.I51.TabIndex = 50;
             this.I51.UseVisualStyleBackColor = true;
+            this.I51.Click += new System.EventHandler(this.I51_Click);
             // 
             // H51
             // 
@@ -593,6 +633,7 @@
             this.H51.Size = new System.Drawing.Size(30, 30);
             this.H51.TabIndex = 49;
             this.H51.UseVisualStyleBackColor = true;
+            this.H51.Click += new System.EventHandler(this.H51_Click);
             // 
             // G51
             // 
@@ -602,6 +643,7 @@
             this.G51.Size = new System.Drawing.Size(30, 30);
             this.G51.TabIndex = 48;
             this.G51.UseVisualStyleBackColor = true;
+            this.G51.Click += new System.EventHandler(this.G51_Click);
             // 
             // F51
             // 
@@ -611,6 +653,7 @@
             this.F51.Size = new System.Drawing.Size(30, 30);
             this.F51.TabIndex = 47;
             this.F51.UseVisualStyleBackColor = true;
+            this.F51.Click += new System.EventHandler(this.F51_Click);
             // 
             // E51
             // 
@@ -620,6 +663,7 @@
             this.E51.Size = new System.Drawing.Size(30, 30);
             this.E51.TabIndex = 46;
             this.E51.UseVisualStyleBackColor = true;
+            this.E51.Click += new System.EventHandler(this.E51_Click);
             // 
             // D51
             // 
@@ -629,6 +673,7 @@
             this.D51.Size = new System.Drawing.Size(30, 30);
             this.D51.TabIndex = 45;
             this.D51.UseVisualStyleBackColor = true;
+            this.D51.Click += new System.EventHandler(this.D51_Click);
             // 
             // C51
             // 
@@ -638,6 +683,7 @@
             this.C51.Size = new System.Drawing.Size(30, 30);
             this.C51.TabIndex = 44;
             this.C51.UseVisualStyleBackColor = true;
+            this.C51.Click += new System.EventHandler(this.C51_Click);
             // 
             // B51
             // 
@@ -647,6 +693,7 @@
             this.B51.Size = new System.Drawing.Size(30, 30);
             this.B51.TabIndex = 43;
             this.B51.UseVisualStyleBackColor = true;
+            this.B51.Click += new System.EventHandler(this.B51_Click);
             // 
             // A51
             // 
@@ -656,6 +703,7 @@
             this.A51.Size = new System.Drawing.Size(30, 30);
             this.A51.TabIndex = 42;
             this.A51.UseVisualStyleBackColor = true;
+            this.A51.Click += new System.EventHandler(this.A51_Click);
             // 
             // I61
             // 
@@ -665,6 +713,7 @@
             this.I61.Size = new System.Drawing.Size(30, 30);
             this.I61.TabIndex = 60;
             this.I61.UseVisualStyleBackColor = true;
+            this.I61.Click += new System.EventHandler(this.I61_Click);
             // 
             // H61
             // 
@@ -674,6 +723,7 @@
             this.H61.Size = new System.Drawing.Size(30, 30);
             this.H61.TabIndex = 59;
             this.H61.UseVisualStyleBackColor = true;
+            this.H61.Click += new System.EventHandler(this.H61_Click);
             // 
             // G61
             // 
@@ -683,6 +733,7 @@
             this.G61.Size = new System.Drawing.Size(30, 30);
             this.G61.TabIndex = 58;
             this.G61.UseVisualStyleBackColor = true;
+            this.G61.Click += new System.EventHandler(this.G61_Click);
             // 
             // F61
             // 
@@ -692,6 +743,7 @@
             this.F61.Size = new System.Drawing.Size(30, 30);
             this.F61.TabIndex = 57;
             this.F61.UseVisualStyleBackColor = true;
+            this.F61.Click += new System.EventHandler(this.F61_Click);
             // 
             // E61
             // 
@@ -701,6 +753,7 @@
             this.E61.Size = new System.Drawing.Size(30, 30);
             this.E61.TabIndex = 56;
             this.E61.UseVisualStyleBackColor = true;
+            this.E61.Click += new System.EventHandler(this.E61_Click);
             // 
             // D61
             // 
@@ -710,6 +763,7 @@
             this.D61.Size = new System.Drawing.Size(30, 30);
             this.D61.TabIndex = 55;
             this.D61.UseVisualStyleBackColor = true;
+            this.D61.Click += new System.EventHandler(this.D61_Click);
             // 
             // C61
             // 
@@ -719,6 +773,7 @@
             this.C61.Size = new System.Drawing.Size(30, 30);
             this.C61.TabIndex = 54;
             this.C61.UseVisualStyleBackColor = true;
+            this.C61.Click += new System.EventHandler(this.C61_Click);
             // 
             // B61
             // 
@@ -728,6 +783,7 @@
             this.B61.Size = new System.Drawing.Size(30, 30);
             this.B61.TabIndex = 53;
             this.B61.UseVisualStyleBackColor = true;
+            this.B61.Click += new System.EventHandler(this.B61_Click);
             // 
             // A61
             // 
@@ -737,6 +793,7 @@
             this.A61.Size = new System.Drawing.Size(30, 30);
             this.A61.TabIndex = 52;
             this.A61.UseVisualStyleBackColor = true;
+            this.A61.Click += new System.EventHandler(this.A61_Click);
             // 
             // I71
             // 
@@ -746,6 +803,7 @@
             this.I71.Size = new System.Drawing.Size(30, 30);
             this.I71.TabIndex = 70;
             this.I71.UseVisualStyleBackColor = true;
+            this.I71.Click += new System.EventHandler(this.I71_Click);
             // 
             // H71
             // 
@@ -755,6 +813,7 @@
             this.H71.Size = new System.Drawing.Size(30, 30);
             this.H71.TabIndex = 69;
             this.H71.UseVisualStyleBackColor = true;
+            this.H71.Click += new System.EventHandler(this.H71_Click);
             // 
             // G71
             // 
@@ -764,6 +823,7 @@
             this.G71.Size = new System.Drawing.Size(30, 30);
             this.G71.TabIndex = 68;
             this.G71.UseVisualStyleBackColor = true;
+            this.G71.Click += new System.EventHandler(this.G71_Click);
             // 
             // F71
             // 
@@ -773,6 +833,7 @@
             this.F71.Size = new System.Drawing.Size(30, 30);
             this.F71.TabIndex = 67;
             this.F71.UseVisualStyleBackColor = true;
+            this.F71.Click += new System.EventHandler(this.F71_Click);
             // 
             // E71
             // 
@@ -782,6 +843,7 @@
             this.E71.Size = new System.Drawing.Size(30, 30);
             this.E71.TabIndex = 66;
             this.E71.UseVisualStyleBackColor = true;
+            this.E71.Click += new System.EventHandler(this.E71_Click);
             // 
             // D71
             // 
@@ -791,6 +853,7 @@
             this.D71.Size = new System.Drawing.Size(30, 30);
             this.D71.TabIndex = 65;
             this.D71.UseVisualStyleBackColor = true;
+            this.D71.Click += new System.EventHandler(this.D71_Click);
             // 
             // C71
             // 
@@ -800,6 +863,7 @@
             this.C71.Size = new System.Drawing.Size(30, 30);
             this.C71.TabIndex = 64;
             this.C71.UseVisualStyleBackColor = true;
+            this.C71.Click += new System.EventHandler(this.C71_Click);
             // 
             // B71
             // 
@@ -809,6 +873,7 @@
             this.B71.Size = new System.Drawing.Size(30, 30);
             this.B71.TabIndex = 63;
             this.B71.UseVisualStyleBackColor = true;
+            this.B71.Click += new System.EventHandler(this.B71_Click);
             // 
             // A71
             // 
@@ -818,6 +883,7 @@
             this.A71.Size = new System.Drawing.Size(30, 30);
             this.A71.TabIndex = 62;
             this.A71.UseVisualStyleBackColor = true;
+            this.A71.Click += new System.EventHandler(this.A71_Click);
             // 
             // I81
             // 
@@ -827,6 +893,7 @@
             this.I81.Size = new System.Drawing.Size(30, 30);
             this.I81.TabIndex = 80;
             this.I81.UseVisualStyleBackColor = true;
+            this.I81.Click += new System.EventHandler(this.I81_Click);
             // 
             // H81
             // 
@@ -836,6 +903,7 @@
             this.H81.Size = new System.Drawing.Size(30, 30);
             this.H81.TabIndex = 79;
             this.H81.UseVisualStyleBackColor = true;
+            this.H81.Click += new System.EventHandler(this.H81_Click);
             // 
             // G81
             // 
@@ -845,6 +913,7 @@
             this.G81.Size = new System.Drawing.Size(30, 30);
             this.G81.TabIndex = 78;
             this.G81.UseVisualStyleBackColor = true;
+            this.G81.Click += new System.EventHandler(this.G81_Click);
             // 
             // F81
             // 
@@ -854,6 +923,7 @@
             this.F81.Size = new System.Drawing.Size(30, 30);
             this.F81.TabIndex = 77;
             this.F81.UseVisualStyleBackColor = true;
+            this.F81.Click += new System.EventHandler(this.F81_Click);
             // 
             // E81
             // 
@@ -863,6 +933,7 @@
             this.E81.Size = new System.Drawing.Size(30, 30);
             this.E81.TabIndex = 76;
             this.E81.UseVisualStyleBackColor = true;
+            this.E81.Click += new System.EventHandler(this.E81_Click);
             // 
             // D81
             // 
@@ -872,6 +943,7 @@
             this.D81.Size = new System.Drawing.Size(30, 30);
             this.D81.TabIndex = 75;
             this.D81.UseVisualStyleBackColor = true;
+            this.D81.Click += new System.EventHandler(this.D81_Click);
             // 
             // C81
             // 
@@ -881,6 +953,7 @@
             this.C81.Size = new System.Drawing.Size(30, 30);
             this.C81.TabIndex = 74;
             this.C81.UseVisualStyleBackColor = true;
+            this.C81.Click += new System.EventHandler(this.C81_Click);
             // 
             // B81
             // 
@@ -890,6 +963,7 @@
             this.B81.Size = new System.Drawing.Size(30, 30);
             this.B81.TabIndex = 73;
             this.B81.UseVisualStyleBackColor = true;
+            this.B81.Click += new System.EventHandler(this.B81_Click);
             // 
             // A81
             // 
@@ -899,6 +973,7 @@
             this.A81.Size = new System.Drawing.Size(30, 30);
             this.A81.TabIndex = 72;
             this.A81.UseVisualStyleBackColor = true;
+            this.A81.Click += new System.EventHandler(this.A81_Click);
             // 
             // I91
             // 
@@ -908,6 +983,7 @@
             this.I91.Size = new System.Drawing.Size(30, 30);
             this.I91.TabIndex = 90;
             this.I91.UseVisualStyleBackColor = true;
+            this.I91.Click += new System.EventHandler(this.I91_Click);
             // 
             // H91
             // 
@@ -917,6 +993,7 @@
             this.H91.Size = new System.Drawing.Size(30, 30);
             this.H91.TabIndex = 89;
             this.H91.UseVisualStyleBackColor = true;
+            this.H91.Click += new System.EventHandler(this.H91_Click);
             // 
             // G91
             // 
@@ -926,6 +1003,7 @@
             this.G91.Size = new System.Drawing.Size(30, 30);
             this.G91.TabIndex = 88;
             this.G91.UseVisualStyleBackColor = true;
+            this.G91.Click += new System.EventHandler(this.G91_Click);
             // 
             // F91
             // 
@@ -935,6 +1013,7 @@
             this.F91.Size = new System.Drawing.Size(30, 30);
             this.F91.TabIndex = 87;
             this.F91.UseVisualStyleBackColor = true;
+            this.F91.Click += new System.EventHandler(this.F91_Click);
             // 
             // E91
             // 
@@ -944,6 +1023,7 @@
             this.E91.Size = new System.Drawing.Size(30, 30);
             this.E91.TabIndex = 86;
             this.E91.UseVisualStyleBackColor = true;
+            this.E91.Click += new System.EventHandler(this.E91_Click);
             // 
             // D91
             // 
@@ -953,6 +1033,7 @@
             this.D91.Size = new System.Drawing.Size(30, 30);
             this.D91.TabIndex = 85;
             this.D91.UseVisualStyleBackColor = true;
+            this.D91.Click += new System.EventHandler(this.D91_Click);
             // 
             // C91
             // 
@@ -962,6 +1043,7 @@
             this.C91.Size = new System.Drawing.Size(30, 30);
             this.C91.TabIndex = 84;
             this.C91.UseVisualStyleBackColor = true;
+            this.C91.Click += new System.EventHandler(this.C91_Click);
             // 
             // B91
             // 
@@ -971,6 +1053,7 @@
             this.B91.Size = new System.Drawing.Size(30, 30);
             this.B91.TabIndex = 83;
             this.B91.UseVisualStyleBackColor = true;
+            this.B91.Click += new System.EventHandler(this.B91_Click);
             // 
             // A91
             // 
@@ -980,6 +1063,7 @@
             this.A91.Size = new System.Drawing.Size(30, 30);
             this.A91.TabIndex = 82;
             this.A91.UseVisualStyleBackColor = true;
+            this.A91.Click += new System.EventHandler(this.A91_Click);
             // 
             // AnzeigePlayer1
             // 
@@ -1009,6 +1093,7 @@
             this.I92.Size = new System.Drawing.Size(30, 30);
             this.I92.TabIndex = 193;
             this.I92.UseVisualStyleBackColor = true;
+            this.I92.Click += new System.EventHandler(this.I92_Click);
             // 
             // H92
             // 
@@ -1018,6 +1103,7 @@
             this.H92.Size = new System.Drawing.Size(30, 30);
             this.H92.TabIndex = 192;
             this.H92.UseVisualStyleBackColor = true;
+            this.H92.Click += new System.EventHandler(this.H92_Click);
             // 
             // G92
             // 
@@ -1027,6 +1113,7 @@
             this.G92.Size = new System.Drawing.Size(30, 30);
             this.G92.TabIndex = 191;
             this.G92.UseVisualStyleBackColor = true;
+            this.G92.Click += new System.EventHandler(this.G92_Click);
             // 
             // F92
             // 
@@ -1036,6 +1123,7 @@
             this.F92.Size = new System.Drawing.Size(30, 30);
             this.F92.TabIndex = 190;
             this.F92.UseVisualStyleBackColor = true;
+            this.F92.Click += new System.EventHandler(this.F92_Click);
             // 
             // E92
             // 
@@ -1045,6 +1133,7 @@
             this.E92.Size = new System.Drawing.Size(30, 30);
             this.E92.TabIndex = 189;
             this.E92.UseVisualStyleBackColor = true;
+            this.E92.Click += new System.EventHandler(this.E92_Click);
             // 
             // D92
             // 
@@ -1054,6 +1143,7 @@
             this.D92.Size = new System.Drawing.Size(30, 30);
             this.D92.TabIndex = 188;
             this.D92.UseVisualStyleBackColor = true;
+            this.D92.Click += new System.EventHandler(this.D92_Click);
             // 
             // C92
             // 
@@ -1063,6 +1153,7 @@
             this.C92.Size = new System.Drawing.Size(30, 30);
             this.C92.TabIndex = 187;
             this.C92.UseVisualStyleBackColor = true;
+            this.C92.Click += new System.EventHandler(this.C92_Click);
             // 
             // B92
             // 
@@ -1072,6 +1163,7 @@
             this.B92.Size = new System.Drawing.Size(30, 30);
             this.B92.TabIndex = 186;
             this.B92.UseVisualStyleBackColor = true;
+            this.B92.Click += new System.EventHandler(this.B92_Click);
             // 
             // A92
             // 
@@ -1081,6 +1173,7 @@
             this.A92.Size = new System.Drawing.Size(30, 30);
             this.A92.TabIndex = 185;
             this.A92.UseVisualStyleBackColor = true;
+            this.A92.Click += new System.EventHandler(this.A92_Click);
             // 
             // I82
             // 
@@ -1090,6 +1183,7 @@
             this.I82.Size = new System.Drawing.Size(30, 30);
             this.I82.TabIndex = 183;
             this.I82.UseVisualStyleBackColor = true;
+            this.I82.Click += new System.EventHandler(this.I82_Click);
             // 
             // H82
             // 
@@ -1099,6 +1193,7 @@
             this.H82.Size = new System.Drawing.Size(30, 30);
             this.H82.TabIndex = 182;
             this.H82.UseVisualStyleBackColor = true;
+            this.H82.Click += new System.EventHandler(this.H82_Click);
             // 
             // G82
             // 
@@ -1108,6 +1203,7 @@
             this.G82.Size = new System.Drawing.Size(30, 30);
             this.G82.TabIndex = 181;
             this.G82.UseVisualStyleBackColor = true;
+            this.G82.Click += new System.EventHandler(this.G82_Click);
             // 
             // F82
             // 
@@ -1117,6 +1213,7 @@
             this.F82.Size = new System.Drawing.Size(30, 30);
             this.F82.TabIndex = 180;
             this.F82.UseVisualStyleBackColor = true;
+            this.F82.Click += new System.EventHandler(this.F82_Click);
             // 
             // E82
             // 
@@ -1126,6 +1223,7 @@
             this.E82.Size = new System.Drawing.Size(30, 30);
             this.E82.TabIndex = 179;
             this.E82.UseVisualStyleBackColor = true;
+            this.E82.Click += new System.EventHandler(this.E82_Click);
             // 
             // D82
             // 
@@ -1135,6 +1233,7 @@
             this.D82.Size = new System.Drawing.Size(30, 30);
             this.D82.TabIndex = 178;
             this.D82.UseVisualStyleBackColor = true;
+            this.D82.Click += new System.EventHandler(this.D82_Click);
             // 
             // C82
             // 
@@ -1144,6 +1243,7 @@
             this.C82.Size = new System.Drawing.Size(30, 30);
             this.C82.TabIndex = 177;
             this.C82.UseVisualStyleBackColor = true;
+            this.C82.Click += new System.EventHandler(this.C82_Click);
             // 
             // B82
             // 
@@ -1153,6 +1253,7 @@
             this.B82.Size = new System.Drawing.Size(30, 30);
             this.B82.TabIndex = 176;
             this.B82.UseVisualStyleBackColor = true;
+            this.B82.Click += new System.EventHandler(this.B82_Click);
             // 
             // A82
             // 
@@ -1162,6 +1263,7 @@
             this.A82.Size = new System.Drawing.Size(30, 30);
             this.A82.TabIndex = 175;
             this.A82.UseVisualStyleBackColor = true;
+            this.A82.Click += new System.EventHandler(this.A82_Click);
             // 
             // I72
             // 
@@ -1171,6 +1273,7 @@
             this.I72.Size = new System.Drawing.Size(30, 30);
             this.I72.TabIndex = 173;
             this.I72.UseVisualStyleBackColor = true;
+            this.I72.Click += new System.EventHandler(this.I72_Click);
             // 
             // H72
             // 
@@ -1180,6 +1283,7 @@
             this.H72.Size = new System.Drawing.Size(30, 30);
             this.H72.TabIndex = 172;
             this.H72.UseVisualStyleBackColor = true;
+            this.H72.Click += new System.EventHandler(this.H72_Click);
             // 
             // G72
             // 
@@ -1189,6 +1293,7 @@
             this.G72.Size = new System.Drawing.Size(30, 30);
             this.G72.TabIndex = 171;
             this.G72.UseVisualStyleBackColor = true;
+            this.G72.Click += new System.EventHandler(this.G72_Click);
             // 
             // F72
             // 
@@ -1198,6 +1303,7 @@
             this.F72.Size = new System.Drawing.Size(30, 30);
             this.F72.TabIndex = 170;
             this.F72.UseVisualStyleBackColor = true;
+            this.F72.Click += new System.EventHandler(this.F72_Click);
             // 
             // E72
             // 
@@ -1207,6 +1313,7 @@
             this.E72.Size = new System.Drawing.Size(30, 30);
             this.E72.TabIndex = 169;
             this.E72.UseVisualStyleBackColor = true;
+            this.E72.Click += new System.EventHandler(this.E72_Click);
             // 
             // D72
             // 
@@ -1216,6 +1323,7 @@
             this.D72.Size = new System.Drawing.Size(30, 30);
             this.D72.TabIndex = 168;
             this.D72.UseVisualStyleBackColor = true;
+            this.D72.Click += new System.EventHandler(this.D72_Click);
             // 
             // C72
             // 
@@ -1225,6 +1333,7 @@
             this.C72.Size = new System.Drawing.Size(30, 30);
             this.C72.TabIndex = 167;
             this.C72.UseVisualStyleBackColor = true;
+            this.C72.Click += new System.EventHandler(this.C72_Click);
             // 
             // B72
             // 
@@ -1234,6 +1343,7 @@
             this.B72.Size = new System.Drawing.Size(30, 30);
             this.B72.TabIndex = 166;
             this.B72.UseVisualStyleBackColor = true;
+            this.B72.Click += new System.EventHandler(this.B72_Click);
             // 
             // A72
             // 
@@ -1243,6 +1353,7 @@
             this.A72.Size = new System.Drawing.Size(30, 30);
             this.A72.TabIndex = 165;
             this.A72.UseVisualStyleBackColor = true;
+            this.A72.Click += new System.EventHandler(this.A72_Click);
             // 
             // I62
             // 
@@ -1252,6 +1363,7 @@
             this.I62.Size = new System.Drawing.Size(30, 30);
             this.I62.TabIndex = 163;
             this.I62.UseVisualStyleBackColor = true;
+            this.I62.Click += new System.EventHandler(this.I62_Click);
             // 
             // H62
             // 
@@ -1261,6 +1373,7 @@
             this.H62.Size = new System.Drawing.Size(30, 30);
             this.H62.TabIndex = 162;
             this.H62.UseVisualStyleBackColor = true;
+            this.H62.Click += new System.EventHandler(this.H62_Click);
             // 
             // G62
             // 
@@ -1270,6 +1383,7 @@
             this.G62.Size = new System.Drawing.Size(30, 30);
             this.G62.TabIndex = 161;
             this.G62.UseVisualStyleBackColor = true;
+            this.G62.Click += new System.EventHandler(this.G62_Click);
             // 
             // F62
             // 
@@ -1279,6 +1393,7 @@
             this.F62.Size = new System.Drawing.Size(30, 30);
             this.F62.TabIndex = 160;
             this.F62.UseVisualStyleBackColor = true;
+            this.F62.Click += new System.EventHandler(this.F62_Click);
             // 
             // E62
             // 
@@ -1288,6 +1403,7 @@
             this.E62.Size = new System.Drawing.Size(30, 30);
             this.E62.TabIndex = 159;
             this.E62.UseVisualStyleBackColor = true;
+            this.E62.Click += new System.EventHandler(this.E62_Click);
             // 
             // D62
             // 
@@ -1297,6 +1413,7 @@
             this.D62.Size = new System.Drawing.Size(30, 30);
             this.D62.TabIndex = 158;
             this.D62.UseVisualStyleBackColor = true;
+            this.D62.Click += new System.EventHandler(this.D62_Click);
             // 
             // C62
             // 
@@ -1306,6 +1423,7 @@
             this.C62.Size = new System.Drawing.Size(30, 30);
             this.C62.TabIndex = 157;
             this.C62.UseVisualStyleBackColor = true;
+            this.C62.Click += new System.EventHandler(this.C62_Click);
             // 
             // B62
             // 
@@ -1315,6 +1433,7 @@
             this.B62.Size = new System.Drawing.Size(30, 30);
             this.B62.TabIndex = 156;
             this.B62.UseVisualStyleBackColor = true;
+            this.B62.Click += new System.EventHandler(this.B62_Click);
             // 
             // A62
             // 
@@ -1324,6 +1443,7 @@
             this.A62.Size = new System.Drawing.Size(30, 30);
             this.A62.TabIndex = 155;
             this.A62.UseVisualStyleBackColor = true;
+            this.A62.Click += new System.EventHandler(this.A62_Click);
             // 
             // I52
             // 
@@ -1333,6 +1453,7 @@
             this.I52.Size = new System.Drawing.Size(30, 30);
             this.I52.TabIndex = 153;
             this.I52.UseVisualStyleBackColor = true;
+            this.I52.Click += new System.EventHandler(this.I52_Click);
             // 
             // H52
             // 
@@ -1342,6 +1463,7 @@
             this.H52.Size = new System.Drawing.Size(30, 30);
             this.H52.TabIndex = 152;
             this.H52.UseVisualStyleBackColor = true;
+            this.H52.Click += new System.EventHandler(this.H52_Click);
             // 
             // G52
             // 
@@ -1351,6 +1473,7 @@
             this.G52.Size = new System.Drawing.Size(30, 30);
             this.G52.TabIndex = 151;
             this.G52.UseVisualStyleBackColor = true;
+            this.G52.Click += new System.EventHandler(this.G52_Click);
             // 
             // F52
             // 
@@ -1360,6 +1483,7 @@
             this.F52.Size = new System.Drawing.Size(30, 30);
             this.F52.TabIndex = 150;
             this.F52.UseVisualStyleBackColor = true;
+            this.F52.Click += new System.EventHandler(this.F52_Click);
             // 
             // E52
             // 
@@ -1369,6 +1493,7 @@
             this.E52.Size = new System.Drawing.Size(30, 30);
             this.E52.TabIndex = 149;
             this.E52.UseVisualStyleBackColor = true;
+            this.E52.Click += new System.EventHandler(this.E52_Click);
             // 
             // D52
             // 
@@ -1378,6 +1503,7 @@
             this.D52.Size = new System.Drawing.Size(30, 30);
             this.D52.TabIndex = 148;
             this.D52.UseVisualStyleBackColor = true;
+            this.D52.Click += new System.EventHandler(this.D52_Click);
             // 
             // C52
             // 
@@ -1387,6 +1513,7 @@
             this.C52.Size = new System.Drawing.Size(30, 30);
             this.C52.TabIndex = 147;
             this.C52.UseVisualStyleBackColor = true;
+            this.C52.Click += new System.EventHandler(this.C52_Click);
             // 
             // B52
             // 
@@ -1396,6 +1523,7 @@
             this.B52.Size = new System.Drawing.Size(30, 30);
             this.B52.TabIndex = 146;
             this.B52.UseVisualStyleBackColor = true;
+            this.B52.Click += new System.EventHandler(this.B52_Click);
             // 
             // A52
             // 
@@ -1405,6 +1533,7 @@
             this.A52.Size = new System.Drawing.Size(30, 30);
             this.A52.TabIndex = 145;
             this.A52.UseVisualStyleBackColor = true;
+            this.A52.Click += new System.EventHandler(this.A52_Click);
             // 
             // I42
             // 
@@ -1414,6 +1543,7 @@
             this.I42.Size = new System.Drawing.Size(30, 30);
             this.I42.TabIndex = 143;
             this.I42.UseVisualStyleBackColor = true;
+            this.I42.Click += new System.EventHandler(this.I42_Click);
             // 
             // H42
             // 
@@ -1423,6 +1553,7 @@
             this.H42.Size = new System.Drawing.Size(30, 30);
             this.H42.TabIndex = 142;
             this.H42.UseVisualStyleBackColor = true;
+            this.H42.Click += new System.EventHandler(this.H42_Click);
             // 
             // G42
             // 
@@ -1432,6 +1563,7 @@
             this.G42.Size = new System.Drawing.Size(30, 30);
             this.G42.TabIndex = 141;
             this.G42.UseVisualStyleBackColor = true;
+            this.G42.Click += new System.EventHandler(this.G42_Click);
             // 
             // F42
             // 
@@ -1441,6 +1573,7 @@
             this.F42.Size = new System.Drawing.Size(30, 30);
             this.F42.TabIndex = 140;
             this.F42.UseVisualStyleBackColor = true;
+            this.F42.Click += new System.EventHandler(this.F42_Click);
             // 
             // E42
             // 
@@ -1450,6 +1583,7 @@
             this.E42.Size = new System.Drawing.Size(30, 30);
             this.E42.TabIndex = 139;
             this.E42.UseVisualStyleBackColor = true;
+            this.E42.Click += new System.EventHandler(this.E42_Click);
             // 
             // D42
             // 
@@ -1459,6 +1593,7 @@
             this.D42.Size = new System.Drawing.Size(30, 30);
             this.D42.TabIndex = 138;
             this.D42.UseVisualStyleBackColor = true;
+            this.D42.Click += new System.EventHandler(this.D42_Click);
             // 
             // C42
             // 
@@ -1468,6 +1603,7 @@
             this.C42.Size = new System.Drawing.Size(30, 30);
             this.C42.TabIndex = 137;
             this.C42.UseVisualStyleBackColor = true;
+            this.C42.Click += new System.EventHandler(this.C42_Click);
             // 
             // B42
             // 
@@ -1477,6 +1613,7 @@
             this.B42.Size = new System.Drawing.Size(30, 30);
             this.B42.TabIndex = 136;
             this.B42.UseVisualStyleBackColor = true;
+            this.B42.Click += new System.EventHandler(this.B42_Click);
             // 
             // A42
             // 
@@ -1486,6 +1623,7 @@
             this.A42.Size = new System.Drawing.Size(30, 30);
             this.A42.TabIndex = 135;
             this.A42.UseVisualStyleBackColor = true;
+            this.A42.Click += new System.EventHandler(this.A42_Click);
             // 
             // I32
             // 
@@ -1495,6 +1633,7 @@
             this.I32.Size = new System.Drawing.Size(30, 30);
             this.I32.TabIndex = 133;
             this.I32.UseVisualStyleBackColor = true;
+            this.I32.Click += new System.EventHandler(this.I32_Click);
             // 
             // H32
             // 
@@ -1504,6 +1643,7 @@
             this.H32.Size = new System.Drawing.Size(30, 30);
             this.H32.TabIndex = 132;
             this.H32.UseVisualStyleBackColor = true;
+            this.H32.Click += new System.EventHandler(this.H32_Click);
             // 
             // G32
             // 
@@ -1513,6 +1653,7 @@
             this.G32.Size = new System.Drawing.Size(30, 30);
             this.G32.TabIndex = 131;
             this.G32.UseVisualStyleBackColor = true;
+            this.G32.Click += new System.EventHandler(this.G32_Click);
             // 
             // F32
             // 
@@ -1522,6 +1663,7 @@
             this.F32.Size = new System.Drawing.Size(30, 30);
             this.F32.TabIndex = 130;
             this.F32.UseVisualStyleBackColor = true;
+            this.F32.Click += new System.EventHandler(this.F32_Click);
             // 
             // E32
             // 
@@ -1531,6 +1673,7 @@
             this.E32.Size = new System.Drawing.Size(30, 30);
             this.E32.TabIndex = 129;
             this.E32.UseVisualStyleBackColor = true;
+            this.E32.Click += new System.EventHandler(this.E32_Click);
             // 
             // D32
             // 
@@ -1540,6 +1683,7 @@
             this.D32.Size = new System.Drawing.Size(30, 30);
             this.D32.TabIndex = 128;
             this.D32.UseVisualStyleBackColor = true;
+            this.D32.Click += new System.EventHandler(this.D32_Click);
             // 
             // C32
             // 
@@ -1549,6 +1693,7 @@
             this.C32.Size = new System.Drawing.Size(30, 30);
             this.C32.TabIndex = 127;
             this.C32.UseVisualStyleBackColor = true;
+            this.C32.Click += new System.EventHandler(this.C32_Click);
             // 
             // B32
             // 
@@ -1558,6 +1703,7 @@
             this.B32.Size = new System.Drawing.Size(30, 30);
             this.B32.TabIndex = 126;
             this.B32.UseVisualStyleBackColor = true;
+            this.B32.Click += new System.EventHandler(this.B32_Click);
             // 
             // A32
             // 
@@ -1567,6 +1713,7 @@
             this.A32.Size = new System.Drawing.Size(30, 30);
             this.A32.TabIndex = 125;
             this.A32.UseVisualStyleBackColor = true;
+            this.A32.Click += new System.EventHandler(this.A32_Click);
             // 
             // I22
             // 
@@ -1576,6 +1723,7 @@
             this.I22.Size = new System.Drawing.Size(30, 30);
             this.I22.TabIndex = 123;
             this.I22.UseVisualStyleBackColor = true;
+            this.I22.Click += new System.EventHandler(this.I22_Click);
             // 
             // H22
             // 
@@ -1585,6 +1733,7 @@
             this.H22.Size = new System.Drawing.Size(30, 30);
             this.H22.TabIndex = 122;
             this.H22.UseVisualStyleBackColor = true;
+            this.H22.Click += new System.EventHandler(this.H22_Click);
             // 
             // G22
             // 
@@ -1594,6 +1743,7 @@
             this.G22.Size = new System.Drawing.Size(30, 30);
             this.G22.TabIndex = 121;
             this.G22.UseVisualStyleBackColor = true;
+            this.G22.Click += new System.EventHandler(this.G22_Click);
             // 
             // F22
             // 
@@ -1603,6 +1753,7 @@
             this.F22.Size = new System.Drawing.Size(30, 30);
             this.F22.TabIndex = 120;
             this.F22.UseVisualStyleBackColor = true;
+            this.F22.Click += new System.EventHandler(this.F22_Click);
             // 
             // E22
             // 
@@ -1612,6 +1763,7 @@
             this.E22.Size = new System.Drawing.Size(30, 30);
             this.E22.TabIndex = 119;
             this.E22.UseVisualStyleBackColor = true;
+            this.E22.Click += new System.EventHandler(this.E22_Click);
             // 
             // D22
             // 
@@ -1621,6 +1773,7 @@
             this.D22.Size = new System.Drawing.Size(30, 30);
             this.D22.TabIndex = 118;
             this.D22.UseVisualStyleBackColor = true;
+            this.D22.Click += new System.EventHandler(this.D22_Click);
             // 
             // C22
             // 
@@ -1630,6 +1783,7 @@
             this.C22.Size = new System.Drawing.Size(30, 30);
             this.C22.TabIndex = 117;
             this.C22.UseVisualStyleBackColor = true;
+            this.C22.Click += new System.EventHandler(this.C22_Click);
             // 
             // B22
             // 
@@ -1639,6 +1793,7 @@
             this.B22.Size = new System.Drawing.Size(30, 30);
             this.B22.TabIndex = 116;
             this.B22.UseVisualStyleBackColor = true;
+            this.B22.Click += new System.EventHandler(this.B22_Click);
             // 
             // A22
             // 
@@ -1648,6 +1803,7 @@
             this.A22.Size = new System.Drawing.Size(30, 30);
             this.A22.TabIndex = 115;
             this.A22.UseVisualStyleBackColor = true;
+            this.A22.Click += new System.EventHandler(this.A22_Click);
             // 
             // I12
             // 
@@ -1657,6 +1813,7 @@
             this.I12.Size = new System.Drawing.Size(30, 30);
             this.I12.TabIndex = 113;
             this.I12.UseVisualStyleBackColor = true;
+            this.I12.Click += new System.EventHandler(this.I12_Click);
             // 
             // H12
             // 
@@ -1666,6 +1823,7 @@
             this.H12.Size = new System.Drawing.Size(30, 30);
             this.H12.TabIndex = 112;
             this.H12.UseVisualStyleBackColor = true;
+            this.H12.Click += new System.EventHandler(this.H12_Click);
             // 
             // G12
             // 
@@ -1675,6 +1833,7 @@
             this.G12.Size = new System.Drawing.Size(30, 30);
             this.G12.TabIndex = 111;
             this.G12.UseVisualStyleBackColor = true;
+            this.G12.Click += new System.EventHandler(this.G12_Click);
             // 
             // F12
             // 
@@ -1684,6 +1843,7 @@
             this.F12.Size = new System.Drawing.Size(30, 30);
             this.F12.TabIndex = 110;
             this.F12.UseVisualStyleBackColor = true;
+            this.F12.Click += new System.EventHandler(this.F12_Click);
             // 
             // E12
             // 
@@ -1693,6 +1853,7 @@
             this.E12.Size = new System.Drawing.Size(30, 30);
             this.E12.TabIndex = 109;
             this.E12.UseVisualStyleBackColor = true;
+            this.E12.Click += new System.EventHandler(this.E12_Click);
             // 
             // D12
             // 
@@ -1702,6 +1863,7 @@
             this.D12.Size = new System.Drawing.Size(30, 30);
             this.D12.TabIndex = 108;
             this.D12.UseVisualStyleBackColor = true;
+            this.D12.Click += new System.EventHandler(this.D12_Click);
             // 
             // C12
             // 
@@ -1711,6 +1873,7 @@
             this.C12.Size = new System.Drawing.Size(30, 30);
             this.C12.TabIndex = 107;
             this.C12.UseVisualStyleBackColor = true;
+            this.C12.Click += new System.EventHandler(this.C12_Click);
             // 
             // B12
             // 
@@ -1720,6 +1883,7 @@
             this.B12.Size = new System.Drawing.Size(30, 30);
             this.B12.TabIndex = 106;
             this.B12.UseVisualStyleBackColor = true;
+            this.B12.Click += new System.EventHandler(this.B12_Click);
             // 
             // A12
             // 
@@ -1729,6 +1893,7 @@
             this.A12.Size = new System.Drawing.Size(30, 30);
             this.A12.TabIndex = 105;
             this.A12.UseVisualStyleBackColor = true;
+            this.A12.Click += new System.EventHandler(this.A12_Click);
             // 
             // KSNumbers2
             // 
@@ -1760,9 +1925,9 @@
             this.Ausgabe.Enabled = false;
             this.Ausgabe.Font = new System.Drawing.Font("Montserrat", 11.95F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Ausgabe.ForeColor = System.Drawing.Color.Black;
-            this.Ausgabe.Location = new System.Drawing.Point(510, 250);
+            this.Ausgabe.Location = new System.Drawing.Point(511, 173);
             this.Ausgabe.Name = "Ausgabe";
-            this.Ausgabe.Size = new System.Drawing.Size(267, 132);
+            this.Ausgabe.Size = new System.Drawing.Size(267, 209);
             this.Ausgabe.TabIndex = 206;
             this.Ausgabe.Text = "Bitte Anzahl der Schiffe pro Spieler auswählen";
             // 
@@ -1888,29 +2053,27 @@
             this.GrößeDerSchiffeInFelder.TabIndex = 214;
             this.GrößeDerSchiffeInFelder.Text = "Größe der Schiffe in Felder";
             // 
-            // vertikal
+            // option1_button
             // 
-            this.vertikal.Enabled = false;
-            this.vertikal.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.vertikal.Location = new System.Drawing.Point(510, 146);
-            this.vertikal.Name = "vertikal";
-            this.vertikal.Size = new System.Drawing.Size(112, 47);
-            this.vertikal.TabIndex = 218;
-            this.vertikal.Text = "vertikal nach unten";
-            this.vertikal.UseVisualStyleBackColor = true;
-            this.vertikal.Click += new System.EventHandler(this.vertikal_Click);
+            this.option1_button.Enabled = false;
+            this.option1_button.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.option1_button.Location = new System.Drawing.Point(492, 45);
+            this.option1_button.Name = "option1_button";
+            this.option1_button.Size = new System.Drawing.Size(130, 100);
+            this.option1_button.TabIndex = 218;
+            this.option1_button.UseVisualStyleBackColor = true;
+            this.option1_button.Click += new System.EventHandler(this.option1_Button_Click);
             // 
-            // horizontal
+            // option2_button
             // 
-            this.horizontal.Enabled = false;
-            this.horizontal.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.horizontal.Location = new System.Drawing.Point(665, 146);
-            this.horizontal.Name = "horizontal";
-            this.horizontal.Size = new System.Drawing.Size(112, 47);
-            this.horizontal.TabIndex = 219;
-            this.horizontal.Text = "horizontal nach rechts";
-            this.horizontal.UseVisualStyleBackColor = true;
-            this.horizontal.Click += new System.EventHandler(this.horizontal_Click);
+            this.option2_button.Enabled = false;
+            this.option2_button.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.option2_button.Location = new System.Drawing.Point(665, 45);
+            this.option2_button.Name = "option2_button";
+            this.option2_button.Size = new System.Drawing.Size(130, 100);
+            this.option2_button.TabIndex = 219;
+            this.option2_button.UseVisualStyleBackColor = true;
+            this.option2_button.Click += new System.EventHandler(this.option2_Button_Click);
             // 
             // Feld3P1
             // 
@@ -2051,32 +2214,43 @@
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dateiToolStripMenuItem,
-            this.ansichtToolStripMenuItem,
-            this.beendenToolStripMenuItem});
+            this.spielToolStripMenuItem,
+            this.infoToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1284, 24);
             this.menuStrip1.TabIndex = 233;
             this.menuStrip1.Text = "menuStrip1";
             // 
-            // dateiToolStripMenuItem
+            // spielToolStripMenuItem
             // 
-            this.dateiToolStripMenuItem.Name = "dateiToolStripMenuItem";
-            this.dateiToolStripMenuItem.Size = new System.Drawing.Size(46, 20);
-            this.dateiToolStripMenuItem.Text = "Datei";
+            this.spielToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.spielBeendenToolStripMenuItem,
+            this.spielBeendenToolStripMenuItem1});
+            this.spielToolStripMenuItem.Name = "spielToolStripMenuItem";
+            this.spielToolStripMenuItem.Size = new System.Drawing.Size(44, 20);
+            this.spielToolStripMenuItem.Text = "Spiel";
             // 
-            // ansichtToolStripMenuItem
+            // spielBeendenToolStripMenuItem
             // 
-            this.ansichtToolStripMenuItem.Name = "ansichtToolStripMenuItem";
-            this.ansichtToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.ansichtToolStripMenuItem.Text = "Ansicht";
+            this.spielBeendenToolStripMenuItem.Name = "spielBeendenToolStripMenuItem";
+            this.spielBeendenToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
+            this.spielBeendenToolStripMenuItem.Text = "Spiel neu starten";
+            this.spielBeendenToolStripMenuItem.Click += new System.EventHandler(this.spielBeendenToolStripMenuItem_Click);
             // 
-            // beendenToolStripMenuItem
+            // spielBeendenToolStripMenuItem1
             // 
-            this.beendenToolStripMenuItem.Name = "beendenToolStripMenuItem";
-            this.beendenToolStripMenuItem.Size = new System.Drawing.Size(65, 20);
-            this.beendenToolStripMenuItem.Text = "Beenden";
+            this.spielBeendenToolStripMenuItem1.Name = "spielBeendenToolStripMenuItem1";
+            this.spielBeendenToolStripMenuItem1.Size = new System.Drawing.Size(161, 22);
+            this.spielBeendenToolStripMenuItem1.Text = "Spiel beenden";
+            this.spielBeendenToolStripMenuItem1.Click += new System.EventHandler(this.spielBeendenToolStripMenuItem1_Click);
+            // 
+            // infoToolStripMenuItem
+            // 
+            this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
+            this.infoToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
+            this.infoToolStripMenuItem.Text = "Info";
+            this.infoToolStripMenuItem.Click += new System.EventHandler(this.infoToolStripMenuItem_Click);
             // 
             // SchiffeVersenken
             // 
@@ -2097,8 +2271,8 @@
             this.Controls.Add(this.Schiff4FP1);
             this.Controls.Add(this.Schiff3FP2);
             this.Controls.Add(this.Schiff3FP1);
-            this.Controls.Add(this.horizontal);
-            this.Controls.Add(this.vertikal);
+            this.Controls.Add(this.option2_button);
+            this.Controls.Add(this.option1_button);
             this.Controls.Add(this.GdS_5);
             this.Controls.Add(this.GdS_4);
             this.Controls.Add(this.GdS_3);
@@ -2292,10 +2466,15 @@
             this.PerformLayout();
 
         }
-
+        private System.Windows.Forms.RichTextBox Ausgabe;
+        private MenuStrip menuStrip1;
+        private ToolStripMenuItem spielToolStripMenuItem;
+        private ToolStripMenuItem spielBeendenToolStripMenuItem;
+        private ToolStripMenuItem spielBeendenToolStripMenuItem1;
+        private ToolStripMenuItem infoToolStripMenuItem;
         #endregion
 
-        #region Elemente des Spiels
+        #region elements of forms
         private System.Windows.Forms.Label KSLetters1;
         private System.Windows.Forms.Label KSNumbers1;
         private System.Windows.Forms.Button A11;
@@ -2464,7 +2643,6 @@
         private System.Windows.Forms.Button A12;
         private System.Windows.Forms.Label KSNumbers2;
         private System.Windows.Forms.Label KSLetters2;
-        private System.Windows.Forms.RichTextBox Ausgabe;
         private System.Windows.Forms.Label Schiffe;
         private System.Windows.Forms.Button AdS_3;
         private System.Windows.Forms.Button AdS_4;
@@ -2476,8 +2654,8 @@
         private System.Windows.Forms.Button GdS_4;
         private System.Windows.Forms.Button GdS_3;
         private System.Windows.Forms.Label GrößeDerSchiffeInFelder;
-        private System.Windows.Forms.Button vertikal;
-        private System.Windows.Forms.Button horizontal;
+        private System.Windows.Forms.Button option1_button;
+        private System.Windows.Forms.Button option2_button;
         private System.Windows.Forms.Label Feld3P1;
         private System.Windows.Forms.Label Feld4P1;
         private System.Windows.Forms.Label Feld5P1;
@@ -2491,17 +2669,1933 @@
         private System.Windows.Forms.Label Schiff4FP1;
         private System.Windows.Forms.Label Schiff3FP2;
         private System.Windows.Forms.Label Schiff3FP1;
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem dateiToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ansichtToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem beendenToolStripMenuItem;
 
         #endregion
 
-        public void buttonlock_AdS()
+        #region enable coordinates
+
+        /// <summary>
+        /// Entsperrt die Koordinaten der Spieler, um Schiffe zu platzieren oder sie zu beschießen
+        /// </summary>
+        /// <param name="Player">0 entsperrt alle Koordinaten. 1 enstperrt nur die Koordinaten des 1. Spielers und 2 die des 2.</param>
+        public void Enablecoordinates(int Player)
         {
-            Ausgabe.Text = "Sie haben " + Player1.AnzahlderSchiffeGesammt + " Schiffe ausgewählt."; //Gibt Text im Ausgabefenster aus
-            Player2.AnzahlderSchiffeGesammt = Player1.AnzahlderSchiffeGesammt;  //Weißt dem 2. Spieler ebensoviel Schiffe zu wie dem 1. Spieler
+            if (Player == 0)
+            {
+                A11.Enabled = true; //Buttons werden entsperrt
+                A21.Enabled = true;
+                A31.Enabled = true;
+                A41.Enabled = true;
+                A51.Enabled = true;
+                A61.Enabled = true;
+                A71.Enabled = true;
+                A81.Enabled = true;
+                A81.Enabled = true;
+                A91.Enabled = true;
+                A12.Enabled = true;
+                A22.Enabled = true;
+                A32.Enabled = true;
+                A42.Enabled = true;
+                A52.Enabled = true;
+                A62.Enabled = true;
+                A72.Enabled = true;
+                A82.Enabled = true;
+                A92.Enabled = true;
+                B11.Enabled = true;
+                B21.Enabled = true;
+                B31.Enabled = true;
+                B41.Enabled = true;
+                B51.Enabled = true;
+                B61.Enabled = true;
+                B71.Enabled = true;
+                B81.Enabled = true;
+                B91.Enabled = true;
+                B12.Enabled = true;
+                B22.Enabled = true;
+                B32.Enabled = true;
+                B42.Enabled = true;
+                B52.Enabled = true;
+                B62.Enabled = true;
+                B72.Enabled = true;
+                B82.Enabled = true;
+                B92.Enabled = true;
+                C11.Enabled = true;
+                C21.Enabled = true;
+                C31.Enabled = true;
+                C41.Enabled = true;
+                C51.Enabled = true;
+                C61.Enabled = true;
+                C71.Enabled = true;
+                C81.Enabled = true;
+                C91.Enabled = true;
+                C12.Enabled = true;
+                C22.Enabled = true;
+                C32.Enabled = true;
+                C42.Enabled = true;
+                C52.Enabled = true;
+                C62.Enabled = true;
+                C72.Enabled = true;
+                C82.Enabled = true;
+                C92.Enabled = true;
+                D11.Enabled = true;
+                D21.Enabled = true;
+                D31.Enabled = true;
+                D41.Enabled = true;
+                D51.Enabled = true;
+                D61.Enabled = true;
+                D71.Enabled = true;
+                D81.Enabled = true;
+                D91.Enabled = true;
+                D12.Enabled = true;
+                D22.Enabled = true;
+                D32.Enabled = true;
+                D42.Enabled = true;
+                D52.Enabled = true;
+                D62.Enabled = true;
+                D72.Enabled = true;
+                D82.Enabled = true;
+                D92.Enabled = true;
+                E11.Enabled = true;
+                E21.Enabled = true;
+                E31.Enabled = true;
+                E41.Enabled = true;
+                E51.Enabled = true;
+                E61.Enabled = true;
+                E71.Enabled = true;
+                E81.Enabled = true;
+                E91.Enabled = true;
+                E12.Enabled = true;
+                E22.Enabled = true;
+                E32.Enabled = true;
+                E42.Enabled = true;
+                E52.Enabled = true;
+                E62.Enabled = true;
+                E72.Enabled = true;
+                E82.Enabled = true;
+                E92.Enabled = true;
+                F11.Enabled = true;
+                F21.Enabled = true;
+                F31.Enabled = true;
+                F41.Enabled = true;
+                F51.Enabled = true;
+                F61.Enabled = true;
+                F71.Enabled = true;
+                F81.Enabled = true;
+                F91.Enabled = true;
+                F12.Enabled = true;
+                F22.Enabled = true;
+                F32.Enabled = true;
+                F42.Enabled = true;
+                F52.Enabled = true;
+                F62.Enabled = true;
+                F72.Enabled = true;
+                F82.Enabled = true;
+                F92.Enabled = true;
+                G11.Enabled = true;
+                G21.Enabled = true;
+                G31.Enabled = true;
+                G41.Enabled = true;
+                G51.Enabled = true;
+                G61.Enabled = true;
+                G71.Enabled = true;
+                G81.Enabled = true;
+                G91.Enabled = true;
+                G12.Enabled = true;
+                G22.Enabled = true;
+                G32.Enabled = true;
+                G42.Enabled = true;
+                G52.Enabled = true;
+                G62.Enabled = true;
+                G72.Enabled = true;
+                G82.Enabled = true;
+                G92.Enabled = true;
+                H11.Enabled = true;
+                H21.Enabled = true;
+                H31.Enabled = true;
+                H41.Enabled = true;
+                H51.Enabled = true;
+                H61.Enabled = true;
+                H71.Enabled = true;
+                H81.Enabled = true;
+                H91.Enabled = true;
+                H12.Enabled = true;
+                H22.Enabled = true;
+                H32.Enabled = true;
+                H42.Enabled = true;
+                H52.Enabled = true;
+                H62.Enabled = true;
+                H72.Enabled = true;
+                H82.Enabled = true;
+                H92.Enabled = true;
+                I11.Enabled = true;
+                I21.Enabled = true;
+                I31.Enabled = true;
+                I41.Enabled = true;
+                I51.Enabled = true;
+                I61.Enabled = true;
+                I71.Enabled = true;
+                I81.Enabled = true;
+                I91.Enabled = true;
+                I12.Enabled = true;
+                I22.Enabled = true;
+                I32.Enabled = true;
+                I42.Enabled = true;
+                I52.Enabled = true;
+                I62.Enabled = true;
+                I72.Enabled = true;
+                I82.Enabled = true;
+                I92.Enabled = true;
+            }
+            else if (Player == 1)
+            {
+                A11.Enabled = true; //Buttons werden entsperrt
+                A21.Enabled = true;
+                A31.Enabled = true;
+                A41.Enabled = true;
+                A51.Enabled = true;
+                A61.Enabled = true;
+                A71.Enabled = true;
+                A81.Enabled = true;
+                A81.Enabled = true;
+                A91.Enabled = true;
+                B11.Enabled = true;
+                B21.Enabled = true;
+                B31.Enabled = true;
+                B41.Enabled = true;
+                B51.Enabled = true;
+                B61.Enabled = true;
+                B71.Enabled = true;
+                B81.Enabled = true;
+                B91.Enabled = true;
+                C11.Enabled = true;
+                C21.Enabled = true;
+                C31.Enabled = true;
+                C41.Enabled = true;
+                C51.Enabled = true;
+                C61.Enabled = true;
+                C71.Enabled = true;
+                C81.Enabled = true;
+                C91.Enabled = true;
+                D11.Enabled = true;
+                D21.Enabled = true;
+                D31.Enabled = true;
+                D41.Enabled = true;
+                D51.Enabled = true;
+                D61.Enabled = true;
+                D71.Enabled = true;
+                D81.Enabled = true;
+                D91.Enabled = true;
+                E11.Enabled = true;
+                E21.Enabled = true;
+                E31.Enabled = true;
+                E41.Enabled = true;
+                E51.Enabled = true;
+                E61.Enabled = true;
+                E71.Enabled = true;
+                E81.Enabled = true;
+                E91.Enabled = true;
+                F11.Enabled = true;
+                F21.Enabled = true;
+                F31.Enabled = true;
+                F41.Enabled = true;
+                F51.Enabled = true;
+                F61.Enabled = true;
+                F71.Enabled = true;
+                F81.Enabled = true;
+                F91.Enabled = true;
+                G11.Enabled = true;
+                G21.Enabled = true;
+                G31.Enabled = true;
+                G41.Enabled = true;
+                G51.Enabled = true;
+                G61.Enabled = true;
+                G71.Enabled = true;
+                G81.Enabled = true;
+                G91.Enabled = true;
+                H11.Enabled = true;
+                H21.Enabled = true;
+                H31.Enabled = true;
+                H41.Enabled = true;
+                H51.Enabled = true;
+                H61.Enabled = true;
+                H71.Enabled = true;
+                H81.Enabled = true;
+                H91.Enabled = true;
+                I11.Enabled = true;
+                I21.Enabled = true;
+                I31.Enabled = true;
+                I41.Enabled = true;
+                I51.Enabled = true;
+                I61.Enabled = true;
+                I71.Enabled = true;
+                I81.Enabled = true;
+                I91.Enabled = true;
+            }
+            else if (Player == 2)
+            {
+                A12.Enabled = true;
+                A22.Enabled = true;
+                A32.Enabled = true;
+                A42.Enabled = true;
+                A52.Enabled = true;
+                A62.Enabled = true;
+                A72.Enabled = true;
+                A82.Enabled = true;
+                A92.Enabled = true;
+                B12.Enabled = true;
+                B22.Enabled = true;
+                B32.Enabled = true;
+                B42.Enabled = true;
+                B52.Enabled = true;
+                B62.Enabled = true;
+                B72.Enabled = true;
+                B82.Enabled = true;
+                B92.Enabled = true;
+                C12.Enabled = true;
+                C22.Enabled = true;
+                C32.Enabled = true;
+                C42.Enabled = true;
+                C52.Enabled = true;
+                C62.Enabled = true;
+                C72.Enabled = true;
+                C82.Enabled = true;
+                C92.Enabled = true;
+                D12.Enabled = true;
+                D22.Enabled = true;
+                D32.Enabled = true;
+                D42.Enabled = true;
+                D52.Enabled = true;
+                D62.Enabled = true;
+                D72.Enabled = true;
+                D82.Enabled = true;
+                D92.Enabled = true;
+                E12.Enabled = true;
+                E22.Enabled = true;
+                E32.Enabled = true;
+                E42.Enabled = true;
+                E52.Enabled = true;
+                E62.Enabled = true;
+                E72.Enabled = true;
+                E82.Enabled = true;
+                E92.Enabled = true;
+                F12.Enabled = true;
+                F22.Enabled = true;
+                F32.Enabled = true;
+                F42.Enabled = true;
+                F52.Enabled = true;
+                F62.Enabled = true;
+                F72.Enabled = true;
+                F82.Enabled = true;
+                F92.Enabled = true;
+                G12.Enabled = true;
+                G22.Enabled = true;
+                G32.Enabled = true;
+                G42.Enabled = true;
+                G52.Enabled = true;
+                G62.Enabled = true;
+                G72.Enabled = true;
+                G82.Enabled = true;
+                G92.Enabled = true;
+                H12.Enabled = true;
+                H22.Enabled = true;
+                H32.Enabled = true;
+                H42.Enabled = true;
+                H52.Enabled = true;
+                H62.Enabled = true;
+                H72.Enabled = true;
+                H82.Enabled = true;
+                H92.Enabled = true;
+                I12.Enabled = true;
+                I22.Enabled = true;
+                I32.Enabled = true;
+                I42.Enabled = true;
+                I52.Enabled = true;
+                I62.Enabled = true;
+                I72.Enabled = true;
+                I82.Enabled = true;
+                I92.Enabled = true;
+            }
+        }
+
+        #endregion
+
+        #region disable coordinates
+        /// <summary>
+        /// Sperrt die Koordinaten der Spieler, um Schiffe zu platzieren oder sie zu beschießen
+        /// </summary>
+        /// <param name="Player">0 sperrt alle Koordinaten. 1 sperrt nur die Koordinaten des 1. Spielers und 2 die des 2.</param>
+        public void Disablecoordinates(int Player)
+        {
+            if (Player == 0)
+            {
+                A11.Enabled = false;    //Buttons werden geperrt
+                A21.Enabled = false;
+                A31.Enabled = false;
+                A41.Enabled = false;
+                A51.Enabled = false;
+                A61.Enabled = false;
+                A71.Enabled = false;
+                A81.Enabled = false;
+                A81.Enabled = false;
+                A91.Enabled = false;
+                A12.Enabled = false;
+                A22.Enabled = false;
+                A32.Enabled = false;
+                A42.Enabled = false;
+                A52.Enabled = false;
+                A62.Enabled = false;
+                A72.Enabled = false;
+                A82.Enabled = false;
+                A92.Enabled = false;
+                B11.Enabled = false;
+                B21.Enabled = false;
+                B31.Enabled = false;
+                B41.Enabled = false;
+                B51.Enabled = false;
+                B61.Enabled = false;
+                B71.Enabled = false;
+                B81.Enabled = false;
+                B91.Enabled = false;
+                B12.Enabled = false;
+                B22.Enabled = false;
+                B32.Enabled = false;
+                B42.Enabled = false;
+                B52.Enabled = false;
+                B62.Enabled = false;
+                B72.Enabled = false;
+                B82.Enabled = false;
+                B92.Enabled = false;
+                C11.Enabled = false;
+                C21.Enabled = false;
+                C31.Enabled = false;
+                C41.Enabled = false;
+                C51.Enabled = false;
+                C61.Enabled = false;
+                C71.Enabled = false;
+                C81.Enabled = false;
+                C91.Enabled = false;
+                C12.Enabled = false;
+                C22.Enabled = false;
+                C32.Enabled = false;
+                C42.Enabled = false;
+                C52.Enabled = false;
+                C62.Enabled = false;
+                C72.Enabled = false;
+                C82.Enabled = false;
+                C92.Enabled = false;
+                D11.Enabled = false;
+                D21.Enabled = false;
+                D31.Enabled = false;
+                D41.Enabled = false;
+                D51.Enabled = false;
+                D61.Enabled = false;
+                D71.Enabled = false;
+                D81.Enabled = false;
+                D91.Enabled = false;
+                D12.Enabled = false;
+                D22.Enabled = false;
+                D32.Enabled = false;
+                D42.Enabled = false;
+                D52.Enabled = false;
+                D62.Enabled = false;
+                D72.Enabled = false;
+                D82.Enabled = false;
+                D92.Enabled = false;
+                E11.Enabled = false;
+                E21.Enabled = false;
+                E31.Enabled = false;
+                E41.Enabled = false;
+                E51.Enabled = false;
+                E61.Enabled = false;
+                E71.Enabled = false;
+                E81.Enabled = false;
+                E91.Enabled = false;
+                E12.Enabled = false;
+                E22.Enabled = false;
+                E32.Enabled = false;
+                E42.Enabled = false;
+                E52.Enabled = false;
+                E62.Enabled = false;
+                E72.Enabled = false;
+                E82.Enabled = false;
+                E92.Enabled = false;
+                F11.Enabled = false;
+                F21.Enabled = false;
+                F31.Enabled = false;
+                F41.Enabled = false;
+                F51.Enabled = false;
+                F61.Enabled = false;
+                F71.Enabled = false;
+                F81.Enabled = false;
+                F91.Enabled = false;
+                F12.Enabled = false;
+                F22.Enabled = false;
+                F32.Enabled = false;
+                F42.Enabled = false;
+                F52.Enabled = false;
+                F62.Enabled = false;
+                F72.Enabled = false;
+                F82.Enabled = false;
+                F92.Enabled = false;
+                G11.Enabled = false;
+                G21.Enabled = false;
+                G31.Enabled = false;
+                G41.Enabled = false;
+                G51.Enabled = false;
+                G61.Enabled = false;
+                G71.Enabled = false;
+                G81.Enabled = false;
+                G91.Enabled = false;
+                G12.Enabled = false;
+                G22.Enabled = false;
+                G32.Enabled = false;
+                G42.Enabled = false;
+                G52.Enabled = false;
+                G62.Enabled = false;
+                G72.Enabled = false;
+                G82.Enabled = false;
+                G92.Enabled = false;
+                H11.Enabled = false;
+                H21.Enabled = false;
+                H31.Enabled = false;
+                H41.Enabled = false;
+                H51.Enabled = false;
+                H61.Enabled = false;
+                H71.Enabled = false;
+                H81.Enabled = false;
+                H91.Enabled = false;
+                H12.Enabled = false;
+                H22.Enabled = false;
+                H32.Enabled = false;
+                H42.Enabled = false;
+                H52.Enabled = false;
+                H62.Enabled = false;
+                H72.Enabled = false;
+                H82.Enabled = false;
+                H92.Enabled = false;
+                I11.Enabled = false;
+                I21.Enabled = false;
+                I31.Enabled = false;
+                I41.Enabled = false;
+                I51.Enabled = false;
+                I61.Enabled = false;
+                I71.Enabled = false;
+                I81.Enabled = false;
+                I91.Enabled = false;
+                I12.Enabled = false;
+                I22.Enabled = false;
+                I32.Enabled = false;
+                I42.Enabled = false;
+                I52.Enabled = false;
+                I62.Enabled = false;
+                I72.Enabled = false;
+                I82.Enabled = false;
+                I92.Enabled = false;
+            }
+            else if (Player == 1)
+            {
+                A11.Enabled = false; //Buttons werden entsperrt
+                A21.Enabled = false;
+                A31.Enabled = false;
+                A41.Enabled = false;
+                A51.Enabled = false;
+                A61.Enabled = false;
+                A71.Enabled = false;
+                A81.Enabled = false;
+                A81.Enabled = false;
+                A91.Enabled = false;
+                B11.Enabled = false;
+                B21.Enabled = false;
+                B31.Enabled = false;
+                B41.Enabled = false;
+                B51.Enabled = false;
+                B61.Enabled = false;
+                B71.Enabled = false;
+                B81.Enabled = false;
+                B91.Enabled = false;
+                C11.Enabled = false;
+                C21.Enabled = false;
+                C31.Enabled = false;
+                C41.Enabled = false;
+                C51.Enabled = false;
+                C61.Enabled = false;
+                C71.Enabled = false;
+                C81.Enabled = false;
+                C91.Enabled = false;
+                D11.Enabled = false;
+                D21.Enabled = false;
+                D31.Enabled = false;
+                D41.Enabled = false;
+                D51.Enabled = false;
+                D61.Enabled = false;
+                D71.Enabled = false;
+                D81.Enabled = false;
+                D91.Enabled = false;
+                E11.Enabled = false;
+                E21.Enabled = false;
+                E31.Enabled = false;
+                E41.Enabled = false;
+                E51.Enabled = false;
+                E61.Enabled = false;
+                E71.Enabled = false;
+                E81.Enabled = false;
+                E91.Enabled = false;
+                F11.Enabled = false;
+                F21.Enabled = false;
+                F31.Enabled = false;
+                F41.Enabled = false;
+                F51.Enabled = false;
+                F61.Enabled = false;
+                F71.Enabled = false;
+                F81.Enabled = false;
+                F91.Enabled = false;
+                G11.Enabled = false;
+                G21.Enabled = false;
+                G31.Enabled = false;
+                G41.Enabled = false;
+                G51.Enabled = false;
+                G61.Enabled = false;
+                G71.Enabled = false;
+                G81.Enabled = false;
+                G91.Enabled = false;
+                H11.Enabled = false;
+                H21.Enabled = false;
+                H31.Enabled = false;
+                H41.Enabled = false;
+                H51.Enabled = false;
+                H61.Enabled = false;
+                H71.Enabled = false;
+                H81.Enabled = false;
+                H91.Enabled = false;
+                I11.Enabled = false;
+                I21.Enabled = false;
+                I31.Enabled = false;
+                I41.Enabled = false;
+                I51.Enabled = false;
+                I61.Enabled = false;
+                I71.Enabled = false;
+                I81.Enabled = false;
+                I91.Enabled = false;
+            }
+            else if (Player == 2)
+            {
+                A12.Enabled = false;
+                A22.Enabled = false;
+                A32.Enabled = false;
+                A42.Enabled = false;
+                A52.Enabled = false;
+                A62.Enabled = false;
+                A72.Enabled = false;
+                A82.Enabled = false;
+                A92.Enabled = false;
+                B12.Enabled = false;
+                B22.Enabled = false;
+                B32.Enabled = false;
+                B42.Enabled = false;
+                B52.Enabled = false;
+                B62.Enabled = false;
+                B72.Enabled = false;
+                B82.Enabled = false;
+                B92.Enabled = false;
+                C12.Enabled = false;
+                C22.Enabled = false;
+                C32.Enabled = false;
+                C42.Enabled = false;
+                C52.Enabled = false;
+                C62.Enabled = false;
+                C72.Enabled = false;
+                C82.Enabled = false;
+                C92.Enabled = false;
+                D12.Enabled = false;
+                D22.Enabled = false;
+                D32.Enabled = false;
+                D42.Enabled = false;
+                D52.Enabled = false;
+                D62.Enabled = false;
+                D72.Enabled = false;
+                D82.Enabled = false;
+                D92.Enabled = false;
+                E12.Enabled = false;
+                E22.Enabled = false;
+                E32.Enabled = false;
+                E42.Enabled = false;
+                E52.Enabled = false;
+                E62.Enabled = false;
+                E72.Enabled = false;
+                E82.Enabled = false;
+                E92.Enabled = false;
+                F12.Enabled = false;
+                F22.Enabled = false;
+                F32.Enabled = false;
+                F42.Enabled = false;
+                F52.Enabled = false;
+                F62.Enabled = false;
+                F72.Enabled = false;
+                F82.Enabled = false;
+                F92.Enabled = false;
+                G12.Enabled = false;
+                G22.Enabled = false;
+                G32.Enabled = false;
+                G42.Enabled = false;
+                G52.Enabled = false;
+                G62.Enabled = false;
+                G72.Enabled = false;
+                G82.Enabled = false;
+                G92.Enabled = false;
+                H12.Enabled = false;
+                H22.Enabled = false;
+                H32.Enabled = false;
+                H42.Enabled = false;
+                H52.Enabled = false;
+                H62.Enabled = false;
+                H72.Enabled = false;
+                H82.Enabled = false;
+                H92.Enabled = false;
+                I12.Enabled = false;
+                I22.Enabled = false;
+                I32.Enabled = false;
+                I42.Enabled = false;
+                I52.Enabled = false;
+                I62.Enabled = false;
+                I72.Enabled = false;
+                I82.Enabled = false;
+                I92.Enabled = false;
+            }
+        }
+
+        #endregion
+
+        #region blank field
+
+        /// <summary>
+        /// Blendet alles aus, was in den Koordinaten des Spielfeldes steht
+        /// </summary>
+        /// <param name="Player">0 blendet alle Koordinaten aus. 1 blendet nur die Koordinaten des 1. Spielers aus und 2 die des 2.</param>
+        public void Unshow(int Player)
+        {
+            if (Player == 0)
+            {
+                A11.Text = ""; //Buttons werden entsperrt
+                A21.Text = "";
+                A31.Text = "";
+                A41.Text = "";
+                A51.Text = "";
+                A61.Text = "";
+                A71.Text = "";
+                A81.Text = "";
+                A81.Text = "";
+                A91.Text = "";
+                A12.Text = "";
+                A22.Text = "";
+                A32.Text = "";
+                A42.Text = "";
+                A52.Text = "";
+                A62.Text = "";
+                A72.Text = "";
+                A82.Text = "";
+                A92.Text = "";
+                B11.Text = "";
+                B21.Text = "";
+                B31.Text = "";
+                B41.Text = "";
+                B51.Text = "";
+                B61.Text = "";
+                B71.Text = "";
+                B81.Text = "";
+                B91.Text = "";
+                B12.Text = "";
+                B22.Text = "";
+                B32.Text = "";
+                B42.Text = "";
+                B52.Text = "";
+                B62.Text = "";
+                B72.Text = "";
+                B82.Text = "";
+                B92.Text = "";
+                C11.Text = "";
+                C21.Text = "";
+                C31.Text = "";
+                C41.Text = "";
+                C51.Text = "";
+                C61.Text = "";
+                C71.Text = "";
+                C81.Text = "";
+                C91.Text = "";
+                C12.Text = "";
+                C22.Text = "";
+                C32.Text = "";
+                C42.Text = "";
+                C52.Text = "";
+                C62.Text = "";
+                C72.Text = "";
+                C82.Text = "";
+                C92.Text = "";
+                D11.Text = "";
+                D21.Text = "";
+                D31.Text = "";
+                D41.Text = "";
+                D51.Text = "";
+                D61.Text = "";
+                D71.Text = "";
+                D81.Text = "";
+                D91.Text = "";
+                D12.Text = "";
+                D22.Text = "";
+                D32.Text = "";
+                D42.Text = "";
+                D52.Text = "";
+                D62.Text = "";
+                D72.Text = "";
+                D82.Text = "";
+                D92.Text = "";
+                E11.Text = "";
+                E21.Text = "";
+                E31.Text = "";
+                E41.Text = "";
+                E51.Text = "";
+                E61.Text = "";
+                E71.Text = "";
+                E81.Text = "";
+                E91.Text = "";
+                E12.Text = "";
+                E22.Text = "";
+                E32.Text = "";
+                E42.Text = "";
+                E52.Text = "";
+                E62.Text = "";
+                E72.Text = "";
+                E82.Text = "";
+                E92.Text = "";
+                F11.Text = "";
+                F21.Text = "";
+                F31.Text = "";
+                F41.Text = "";
+                F51.Text = "";
+                F61.Text = "";
+                F71.Text = "";
+                F81.Text = "";
+                F91.Text = "";
+                F12.Text = "";
+                F22.Text = "";
+                F32.Text = "";
+                F42.Text = "";
+                F52.Text = "";
+                F62.Text = "";
+                F72.Text = "";
+                F82.Text = "";
+                F92.Text = "";
+                G11.Text = "";
+                G21.Text = "";
+                G31.Text = "";
+                G41.Text = "";
+                G51.Text = "";
+                G61.Text = "";
+                G71.Text = "";
+                G81.Text = "";
+                G91.Text = "";
+                G12.Text = "";
+                G22.Text = "";
+                G32.Text = "";
+                G42.Text = "";
+                G52.Text = "";
+                G62.Text = "";
+                G72.Text = "";
+                G82.Text = "";
+                G92.Text = "";
+                H11.Text = "";
+                H21.Text = "";
+                H31.Text = "";
+                H41.Text = "";
+                H51.Text = "";
+                H61.Text = "";
+                H71.Text = "";
+                H81.Text = "";
+                H91.Text = "";
+                H12.Text = "";
+                H22.Text = "";
+                H32.Text = "";
+                H42.Text = "";
+                H52.Text = "";
+                H62.Text = "";
+                H72.Text = "";
+                H82.Text = "";
+                H92.Text = "";
+                I11.Text = "";
+                I21.Text = "";
+                I31.Text = "";
+                I41.Text = "";
+                I51.Text = "";
+                I61.Text = "";
+                I71.Text = "";
+                I81.Text = "";
+                I91.Text = "";
+                I12.Text = "";
+                I22.Text = "";
+                I32.Text = "";
+                I42.Text = "";
+                I52.Text = "";
+                I62.Text = "";
+                I72.Text = "";
+                I82.Text = "";
+                I92.Text = "";
+            }
+            else if (Player == 1)
+            {
+                A11.Text = ""; //Buttons werden entsperrt
+                A21.Text = "";
+                A31.Text = "";
+                A41.Text = "";
+                A51.Text = "";
+                A61.Text = "";
+                A71.Text = "";
+                A81.Text = "";
+                A81.Text = "";
+                A91.Text = "";
+                B11.Text = "";
+                B21.Text = "";
+                B31.Text = "";
+                B41.Text = "";
+                B51.Text = "";
+                B61.Text = "";
+                B71.Text = "";
+                B81.Text = "";
+                B91.Text = "";
+                C11.Text = "";
+                C21.Text = "";
+                C31.Text = "";
+                C41.Text = "";
+                C51.Text = "";
+                C61.Text = "";
+                C71.Text = "";
+                C81.Text = "";
+                C91.Text = "";
+                D11.Text = "";
+                D21.Text = "";
+                D31.Text = "";
+                D41.Text = "";
+                D51.Text = "";
+                D61.Text = "";
+                D71.Text = "";
+                D81.Text = "";
+                D91.Text = "";
+                E11.Text = "";
+                E21.Text = "";
+                E31.Text = "";
+                E41.Text = "";
+                E51.Text = "";
+                E61.Text = "";
+                E71.Text = "";
+                E81.Text = "";
+                E91.Text = "";
+                F11.Text = "";
+                F21.Text = "";
+                F31.Text = "";
+                F41.Text = "";
+                F51.Text = "";
+                F61.Text = "";
+                F71.Text = "";
+                F81.Text = "";
+                F91.Text = "";
+                G11.Text = "";
+                G21.Text = "";
+                G31.Text = "";
+                G41.Text = "";
+                G51.Text = "";
+                G61.Text = "";
+                G71.Text = "";
+                G81.Text = "";
+                G91.Text = "";
+                H11.Text = "";
+                H21.Text = "";
+                H31.Text = "";
+                H41.Text = "";
+                H51.Text = "";
+                H61.Text = "";
+                H71.Text = "";
+                H81.Text = "";
+                H91.Text = "";
+                I11.Text = "";
+                I21.Text = "";
+                I31.Text = "";
+                I41.Text = "";
+                I51.Text = "";
+                I61.Text = "";
+                I71.Text = "";
+                I81.Text = "";
+                I91.Text = "";
+            }
+            else if (Player == 2)
+            {
+                A12.Text = "";
+                A22.Text = "";
+                A32.Text = "";
+                A42.Text = "";
+                A52.Text = "";
+                A62.Text = "";
+                A72.Text = "";
+                A82.Text = "";
+                A92.Text = "";
+                B12.Text = "";
+                B22.Text = "";
+                B32.Text = "";
+                B42.Text = "";
+                B52.Text = "";
+                B62.Text = "";
+                B72.Text = "";
+                B82.Text = "";
+                B92.Text = "";
+                C12.Text = "";
+                C22.Text = "";
+                C32.Text = "";
+                C42.Text = "";
+                C52.Text = "";
+                C62.Text = "";
+                C72.Text = "";
+                C82.Text = "";
+                C92.Text = "";
+                D12.Text = "";
+                D22.Text = "";
+                D32.Text = "";
+                D42.Text = "";
+                D52.Text = "";
+                D62.Text = "";
+                D72.Text = "";
+                D82.Text = "";
+                D92.Text = "";
+                E12.Text = "";
+                E22.Text = "";
+                E32.Text = "";
+                E42.Text = "";
+                E52.Text = "";
+                E62.Text = "";
+                E72.Text = "";
+                E82.Text = "";
+                E92.Text = "";
+                F12.Text = "";
+                F22.Text = "";
+                F32.Text = "";
+                F42.Text = "";
+                F52.Text = "";
+                F62.Text = "";
+                F72.Text = "";
+                F82.Text = "";
+                F92.Text = "";
+                G12.Text = "";
+                G22.Text = "";
+                G32.Text = "";
+                G42.Text = "";
+                G52.Text = "";
+                G62.Text = "";
+                G72.Text = "";
+                G82.Text = "";
+                G92.Text = "";
+                H12.Text = "";
+                H22.Text = "";
+                H32.Text = "";
+                H42.Text = "";
+                H52.Text = "";
+                H62.Text = "";
+                H72.Text = "";
+                H82.Text = "";
+                H92.Text = "";
+                I12.Text = "";
+                I22.Text = "";
+                I32.Text = "";
+                I42.Text = "";
+                I52.Text = "";
+                I62.Text = "";
+                I72.Text = "";
+                I82.Text = "";
+                I92.Text = "";
+            }
+        }
+
+        #endregion
+
+        #region hide ships
+
+        /// <summary>
+        /// Blendet alle Schiffe auf dem Spielfeld aus
+        /// </summary>
+        public void HideShips()
+        {
+            if (player1._BattleArea[0, 0] == "O")
+            {
+                A11.Text = "";
+            }
+            if (player1._BattleArea[1, 0] == "O")
+            {
+                B11.Text = "";
+            }
+            if (player1._BattleArea[2, 0] == "O")
+            {
+                C11.Text = "";
+            }
+            if (player1._BattleArea[3, 0] == "O")
+            {
+                D11.Text = "";
+            }
+            if (player1._BattleArea[4, 0] == "O")
+            {
+                E11.Text = "";
+            }
+            if (player1._BattleArea[5, 0] == "O")
+            {
+                F11.Text = "";
+            }
+            if (player1._BattleArea[6, 0] == "O")
+            {
+                G11.Text = "";
+            }
+            if (player1._BattleArea[7, 0] == "O")
+            {
+                H11.Text = "";
+            }
+            if (player1._BattleArea[8, 0] == "O")
+            {
+                I11.Text = "";
+            }
+
+            if (player1._BattleArea[0, 1] == "O")
+            {
+                A21.Text = "";
+            }
+            if (player1._BattleArea[1, 1] == "O")
+            {
+                B21.Text = "";
+            }
+            if (player1._BattleArea[2, 1] == "O")
+            {
+                C21.Text = "";
+            }
+            if (player1._BattleArea[3, 1] == "O")
+            {
+                D21.Text = "";
+            }
+            if (player1._BattleArea[4, 1] == "O")
+            {
+                E21.Text = "";
+            }
+            if (player1._BattleArea[5, 1] == "O")
+            {
+                F21.Text = "";
+            }
+            if (player1._BattleArea[6, 1] == "O")
+            {
+                G21.Text = "";
+            }
+            if (player1._BattleArea[7, 1] == "O")
+            {
+                H21.Text = "";
+            }
+            if (player1._BattleArea[8, 1] == "O")
+            {
+                I21.Text = "";
+            }
+
+            if (player1._BattleArea[0, 2] == "O")
+            {
+                A31.Text = "";
+            }
+            if (player1._BattleArea[1, 2] == "O")
+            {
+                B31.Text = "";
+            }
+            if (player1._BattleArea[2, 2] == "O")
+            {
+                C31.Text = "";
+            }
+            if (player1._BattleArea[3, 2] == "O")
+            {
+                D31.Text = "";
+            }
+            if (player1._BattleArea[4, 2] == "O")
+            {
+                E31.Text = "";
+            }
+            if (player1._BattleArea[5, 2] == "O")
+            {
+                F31.Text = "";
+            }
+            if (player1._BattleArea[6, 2] == "O")
+            {
+                G31.Text = "";
+            }
+            if (player1._BattleArea[7, 2] == "O")
+            {
+                H31.Text = "";
+            }
+            if (player1._BattleArea[8, 2] == "O")
+            {
+                I31.Text = "";
+            }
+
+            if (player1._BattleArea[0, 3] == "O")
+            {
+                A41.Text = "";
+            }
+            if (player1._BattleArea[1, 3] == "O")
+            {
+                B41.Text = "";
+            }
+            if (player1._BattleArea[2, 3] == "O")
+            {
+                C41.Text = "";
+            }
+            if (player1._BattleArea[3, 3] == "O")
+            {
+                D41.Text = "";
+            }
+            if (player1._BattleArea[4, 3] == "O")
+            {
+                E41.Text = "";
+            }
+            if (player1._BattleArea[5, 3] == "O")
+            {
+                F41.Text = "";
+            }
+            if (player1._BattleArea[6, 3] == "O")
+            {
+                G41.Text = "";
+            }
+            if (player1._BattleArea[7, 3] == "O")
+            {
+                H41.Text = "";
+            }
+            if (player1._BattleArea[8, 3] == "O")
+            {
+                I41.Text = "";
+            }
+
+            if (player1._BattleArea[0, 4] == "O")
+            {
+                A51.Text = "";
+            }
+            if (player1._BattleArea[1, 4] == "O")
+            {
+                B51.Text = "";
+            }
+            if (player1._BattleArea[2, 4] == "O")
+            {
+                C51.Text = "";
+            }
+            if (player1._BattleArea[3, 4] == "O")
+            {
+                D51.Text = "";
+            }
+            if (player1._BattleArea[4, 4] == "O")
+            {
+                E51.Text = "";
+            }
+            if (player1._BattleArea[5, 4] == "O")
+            {
+                F51.Text = "";
+            }
+            if (player1._BattleArea[6, 4] == "O")
+            {
+                G51.Text = "";
+            }
+            if (player1._BattleArea[7, 4] == "O")
+            {
+                H51.Text = "";
+            }
+            if (player1._BattleArea[8, 4] == "O")
+            {
+                I51.Text = "";
+            }
+
+            if (player1._BattleArea[0, 5] == "O")
+            {
+                A61.Text = "";
+            }
+            if (player1._BattleArea[1, 5] == "O")
+            {
+                B61.Text = "";
+            }
+            if (player1._BattleArea[2, 5] == "O")
+            {
+                C61.Text = "";
+            }
+            if (player1._BattleArea[3, 5] == "O")
+            {
+                D61.Text = "";
+            }
+            if (player1._BattleArea[4, 5] == "O")
+            {
+                E61.Text = "";
+            }
+            if (player1._BattleArea[5, 5] == "O")
+            {
+                F61.Text = "";
+            }
+            if (player1._BattleArea[6, 5] == "O")
+            {
+                G61.Text = "";
+            }
+            if (player1._BattleArea[7, 5] == "O")
+            {
+                H61.Text = "";
+            }
+            if (player1._BattleArea[8, 5] == "O")
+            {
+                I61.Text = "";
+            }
+
+            if (player1._BattleArea[0, 6] == "O")
+            {
+                A71.Text = "";
+            }
+            if (player1._BattleArea[1, 6] == "O")
+            {
+                B71.Text = "";
+            }
+            if (player1._BattleArea[2, 6] == "O")
+            {
+                C71.Text = "";
+            }
+            if (player1._BattleArea[3, 6] == "O")
+            {
+                D71.Text = "";
+            }
+            if (player1._BattleArea[4, 6] == "O")
+            {
+                E71.Text = "";
+            }
+            if (player1._BattleArea[5, 6] == "O")
+            {
+                F71.Text = "";
+            }
+            if (player1._BattleArea[6, 6] == "O")
+            {
+                G71.Text = "";
+            }
+            if (player1._BattleArea[7, 6] == "O")
+            {
+                H71.Text = "";
+            }
+            if (player1._BattleArea[8, 6] == "O")
+            {
+                I71.Text = "";
+            }
+
+            if (player1._BattleArea[0, 7] == "O")
+            {
+                A81.Text = "";
+            }
+            if (player1._BattleArea[1, 7] == "O")
+            {
+                B81.Text = "";
+            }
+            if (player1._BattleArea[2, 7] == "O")
+            {
+                C81.Text = "";
+            }
+            if (player1._BattleArea[3, 7] == "O")
+            {
+                D81.Text = "";
+            }
+            if (player1._BattleArea[4, 7] == "O")
+            {
+                E81.Text = "";
+            }
+            if (player1._BattleArea[5, 7] == "O")
+            {
+                F81.Text = "";
+            }
+            if (player1._BattleArea[6, 7] == "O")
+            {
+                G81.Text = "";
+            }
+            if (player1._BattleArea[7, 7] == "O")
+            {
+                H81.Text = "";
+            }
+            if (player1._BattleArea[8, 7] == "O")
+            {
+                I81.Text = "";
+            }
+
+            if (player1._BattleArea[0, 8] == "O")
+            {
+                A91.Text = "";
+            }
+            if (player1._BattleArea[1, 8] == "O")
+            {
+                B91.Text = "";
+            }
+            if (player1._BattleArea[2, 8] == "O")
+            {
+                C91.Text = "";
+            }
+            if (player1._BattleArea[3, 8] == "O")
+            {
+                D91.Text = "";
+            }
+            if (player1._BattleArea[4, 8] == "O")
+            {
+                E91.Text = "";
+            }
+            if (player1._BattleArea[5, 8] == "O")
+            {
+                F91.Text = "";
+            }
+            if (player1._BattleArea[6, 8] == "O")
+            {
+                G91.Text = "";
+            }
+            if (player1._BattleArea[7, 8] == "O")
+            {
+                H91.Text = "";
+            }
+            if (player1._BattleArea[8, 8] == "O")
+            {
+                I91.Text = "";
+            }
+
+            if (player2._BattleArea[0, 0] == "O")
+            {
+                A12.Text = "";
+            }
+            if (player2._BattleArea[1, 0] == "O")
+            {
+                B12.Text = "";
+            }
+            if (player2._BattleArea[2, 0] == "O")
+            {
+                C12.Text = "";
+            }
+            if (player2._BattleArea[3, 0] == "O")
+            {
+                D12.Text = "";
+            }
+            if (player2._BattleArea[4, 0] == "O")
+            {
+                E12.Text = "";
+            }
+            if (player2._BattleArea[5, 0] == "O")
+            {
+                F12.Text = "";
+            }
+            if (player2._BattleArea[6, 0] == "O")
+            {
+                G12.Text = "";
+            }
+            if (player2._BattleArea[7, 0] == "O")
+            {
+                H12.Text = "";
+            }
+            if (player2._BattleArea[8, 0] == "O")
+            {
+                I12.Text = "";
+            }
+
+            if (player2._BattleArea[0, 1] == "O")
+            {
+                A22.Text = "";
+            }
+            if (player2._BattleArea[1, 1] == "O")
+            {
+                B22.Text = "";
+            }
+            if (player2._BattleArea[2, 1] == "O")
+            {
+                C22.Text = "";
+            }
+            if (player2._BattleArea[3, 1] == "O")
+            {
+                D22.Text = "";
+            }
+            if (player2._BattleArea[4, 1] == "O")
+            {
+                E22.Text = "";
+            }
+            if (player2._BattleArea[5, 1] == "O")
+            {
+                F22.Text = "";
+            }
+            if (player2._BattleArea[6, 1] == "O")
+            {
+                G22.Text = "";
+            }
+            if (player2._BattleArea[7, 1] == "O")
+            {
+                H22.Text = "";
+            }
+            if (player2._BattleArea[8, 1] == "O")
+            {
+                I22.Text = "";
+            }
+
+            if (player2._BattleArea[0, 2] == "O")
+            {
+                A32.Text = "";
+            }
+            if (player2._BattleArea[1, 2] == "O")
+            {
+                B32.Text = "";
+            }
+            if (player2._BattleArea[2, 2] == "O")
+            {
+                C32.Text = "";
+            }
+            if (player2._BattleArea[3, 2] == "O")
+            {
+                D32.Text = "";
+            }
+            if (player2._BattleArea[4, 2] == "O")
+            {
+                E32.Text = "";
+            }
+            if (player2._BattleArea[5, 2] == "O")
+            {
+                F32.Text = "";
+            }
+            if (player2._BattleArea[6, 2] == "O")
+            {
+                G32.Text = "";
+            }
+            if (player2._BattleArea[7, 2] == "O")
+            {
+                H32.Text = "";
+            }
+            if (player2._BattleArea[8, 2] == "O")
+            {
+                I32.Text = "";
+            }
+
+            if (player2._BattleArea[0, 3] == "O")
+            {
+                A42.Text = "";
+            }
+            if (player2._BattleArea[1, 3] == "O")
+            {
+                B42.Text = "";
+            }
+            if (player2._BattleArea[2, 3] == "O")
+            {
+                C42.Text = "";
+            }
+            if (player2._BattleArea[3, 3] == "O")
+            {
+                D42.Text = "";
+            }
+            if (player2._BattleArea[4, 3] == "O")
+            {
+                E42.Text = "";
+            }
+            if (player2._BattleArea[5, 3] == "O")
+            {
+                F42.Text = "";
+            }
+            if (player2._BattleArea[6, 3] == "O")
+            {
+                G42.Text = "";
+            }
+            if (player2._BattleArea[7, 3] == "O")
+            {
+                H42.Text = "";
+            }
+            if (player2._BattleArea[8, 3] == "O")
+            {
+                I42.Text = "";
+            }
+
+            if (player2._BattleArea[0, 4] == "O")
+            {
+                A52.Text = "";
+            }
+            if (player2._BattleArea[1, 4] == "O")
+            {
+                B52.Text = "";
+            }
+            if (player2._BattleArea[2, 4] == "O")
+            {
+                C52.Text = "";
+            }
+            if (player2._BattleArea[3, 4] == "O")
+            {
+                D52.Text = "";
+            }
+            if (player2._BattleArea[4, 4] == "O")
+            {
+                E52.Text = "";
+            }
+            if (player2._BattleArea[5, 4] == "O")
+            {
+                F52.Text = "";
+            }
+            if (player2._BattleArea[6, 4] == "O")
+            {
+                G52.Text = "";
+            }
+            if (player2._BattleArea[7, 4] == "O")
+            {
+                H52.Text = "";
+            }
+            if (player2._BattleArea[8, 4] == "O")
+            {
+                I52.Text = "";
+            }
+
+            if (player2._BattleArea[0, 5] == "O")
+            {
+                A61.Text = "";
+            }
+            if (player2._BattleArea[2, 5] == "O")
+            {
+                B62.Text = "";
+            }
+            if (player2._BattleArea[2, 5] == "O")
+            {
+                C62.Text = "";
+            }
+            if (player2._BattleArea[3, 5] == "O")
+            {
+                D62.Text = "";
+            }
+            if (player2._BattleArea[4, 5] == "O")
+            {
+                E62.Text = "";
+            }
+            if (player2._BattleArea[5, 5] == "O")
+            {
+                F62.Text = "";
+            }
+            if (player2._BattleArea[6, 5] == "O")
+            {
+                G62.Text = "";
+            }
+            if (player2._BattleArea[7, 5] == "O")
+            {
+                H62.Text = "";
+            }
+            if (player2._BattleArea[8, 5] == "O")
+            {
+                I62.Text = "";
+            }
+
+            if (player2._BattleArea[0, 6] == "O")
+            {
+                A72.Text = "";
+            }
+            if (player2._BattleArea[2, 6] == "O")
+            {
+                B72.Text = "";
+            }
+            if (player2._BattleArea[2, 6] == "O")
+            {
+                C72.Text = "";
+            }
+            if (player2._BattleArea[3, 6] == "O")
+            {
+                D72.Text = "";
+            }
+            if (player2._BattleArea[4, 6] == "O")
+            {
+                E72.Text = "";
+            }
+            if (player2._BattleArea[5, 6] == "O")
+            {
+                F72.Text = "";
+            }
+            if (player2._BattleArea[6, 6] == "O")
+            {
+                G72.Text = "";
+            }
+            if (player2._BattleArea[7, 6] == "O")
+            {
+                H72.Text = "";
+            }
+            if (player2._BattleArea[8, 6] == "O")
+            {
+                I72.Text = "";
+            }
+
+            if (player2._BattleArea[0, 7] == "O")
+            {
+                A82.Text = "";
+            }
+            if (player2._BattleArea[1, 7] == "O")
+            {
+                B82.Text = "";
+            }
+            if (player2._BattleArea[2, 7] == "O")
+            {
+                C82.Text = "";
+            }
+            if (player2._BattleArea[3, 7] == "O")
+            {
+                D82.Text = "";
+            }
+            if (player2._BattleArea[4, 7] == "O")
+            {
+                E82.Text = "";
+            }
+            if (player2._BattleArea[5, 7] == "O")
+            {
+                F82.Text = "";
+            }
+            if (player2._BattleArea[6, 7] == "O")
+            {
+                G82.Text = "";
+            }
+            if (player2._BattleArea[7, 7] == "O")
+            {
+                H82.Text = "";
+            }
+            if (player2._BattleArea[8, 7] == "O")
+            {
+                I82.Text = "";
+            }
+
+            if (player2._BattleArea[0, 8] == "O")
+            {
+                A92.Text = "";
+            }
+            if (player2._BattleArea[1, 8] == "O")
+            {
+                B92.Text = "";
+            }
+            if (player2._BattleArea[2, 8] == "O")
+            {
+                C92.Text = "";
+            }
+            if (player2._BattleArea[3, 8] == "O")
+            {
+                D92.Text = "";
+            }
+            if (player2._BattleArea[4, 8] == "O")
+            {
+                E92.Text = "";
+            }
+            if (player2._BattleArea[5, 8] == "O")
+            {
+                F92.Text = "";
+            }
+            if (player2._BattleArea[6, 8] == "O")
+            {
+                G92.Text = "";
+            }
+            if (player2._BattleArea[7, 8] == "O")
+            {
+                H92.Text = "";
+            }
+            if (player2._BattleArea[8, 8] == "O")
+            {
+                I92.Text = "";
+            }
+        }
+
+        #endregion
+
+        #region show ships and all data 
+
+        /// <summary>
+        /// Blendet alles ein, was in den Koordinaten eines Spielers steht
+        /// </summary>
+        /// <param name="Player">0 blendet alle Koordinaten ein. 1 blendet nur die Koordinaten des 1. Spielers ein und 2 die des 2.</param>
+        public void ShowAllData(int Player)
+        {
+            if (Player == 1)    //Dem Array des Spieler 1 werden seine Koordinaten zugewiesen
+            {
+                A11.Text = player1._BattleArea[0, 0];
+                A21.Text = player1._BattleArea[0, 1];
+                A31.Text = player1._BattleArea[0, 2];
+                A41.Text = player1._BattleArea[0, 3];
+                A51.Text = player1._BattleArea[0, 4];
+                A61.Text = player1._BattleArea[0, 5];
+                A71.Text = player1._BattleArea[0, 6];
+                A81.Text = player1._BattleArea[0, 7];
+                A91.Text = player1._BattleArea[0, 8];
+
+                B11.Text = player1._BattleArea[1, 0];
+                B21.Text = player1._BattleArea[1, 1];
+                B31.Text = player1._BattleArea[1, 2];
+                B41.Text = player1._BattleArea[1, 3];
+                B51.Text = player1._BattleArea[1, 4];
+                B61.Text = player1._BattleArea[1, 5];
+                B71.Text = player1._BattleArea[1, 6];
+                B81.Text = player1._BattleArea[1, 7];
+                B91.Text = player1._BattleArea[1, 8];
+
+                C11.Text = player1._BattleArea[2, 0];
+                C21.Text = player1._BattleArea[2, 1];
+                C31.Text = player1._BattleArea[2, 2];
+                C41.Text = player1._BattleArea[2, 3];
+                C51.Text = player1._BattleArea[2, 4];
+                C61.Text = player1._BattleArea[2, 5];
+                C71.Text = player1._BattleArea[2, 6];
+                C81.Text = player1._BattleArea[2, 7];
+                C91.Text = player1._BattleArea[2, 8];
+
+                D11.Text = player1._BattleArea[3, 0];
+                D21.Text = player1._BattleArea[3, 1];
+                D31.Text = player1._BattleArea[3, 2];
+                D41.Text = player1._BattleArea[3, 3];
+                D51.Text = player1._BattleArea[3, 4];
+                D61.Text = player1._BattleArea[3, 5];
+                D71.Text = player1._BattleArea[3, 6];
+                D81.Text = player1._BattleArea[3, 7];
+                D91.Text = player1._BattleArea[3, 8];
+
+                E11.Text = player1._BattleArea[4, 0];
+                E21.Text = player1._BattleArea[4, 1];
+                E31.Text = player1._BattleArea[4, 2];
+                E41.Text = player1._BattleArea[4, 3];
+                E51.Text = player1._BattleArea[4, 4];
+                E61.Text = player1._BattleArea[4, 5];
+                E71.Text = player1._BattleArea[4, 6];
+                E81.Text = player1._BattleArea[4, 7];
+                E91.Text = player1._BattleArea[4, 8];
+
+                F11.Text = player1._BattleArea[5, 0];
+                F21.Text = player1._BattleArea[5, 1];
+                F31.Text = player1._BattleArea[5, 2];
+                F41.Text = player1._BattleArea[5, 3];
+                F51.Text = player1._BattleArea[5, 4];
+                F61.Text = player1._BattleArea[5, 5];
+                F71.Text = player1._BattleArea[5, 6];
+                F81.Text = player1._BattleArea[5, 7];
+                F91.Text = player1._BattleArea[5, 8];
+
+                G11.Text = player1._BattleArea[6, 0];
+                G21.Text = player1._BattleArea[6, 1];
+                G31.Text = player1._BattleArea[6, 2];
+                G41.Text = player1._BattleArea[6, 3];
+                G51.Text = player1._BattleArea[6, 4];
+                G61.Text = player1._BattleArea[6, 5];
+                G71.Text = player1._BattleArea[6, 6];
+                G81.Text = player1._BattleArea[6, 7];
+                G91.Text = player1._BattleArea[6, 8];
+
+                H11.Text = player1._BattleArea[7, 0];
+                H21.Text = player1._BattleArea[7, 1];
+                H31.Text = player1._BattleArea[7, 2];
+                H41.Text = player1._BattleArea[7, 3];
+                H51.Text = player1._BattleArea[7, 4];
+                H61.Text = player1._BattleArea[7, 5];
+                H71.Text = player1._BattleArea[7, 6];
+                H81.Text = player1._BattleArea[7, 7];
+                H91.Text = player1._BattleArea[7, 8];
+
+                I11.Text = player1._BattleArea[8, 0];
+                I21.Text = player1._BattleArea[8, 1];
+                I31.Text = player1._BattleArea[8, 2];
+                I41.Text = player1._BattleArea[8, 3];
+                I51.Text = player1._BattleArea[8, 4];
+                I61.Text = player1._BattleArea[8, 5];
+                I71.Text = player1._BattleArea[8, 6];
+                I81.Text = player1._BattleArea[8, 7];
+                I91.Text = player1._BattleArea[8, 8];
+            }
+
+            else if (Player == 2)
+            {
+                A12.Text = player2._BattleArea[0, 0];
+                A22.Text = player2._BattleArea[0, 1];
+                A32.Text = player2._BattleArea[0, 2];
+                A42.Text = player2._BattleArea[0, 3];
+                A52.Text = player2._BattleArea[0, 4];
+                A62.Text = player2._BattleArea[0, 5];
+                A72.Text = player2._BattleArea[0, 6];
+                A82.Text = player2._BattleArea[0, 7];
+                A92.Text = player2._BattleArea[0, 8];
+
+                B12.Text = player2._BattleArea[1, 0];
+                B22.Text = player2._BattleArea[1, 1];
+                B32.Text = player2._BattleArea[1, 2];
+                B42.Text = player2._BattleArea[1, 3];
+                B52.Text = player2._BattleArea[1, 4];
+                B62.Text = player2._BattleArea[1, 5];
+                B72.Text = player2._BattleArea[1, 6];
+                B82.Text = player2._BattleArea[1, 7];
+                B92.Text = player2._BattleArea[1, 8];
+
+                C12.Text = player2._BattleArea[2, 0];
+                C22.Text = player2._BattleArea[2, 1];
+                C32.Text = player2._BattleArea[2, 2];
+                C42.Text = player2._BattleArea[2, 3];
+                C52.Text = player2._BattleArea[2, 4];
+                C62.Text = player2._BattleArea[2, 5];
+                C72.Text = player2._BattleArea[2, 6];
+                C82.Text = player2._BattleArea[2, 7];
+                C92.Text = player2._BattleArea[2, 8];
+
+                D12.Text = player2._BattleArea[3, 0];
+                D22.Text = player2._BattleArea[3, 1];
+                D32.Text = player2._BattleArea[3, 2];
+                D42.Text = player2._BattleArea[3, 3];
+                D52.Text = player2._BattleArea[3, 4];
+                D62.Text = player2._BattleArea[3, 5];
+                D72.Text = player2._BattleArea[3, 6];
+                D82.Text = player2._BattleArea[3, 7];
+                D92.Text = player2._BattleArea[3, 8];
+
+                E12.Text = player2._BattleArea[4, 0];
+                E22.Text = player2._BattleArea[4, 1];
+                E32.Text = player2._BattleArea[4, 2];
+                E42.Text = player2._BattleArea[4, 3];
+                E52.Text = player2._BattleArea[4, 4];
+                E62.Text = player2._BattleArea[4, 5];
+                E72.Text = player2._BattleArea[4, 6];
+                E82.Text = player2._BattleArea[4, 7];
+                E92.Text = player2._BattleArea[4, 8];
+
+                F12.Text = player2._BattleArea[5, 0];
+                F22.Text = player2._BattleArea[5, 1];
+                F32.Text = player2._BattleArea[5, 2];
+                F42.Text = player2._BattleArea[5, 3];
+                F52.Text = player2._BattleArea[5, 4];
+                F62.Text = player2._BattleArea[5, 5];
+                F72.Text = player2._BattleArea[5, 6];
+                F82.Text = player2._BattleArea[5, 7];
+                F92.Text = player2._BattleArea[5, 8];
+
+                G12.Text = player2._BattleArea[6, 0];
+                G22.Text = player2._BattleArea[6, 1];
+                G32.Text = player2._BattleArea[6, 2];
+                G42.Text = player2._BattleArea[6, 3];
+                G52.Text = player2._BattleArea[6, 4];
+                G62.Text = player2._BattleArea[6, 5];
+                G72.Text = player2._BattleArea[6, 6];
+                G82.Text = player2._BattleArea[6, 7];
+                G92.Text = player2._BattleArea[6, 8];
+
+                H12.Text = player2._BattleArea[7, 0];
+                H22.Text = player2._BattleArea[7, 1];
+                H32.Text = player2._BattleArea[7, 2];
+                H42.Text = player2._BattleArea[7, 3];
+                H52.Text = player2._BattleArea[7, 4];
+                H62.Text = player2._BattleArea[7, 5];
+                H72.Text = player2._BattleArea[7, 6];
+                H82.Text = player2._BattleArea[7, 7];
+                H92.Text = player2._BattleArea[7, 8];
+
+                I12.Text = player2._BattleArea[8, 0];
+                I22.Text = player2._BattleArea[8, 1];
+                I32.Text = player2._BattleArea[8, 2];
+                I42.Text = player2._BattleArea[8, 3];
+                I52.Text = player2._BattleArea[8, 4];
+                I62.Text = player2._BattleArea[8, 5];
+                I72.Text = player2._BattleArea[8, 6];
+                I82.Text = player2._BattleArea[8, 7];
+                I92.Text = player2._BattleArea[8, 8];
+            }
+
+        }
+
+        #endregion
+
+        #region button locks
+
+        /// <summary>
+        /// Enthält alle Vorgänge um von der Auswahl der Anzahl Schiffe zur Auswahl der Länge der Schiffe zu gelangen
+        /// </summary>
+        public void buttonlock_AdS()    //button lock nach Festlegung der Spieler (AdS - Anzahl der Spieler)
+        {
+            player2.AmountOfShipsInTotal = player1.AmountOfShipsInTotal;  //Weißt dem 2. Spieler ebensoviel Schiffe zu wie dem 1. Spieler
+            counter.AmountOfShipsInTotal = player1.AmountOfShipsInTotal;  //Gibt auch dem Counter die Anzahl der Schiffe
+            Ausgabe.Text = "Sie haben " + player1.AmountOfShipsInTotal + " Schiffe ausgewählt.\nGeben sie jetzt die Längen der Schiffe in beliebiger Reihenfolge an."; //Gibt Text im Ausgabefenster aus
             AdS_3.Enabled = false;  //Buttons werden geperrt
             AdS_4.Enabled = false;
             AdS_5.Enabled = false;
@@ -2511,775 +4605,578 @@
             GdS_3.Enabled = true;   //Buttons werden entsperrt
             GdS_4.Enabled = true;
             GdS_5.Enabled = true;
-            Player1.Schiffzähler = Player1.AnzahlderSchiffeGesammt; //übergibt der Schiffzähler Variablen die Anzahl der Schiffe für einen Spieler
-            Player2.Schiffzähler = Player2.AnzahlderSchiffeGesammt;
         }
 
-        public int SchiffAusgewählt()
+        /// <summary>
+        /// Enhält alle Vorgänge um von der Auswahl der länge der Schiff zur Platzierung der Schiffe des 1. Spielers zu gelangen
+        /// </summary>
+        public void buttonlock_GdS()    //button lock nach Festlegung der Größen der Schiffe (GdS - Größe der Schiffe)
         {
-            Player1.Schiffzähler -= 1;  //Ein Schiff der Gesamtschiffe jedes Spielers wurde mit einer Größe verbunden
-
-            if (Player1.Schiffzähler == 0)  //Bei 0 angelangt wurden die größen aller Schiffe jedes Spielers festgelegt
+            Ausgabe.Text = AnzeigePlayer1.Text + ", platziere nun deine Schiffe auf deinem Spielfeld.\n";
+            if (counter.AmountOfShipsLength3 == 0 && counter.AmountOfShipsLength4 == 0)
             {
-                return 1;   
+                Ausgabe.Text = Ausgabe.Text + "Zunächst ein 5 Feld Schiff.\n Verwenden sie die Optionen 'vertikal nach unten' und 'horizontal nach rechts' um die Orientierung fest zu legen.\n";
             }
-            return 0;   //Bei noch einem Schiff muss die Größe festgelegt werden
-        }
-
-        public int Schiffgesetzt(int Player)
-        {
-            if (Player==1)
+            else if (counter.AmountOfShipsLength3 == 0)
             {
-                Player1.Schiffzähler -= 1;  //Der Schiffzähler des 1. Spielers wird um 1 reduziert
-
-                if (Player1.Schiffzähler == 0)  //Bei 0 angelangt wechselt die Schiffsvergabe zum nächsten Spieler
-                {
-                    return 1;   //Spieler 1 hat alle Schiffe gesetzt
-                }
-                return 0;   //Spieler 1 darf ein weiteres Schiff setzen
+                Ausgabe.Text = Ausgabe.Text + "Zunächst ein 4 Feld Schiff.\n Verwenden sie die Optionen 'vertikal nach unten' und 'horizontal nach rechts' um die Orientierung fest zu legen.\n";
             }
-            else if (Player==2)
+            else
             {
-                Player2.Schiffzähler -= 1;  
-
-                if (Player1.Schiffzähler == 0)  
-                {
-                    return 1;   
-                }
-                return 0;   
+                Ausgabe.Text = Ausgabe.Text + "Zunächst ein 3 Feld Schiff.\n Verwenden sie die Optionen 'vertikal nach unten' und 'horizontal nach rechts' um die Orientierung fest zu legen.\n";
             }
-            //Laufzeitfehler einbauen!
-            return 0;
-        }
-
-        public void buttonlock_GdS()
-        {
-            Ausgabe.Text = "Alle Schiffe ausgewählt.\nPlatziere nun deine 3 Feld Schiffe mithilfe den Tasten:\n*vertikal nach unten* und *horizontal nach rechts*"; //Gibt Text im Ausgabefenster aus
+            Ausgabe.Text = Ausgabe.Text + "\n" + AnzeigePlayer2.Text + " wegschauen!";
             GdS_3.Enabled = false;  //Buttons werden geperrt
             GdS_4.Enabled = false;
             GdS_5.Enabled = false;
-            vertikal.Enabled = true;    //Buttons werden entsperrt
-            horizontal.Enabled = true;
-            enablecoordinates();    //Die Buttons für die Koordinaten werden entsperrt
+            option1_button.Enabled = true;    //Buttons werden entsperrt
+            option2_button.Enabled = true;
+            Enablecoordinates(1);    //Die Buttons für die Koordinaten werden entsperrt
+            option1_button.Text = "horizontal nach rechts";
+            option2_button.Text = "vertikal nach unten";
         }
 
-        public void enablecoordinates()
+        /// <summary>
+        /// Ändert den Spieler der seine Schiffe platzieren kann von Spieler 1 auf Spieler 2
+        /// </summary>
+        public void buttonlock_SPP1()   //button lock nach Platzierung der Schiffe des Spieler 1 (SPP1 - Schiffe platziert Player 1)
         {
-            A11.Enabled = true; //Buttons werden entsperrt
-            A21.Enabled = true;
-            A31.Enabled = true;
-            A41.Enabled = true;
-            A51.Enabled = true;
-            A61.Enabled = true;
-            A71.Enabled = true;
-            A81.Enabled = true;
-            A81.Enabled = true;
-            A91.Enabled = true;
-            A12.Enabled = true;
-            A22.Enabled = true;
-            A32.Enabled = true;
-            A42.Enabled = true;
-            A52.Enabled = true;
-            A62.Enabled = true;
-            A72.Enabled = true;
-            A82.Enabled = true;
-            A92.Enabled = true;
-            B11.Enabled = true;
-            B21.Enabled = true;
-            B31.Enabled = true;
-            B41.Enabled = true;
-            B51.Enabled = true;
-            B61.Enabled = true;
-            B71.Enabled = true;
-            B81.Enabled = true;
-            B91.Enabled = true;
-            B12.Enabled = true;
-            B22.Enabled = true;
-            B32.Enabled = true;
-            B42.Enabled = true;
-            B52.Enabled = true;
-            B62.Enabled = true;
-            B72.Enabled = true;
-            B82.Enabled = true;
-            B92.Enabled = true;
-            C11.Enabled = true;
-            C21.Enabled = true;
-            C31.Enabled = true;
-            C41.Enabled = true;
-            C51.Enabled = true;
-            C61.Enabled = true;
-            C71.Enabled = true;
-            C81.Enabled = true;
-            C91.Enabled = true;
-            C12.Enabled = true;
-            C22.Enabled = true;
-            C32.Enabled = true;
-            C42.Enabled = true;
-            C52.Enabled = true;
-            C62.Enabled = true;
-            C72.Enabled = true;
-            C82.Enabled = true;
-            C92.Enabled = true;
-            D11.Enabled = true;
-            D21.Enabled = true;
-            D31.Enabled = true;
-            D41.Enabled = true;
-            D51.Enabled = true;
-            D61.Enabled = true;
-            D71.Enabled = true;
-            D81.Enabled = true;
-            D91.Enabled = true;
-            D12.Enabled = true;
-            D22.Enabled = true;
-            D32.Enabled = true;
-            D42.Enabled = true;
-            D52.Enabled = true;
-            D62.Enabled = true;
-            D72.Enabled = true;
-            D82.Enabled = true;
-            D92.Enabled = true;
-            E11.Enabled = true;
-            E21.Enabled = true;
-            E31.Enabled = true;
-            E41.Enabled = true;
-            E51.Enabled = true;
-            E61.Enabled = true;
-            E71.Enabled = true;
-            E81.Enabled = true;
-            E91.Enabled = true;
-            E12.Enabled = true;
-            E22.Enabled = true;
-            E32.Enabled = true;
-            E42.Enabled = true;
-            E52.Enabled = true;
-            E62.Enabled = true;
-            E72.Enabled = true;
-            E82.Enabled = true;
-            E92.Enabled = true;
-            F11.Enabled = true;
-            F21.Enabled = true;
-            F31.Enabled = true;
-            F41.Enabled = true;
-            F51.Enabled = true;
-            F61.Enabled = true;
-            F71.Enabled = true;
-            F81.Enabled = true;
-            F91.Enabled = true;
-            F12.Enabled = true;
-            F22.Enabled = true;
-            F32.Enabled = true;
-            F42.Enabled = true;
-            F52.Enabled = true;
-            F62.Enabled = true;
-            F72.Enabled = true;
-            F82.Enabled = true;
-            F92.Enabled = true;
-            G11.Enabled = true;
-            G21.Enabled = true;
-            G31.Enabled = true;
-            G41.Enabled = true;
-            G51.Enabled = true;
-            G61.Enabled = true;
-            G71.Enabled = true;
-            G81.Enabled = true;
-            G91.Enabled = true;
-            G12.Enabled = true;
-            G22.Enabled = true;
-            G32.Enabled = true;
-            G42.Enabled = true;
-            G52.Enabled = true;
-            G62.Enabled = true;
-            G72.Enabled = true;
-            G82.Enabled = true;
-            G92.Enabled = true;
-            H11.Enabled = true;
-            H21.Enabled = true;
-            H31.Enabled = true;
-            H41.Enabled = true;
-            H51.Enabled = true;
-            H61.Enabled = true;
-            H71.Enabled = true;
-            H81.Enabled = true;
-            H91.Enabled = true;
-            H12.Enabled = true;
-            H22.Enabled = true;
-            H32.Enabled = true;
-            H42.Enabled = true;
-            H52.Enabled = true;
-            H62.Enabled = true;
-            H72.Enabled = true;
-            H82.Enabled = true;
-            H92.Enabled = true;
-            I11.Enabled = true;
-            I21.Enabled = true;
-            I31.Enabled = true;
-            I41.Enabled = true;
-            I51.Enabled = true;
-            I61.Enabled = true;
-            I71.Enabled = true;
-            I81.Enabled = true;
-            I91.Enabled = true;
-            I12.Enabled = true;
-            I22.Enabled = true;
-            I32.Enabled = true;
-            I42.Enabled = true;
-            I52.Enabled = true;
-            I62.Enabled = true;
-            I72.Enabled = true;
-            I82.Enabled = true;
-            I92.Enabled = true;
-        }
-
-        public void disablecoordinates()
-        {
-            A11.Enabled = false;    //Buttons werden geperrt
-            A21.Enabled = false;
-            A31.Enabled = false;
-            A41.Enabled = false;
-            A51.Enabled = false;
-            A61.Enabled = false;
-            A71.Enabled = false;
-            A81.Enabled = false;
-            A81.Enabled = false;
-            A91.Enabled = false;
-            A12.Enabled = false;
-            A22.Enabled = false;
-            A32.Enabled = false;
-            A42.Enabled = false;
-            A52.Enabled = false;
-            A62.Enabled = false;
-            A72.Enabled = false;
-            A82.Enabled = false;
-            A92.Enabled = false;
-            B11.Enabled = false;
-            B21.Enabled = false;
-            B31.Enabled = false;
-            B41.Enabled = false;
-            B51.Enabled = false;
-            B61.Enabled = false;
-            B71.Enabled = false;
-            B81.Enabled = false;
-            B91.Enabled = false;
-            B12.Enabled = false;
-            B22.Enabled = false;
-            B32.Enabled = false;
-            B42.Enabled = false;
-            B52.Enabled = false;
-            B62.Enabled = false;
-            B72.Enabled = false;
-            B82.Enabled = false;
-            B92.Enabled = false;
-            C11.Enabled = false;
-            C21.Enabled = false;
-            C31.Enabled = false;
-            C41.Enabled = false;
-            C51.Enabled = false;
-            C61.Enabled = false;
-            C71.Enabled = false;
-            C81.Enabled = false;
-            C91.Enabled = false;
-            C12.Enabled = false;
-            C22.Enabled = false;
-            C32.Enabled = false;
-            C42.Enabled = false;
-            C52.Enabled = false;
-            C62.Enabled = false;
-            C72.Enabled = false;
-            C82.Enabled = false;
-            C92.Enabled = false;
-            D11.Enabled = false;
-            D21.Enabled = false;
-            D31.Enabled = false;
-            D41.Enabled = false;
-            D51.Enabled = false;
-            D61.Enabled = false;
-            D71.Enabled = false;
-            D81.Enabled = false;
-            D91.Enabled = false;
-            D12.Enabled = false;
-            D22.Enabled = false;
-            D32.Enabled = false;
-            D42.Enabled = false;
-            D52.Enabled = false;
-            D62.Enabled = false;
-            D72.Enabled = false;
-            D82.Enabled = false;
-            D92.Enabled = false;
-            E11.Enabled = false;
-            E21.Enabled = false;
-            E31.Enabled = false;
-            E41.Enabled = false;
-            E51.Enabled = false;
-            E61.Enabled = false;
-            E71.Enabled = false;
-            E81.Enabled = false;
-            E91.Enabled = false;
-            E12.Enabled = false;
-            E22.Enabled = false;
-            E32.Enabled = false;
-            E42.Enabled = false;
-            E52.Enabled = false;
-            E62.Enabled = false;
-            E72.Enabled = false;
-            E82.Enabled = false;
-            E92.Enabled = false;
-            F11.Enabled = false;
-            F21.Enabled = false;
-            F31.Enabled = false;
-            F41.Enabled = false;
-            F51.Enabled = false;
-            F61.Enabled = false;
-            F71.Enabled = false;
-            F81.Enabled = false;
-            F91.Enabled = false;
-            F12.Enabled = false;
-            F22.Enabled = false;
-            F32.Enabled = false;
-            F42.Enabled = false;
-            F52.Enabled = false;
-            F62.Enabled = false;
-            F72.Enabled = false;
-            F82.Enabled = false;
-            F92.Enabled = false;
-            G11.Enabled = false;
-            G21.Enabled = false;
-            G31.Enabled = false;
-            G41.Enabled = false;
-            G51.Enabled = false;
-            G61.Enabled = false;
-            G71.Enabled = false;
-            G81.Enabled = false;
-            G91.Enabled = false;
-            G12.Enabled = false;
-            G22.Enabled = false;
-            G32.Enabled = false;
-            G42.Enabled = false;
-            G52.Enabled = false;
-            G62.Enabled = false;
-            G72.Enabled = false;
-            G82.Enabled = false;
-            G92.Enabled = false;
-            H11.Enabled = false;
-            H21.Enabled = false;
-            H31.Enabled = false;
-            H41.Enabled = false;
-            H51.Enabled = false;
-            H61.Enabled = false;
-            H71.Enabled = false;
-            H81.Enabled = false;
-            H91.Enabled = false;
-            H12.Enabled = false;
-            H22.Enabled = false;
-            H32.Enabled = false;
-            H42.Enabled = false;
-            H52.Enabled = false;
-            H62.Enabled = false;
-            H72.Enabled = false;
-            H82.Enabled = false;
-            H92.Enabled = false;
-            I11.Enabled = false;
-            I21.Enabled = false;
-            I31.Enabled = false;
-            I41.Enabled = false;
-            I51.Enabled = false;
-            I61.Enabled = false;
-            I71.Enabled = false;
-            I81.Enabled = false;
-            I91.Enabled = false;
-            I12.Enabled = false;
-            I22.Enabled = false;
-            I32.Enabled = false;
-            I42.Enabled = false;
-            I52.Enabled = false;
-            I62.Enabled = false;
-            I72.Enabled = false;
-            I82.Enabled = false;
-            I92.Enabled = false;
-        }
-
-        public void ArrayAktualisieren(int Player)
-        {
-            if (Player == 1)    //Dem Array des Spieler 1 werden seine Koordinaten zugewiesen
+            Ausgabe.Text = AnzeigePlayer2.Text + ", platziere nun deine Schiffe auf deinem Spielfeld.\n";
+            if (counter.AmountOfShipsLength3 == 0 && counter.AmountOfShipsLength4 == 0)
             {
-                A11.Text = Player1._SpielfeldDesSpielers[0, 0];
-                A21.Text = Player1._SpielfeldDesSpielers[0, 1];
-                A31.Text = Player1._SpielfeldDesSpielers[0, 2];
-                A41.Text = Player1._SpielfeldDesSpielers[0, 3];
-                A51.Text = Player1._SpielfeldDesSpielers[0, 4];
-                A61.Text = Player1._SpielfeldDesSpielers[0, 5];
-                A71.Text = Player1._SpielfeldDesSpielers[0, 6];
-                A81.Text = Player1._SpielfeldDesSpielers[0, 7];
-                A91.Text = Player1._SpielfeldDesSpielers[0, 8];
-
-                B11.Text = Player1._SpielfeldDesSpielers[1, 0];
-                B21.Text = Player1._SpielfeldDesSpielers[1, 1];
-                B31.Text = Player1._SpielfeldDesSpielers[1, 2];
-                B41.Text = Player1._SpielfeldDesSpielers[1, 3];
-                B51.Text = Player1._SpielfeldDesSpielers[1, 4];
-                B61.Text = Player1._SpielfeldDesSpielers[1, 5];
-                B71.Text = Player1._SpielfeldDesSpielers[1, 6];
-                B81.Text = Player1._SpielfeldDesSpielers[1, 7];
-                B91.Text = Player1._SpielfeldDesSpielers[1, 8];
-
-                C11.Text = Player1._SpielfeldDesSpielers[2, 0];
-                C21.Text = Player1._SpielfeldDesSpielers[2, 1];
-                C31.Text = Player1._SpielfeldDesSpielers[2, 2];
-                C41.Text = Player1._SpielfeldDesSpielers[2, 3];
-                C51.Text = Player1._SpielfeldDesSpielers[2, 4];
-                C61.Text = Player1._SpielfeldDesSpielers[2, 5];
-                C71.Text = Player1._SpielfeldDesSpielers[2, 6];
-                C81.Text = Player1._SpielfeldDesSpielers[2, 7];
-                C91.Text = Player1._SpielfeldDesSpielers[2, 8];
-
-                D11.Text = Player1._SpielfeldDesSpielers[3, 0];
-                D21.Text = Player1._SpielfeldDesSpielers[3, 1];
-                D31.Text = Player1._SpielfeldDesSpielers[3, 2];
-                D41.Text = Player1._SpielfeldDesSpielers[3, 3];
-                D51.Text = Player1._SpielfeldDesSpielers[3, 4];
-                D61.Text = Player1._SpielfeldDesSpielers[3, 5];
-                D71.Text = Player1._SpielfeldDesSpielers[3, 6];
-                D81.Text = Player1._SpielfeldDesSpielers[3, 7];
-                D91.Text = Player1._SpielfeldDesSpielers[3, 8];
-
-                E11.Text = Player1._SpielfeldDesSpielers[4, 0];
-                E21.Text = Player1._SpielfeldDesSpielers[4, 1];
-                E31.Text = Player1._SpielfeldDesSpielers[4, 2];
-                E41.Text = Player1._SpielfeldDesSpielers[4, 3];
-                E51.Text = Player1._SpielfeldDesSpielers[4, 4];
-                E61.Text = Player1._SpielfeldDesSpielers[4, 5];
-                E71.Text = Player1._SpielfeldDesSpielers[4, 6];
-                E81.Text = Player1._SpielfeldDesSpielers[4, 7];
-                E91.Text = Player1._SpielfeldDesSpielers[4, 8];
-
-                F11.Text = Player1._SpielfeldDesSpielers[5, 0];
-                F21.Text = Player1._SpielfeldDesSpielers[5, 1];
-                F31.Text = Player1._SpielfeldDesSpielers[5, 2];
-                F41.Text = Player1._SpielfeldDesSpielers[5, 3];
-                F51.Text = Player1._SpielfeldDesSpielers[5, 4];
-                F61.Text = Player1._SpielfeldDesSpielers[5, 5];
-                F71.Text = Player1._SpielfeldDesSpielers[5, 6];
-                F81.Text = Player1._SpielfeldDesSpielers[5, 7];
-                F91.Text = Player1._SpielfeldDesSpielers[5, 8];
-
-                G11.Text = Player1._SpielfeldDesSpielers[6, 0];
-                G21.Text = Player1._SpielfeldDesSpielers[6, 1];
-                G31.Text = Player1._SpielfeldDesSpielers[6, 2];
-                G41.Text = Player1._SpielfeldDesSpielers[6, 3];
-                G51.Text = Player1._SpielfeldDesSpielers[6, 4];
-                G61.Text = Player1._SpielfeldDesSpielers[6, 5];
-                G71.Text = Player1._SpielfeldDesSpielers[6, 6];
-                G81.Text = Player1._SpielfeldDesSpielers[6, 7];
-                G91.Text = Player1._SpielfeldDesSpielers[6, 8];
-
-                H11.Text = Player1._SpielfeldDesSpielers[7, 0];
-                H21.Text = Player1._SpielfeldDesSpielers[7, 1];
-                H31.Text = Player1._SpielfeldDesSpielers[7, 2];
-                H41.Text = Player1._SpielfeldDesSpielers[7, 3];
-                H51.Text = Player1._SpielfeldDesSpielers[7, 4];
-                H61.Text = Player1._SpielfeldDesSpielers[7, 5];
-                H71.Text = Player1._SpielfeldDesSpielers[7, 6];
-                H81.Text = Player1._SpielfeldDesSpielers[7, 7];
-                H91.Text = Player1._SpielfeldDesSpielers[7, 8];
-
-                I11.Text = Player1._SpielfeldDesSpielers[8, 0];
-                I21.Text = Player1._SpielfeldDesSpielers[8, 1];
-                I31.Text = Player1._SpielfeldDesSpielers[8, 2];
-                I41.Text = Player1._SpielfeldDesSpielers[8, 3];
-                I51.Text = Player1._SpielfeldDesSpielers[8, 4];
-                I61.Text = Player1._SpielfeldDesSpielers[8, 5];
-                I71.Text = Player1._SpielfeldDesSpielers[8, 6];
-                I81.Text = Player1._SpielfeldDesSpielers[8, 7];
-                I91.Text = Player1._SpielfeldDesSpielers[8, 8];
+                Ausgabe.Text = Ausgabe.Text + "Zunächst ein 5 Feld Schiff.\n Verwenden sie die Optionen 'vertikal nach unten' und 'horizontal nach rechts' um die Orientierung fest zu legen.\n";
             }
-
-            else if (Player == 2)
+            else if (counter.AmountOfShipsLength3 == 0)
             {
-                A12.Text = Player2._SpielfeldDesSpielers[0, 0];
-                A22.Text = Player2._SpielfeldDesSpielers[0, 1];
-                A32.Text = Player2._SpielfeldDesSpielers[0, 2];
-                A42.Text = Player2._SpielfeldDesSpielers[0, 3];
-                A52.Text = Player2._SpielfeldDesSpielers[0, 4];
-                A62.Text = Player2._SpielfeldDesSpielers[0, 5];
-                A72.Text = Player2._SpielfeldDesSpielers[0, 6];
-                A82.Text = Player2._SpielfeldDesSpielers[0, 7];
-                A92.Text = Player2._SpielfeldDesSpielers[0, 8];
-
-                B12.Text = Player2._SpielfeldDesSpielers[1, 0];
-                B22.Text = Player2._SpielfeldDesSpielers[1, 1];
-                B32.Text = Player2._SpielfeldDesSpielers[1, 2];
-                B42.Text = Player2._SpielfeldDesSpielers[1, 3];
-                B52.Text = Player2._SpielfeldDesSpielers[1, 4];
-                B62.Text = Player2._SpielfeldDesSpielers[1, 5];
-                B72.Text = Player2._SpielfeldDesSpielers[1, 6];
-                B82.Text = Player2._SpielfeldDesSpielers[1, 7];
-                B92.Text = Player2._SpielfeldDesSpielers[1, 8];
-
-                C12.Text = Player2._SpielfeldDesSpielers[2, 0];
-                C22.Text = Player2._SpielfeldDesSpielers[2, 1];
-                C32.Text = Player2._SpielfeldDesSpielers[2, 2];
-                C42.Text = Player2._SpielfeldDesSpielers[2, 3];
-                C52.Text = Player2._SpielfeldDesSpielers[2, 4];
-                C62.Text = Player2._SpielfeldDesSpielers[2, 5];
-                C72.Text = Player2._SpielfeldDesSpielers[2, 6];
-                C82.Text = Player2._SpielfeldDesSpielers[2, 7];
-                C92.Text = Player2._SpielfeldDesSpielers[2, 8];
-
-                D12.Text = Player2._SpielfeldDesSpielers[3, 0];
-                D22.Text = Player2._SpielfeldDesSpielers[3, 1];
-                D32.Text = Player2._SpielfeldDesSpielers[3, 2];
-                D42.Text = Player2._SpielfeldDesSpielers[3, 3];
-                D52.Text = Player2._SpielfeldDesSpielers[3, 4];
-                D62.Text = Player2._SpielfeldDesSpielers[3, 5];
-                D72.Text = Player2._SpielfeldDesSpielers[3, 6];
-                D82.Text = Player2._SpielfeldDesSpielers[3, 7];
-                D92.Text = Player2._SpielfeldDesSpielers[3, 8];
-
-                E12.Text = Player2._SpielfeldDesSpielers[4, 0];
-                E22.Text = Player2._SpielfeldDesSpielers[4, 1];
-                E32.Text = Player2._SpielfeldDesSpielers[4, 2];
-                E42.Text = Player2._SpielfeldDesSpielers[4, 3];
-                E52.Text = Player2._SpielfeldDesSpielers[4, 4];
-                E62.Text = Player2._SpielfeldDesSpielers[4, 5];
-                E72.Text = Player2._SpielfeldDesSpielers[4, 6];
-                E82.Text = Player2._SpielfeldDesSpielers[4, 7];
-                E92.Text = Player2._SpielfeldDesSpielers[4, 8];
-
-                F12.Text = Player2._SpielfeldDesSpielers[5, 0];
-                F22.Text = Player2._SpielfeldDesSpielers[5, 1];
-                F32.Text = Player2._SpielfeldDesSpielers[5, 2];
-                F42.Text = Player2._SpielfeldDesSpielers[5, 3];
-                F52.Text = Player2._SpielfeldDesSpielers[5, 4];
-                F62.Text = Player2._SpielfeldDesSpielers[5, 5];
-                F72.Text = Player2._SpielfeldDesSpielers[5, 6];
-                F82.Text = Player2._SpielfeldDesSpielers[5, 7];
-                F92.Text = Player2._SpielfeldDesSpielers[5, 8];
-
-                G12.Text = Player2._SpielfeldDesSpielers[6, 0];
-                G22.Text = Player2._SpielfeldDesSpielers[6, 1];
-                G32.Text = Player2._SpielfeldDesSpielers[6, 2];
-                G42.Text = Player2._SpielfeldDesSpielers[6, 3];
-                G52.Text = Player2._SpielfeldDesSpielers[6, 4];
-                G62.Text = Player2._SpielfeldDesSpielers[6, 5];
-                G72.Text = Player2._SpielfeldDesSpielers[6, 6];
-                G82.Text = Player2._SpielfeldDesSpielers[6, 7];
-                G92.Text = Player2._SpielfeldDesSpielers[6, 8];
-
-                H12.Text = Player2._SpielfeldDesSpielers[7, 0];
-                H22.Text = Player2._SpielfeldDesSpielers[7, 1];
-                H32.Text = Player2._SpielfeldDesSpielers[7, 2];
-                H42.Text = Player2._SpielfeldDesSpielers[7, 3];
-                H52.Text = Player2._SpielfeldDesSpielers[7, 4];
-                H62.Text = Player2._SpielfeldDesSpielers[7, 5];
-                H72.Text = Player2._SpielfeldDesSpielers[7, 6];
-                H82.Text = Player2._SpielfeldDesSpielers[7, 7];
-                H92.Text = Player2._SpielfeldDesSpielers[7, 8];
-
-                I12.Text = Player2._SpielfeldDesSpielers[8, 0];
-                I22.Text = Player2._SpielfeldDesSpielers[8, 1];
-                I32.Text = Player2._SpielfeldDesSpielers[8, 2];
-                I42.Text = Player2._SpielfeldDesSpielers[8, 3];
-                I52.Text = Player2._SpielfeldDesSpielers[8, 4];
-                I62.Text = Player2._SpielfeldDesSpielers[8, 5];
-                I72.Text = Player2._SpielfeldDesSpielers[8, 6];
-                I82.Text = Player2._SpielfeldDesSpielers[8, 7];
-                I92.Text = Player2._SpielfeldDesSpielers[8, 8];
+                Ausgabe.Text = Ausgabe.Text + "Zunächst ein 4 Feld Schiff.\n Verwenden sie die Optionen 'vertikal nach unten' und 'horizontal nach rechts' um die Orientierung fest zu legen.\n";
             }
-            
+            else
+            {
+                Ausgabe.Text = Ausgabe.Text + "Zunächst ein 3 Feld Schiff.\n Verwenden sie die Optionen 'vertikal nach unten' und 'horizontal nach rechts' um die Orientierung fest zu legen.\n";
+            }
+            Ausgabe.Text = Ausgabe.Text + "\n" + AnzeigePlayer1.Text + " wegschauen!";
+            Disablecoordinates(1);
+            Enablecoordinates(2);
         }
 
-        public void SpielfeldAktualisieren(int Player)
+        /// <summary>
+        /// Lässt das Spiel in die Beschussphase starten
+        /// </summary>
+        public void buttonlock_GS()   //button lock nach Platzierung der Schiffe des Spieler 2 (GS - Game Start)
         {
-            if (Player == 1)    //Dem Array des Spieler 1 werden seine Koordinaten zugewiesen
+            Unshow(0);
+            Disablecoordinates(0);
+            Ausgabe.Text = "Beschussphase startet!\n" + AnzeigePlayer1.Text + " beginnt!\nDrücke auf 'Zug beginnen' um zu starten\n" + AnzeigePlayer2.Text + " wegschauen!";
+            option2_button.BackColor = System.Drawing.Color.White;  
+            option1_button.BackColor = System.Drawing.Color.White;    
+            option1_button.Text = "Zug beginnen";
+            option2_button.Text = "Zug beenden";
+            option2_button.Enabled = false;
+            gamestage.number = 1;
+            turn.number = 1;
+        }
+
+        #endregion
+
+        #region ship placement & game operation
+
+        /// <summary>
+        /// Speichert die Längen der Schiffe
+        /// </summary>
+        /// <param name="Länge">Ist die Länge eines Schiffes</param>
+        private void SetLengthOfShip(int Länge)
+        {
+            Ausgabe.Text = "Wähle die länge des " + (player1.AmountOfShipsLength3 + player1.AmountOfShipsLength4 + player1.AmountOfShipsLength5 + 1) + ". Schiffes aus.";   //Neue Anweisungim Ausgabe Fenster
+            switch (Länge)
             {
-                Player1._SpielfeldDesSpielers[0, 0] = A11.Text;
-                Player1._SpielfeldDesSpielers[0, 1] = A21.Text;
-                Player1._SpielfeldDesSpielers[0, 2] = A31.Text;
-                Player1._SpielfeldDesSpielers[0, 3] = A41.Text;
-                Player1._SpielfeldDesSpielers[0, 4] = A51.Text;
-                Player1._SpielfeldDesSpielers[0, 5] = A61.Text;
-                Player1._SpielfeldDesSpielers[0, 6] = A71.Text;
-                Player1._SpielfeldDesSpielers[0, 7] = A81.Text;
-                Player1._SpielfeldDesSpielers[0, 8] = A91.Text;
-
-                Player1._SpielfeldDesSpielers[1, 0] = B11.Text;
-                Player1._SpielfeldDesSpielers[1, 1] = B21.Text;
-                Player1._SpielfeldDesSpielers[1, 2] = B31.Text;
-                Player1._SpielfeldDesSpielers[1, 3] = B41.Text;
-                Player1._SpielfeldDesSpielers[1, 4] = B51.Text;
-                Player1._SpielfeldDesSpielers[1, 5] = B61.Text;
-                Player1._SpielfeldDesSpielers[1, 6] = B71.Text;
-                Player1._SpielfeldDesSpielers[1, 7] = B81.Text;
-                Player1._SpielfeldDesSpielers[1, 8] = B91.Text;
-
-                Player1._SpielfeldDesSpielers[2, 0] = C11.Text;
-                Player1._SpielfeldDesSpielers[2, 1] = C21.Text;
-                Player1._SpielfeldDesSpielers[2, 2] = C31.Text;
-                Player1._SpielfeldDesSpielers[2, 3] = C41.Text;
-                Player1._SpielfeldDesSpielers[2, 4] = C51.Text;
-                Player1._SpielfeldDesSpielers[2, 5] = C61.Text;
-                Player1._SpielfeldDesSpielers[2, 6] = C71.Text;
-                Player1._SpielfeldDesSpielers[2, 7] = C81.Text;
-                Player1._SpielfeldDesSpielers[2, 8] = C91.Text;
-
-                Player1._SpielfeldDesSpielers[3, 0] = D11.Text;
-                Player1._SpielfeldDesSpielers[3, 1] = D21.Text;
-                Player1._SpielfeldDesSpielers[3, 2] = D31.Text;
-                Player1._SpielfeldDesSpielers[3, 3] = D41.Text;
-                Player1._SpielfeldDesSpielers[3, 4] = D51.Text;
-                Player1._SpielfeldDesSpielers[3, 5] = D61.Text;
-                Player1._SpielfeldDesSpielers[3, 6] = D71.Text;
-                Player1._SpielfeldDesSpielers[3, 7] = D81.Text;
-                Player1._SpielfeldDesSpielers[3, 8] = D91.Text;
-
-                Player1._SpielfeldDesSpielers[4, 0] = E11.Text;
-                Player1._SpielfeldDesSpielers[4, 1] = E21.Text;
-                Player1._SpielfeldDesSpielers[4, 2] = E31.Text;
-                Player1._SpielfeldDesSpielers[4, 3] = E41.Text;
-                Player1._SpielfeldDesSpielers[4, 4] = E51.Text;
-                Player1._SpielfeldDesSpielers[4, 5] = E61.Text;
-                Player1._SpielfeldDesSpielers[4, 6] = E71.Text;
-                Player1._SpielfeldDesSpielers[4, 7] = E81.Text;
-                Player1._SpielfeldDesSpielers[4, 8] = E91.Text;
-
-                Player1._SpielfeldDesSpielers[5, 0] = F11.Text;
-                Player1._SpielfeldDesSpielers[5, 1] = F21.Text;
-                Player1._SpielfeldDesSpielers[5, 2] = F31.Text;
-                Player1._SpielfeldDesSpielers[5, 3] = F41.Text;
-                Player1._SpielfeldDesSpielers[5, 4] = F51.Text;
-                Player1._SpielfeldDesSpielers[5, 5] = F61.Text;
-                Player1._SpielfeldDesSpielers[5, 6] = F71.Text;
-                Player1._SpielfeldDesSpielers[5, 7] = F81.Text;
-                Player1._SpielfeldDesSpielers[5, 8] = F91.Text;
-
-                Player1._SpielfeldDesSpielers[6, 0] = G11.Text;
-                Player1._SpielfeldDesSpielers[6, 1] = G21.Text;
-                Player1._SpielfeldDesSpielers[6, 2] = G31.Text;
-                Player1._SpielfeldDesSpielers[6, 3] = G41.Text;
-                Player1._SpielfeldDesSpielers[6, 4] = G51.Text;
-                Player1._SpielfeldDesSpielers[6, 5] = G61.Text;
-                Player1._SpielfeldDesSpielers[6, 6] = G71.Text;
-                Player1._SpielfeldDesSpielers[6, 7] = G81.Text;
-                Player1._SpielfeldDesSpielers[6, 8] = G91.Text;
-
-                Player1._SpielfeldDesSpielers[7, 0] = H11.Text;
-                Player1._SpielfeldDesSpielers[7, 1] = H21.Text;
-                Player1._SpielfeldDesSpielers[7, 2] = H31.Text;
-                Player1._SpielfeldDesSpielers[7, 3] = H41.Text;
-                Player1._SpielfeldDesSpielers[7, 4] = H51.Text;
-                Player1._SpielfeldDesSpielers[7, 5] = H61.Text;
-                Player1._SpielfeldDesSpielers[7, 6] = H71.Text;
-                Player1._SpielfeldDesSpielers[7, 7] = H81.Text;
-                Player1._SpielfeldDesSpielers[7, 8] = H91.Text;
-
-                Player1._SpielfeldDesSpielers[8, 0] = I11.Text;
-                Player1._SpielfeldDesSpielers[8, 1] = I21.Text;
-                Player1._SpielfeldDesSpielers[8, 2] = I31.Text;
-                Player1._SpielfeldDesSpielers[8, 3] = I41.Text;
-                Player1._SpielfeldDesSpielers[8, 4] = I51.Text;
-                Player1._SpielfeldDesSpielers[8, 5] = I61.Text;
-                Player1._SpielfeldDesSpielers[8, 6] = I71.Text;
-                Player1._SpielfeldDesSpielers[8, 7] = I81.Text;
-                Player1._SpielfeldDesSpielers[8, 8] = I91.Text;
-            }
-
-            else if (Player == 2)
-            {
-                Player2._SpielfeldDesSpielers[0, 0] = A12.Text;
-                Player2._SpielfeldDesSpielers[0, 1] = A22.Text;
-                Player2._SpielfeldDesSpielers[0, 2] = A32.Text;
-                Player2._SpielfeldDesSpielers[0, 3] = A42.Text;
-                Player2._SpielfeldDesSpielers[0, 4] = A52.Text;
-                Player2._SpielfeldDesSpielers[0, 5] = A62.Text;
-                Player2._SpielfeldDesSpielers[0, 6] = A72.Text;
-                Player2._SpielfeldDesSpielers[0, 7] = A82.Text;
-                Player2._SpielfeldDesSpielers[0, 8] = A92.Text;
-
-                Player2._SpielfeldDesSpielers[1, 0] = B12.Text;
-                Player2._SpielfeldDesSpielers[1, 1] = B22.Text;
-                Player2._SpielfeldDesSpielers[1, 2] = B32.Text;
-                Player2._SpielfeldDesSpielers[1, 3] = B42.Text;
-                Player2._SpielfeldDesSpielers[1, 4] = B52.Text;
-                Player2._SpielfeldDesSpielers[1, 5] = B62.Text;
-                Player2._SpielfeldDesSpielers[1, 6] = B72.Text;
-                Player2._SpielfeldDesSpielers[1, 7] = B82.Text;
-                Player2._SpielfeldDesSpielers[1, 8] = B92.Text;
-
-                Player2._SpielfeldDesSpielers[2, 0] = C12.Text;
-                Player2._SpielfeldDesSpielers[2, 1] = C22.Text;
-                Player2._SpielfeldDesSpielers[2, 2] = C32.Text;
-                Player2._SpielfeldDesSpielers[2, 3] = C42.Text;
-                Player2._SpielfeldDesSpielers[2, 4] = C52.Text;
-                Player2._SpielfeldDesSpielers[2, 5] = C62.Text;
-                Player2._SpielfeldDesSpielers[2, 6] = C72.Text;
-                Player2._SpielfeldDesSpielers[2, 7] = C82.Text;
-                Player2._SpielfeldDesSpielers[2, 8] = C92.Text;
-
-                Player2._SpielfeldDesSpielers[3, 0] = D12.Text;
-                Player2._SpielfeldDesSpielers[3, 1] = D22.Text;
-                Player2._SpielfeldDesSpielers[3, 2] = D32.Text;
-                Player2._SpielfeldDesSpielers[3, 3] = D42.Text;
-                Player2._SpielfeldDesSpielers[3, 4] = D52.Text;
-                Player2._SpielfeldDesSpielers[3, 5] = D62.Text;
-                Player2._SpielfeldDesSpielers[3, 6] = D72.Text;
-                Player2._SpielfeldDesSpielers[3, 7] = D82.Text;
-                Player2._SpielfeldDesSpielers[3, 8] = D92.Text;
-
-                Player2._SpielfeldDesSpielers[4, 0] = E12.Text;
-                Player2._SpielfeldDesSpielers[4, 1] = E22.Text;
-                Player2._SpielfeldDesSpielers[4, 2] = E32.Text;
-                Player2._SpielfeldDesSpielers[4, 3] = E42.Text;
-                Player2._SpielfeldDesSpielers[4, 4] = E52.Text;
-                Player2._SpielfeldDesSpielers[4, 5] = E62.Text;
-                Player2._SpielfeldDesSpielers[4, 6] = E72.Text;
-                Player2._SpielfeldDesSpielers[4, 7] = E82.Text;
-                Player2._SpielfeldDesSpielers[4, 8] = E92.Text;
-
-                Player2._SpielfeldDesSpielers[5, 0] = F12.Text;
-                Player2._SpielfeldDesSpielers[5, 1] = F22.Text;
-                Player2._SpielfeldDesSpielers[5, 2] = F32.Text;
-                Player2._SpielfeldDesSpielers[5, 3] = F42.Text;
-                Player2._SpielfeldDesSpielers[5, 4] = F52.Text;
-                Player2._SpielfeldDesSpielers[5, 5] = F62.Text;
-                Player2._SpielfeldDesSpielers[5, 6] = F72.Text;
-                Player2._SpielfeldDesSpielers[5, 7] = F82.Text;
-                Player2._SpielfeldDesSpielers[5, 8] = F92.Text;
-
-                Player2._SpielfeldDesSpielers[6, 0] = G12.Text;
-                Player2._SpielfeldDesSpielers[6, 1] = G22.Text;
-                Player2._SpielfeldDesSpielers[6, 2] = G32.Text;
-                Player2._SpielfeldDesSpielers[6, 3] = G42.Text;
-                Player2._SpielfeldDesSpielers[6, 4] = G52.Text;
-                Player2._SpielfeldDesSpielers[6, 5] = G62.Text;
-                Player2._SpielfeldDesSpielers[6, 6] = G72.Text;
-                Player2._SpielfeldDesSpielers[6, 7] = G82.Text;
-                Player2._SpielfeldDesSpielers[6, 8] = G92.Text;
-
-                Player2._SpielfeldDesSpielers[7, 0] = H12.Text;
-                Player2._SpielfeldDesSpielers[7, 1] = H22.Text;
-                Player2._SpielfeldDesSpielers[7, 2] = H32.Text;
-                Player2._SpielfeldDesSpielers[7, 3] = H42.Text;
-                Player2._SpielfeldDesSpielers[7, 4] = H52.Text;
-                Player2._SpielfeldDesSpielers[7, 5] = H62.Text;
-                Player2._SpielfeldDesSpielers[7, 6] = H72.Text;
-                Player2._SpielfeldDesSpielers[7, 7] = H82.Text;
-                Player2._SpielfeldDesSpielers[7, 8] = H92.Text;
-
-                Player2._SpielfeldDesSpielers[8, 0] = I12.Text;
-                Player2._SpielfeldDesSpielers[8, 1] = I22.Text;
-                Player2._SpielfeldDesSpielers[8, 2] = I32.Text;
-                Player2._SpielfeldDesSpielers[8, 3] = I42.Text;
-                Player2._SpielfeldDesSpielers[8, 4] = I52.Text;
-                Player2._SpielfeldDesSpielers[8, 5] = I62.Text;
-                Player2._SpielfeldDesSpielers[8, 6] = I72.Text;
-                Player2._SpielfeldDesSpielers[8, 7] = I82.Text;
-                Player2._SpielfeldDesSpielers[8, 8] = I92.Text;
+                case 3:
+                    player2.AmountOfShipsLength3 = player1.AmountOfShipsLength3;  //Spieler 2 hat dementsprechend auch eins
+                    counter.AmountOfShipsLength3 = player1.AmountOfShipsLength3;  //Counter erhält auch die Anzahl
+                    Schiff3FP1.Text = Convert.ToString(player1.AmountOfShipsLength3);  //Die Anzeige im Fenster des 1. Spielers wird akutalisiert
+                    Schiff3FP2.Text = Convert.ToString(player2.AmountOfShipsLength3);  //Die Anzeige im Fenster des 2. Spielers wird akutalisiert
+                    if (player1.AmountOfShipsInTotal == player1.AmountOfShipsLength3 + player1.AmountOfShipsLength4 + player1.AmountOfShipsLength5) //Wenn allen Schiffen Längen zugeordnet wurden
+                    {
+                        buttonlock_GdS();   //Sperrt und entperrt Buttons
+                    }
+                    break;
+                case 4:
+                    player2.AmountOfShipsLength4 = player1.AmountOfShipsLength4;
+                    counter.AmountOfShipsLength4 = player1.AmountOfShipsLength4;
+                    Schiff4FP1.Text = Convert.ToString(player1.AmountOfShipsLength4);
+                    Schiff4FP2.Text = Convert.ToString(player2.AmountOfShipsLength4);
+                    if (player1.AmountOfShipsInTotal == player1.AmountOfShipsLength3 + player1.AmountOfShipsLength4 + player1.AmountOfShipsLength5)
+                    {
+                        buttonlock_GdS();
+                    }
+                    break;
+                case 5:
+                    player2.AmountOfShipsLength5 = player1.AmountOfShipsLength5;
+                    counter.AmountOfShipsLength5 = player1.AmountOfShipsLength5;
+                    Schiff5FP1.Text = Convert.ToString(player1.AmountOfShipsLength5);
+                    Schiff5FP2.Text = Convert.ToString(player2.AmountOfShipsLength5);
+                    if (player1.AmountOfShipsInTotal == player1.AmountOfShipsLength3 + player1.AmountOfShipsLength4 + player1.AmountOfShipsLength5)
+                    {
+                        buttonlock_GdS();
+                    }
+                    break;
             }
         }
 
-        private int LängedesSchiffes()
+        /// <summary>
+        /// Sucht die Länge des als nächstes zu platzierenden Schiffs (von klein nach groß - also zuerst die 3 Feld, dann die 4 Feld und zuletzt die 5 Feld Schiffe)
+        /// </summary>
+        /// <returns>Ist die Länge des zu platzierenden Schiffes</returns>
+        private int GetLengthOfShip()
         {
-            return 3;
+            if (counter.AmountOfShipsLength3 == 0 && counter.AmountOfShipsLength4 == 0)
+            {
+                return 5;
+            }
+            else if (counter.AmountOfShipsLength3 == 0)
+            {
+                return 4;
+            }
+            else
+            {
+                return 3;
+            }
         }
+
+        /// <summary>
+        /// Hier wird versucht das Schiff zu platzieren
+        /// </summary>
+        /// <param name="X">Ist die X Koordinate (Buchstaben) des ausgewählten Feldes</param>
+        /// <param name="Y">Ist die Y Koordinate (Zahlen) des ausgewählten Feldes</param>
+        /// <param name="Player">Ist der Spieler, auf dessen Feld die Koordinate ausgewählt wurde</param>
+        /// <param name="Länge">Ist die Länge des Schiffes, welches platziert werden soll</param>
+        /// <returns>Gibt zurück, ob die Platzierung erfolgreich war (true = erfolgreich, false = nicht erfolgreich)</returns>
+        private bool PlacingAttempt(int X, int Y, int Player, int Länge)
+        {
+            if (CollisionCheck(X, Y, Player, Länge) == true)
+            {
+                if (horizontalvertical.number == 0)
+                {
+                    Ausgabe.Text = "Wähle zuerst aus, ob du dein Schiff vertikal oder horizontal platzieren möchtest.";
+                    return false;
+                }
+                else if (horizontalvertical.number == 1)
+                {
+
+                    if (Player == 1)
+                    {
+
+                        for (int i = 0; i < Länge; i++) //Das Schiff ist 3 Koordinaten lang und wird so platziert
+                        {
+                            player1._BattleArea[X + i, Y] = "O";  //An den Koordinaten wird ein O für das Schiff gesetzt, jedoch nur im Array des Spielers 
+                        }
+
+                    }
+                    else
+                    {
+                        for (int i = 0; i < Länge; i++) //Das Schiff ist 3 Koordinaten lang und wird so platziert
+                        {
+                            player2._BattleArea[X + i, Y] = "O";  //An den Koordinaten wird ein O für das Schiff gesetzt, jedoch nur im Array des Spielers 
+                        }
+                    }
+
+                }
+                else
+                {
+                    if (Player == 1)
+                    {
+                        for (int i = 0; i < Länge; i++) //Das Schiff ist 3 Koordinaten lang und wird so platziert
+                        {
+                            player1._BattleArea[X, Y + i] = "O";  //An den Koordinaten wird ein O für das Schiff gesetzt, jedoch nur im Array des Spielers 
+                        }
+                    }
+                    else
+                    {
+                        for (int i = 0; i < Länge; i++) //Das Schiff ist 3 Koordinaten lang und wird so platziert
+                        {
+                            player2._BattleArea[X, Y + i] = "O";  //An den Koordinaten wird ein O für das Schiff gesetzt, jedoch nur im Array des Spielers 
+                        }
+                    }
+                }
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+
+        /// <summary>
+        /// Hier wird überprüft, ob das Schiff platziert werden kann, oder ob ein anderes Schiff im Weg steht, oder das Spielfeld verlassen wird 
+        /// </summary>
+        /// <param name="X">Ist die X Koordinate (Buchstaben) des ausgewählten Feldes</param>
+        /// <param name="Y">Ist die Y Koordinate (Zahlen) des ausgewählten Feldes</param>
+        /// <param name="Player">Ist der Spieler, auf dessen Feld die Koordinate ausgewählt wurde</param>
+        /// <param name="Länge">Ist die Länge des Schiffes, welches platziert werden soll</param>
+        /// <returns>Gibt zurück, ob das Schiff platziert werden kann oder nicht (true = passt, false = passt nicht) </returns>
+        public bool CollisionCheck(int X, int Y, int Player, int Länge)
+        {
+            if (horizontalvertical.number == 1) //horizontale Platzierung
+            {
+                if (Player == 1)
+                {
+
+                    if (X + Länge > 9) //Kollisionsprüfung außerhalb des Randes
+                    {
+                        return false;
+                    }
+
+                    for (int i = 0; i < Länge; i++)
+                    {
+                        if (player1._BattleArea[X + i, Y] == "O")
+                        {
+                            return false;
+                        }
+                    }
+                }
+                else
+                {
+                    if (X + Länge > 9) //Kollisionsprüfung außerhalb des Randes
+                    {
+                        return false;
+                    }
+
+                    for (int i = 0; i < Länge; i++)
+                    {
+                        if (player2._BattleArea[X + i, Y] == "O")
+                        {
+                            return false;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                if (Player == 1) //horizontale Platzierung
+                {
+                    if (Y + Länge > 9) //Kollisionsprüfung außerhalb des Randes
+                    {
+                        return false;
+                    }
+
+                    for (int i = 0; i < Länge; i++)
+                    {
+                        if (player1._BattleArea[X, Y + i] == "O")
+                        {
+                            return false;
+                        }
+                    }
+                }
+                else
+                {
+                    if (Y + Länge > 9) //Kollisionsprüfung außerhalb des Randes
+                    {
+                        return false;
+                    }
+
+                    for (int i = 0; i < Länge; i++)
+                    {
+                        if (player2._BattleArea[X, Y + i] == "O")
+                        {
+                            return false;
+                        }
+                    }
+                }
+            }
+            return true;
+        }
+
+        /// <summary>
+        /// Verwaltet je nach Spielphase ob und wie ein bestimmtes Schiff platziert wird
+        /// </summary>
+        /// <param name="X">Ist die X Koordinate (Buchstaben) des ausgewählten Feldes</param>
+        /// <param name="Y">Ist die Y Koordinate (Zahlen) des ausgewählten Feldes</param>
+        /// <param name="Player">Ist der Spieler, auf dessen Feld die Koordinate ausgewählt wurde</param>
+        private void CoordinateScanner(int X, int Y, int Player)
+        {
+            if (gamestage.number == 0)
+            {
+                switch (GetLengthOfShip())
+                {
+                    case 3:
+                        if (PlacingAttempt(X, Y, Player, 3) == true) //Wenn 1 zurückgegeben, Platzierung erfolgreich
+                        {
+                            counter.AmountOfShipsInTotal -= 1;
+                            counter.AmountOfShipsLength3 -= 1;
+                            if (counter.AmountOfShipsLength3 > 0)
+                            {
+                                Ausgabe.Text = "Platzieren Sie ein weiteres Schiff der Länge 3";
+                            }
+                            else if (counter.AmountOfShipsLength4 > 0)
+                            {
+                                Ausgabe.Text = "Platzieren Sie ein weiteres Schiff der Länge 4";
+                            }
+                            else
+                            {
+                                Ausgabe.Text = "Platzieren Sie ein weiteres Schiff der Länge 5";
+                            }
+                        }
+                        else
+                        {
+                            Ausgabe.Text = "Fehler! Wenn du das Schiff so platzierst, dann überlappt sich das Schiff mit einem anderen oder verlässt das Spielfeld! Bitte erneut auswählen!";
+                        }
+                        if (Player == 1)
+                        {
+                            ShowAllData(1);
+                        }
+                        else if (Player == 2)
+                        {
+                            ShowAllData(2);
+                        }
+                        break;
+                    case 4:
+                        if (PlacingAttempt(X, Y, Player, 4) == true)
+                        {
+                            counter.AmountOfShipsInTotal -= 1;
+                            counter.AmountOfShipsLength4 -= 1;
+                            if (counter.AmountOfShipsLength3 > 0)
+                            {
+                                Ausgabe.Text = "Platzieren Sie ein weiteres Schiff der Länge 3";
+                            }
+                            else if (counter.AmountOfShipsLength4 > 0)
+                            {
+                                Ausgabe.Text = "Platzieren Sie ein weiteres Schiff der Länge 4";
+                            }
+                            else
+                            {
+                                Ausgabe.Text = "Platzieren Sie ein weiteres Schiff der Länge 5";
+                            }
+                            if (Player == 1)
+                            {
+                                ShowAllData(1);
+                            }
+                            else if (Player == 2)
+                            {
+                                ShowAllData(2);
+                            }
+                        }
+                        else
+                        {
+                            Ausgabe.Text = "Fehler! Wenn du das Schiff so platzierst, dann überlappt sich das Schiff mit einem anderen oder verlässt das Spielfeld! Bitte erneut auswählen!";
+                        }
+                        ShowAllData(1);
+                        ShowAllData(2);
+                        break;
+                    case 5:
+                        if (PlacingAttempt(X, Y, Player, 5) == true)
+                        {
+                            counter.AmountOfShipsInTotal -= 1;
+                            counter.AmountOfShipsLength5 -= 1;
+                            if (counter.AmountOfShipsLength3 > 0)
+                            {
+                                Ausgabe.Text = "Platzieren Sie ein weiteres Schiff der Länge 3";
+                            }
+                            else if (counter.AmountOfShipsLength4 > 0)
+                            {
+                                Ausgabe.Text = "Platzieren Sie ein weiteres Schiff der Länge 4";
+                            }
+                            else
+                            {
+                                Ausgabe.Text = "Platzieren Sie ein weiteres Schiff der Länge 5";
+                            }
+                            if (Player == 1)
+                            {
+                                ShowAllData(1);
+                            }
+                            else if (Player == 2)
+                            {
+                                ShowAllData(2);
+                            }
+                        }
+                        else
+                        {
+                            Ausgabe.Text = "Fehler! Wenn du das Schiff so platzierst, dann überlappt sich das Schiff mit einem anderen oder verlässt das Spielfeld! Bitte erneut auswählen!";
+                        }
+                        ShowAllData(1);
+                        ShowAllData(2);
+                        break;
+                }
+                if (counter.AmountOfShipsInTotal == 0)
+                {
+                    counter.AmountOfShipsLength3 = player1.AmountOfShipsLength3;
+                    counter.AmountOfShipsLength4 = player1.AmountOfShipsLength4;
+                    counter.AmountOfShipsLength5 = player1.AmountOfShipsLength5;
+                    counter.AmountOfShipsInTotal = player1.AmountOfShipsInTotal;
+                    if (Player == 1)
+                    {
+                        Ausgabe.Text = AnzeigePlayer2.Text + " darf nun seine Schiffe platzieren.";
+                        HideShips();
+                        buttonlock_SPP1();
+                    }
+                    else if (Player == 2)
+                    {
+                        buttonlock_GS();
+                    }
+                }
+            }
+            else if (gamestage.number == 1)
+            {
+                if (Player == 1)
+                {
+                    if (player1._BattleArea[X, Y] == "O")
+                    {
+                        player1._BattleArea[X, Y] = "X";
+                        Ausgabe.Text = "Treffer!";
+                    }
+                    else
+                    {
+                        player1._BattleArea[X, Y] = "U";
+                        Ausgabe.Text = "Kein Treffer";
+                    }
+                }
+                else if (Player == 2)
+                {
+                    if (player2._BattleArea[X, Y] == "O")
+                    {
+                        player2._BattleArea[X, Y] = "X";
+                        Ausgabe.Text = "Treffer!";
+                    }
+                    else
+                    {
+                        player2._BattleArea[X, Y] = "U";
+                        Ausgabe.Text = "Kein Treffer";
+                    }
+                }
+                Disablecoordinates(0);
+                option1_button.Enabled = false;
+                option2_button.Enabled = true;
+                if (Player == 1)
+                {
+                    ShowAllData(1);
+                    Endgame(1);
+                }
+                else if (Player == 2)
+                {
+                    ShowAllData(2);
+                    Endgame(2);
+                }
+                HideShips();
+            }
+        }
+
+        #endregion
+
+        #region ending phase
+
+        /// <summary>
+        /// Überprüft ob die Spieler noch ein Schiff auf dem Spielfeld haben
+        /// </summary>
+        /// <param name="Player">Gibt an welcher Spieler überprüft wird</param>
+        public void Endgame(int Player)
+        {
+            if(Player==1)
+            {
+                for (int i = 0; i < 9; i++)
+                {
+                    for (int j = 0; j < 9; j++)
+                    {
+                        if (player1._BattleArea[i, j] == "O")
+                        {
+                            return;
+                        }
+                    }
+                }
+                Ausgabe.Text = "Spielende!\n" + AnzeigePlayer2.Text + " hat gewonnen!\nMöchtet ihr ein weiteres Spiel spielen oder beenden?";
+                option1_button.Enabled = true;
+                option2_button.Enabled = true;
+                option1_button.Text = "Erneut spielen?";
+                option2_button.Text = "Spiel verlassen";
+                gamestage.number = 2;
+                Disablecoordinates(0);
+            }
+            if (Player==2)
+            {
+                for (int i = 0; i < 9; i++)
+                {
+                    for (int j = 0; j < 9; j++)
+                    {
+                        if (player2._BattleArea[i, j] == "O")
+                        {
+                            return;
+                        }
+                    }
+                }
+                Ausgabe.Text = "Spielende!\n" + AnzeigePlayer1.Text + " hat gewonnen!\nMöchtet ihr ein weiteres Spiel spielen oder beenden?";
+                option1_button.Enabled = true;
+                option2_button.Enabled = true;
+                option1_button.Text = "Erneut spielen?";
+                option2_button.Text = "Spiel verlassen";
+                gamestage.number = 2;
+                Disablecoordinates(0);
+            }
+        }
+
+        /// <summary>
+        /// Setzt die Spielrunde und sämtliche Informationen zurück, wie zu Beginn des Spiels
+        /// </summary>
+        public void Reset()
+        {
+            player1.AmountOfShipsInTotal = 0;
+            player1.AmountOfShipsLength3 = 0;
+            player1.AmountOfShipsLength4 = 0;
+            player1.AmountOfShipsLength5 = 0;
+            player2.AmountOfShipsInTotal = 0;
+            player2.AmountOfShipsLength3 = 0;
+            player2.AmountOfShipsLength4 = 0;
+            player2.AmountOfShipsLength5 = 0;
+            counter.AmountOfShipsInTotal = 0;
+            counter.AmountOfShipsLength3 = 0;
+            counter.AmountOfShipsLength4 = 0;
+            counter.AmountOfShipsLength5 = 0;
+            turn.number = 0;
+            horizontalvertical.number = 0;
+            gamestage.number = 0;
+            option1_button.Enabled = false;
+            option2_button.Enabled = false;
+            option1_button.Text = "";
+            option2_button.Text = "";
+            option1_button.BackColor = System.Drawing.Color.White;
+            option2_button.BackColor = System.Drawing.Color.White;
+            AdS_3.BackColor = System.Drawing.Color.White;
+            AdS_4.BackColor = System.Drawing.Color.White;
+            AdS_5.BackColor = System.Drawing.Color.White;
+            AdS_6.BackColor = System.Drawing.Color.White;
+            AdS_7.BackColor = System.Drawing.Color.White;
+            AdS_8.BackColor = System.Drawing.Color.White;
+            Ausgabe.Text = "Bitte Anzahl der Schiffe pro Spieler auswählen";
+            Schiff3FP1.Text = "";
+            Schiff4FP1.Text = "";
+            Schiff5FP1.Text = "";
+            Schiff3FP2.Text = "";
+            Schiff4FP2.Text = "";
+            Schiff5FP2.Text = "";
+            Schiff3FP1.BackColor = System.Drawing.Color.White;
+            Schiff4FP1.BackColor = System.Drawing.Color.White;
+            Schiff5FP1.BackColor = System.Drawing.Color.White;
+            Schiff3FP2.BackColor = System.Drawing.Color.White;
+            Schiff4FP2.BackColor = System.Drawing.Color.White;
+            Schiff5FP2.BackColor = System.Drawing.Color.White;
+            AdS_3.Enabled = true;
+            AdS_4.Enabled = true;
+            AdS_5.Enabled = true;
+            AdS_6.Enabled = true;
+            AdS_7.Enabled = true;
+            AdS_8.Enabled = true;
+            GdS_3.Enabled = false;
+            GdS_4.Enabled = false;
+            GdS_5.Enabled = false;
+            for (int i = 0; i < 9; i++)
+            {
+                for (int j = 0; j < 9; j++)
+                {
+                    player1._BattleArea[i, j] = "";
+                    player2._BattleArea[i, j] = "";
+                }
+            }
+            Unshow(0);
+            Disablecoordinates(0);
+        }
+
+        #endregion 
     }
 }
 
