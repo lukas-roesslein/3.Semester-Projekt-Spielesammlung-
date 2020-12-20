@@ -16,57 +16,71 @@ namespace Spielesammlung
         {
             InitializeComponent();
         }
-        
 
-        private void B_TicTacToe_Click(object sender, EventArgs e)
+        //Click Event zum Starten eines Spieles
+        private void B_Start_Click(object sender, EventArgs e)
         {
-        
-            string Spieler1 = TB_Name1.Text;
+            string Spieler1 = TB_Name1.Text;   //Die Spielernamen werden aus der jeweiligen Textbox geholt
             string Spieler2 = TB_Name2.Text;
-            if(CheckNamen()==1)
+            if (CheckNamen() == 1)  //Übergabe an eine Methode zur Überprüfung der Namen
             {
-                this.Hide();
-                TicTacToe TTT = new TicTacToe(Spieler1, Spieler2);
-                TTT.ShowDialog();   //Macht die Form sichtbar
-                this.Show();
+                this.Hide();    //Auswahl Spiel Fenster wird verborgen
+                //IF-Abfrage um festzustellen welches Spiel in der Combobox ausgewählt wurde
+                if (CB_NameSpiel.Text=="TIC TAC TOE")
+                {                  
+                    TicTacToe TTT = new TicTacToe(Spieler1, Spieler2);  //Objekt wird instanziert
+                    TTT.ShowDialog();   //Macht die Form sichtbar                    
+                }
+                else if (CB_NameSpiel.Text == "Schiffe Versenken")
+                {      
+                    SchiffeVersenken schiffeVersenken = new SchiffeVersenken(Spieler1, Spieler2);
+                    schiffeVersenken.ShowDialog();   //Macht die Form sichtbar                 
+                }
+                //else if()
+                //{
+                     //Vier Gewinnt   
+                //}
+                else
+                {
+
+                }
+                this.Show();    //Macht das Auswahl Spiel Fenster wieder sichtbar
+
+            }
+            else { }
+        }
+        //private void B_TicTacToe_Click(object sender, EventArgs e)
+        //{
+        
+        //    string Spieler1 = TB_Name1.Text;
+        //    string Spieler2 = TB_Name2.Text;
+        //    if(CheckNamen()==1)
+        //    {
+        //        this.Hide();
+        //        TicTacToe TTT = new TicTacToe(Spieler1, Spieler2);
+        //        TTT.ShowDialog();   //Macht die Form sichtbar
+        //        this.Show();
                 
-                //const string message = "Wollen sie ein neues Spiel starten?";
-                //const string caption = "Neues Spiel";
-                //var result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+        //        //const string message = "Wollen sie ein neues Spiel starten?";
+        //        //const string caption = "Neues Spiel";
+        //        //var result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-                //if (result == DialogResult.Yes)
-                //{
-                //    this.Show();
-                //}
-                //else
-                //{
-                //    this.Close();
-                //}
-            }
-            else { }
+        //        //if (result == DialogResult.Yes)
+        //        //{
+        //        //    this.Show();
+        //        //}
+        //        //else
+        //        //{
+        //        //    this.Close();
+        //        //}
+        //    }
+        //    else { }
            
-        }
+        //}
 
-        private void B_VierGewinnt_Click(object sender, EventArgs e)
-        {
+       
 
-        }
 
-        private void B_Schiffeversenken_Click(object sender, EventArgs e)
-        {
-            string Spieler1 = TB_Name1.Text;
-            string Spieler2 = TB_Name2.Text;
-            if (CheckNamen() == 1)
-            {
-
-                this.Hide();
-
-                SchiffeVersenken schiffeVersenken = new SchiffeVersenken(Spieler1, Spieler2);
-                schiffeVersenken.ShowDialog();   //Macht die Form sichtbar
-                this.Show();
-            }
-            else { }
-        }
 
    
         private void Message_Box()
@@ -84,6 +98,11 @@ namespace Spielesammlung
             //    this.Close();
             //}
         }
+
+        /// <summary>
+        /// Methode um die Richtigkeit der eingegebenen Spielernamen zu überprüfen
+        /// </summary>
+        /// <returns>Error Code</returns>
         private int CheckNamen()
         {
             string _Name1 = TB_Name1.Text;
@@ -104,5 +123,7 @@ namespace Spielesammlung
                 return 1;
             }
         }
+
+     
     }
 }

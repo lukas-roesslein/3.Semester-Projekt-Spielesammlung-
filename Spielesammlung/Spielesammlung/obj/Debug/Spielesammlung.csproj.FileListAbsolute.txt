@@ -20,14 +20,5 @@ C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\Spi
 C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.csproj.CoreCompileInputs.cache
 C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.exe
 C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.pdb
-C:\Users\Pascal\source\repos\lukas-roesslein\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.csprojAssemblyReference.cache
-C:\Users\Pascal\source\repos\lukas-roesslein\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.AuswahlSpiel.resources
-C:\Users\Pascal\source\repos\lukas-roesslein\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.Properties.Resources.resources
-C:\Users\Pascal\source\repos\lukas-roesslein\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.TicTacToe.resources
-C:\Users\Pascal\source\repos\lukas-roesslein\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.csproj.GenerateResource.cache
-C:\Users\Pascal\source\repos\lukas-roesslein\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.csproj.CoreCompileInputs.cache
-C:\Users\Pascal\source\repos\lukas-roesslein\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.exe
-C:\Users\Pascal\source\repos\lukas-roesslein\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.pdb
-C:\Users\Pascal\source\repos\lukas-roesslein\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\bin\Debug\Spielesammlung.exe.config
-C:\Users\Pascal\source\repos\lukas-roesslein\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\bin\Debug\Spielesammlung.exe
-C:\Users\Pascal\source\repos\lukas-roesslein\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\bin\Debug\Spielesammlung.pdb
+C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.SchiffeVersenken.resources
+C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.Info.resources
