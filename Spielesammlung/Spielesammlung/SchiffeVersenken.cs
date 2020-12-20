@@ -138,7 +138,7 @@ namespace Spielesammlung
         /// <summary>
         /// Erstellt ein Infofenster
         /// </summary>
-        Info infowindow = new Info();           
+       // Info infowindow = new Info();           
 
         #region set amount of ships
 

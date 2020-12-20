@@ -16,57 +16,69 @@ namespace Spielesammlung
         {
             InitializeComponent();
         }
-        
 
-        private void B_TicTacToe_Click(object sender, EventArgs e)
-        {
-        
-            string Spieler1 = TB_Name1.Text;
-            string Spieler2 = TB_Name2.Text;
-            if(CheckNamen()==1)
-            {
-                this.Hide();
-                TicTacToe TTT = new TicTacToe(Spieler1, Spieler2);
-                TTT.ShowDialog();   //Macht die Form sichtbar
-                this.Show();
-                
-                //const string message = "Wollen sie ein neues Spiel starten?";
-                //const string caption = "Neues Spiel";
-                //var result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
-
-                //if (result == DialogResult.Yes)
-                //{
-                //    this.Show();
-                //}
-                //else
-                //{
-                //    this.Close();
-                //}
-            }
-            else { }
-           
-        }
-
-        private void B_VierGewinnt_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void B_Schiffeversenken_Click(object sender, EventArgs e)
+        private void B_Start_Click(object sender, EventArgs e)
         {
             string Spieler1 = TB_Name1.Text;
             string Spieler2 = TB_Name2.Text;
             if (CheckNamen() == 1)
             {
-
                 this.Hide();
+                if (CB_NameSpiel.Text=="TIC TAC TOE")
+                {                  
+                    TicTacToe TTT = new TicTacToe(Spieler1, Spieler2);
+                    TTT.ShowDialog();   //Macht die Form sichtbar                    
+                }
+                else if (CB_NameSpiel.Text == "Schiffe Versenken")
+                {      
+                    SchiffeVersenken schiffeVersenken = new SchiffeVersenken(Spieler1, Spieler2);
+                    schiffeVersenken.ShowDialog();   //Macht die Form sichtbar                 
+                }
+                //else if()
+                //{
 
-                SchiffeVersenken schiffeVersenken = new SchiffeVersenken(Spieler1, Spieler2);
-                schiffeVersenken.ShowDialog();   //Macht die Form sichtbar
+                //}
+                else
+                {
+
+                }
                 this.Show();
+
             }
             else { }
         }
+        //private void B_TicTacToe_Click(object sender, EventArgs e)
+        //{
+        
+        //    string Spieler1 = TB_Name1.Text;
+        //    string Spieler2 = TB_Name2.Text;
+        //    if(CheckNamen()==1)
+        //    {
+        //        this.Hide();
+        //        TicTacToe TTT = new TicTacToe(Spieler1, Spieler2);
+        //        TTT.ShowDialog();   //Macht die Form sichtbar
+        //        this.Show();
+                
+        //        //const string message = "Wollen sie ein neues Spiel starten?";
+        //        //const string caption = "Neues Spiel";
+        //        //var result = MessageBox.Show(message, caption, MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+        //        //if (result == DialogResult.Yes)
+        //        //{
+        //        //    this.Show();
+        //        //}
+        //        //else
+        //        //{
+        //        //    this.Close();
+        //        //}
+        //    }
+        //    else { }
+           
+        //}
+
+       
+
+
 
    
         private void Message_Box()
@@ -104,5 +116,7 @@ namespace Spielesammlung
                 return 1;
             }
         }
+
+     
     }
 }
