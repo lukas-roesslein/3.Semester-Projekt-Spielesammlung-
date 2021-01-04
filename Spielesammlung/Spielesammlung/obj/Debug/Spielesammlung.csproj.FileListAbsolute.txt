@@ -22,8 +22,11 @@ C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\Spi
 C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.pdb
 C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.SchiffeVersenken.resources
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.Info.resources
 =======
+=======
+>>>>>>> Stashed changes
 D:\_Dokumente\• Studium\3. Semester\Datenverarbeitung und Programmierung\Projekt\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\bin\Debug\Spielesammlung.exe.config
 D:\_Dokumente\• Studium\3. Semester\Datenverarbeitung und Programmierung\Projekt\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\bin\Debug\Spielesammlung.exe
 D:\_Dokumente\• Studium\3. Semester\Datenverarbeitung und Programmierung\Projekt\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\bin\Debug\Spielesammlung.pdb
@@ -36,4 +39,7 @@ D:\_Dokumente\• Studium\3. Semester\Datenverarbeitung und Programmierung\Proje
 D:\_Dokumente\• Studium\3. Semester\Datenverarbeitung und Programmierung\Projekt\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.csproj.CoreCompileInputs.cache
 D:\_Dokumente\• Studium\3. Semester\Datenverarbeitung und Programmierung\Projekt\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.exe
 D:\_Dokumente\• Studium\3. Semester\Datenverarbeitung und Programmierung\Projekt\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.pdb
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
