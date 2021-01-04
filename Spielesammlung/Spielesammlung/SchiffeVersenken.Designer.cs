@@ -2075,142 +2075,6 @@ namespace Spielesammlung
             this.option2_button.UseVisualStyleBackColor = true;
             this.option2_button.Click += new System.EventHandler(this.option2_Button_Click);
             // 
-            // Feld3P1
-            // 
-            this.Feld3P1.AutoSize = true;
-            this.Feld3P1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Feld3P1.Location = new System.Drawing.Point(528, 430);
-            this.Feld3P1.Name = "Feld3P1";
-            this.Feld3P1.Size = new System.Drawing.Size(63, 19);
-            this.Feld3P1.TabIndex = 226;
-            this.Feld3P1.Text = "3 Feld";
-            // 
-            // Feld4P1
-            // 
-            this.Feld4P1.AutoSize = true;
-            this.Feld4P1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Feld4P1.Location = new System.Drawing.Point(528, 491);
-            this.Feld4P1.Name = "Feld4P1";
-            this.Feld4P1.Size = new System.Drawing.Size(63, 19);
-            this.Feld4P1.TabIndex = 227;
-            this.Feld4P1.Text = "4 Feld";
-            // 
-            // Feld5P1
-            // 
-            this.Feld5P1.AutoSize = true;
-            this.Feld5P1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Feld5P1.Location = new System.Drawing.Point(528, 552);
-            this.Feld5P1.Name = "Feld5P1";
-            this.Feld5P1.Size = new System.Drawing.Size(63, 19);
-            this.Feld5P1.TabIndex = 228;
-            this.Feld5P1.Text = "5 Feld";
-            // 
-            // Feld3P2
-            // 
-            this.Feld3P2.AutoSize = true;
-            this.Feld3P2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Feld3P2.Location = new System.Drawing.Point(689, 430);
-            this.Feld3P2.Name = "Feld3P2";
-            this.Feld3P2.Size = new System.Drawing.Size(63, 19);
-            this.Feld3P2.TabIndex = 229;
-            this.Feld3P2.Text = "3 Feld";
-            // 
-            // Feld4P2
-            // 
-            this.Feld4P2.AutoSize = true;
-            this.Feld4P2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Feld4P2.Location = new System.Drawing.Point(689, 491);
-            this.Feld4P2.Name = "Feld4P2";
-            this.Feld4P2.Size = new System.Drawing.Size(63, 19);
-            this.Feld4P2.TabIndex = 230;
-            this.Feld4P2.Text = "4 Feld";
-            // 
-            // Feld5P2
-            // 
-            this.Feld5P2.AutoSize = true;
-            this.Feld5P2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Feld5P2.Location = new System.Drawing.Point(689, 552);
-            this.Feld5P2.Name = "Feld5P2";
-            this.Feld5P2.Size = new System.Drawing.Size(63, 19);
-            this.Feld5P2.TabIndex = 231;
-            this.Feld5P2.Text = "5 Feld";
-            // 
-            // SchiffeimEinsatz
-            // 
-            this.SchiffeimEinsatz.AutoSize = true;
-            this.SchiffeimEinsatz.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.SchiffeimEinsatz.Location = new System.Drawing.Point(563, 393);
-            this.SchiffeimEinsatz.Name = "SchiffeimEinsatz";
-            this.SchiffeimEinsatz.Size = new System.Drawing.Size(167, 19);
-            this.SchiffeimEinsatz.TabIndex = 232;
-            this.SchiffeimEinsatz.Text = "Schiffe im Einsatz";
-            // 
-            // Schiff5FP2
-            // 
-            this.Schiff5FP2.AutoSize = true;
-            this.Schiff5FP2.BackColor = System.Drawing.Color.White;
-            this.Schiff5FP2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Schiff5FP2.Location = new System.Drawing.Point(710, 579);
-            this.Schiff5FP2.Name = "Schiff5FP2";
-            this.Schiff5FP2.Size = new System.Drawing.Size(20, 19);
-            this.Schiff5FP2.TabIndex = 225;
-            this.Schiff5FP2.Text = "0";
-            // 
-            // Schiff5FP1
-            // 
-            this.Schiff5FP1.AutoSize = true;
-            this.Schiff5FP1.BackColor = System.Drawing.Color.White;
-            this.Schiff5FP1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Schiff5FP1.Location = new System.Drawing.Point(547, 579);
-            this.Schiff5FP1.Name = "Schiff5FP1";
-            this.Schiff5FP1.Size = new System.Drawing.Size(20, 19);
-            this.Schiff5FP1.TabIndex = 224;
-            this.Schiff5FP1.Text = "0";
-            // 
-            // Schiff4FP2
-            // 
-            this.Schiff4FP2.AutoSize = true;
-            this.Schiff4FP2.BackColor = System.Drawing.Color.White;
-            this.Schiff4FP2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Schiff4FP2.Location = new System.Drawing.Point(710, 516);
-            this.Schiff4FP2.Name = "Schiff4FP2";
-            this.Schiff4FP2.Size = new System.Drawing.Size(20, 19);
-            this.Schiff4FP2.TabIndex = 223;
-            this.Schiff4FP2.Text = "0";
-            // 
-            // Schiff4FP1
-            // 
-            this.Schiff4FP1.AutoSize = true;
-            this.Schiff4FP1.BackColor = System.Drawing.Color.White;
-            this.Schiff4FP1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Schiff4FP1.Location = new System.Drawing.Point(547, 516);
-            this.Schiff4FP1.Name = "Schiff4FP1";
-            this.Schiff4FP1.Size = new System.Drawing.Size(20, 19);
-            this.Schiff4FP1.TabIndex = 222;
-            this.Schiff4FP1.Text = "0";
-            // 
-            // Schiff3FP2
-            // 
-            this.Schiff3FP2.AutoSize = true;
-            this.Schiff3FP2.BackColor = System.Drawing.Color.White;
-            this.Schiff3FP2.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Schiff3FP2.Location = new System.Drawing.Point(710, 455);
-            this.Schiff3FP2.Name = "Schiff3FP2";
-            this.Schiff3FP2.Size = new System.Drawing.Size(20, 19);
-            this.Schiff3FP2.TabIndex = 221;
-            this.Schiff3FP2.Text = "0";
-            // 
-            // Schiff3FP1
-            // 
-            this.Schiff3FP1.AutoSize = true;
-            this.Schiff3FP1.BackColor = System.Drawing.Color.White;
-            this.Schiff3FP1.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Schiff3FP1.Location = new System.Drawing.Point(547, 455);
-            this.Schiff3FP1.Name = "Schiff3FP1";
-            this.Schiff3FP1.Size = new System.Drawing.Size(20, 19);
-            this.Schiff3FP1.TabIndex = 220;
-            this.Schiff3FP1.Text = "0";
-            // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -4667,8 +4531,8 @@ namespace Spielesammlung
             Unshow(0);
             Disablecoordinates(0);
             Ausgabe.Text = "Beschussphase startet!\n" + AnzeigePlayer1.Text + " beginnt!\nDrücke auf 'Zug beginnen' um zu starten\n" + AnzeigePlayer2.Text + " wegschauen!";
-            option2_button.BackColor = System.Drawing.Color.White;  
-            option1_button.BackColor = System.Drawing.Color.White;    
+            option2_button.BackColor = System.Drawing.Color.White;
+            option1_button.BackColor = System.Drawing.Color.White;
             option1_button.Text = "Zug beginnen";
             option2_button.Text = "Zug beenden";
             option2_button.Enabled = false;
@@ -4767,7 +4631,7 @@ namespace Spielesammlung
 
                         for (int i = 0; i < Länge; i++) //Das Schiff ist 3 Koordinaten lang und wird so platziert
                         {
-                            player1._BattleArea[X + i, Y] = "O";  //An den Koordinaten wird ein O für das Schiff gesetzt, jedoch nur im Array des Spielers 
+                            player1._BattleArea[X + i, Y] = "O";  //An den Koordinaten wird ein O für das Schiff gesetzt, jedoch nur im Array des Spielers
                         }
 
                     }
@@ -4898,10 +4762,11 @@ namespace Spielesammlung
                 switch (GetLengthOfShip())
                 {
                     case 3:
-                        if (PlacingAttempt(X, Y, Player, 3) == true) //Wenn 1 zurückgegeben, Platzierung erfolgreich
+                        if (PlacingAttempt(X, Y, Player, 3) == true) //Wenn true zurückgegeben, Platzierung erfolgreich
                         {
                             counter.AmountOfShipsInTotal -= 1;
                             counter.AmountOfShipsLength3 -= 1;
+
                             if (counter.AmountOfShipsLength3 > 0)
                             {
                                 Ausgabe.Text = "Platzieren Sie ein weiteres Schiff der Länge 3";
@@ -5068,7 +4933,7 @@ namespace Spielesammlung
         /// <param name="Player">Gibt an welcher Spieler überprüft wird</param>
         public void Endgame(int Player)
         {
-            if(Player==1)
+            if (Player == 1)
             {
                 for (int i = 0; i < 9; i++)
                 {
@@ -5088,7 +4953,7 @@ namespace Spielesammlung
                 gamestage.number = 2;
                 Disablecoordinates(0);
             }
-            if (Player==2)
+            if (Player == 2)
             {
                 for (int i = 0; i < 9; i++)
                 {

@@ -24,7 +24,7 @@ namespace Spielesammlung
             InitializeComponent();
             AnzeigePlayer1.Text = Name_Player1;
             AnzeigePlayer2.Text = Name_Player2;
-    }
+        }
 
         //Klassen
         /// <summary>
