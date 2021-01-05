@@ -1,0 +1,20 @@
+C:\Users\Sebastian_Lippert\Source\Repos\4 Gewinnt Campus Projekt\4 Gewinnt Campus Projekt\bin\Debug\4 Gewinnt Campus Projekt.exe.config
+C:\Users\Sebastian_Lippert\Source\Repos\4 Gewinnt Campus Projekt\4 Gewinnt Campus Projekt\bin\Debug\4 Gewinnt Campus Projekt.exe
+C:\Users\Sebastian_Lippert\Source\Repos\4 Gewinnt Campus Projekt\4 Gewinnt Campus Projekt\bin\Debug\4 Gewinnt Campus Projekt.pdb
+C:\Users\Sebastian_Lippert\Source\Repos\4 Gewinnt Campus Projekt\4 Gewinnt Campus Projekt\obj\Debug\_4_Gewinnt_Campus_Projekt.Properties.Resources.resources
+C:\Users\Sebastian_Lippert\Source\Repos\4 Gewinnt Campus Projekt\4 Gewinnt Campus Projekt\obj\Debug\4 Gewinnt Campus Projekt.csproj.GenerateResource.cache
+C:\Users\Sebastian_Lippert\Source\Repos\4 Gewinnt Campus Projekt\4 Gewinnt Campus Projekt\obj\Debug\4 Gewinnt Campus Projekt.csproj.CoreCompileInputs.cache
+C:\Users\Sebastian_Lippert\Source\Repos\4 Gewinnt Campus Projekt\4 Gewinnt Campus Projekt\obj\Debug\4 Gewinnt Campus Projekt.exe
+C:\Users\Sebastian_Lippert\Source\Repos\4 Gewinnt Campus Projekt\4 Gewinnt Campus Projekt\obj\Debug\4 Gewinnt Campus Projekt.pdb
+C:\Users\Sebastian_Lippert\Source\Repos\4 Gewinnt Campus Projekt\4 Gewinnt Campus Projekt\obj\Debug\4 Gewinnt Campus Projekt.csprojAssemblyReference.cache
+C:\Users\Sebastian_Lippert\Source\Repos\4 Gewinnt Campus Projekt\4 Gewinnt Campus Projekt\obj\Debug\_4_Gewinnt_Campus_Projekt.TCC.resources
+D:\_Dokumente\• Studium\3. Semester\Datenverarbeitung und Programmierung\Projekt\3.Semester-Projekt-Spielesammlung-\4 Gewinnt Campus Projekt\4 Gewinnt Campus Projekt\bin\Debug\4 Gewinnt Campus Projekt.exe.config
+D:\_Dokumente\• Studium\3. Semester\Datenverarbeitung und Programmierung\Projekt\3.Semester-Projekt-Spielesammlung-\4 Gewinnt Campus Projekt\4 Gewinnt Campus Projekt\bin\Debug\4 Gewinnt Campus Projekt.exe
+D:\_Dokumente\• Studium\3. Semester\Datenverarbeitung und Programmierung\Projekt\3.Semester-Projekt-Spielesammlung-\4 Gewinnt Campus Projekt\4 Gewinnt Campus Projekt\bin\Debug\4 Gewinnt Campus Projekt.pdb
+D:\_Dokumente\• Studium\3. Semester\Datenverarbeitung und Programmierung\Projekt\3.Semester-Projekt-Spielesammlung-\4 Gewinnt Campus Projekt\4 Gewinnt Campus Projekt\obj\Debug\4 Gewinnt Campus Projekt.csprojAssemblyReference.cache
+D:\_Dokumente\• Studium\3. Semester\Datenverarbeitung und Programmierung\Projekt\3.Semester-Projekt-Spielesammlung-\4 Gewinnt Campus Projekt\4 Gewinnt Campus Projekt\obj\Debug\_4_Gewinnt_Campus_Projekt.TCC.resources
+D:\_Dokumente\• Studium\3. Semester\Datenverarbeitung und Programmierung\Projekt\3.Semester-Projekt-Spielesammlung-\4 Gewinnt Campus Projekt\4 Gewinnt Campus Projekt\obj\Debug\_4_Gewinnt_Campus_Projekt.Properties.Resources.resources
+D:\_Dokumente\• Studium\3. Semester\Datenverarbeitung und Programmierung\Projekt\3.Semester-Projekt-Spielesammlung-\4 Gewinnt Campus Projekt\4 Gewinnt Campus Projekt\obj\Debug\4 Gewinnt Campus Projekt.csproj.GenerateResource.cache
+D:\_Dokumente\• Studium\3. Semester\Datenverarbeitung und Programmierung\Projekt\3.Semester-Projekt-Spielesammlung-\4 Gewinnt Campus Projekt\4 Gewinnt Campus Projekt\obj\Debug\4 Gewinnt Campus Projekt.csproj.CoreCompileInputs.cache
+D:\_Dokumente\• Studium\3. Semester\Datenverarbeitung und Programmierung\Projekt\3.Semester-Projekt-Spielesammlung-\4 Gewinnt Campus Projekt\4 Gewinnt Campus Projekt\obj\Debug\4 Gewinnt Campus Projekt.exe
+D:\_Dokumente\• Studium\3. Semester\Datenverarbeitung und Programmierung\Projekt\3.Semester-Projekt-Spielesammlung-\4 Gewinnt Campus Projekt\4 Gewinnt Campus Projekt\obj\Debug\4 Gewinnt Campus Projekt.pdb
