@@ -38,3 +38,13 @@ C:\Users\lukas\OneDrive\Desktop\Sebastian fertig\4 Gewinnt Campus Projekt\4 Gewi
 C:\Users\lukas\OneDrive\Desktop\Sebastian fertig\4 Gewinnt Campus Projekt\4 Gewinnt Campus Projekt\obj\Release\4 Gewinnt Campus Projekt.csproj.CoreCompileInputs.cache
 C:\Users\lukas\OneDrive\Desktop\Sebastian fertig\4 Gewinnt Campus Projekt\4 Gewinnt Campus Projekt\obj\Release\4 Gewinnt Campus Projekt.exe
 C:\Users\lukas\OneDrive\Desktop\Sebastian fertig\4 Gewinnt Campus Projekt\4 Gewinnt Campus Projekt\obj\Release\4 Gewinnt Campus Projekt.pdb
+C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\4 Gewinnt Campus Projekt\4 Gewinnt Campus Projekt\bin\Release\4 Gewinnt Campus Projekt.exe.config
+C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\4 Gewinnt Campus Projekt\4 Gewinnt Campus Projekt\bin\Release\4 Gewinnt Campus Projekt.exe
+C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\4 Gewinnt Campus Projekt\4 Gewinnt Campus Projekt\bin\Release\4 Gewinnt Campus Projekt.pdb
+C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\4 Gewinnt Campus Projekt\4 Gewinnt Campus Projekt\obj\Release\4 Gewinnt Campus Projekt.csprojAssemblyReference.cache
+C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\4 Gewinnt Campus Projekt\4 Gewinnt Campus Projekt\obj\Release\_4_Gewinnt_Campus_Projekt.TCC.resources
+C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\4 Gewinnt Campus Projekt\4 Gewinnt Campus Projekt\obj\Release\_4_Gewinnt_Campus_Projekt.Properties.Resources.resources
+C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\4 Gewinnt Campus Projekt\4 Gewinnt Campus Projekt\obj\Release\4 Gewinnt Campus Projekt.csproj.GenerateResource.cache
+C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\4 Gewinnt Campus Projekt\4 Gewinnt Campus Projekt\obj\Release\4 Gewinnt Campus Projekt.csproj.CoreCompileInputs.cache
+C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\4 Gewinnt Campus Projekt\4 Gewinnt Campus Projekt\obj\Release\4 Gewinnt Campus Projekt.exe
+C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\4 Gewinnt Campus Projekt\4 Gewinnt Campus Projekt\obj\Release\4 Gewinnt Campus Projekt.pdb

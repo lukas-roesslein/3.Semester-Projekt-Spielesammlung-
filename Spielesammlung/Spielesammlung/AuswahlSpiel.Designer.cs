@@ -94,7 +94,8 @@ namespace Spielesammlung
             this.CB_NameSpiel.Items.AddRange(new object[] {
             "TIC TAC TOE",
             "Vier Gewinnt",
-            "Schiffe Versenken"});
+            "Schiffe Versenken",
+            "Cross Game"});
             this.CB_NameSpiel.Location = new System.Drawing.Point(59, 438);
             this.CB_NameSpiel.Name = "CB_NameSpiel";
             this.CB_NameSpiel.Size = new System.Drawing.Size(348, 37);

@@ -52,6 +52,10 @@
     <Compile Include="AuswahlSpiel.Designer.cs">
       <DependentUpon>AuswahlSpiel.cs</DependentUpon>
     </Compile>
+    <Compile Include="CrossGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CrossGame.Designer.cs" />
     <Compile Include="Info.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -73,6 +77,7 @@
     <EmbeddedResource Include="AuswahlSpiel.resx">
       <DependentUpon>AuswahlSpiel.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="CrossGame.resx" />
     <EmbeddedResource Include="Info.resx">
       <DependentUpon>Info.cs</DependentUpon>
     </EmbeddedResource>
