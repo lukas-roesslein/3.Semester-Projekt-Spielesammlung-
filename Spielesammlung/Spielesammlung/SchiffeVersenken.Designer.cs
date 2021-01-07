@@ -213,19 +213,6 @@ namespace Spielesammlung
             this.GrößeDerSchiffeInFelder = new System.Windows.Forms.Label();
             this.option1_button = new System.Windows.Forms.Button();
             this.option2_button = new System.Windows.Forms.Button();
-            this.Feld3P1 = new System.Windows.Forms.Label();
-            this.Feld4P1 = new System.Windows.Forms.Label();
-            this.Feld5P1 = new System.Windows.Forms.Label();
-            this.Feld3P2 = new System.Windows.Forms.Label();
-            this.Feld4P2 = new System.Windows.Forms.Label();
-            this.Feld5P2 = new System.Windows.Forms.Label();
-            this.SchiffeimEinsatz = new System.Windows.Forms.Label();
-            this.Schiff5FP2 = new System.Windows.Forms.Label();
-            this.Schiff5FP1 = new System.Windows.Forms.Label();
-            this.Schiff4FP2 = new System.Windows.Forms.Label();
-            this.Schiff4FP1 = new System.Windows.Forms.Label();
-            this.Schiff3FP2 = new System.Windows.Forms.Label();
-            this.Schiff3FP1 = new System.Windows.Forms.Label();
             this.menuStripSchiffeVersenken = new System.Windows.Forms.MenuStrip();
             this.spielToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.spielBeendenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -2329,12 +2316,7 @@ namespace Spielesammlung
             this.ResumeLayout(false);
             this.PerformLayout();
         }
-        private System.Windows.Forms.RichTextBox Ausgabe;
-        private MenuStrip menuStripSchiffeVersenken;
-        private ToolStripMenuItem spielToolStripMenuItem;
-        private ToolStripMenuItem spielBeendenToolStripMenuItem;
-        private ToolStripMenuItem spielBeendenToolStripMenuItem1;
-        private ToolStripMenuItem infoToolStripMenuItem;
+        
         #endregion
 
         #region elements of forms
@@ -2532,7 +2514,12 @@ namespace Spielesammlung
         private System.Windows.Forms.Label Schiff4FP1;
         private System.Windows.Forms.Label Schiff3FP2;
         private System.Windows.Forms.Label Schiff3FP1;
-
+        private System.Windows.Forms.RichTextBox Ausgabe;
+        private System.Windows.Forms.MenuStrip menuStripSchiffeVersenken;
+        private System.Windows.Forms.ToolStripMenuItem spielToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem spielBeendenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem spielBeendenToolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem infoToolStripMenuItem;
         #endregion
 
         #region enable coordinates

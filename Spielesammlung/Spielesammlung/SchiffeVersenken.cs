@@ -138,7 +138,7 @@ namespace Spielesammlung
         /// <summary>
         /// Erstellt ein Infofenster
         /// </summary>
-        Info Infowindow = new Info();           
+        Info InfoSchiffeVersenken = new Info();           
 
         #region set amount of ships
 
@@ -1103,7 +1103,7 @@ namespace Spielesammlung
 
         private void InfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Infowindow.Show();
+            InfoSchiffeVersenken.Show();
         }
         #endregion
     }
