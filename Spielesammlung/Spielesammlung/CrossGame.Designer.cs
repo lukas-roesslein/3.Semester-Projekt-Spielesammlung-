@@ -276,7 +276,7 @@
             // timer1
             // 
             this.timer1.Enabled = true;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            this.timer1.Tick += new System.EventHandler(this.Timer1_Tick);
             // 
             // label1
             // 
@@ -469,7 +469,7 @@
             this.neuesSpielToolStripMenuItem.Name = "neuesSpielToolStripMenuItem";
             this.neuesSpielToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
             this.neuesSpielToolStripMenuItem.Text = "Neues Spiel";
-            this.neuesSpielToolStripMenuItem.Click += new System.EventHandler(this.neuesSpielToolStripMenuItem_Click);
+            this.neuesSpielToolStripMenuItem.Click += new System.EventHandler(this.NeuesSpielToolStripMenuItem_Click);
             // 
             // spielStatistikZurücksetzenToolStripMenuItem
             // 
@@ -493,7 +493,7 @@
             this.spielVerlassenToolStripMenuItem.Name = "spielVerlassenToolStripMenuItem";
             this.spielVerlassenToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
             this.spielVerlassenToolStripMenuItem.Text = "Spiel verlassen";
-            this.spielVerlassenToolStripMenuItem.Click += new System.EventHandler(this.spielVerlassenToolStripMenuItem_Click);
+            this.spielVerlassenToolStripMenuItem.Click += new System.EventHandler(this.SpielVerlassenToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
@@ -624,6 +624,7 @@
         }
 
         #endregion
+
         private System.Windows.Forms.PictureBox Save2;
         private System.Windows.Forms.PictureBox Save1;
         private System.Windows.Forms.PictureBox Enemyu1;

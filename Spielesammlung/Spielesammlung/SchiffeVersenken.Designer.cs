@@ -226,12 +226,12 @@ namespace Spielesammlung
             this.Schiff4FP1 = new System.Windows.Forms.Label();
             this.Schiff3FP2 = new System.Windows.Forms.Label();
             this.Schiff3FP1 = new System.Windows.Forms.Label();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.menuStripSchiffeVersenken = new System.Windows.Forms.MenuStrip();
             this.spielToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.spielBeendenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.spielBeendenToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.infoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.menuStrip1.SuspendLayout();
+            this.menuStripSchiffeVersenken.SuspendLayout();
             this.SuspendLayout();
             // 
             // KSLetters1
@@ -2062,7 +2062,7 @@ namespace Spielesammlung
             this.option1_button.Size = new System.Drawing.Size(130, 100);
             this.option1_button.TabIndex = 218;
             this.option1_button.UseVisualStyleBackColor = true;
-            this.option1_button.Click += new System.EventHandler(this.option1_Button_Click);
+            this.option1_button.Click += new System.EventHandler(this.Option1_Button_Click);
             // 
             // option2_button
             // 
@@ -2073,18 +2073,18 @@ namespace Spielesammlung
             this.option2_button.Size = new System.Drawing.Size(130, 100);
             this.option2_button.TabIndex = 219;
             this.option2_button.UseVisualStyleBackColor = true;
-            this.option2_button.Click += new System.EventHandler(this.option2_Button_Click);
+            this.option2_button.Click += new System.EventHandler(this.Option2_Button_Click);
             // 
             // menuStrip1
             // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.menuStripSchiffeVersenken.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.spielToolStripMenuItem,
             this.infoToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1284, 24);
-            this.menuStrip1.TabIndex = 233;
-            this.menuStrip1.Text = "menuStrip1";
+            this.menuStripSchiffeVersenken.Location = new System.Drawing.Point(0, 0);
+            this.menuStripSchiffeVersenken.Name = "menuStrip1";
+            this.menuStripSchiffeVersenken.Size = new System.Drawing.Size(1284, 24);
+            this.menuStripSchiffeVersenken.TabIndex = 233;
+            this.menuStripSchiffeVersenken.Text = "menuStrip1";
             // 
             // spielToolStripMenuItem
             // 
@@ -2100,21 +2100,21 @@ namespace Spielesammlung
             this.spielBeendenToolStripMenuItem.Name = "spielBeendenToolStripMenuItem";
             this.spielBeendenToolStripMenuItem.Size = new System.Drawing.Size(161, 22);
             this.spielBeendenToolStripMenuItem.Text = "Spiel neu starten";
-            this.spielBeendenToolStripMenuItem.Click += new System.EventHandler(this.spielBeendenToolStripMenuItem_Click);
+            this.spielBeendenToolStripMenuItem.Click += new System.EventHandler(this.SpielBeendenToolStripMenuItem_Click);
             // 
             // spielBeendenToolStripMenuItem1
             // 
             this.spielBeendenToolStripMenuItem1.Name = "spielBeendenToolStripMenuItem1";
             this.spielBeendenToolStripMenuItem1.Size = new System.Drawing.Size(161, 22);
             this.spielBeendenToolStripMenuItem1.Text = "Spiel beenden";
-            this.spielBeendenToolStripMenuItem1.Click += new System.EventHandler(this.spielBeendenToolStripMenuItem1_Click);
+            this.spielBeendenToolStripMenuItem1.Click += new System.EventHandler(this.SpielBeendenToolStripMenuItem1_Click);
             // 
             // infoToolStripMenuItem
             // 
             this.infoToolStripMenuItem.Name = "infoToolStripMenuItem";
             this.infoToolStripMenuItem.Size = new System.Drawing.Size(40, 20);
             this.infoToolStripMenuItem.Text = "Info";
-            this.infoToolStripMenuItem.Click += new System.EventHandler(this.infoToolStripMenuItem_Click);
+            this.infoToolStripMenuItem.Click += new System.EventHandler(this.InfoToolStripMenuItem_Click);
             // 
             // SchiffeVersenken
             // 
@@ -2317,21 +2317,20 @@ namespace Spielesammlung
             this.Controls.Add(this.A11);
             this.Controls.Add(this.KSNumbers1);
             this.Controls.Add(this.KSLetters1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.Controls.Add(this.menuStripSchiffeVersenken);
+            this.MainMenuStrip = this.menuStripSchiffeVersenken;
             this.MaximumSize = new System.Drawing.Size(1300, 700);
             this.MinimumSize = new System.Drawing.Size(1300, 700);
             this.Name = "SchiffeVersenken";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Schiffe versenken";
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.menuStripSchiffeVersenken.ResumeLayout(false);
+            this.menuStripSchiffeVersenken.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
         private System.Windows.Forms.RichTextBox Ausgabe;
-        private MenuStrip menuStrip1;
+        private MenuStrip menuStripSchiffeVersenken;
         private ToolStripMenuItem spielToolStripMenuItem;
         private ToolStripMenuItem spielBeendenToolStripMenuItem;
         private ToolStripMenuItem spielBeendenToolStripMenuItem1;
@@ -3583,668 +3582,668 @@ namespace Spielesammlung
         /// </summary>
         public void HideShips()
         {
-            if (player1._BattleArea[0, 0] == "O")
+            if (Player1.BattleArea[0, 0] == "O")
             {
                 A11.Text = "";
             }
-            if (player1._BattleArea[1, 0] == "O")
+            if (Player1.BattleArea[1, 0] == "O")
             {
                 B11.Text = "";
             }
-            if (player1._BattleArea[2, 0] == "O")
+            if (Player1.BattleArea[2, 0] == "O")
             {
                 C11.Text = "";
             }
-            if (player1._BattleArea[3, 0] == "O")
+            if (Player1.BattleArea[3, 0] == "O")
             {
                 D11.Text = "";
             }
-            if (player1._BattleArea[4, 0] == "O")
+            if (Player1.BattleArea[4, 0] == "O")
             {
                 E11.Text = "";
             }
-            if (player1._BattleArea[5, 0] == "O")
+            if (Player1.BattleArea[5, 0] == "O")
             {
                 F11.Text = "";
             }
-            if (player1._BattleArea[6, 0] == "O")
+            if (Player1.BattleArea[6, 0] == "O")
             {
                 G11.Text = "";
             }
-            if (player1._BattleArea[7, 0] == "O")
+            if (Player1.BattleArea[7, 0] == "O")
             {
                 H11.Text = "";
             }
-            if (player1._BattleArea[8, 0] == "O")
+            if (Player1.BattleArea[8, 0] == "O")
             {
                 I11.Text = "";
             }
 
-            if (player1._BattleArea[0, 1] == "O")
+            if (Player1.BattleArea[0, 1] == "O")
             {
                 A21.Text = "";
             }
-            if (player1._BattleArea[1, 1] == "O")
+            if (Player1.BattleArea[1, 1] == "O")
             {
                 B21.Text = "";
             }
-            if (player1._BattleArea[2, 1] == "O")
+            if (Player1.BattleArea[2, 1] == "O")
             {
                 C21.Text = "";
             }
-            if (player1._BattleArea[3, 1] == "O")
+            if (Player1.BattleArea[3, 1] == "O")
             {
                 D21.Text = "";
             }
-            if (player1._BattleArea[4, 1] == "O")
+            if (Player1.BattleArea[4, 1] == "O")
             {
                 E21.Text = "";
             }
-            if (player1._BattleArea[5, 1] == "O")
+            if (Player1.BattleArea[5, 1] == "O")
             {
                 F21.Text = "";
             }
-            if (player1._BattleArea[6, 1] == "O")
+            if (Player1.BattleArea[6, 1] == "O")
             {
                 G21.Text = "";
             }
-            if (player1._BattleArea[7, 1] == "O")
+            if (Player1.BattleArea[7, 1] == "O")
             {
                 H21.Text = "";
             }
-            if (player1._BattleArea[8, 1] == "O")
+            if (Player1.BattleArea[8, 1] == "O")
             {
                 I21.Text = "";
             }
 
-            if (player1._BattleArea[0, 2] == "O")
+            if (Player1.BattleArea[0, 2] == "O")
             {
                 A31.Text = "";
             }
-            if (player1._BattleArea[1, 2] == "O")
+            if (Player1.BattleArea[1, 2] == "O")
             {
                 B31.Text = "";
             }
-            if (player1._BattleArea[2, 2] == "O")
+            if (Player1.BattleArea[2, 2] == "O")
             {
                 C31.Text = "";
             }
-            if (player1._BattleArea[3, 2] == "O")
+            if (Player1.BattleArea[3, 2] == "O")
             {
                 D31.Text = "";
             }
-            if (player1._BattleArea[4, 2] == "O")
+            if (Player1.BattleArea[4, 2] == "O")
             {
                 E31.Text = "";
             }
-            if (player1._BattleArea[5, 2] == "O")
+            if (Player1.BattleArea[5, 2] == "O")
             {
                 F31.Text = "";
             }
-            if (player1._BattleArea[6, 2] == "O")
+            if (Player1.BattleArea[6, 2] == "O")
             {
                 G31.Text = "";
             }
-            if (player1._BattleArea[7, 2] == "O")
+            if (Player1.BattleArea[7, 2] == "O")
             {
                 H31.Text = "";
             }
-            if (player1._BattleArea[8, 2] == "O")
+            if (Player1.BattleArea[8, 2] == "O")
             {
                 I31.Text = "";
             }
 
-            if (player1._BattleArea[0, 3] == "O")
+            if (Player1.BattleArea[0, 3] == "O")
             {
                 A41.Text = "";
             }
-            if (player1._BattleArea[1, 3] == "O")
+            if (Player1.BattleArea[1, 3] == "O")
             {
                 B41.Text = "";
             }
-            if (player1._BattleArea[2, 3] == "O")
+            if (Player1.BattleArea[2, 3] == "O")
             {
                 C41.Text = "";
             }
-            if (player1._BattleArea[3, 3] == "O")
+            if (Player1.BattleArea[3, 3] == "O")
             {
                 D41.Text = "";
             }
-            if (player1._BattleArea[4, 3] == "O")
+            if (Player1.BattleArea[4, 3] == "O")
             {
                 E41.Text = "";
             }
-            if (player1._BattleArea[5, 3] == "O")
+            if (Player1.BattleArea[5, 3] == "O")
             {
                 F41.Text = "";
             }
-            if (player1._BattleArea[6, 3] == "O")
+            if (Player1.BattleArea[6, 3] == "O")
             {
                 G41.Text = "";
             }
-            if (player1._BattleArea[7, 3] == "O")
+            if (Player1.BattleArea[7, 3] == "O")
             {
                 H41.Text = "";
             }
-            if (player1._BattleArea[8, 3] == "O")
+            if (Player1.BattleArea[8, 3] == "O")
             {
                 I41.Text = "";
             }
 
-            if (player1._BattleArea[0, 4] == "O")
+            if (Player1.BattleArea[0, 4] == "O")
             {
                 A51.Text = "";
             }
-            if (player1._BattleArea[1, 4] == "O")
+            if (Player1.BattleArea[1, 4] == "O")
             {
                 B51.Text = "";
             }
-            if (player1._BattleArea[2, 4] == "O")
+            if (Player1.BattleArea[2, 4] == "O")
             {
                 C51.Text = "";
             }
-            if (player1._BattleArea[3, 4] == "O")
+            if (Player1.BattleArea[3, 4] == "O")
             {
                 D51.Text = "";
             }
-            if (player1._BattleArea[4, 4] == "O")
+            if (Player1.BattleArea[4, 4] == "O")
             {
                 E51.Text = "";
             }
-            if (player1._BattleArea[5, 4] == "O")
+            if (Player1.BattleArea[5, 4] == "O")
             {
                 F51.Text = "";
             }
-            if (player1._BattleArea[6, 4] == "O")
+            if (Player1.BattleArea[6, 4] == "O")
             {
                 G51.Text = "";
             }
-            if (player1._BattleArea[7, 4] == "O")
+            if (Player1.BattleArea[7, 4] == "O")
             {
                 H51.Text = "";
             }
-            if (player1._BattleArea[8, 4] == "O")
+            if (Player1.BattleArea[8, 4] == "O")
             {
                 I51.Text = "";
             }
 
-            if (player1._BattleArea[0, 5] == "O")
+            if (Player1.BattleArea[0, 5] == "O")
             {
                 A61.Text = "";
             }
-            if (player1._BattleArea[1, 5] == "O")
+            if (Player1.BattleArea[1, 5] == "O")
             {
                 B61.Text = "";
             }
-            if (player1._BattleArea[2, 5] == "O")
+            if (Player1.BattleArea[2, 5] == "O")
             {
                 C61.Text = "";
             }
-            if (player1._BattleArea[3, 5] == "O")
+            if (Player1.BattleArea[3, 5] == "O")
             {
                 D61.Text = "";
             }
-            if (player1._BattleArea[4, 5] == "O")
+            if (Player1.BattleArea[4, 5] == "O")
             {
                 E61.Text = "";
             }
-            if (player1._BattleArea[5, 5] == "O")
+            if (Player1.BattleArea[5, 5] == "O")
             {
                 F61.Text = "";
             }
-            if (player1._BattleArea[6, 5] == "O")
+            if (Player1.BattleArea[6, 5] == "O")
             {
                 G61.Text = "";
             }
-            if (player1._BattleArea[7, 5] == "O")
+            if (Player1.BattleArea[7, 5] == "O")
             {
                 H61.Text = "";
             }
-            if (player1._BattleArea[8, 5] == "O")
+            if (Player1.BattleArea[8, 5] == "O")
             {
                 I61.Text = "";
             }
 
-            if (player1._BattleArea[0, 6] == "O")
+            if (Player1.BattleArea[0, 6] == "O")
             {
                 A71.Text = "";
             }
-            if (player1._BattleArea[1, 6] == "O")
+            if (Player1.BattleArea[1, 6] == "O")
             {
                 B71.Text = "";
             }
-            if (player1._BattleArea[2, 6] == "O")
+            if (Player1.BattleArea[2, 6] == "O")
             {
                 C71.Text = "";
             }
-            if (player1._BattleArea[3, 6] == "O")
+            if (Player1.BattleArea[3, 6] == "O")
             {
                 D71.Text = "";
             }
-            if (player1._BattleArea[4, 6] == "O")
+            if (Player1.BattleArea[4, 6] == "O")
             {
                 E71.Text = "";
             }
-            if (player1._BattleArea[5, 6] == "O")
+            if (Player1.BattleArea[5, 6] == "O")
             {
                 F71.Text = "";
             }
-            if (player1._BattleArea[6, 6] == "O")
+            if (Player1.BattleArea[6, 6] == "O")
             {
                 G71.Text = "";
             }
-            if (player1._BattleArea[7, 6] == "O")
+            if (Player1.BattleArea[7, 6] == "O")
             {
                 H71.Text = "";
             }
-            if (player1._BattleArea[8, 6] == "O")
+            if (Player1.BattleArea[8, 6] == "O")
             {
                 I71.Text = "";
             }
 
-            if (player1._BattleArea[0, 7] == "O")
+            if (Player1.BattleArea[0, 7] == "O")
             {
                 A81.Text = "";
             }
-            if (player1._BattleArea[1, 7] == "O")
+            if (Player1.BattleArea[1, 7] == "O")
             {
                 B81.Text = "";
             }
-            if (player1._BattleArea[2, 7] == "O")
+            if (Player1.BattleArea[2, 7] == "O")
             {
                 C81.Text = "";
             }
-            if (player1._BattleArea[3, 7] == "O")
+            if (Player1.BattleArea[3, 7] == "O")
             {
                 D81.Text = "";
             }
-            if (player1._BattleArea[4, 7] == "O")
+            if (Player1.BattleArea[4, 7] == "O")
             {
                 E81.Text = "";
             }
-            if (player1._BattleArea[5, 7] == "O")
+            if (Player1.BattleArea[5, 7] == "O")
             {
                 F81.Text = "";
             }
-            if (player1._BattleArea[6, 7] == "O")
+            if (Player1.BattleArea[6, 7] == "O")
             {
                 G81.Text = "";
             }
-            if (player1._BattleArea[7, 7] == "O")
+            if (Player1.BattleArea[7, 7] == "O")
             {
                 H81.Text = "";
             }
-            if (player1._BattleArea[8, 7] == "O")
+            if (Player1.BattleArea[8, 7] == "O")
             {
                 I81.Text = "";
             }
 
-            if (player1._BattleArea[0, 8] == "O")
+            if (Player1.BattleArea[0, 8] == "O")
             {
                 A91.Text = "";
             }
-            if (player1._BattleArea[1, 8] == "O")
+            if (Player1.BattleArea[1, 8] == "O")
             {
                 B91.Text = "";
             }
-            if (player1._BattleArea[2, 8] == "O")
+            if (Player1.BattleArea[2, 8] == "O")
             {
                 C91.Text = "";
             }
-            if (player1._BattleArea[3, 8] == "O")
+            if (Player1.BattleArea[3, 8] == "O")
             {
                 D91.Text = "";
             }
-            if (player1._BattleArea[4, 8] == "O")
+            if (Player1.BattleArea[4, 8] == "O")
             {
                 E91.Text = "";
             }
-            if (player1._BattleArea[5, 8] == "O")
+            if (Player1.BattleArea[5, 8] == "O")
             {
                 F91.Text = "";
             }
-            if (player1._BattleArea[6, 8] == "O")
+            if (Player1.BattleArea[6, 8] == "O")
             {
                 G91.Text = "";
             }
-            if (player1._BattleArea[7, 8] == "O")
+            if (Player1.BattleArea[7, 8] == "O")
             {
                 H91.Text = "";
             }
-            if (player1._BattleArea[8, 8] == "O")
+            if (Player1.BattleArea[8, 8] == "O")
             {
                 I91.Text = "";
             }
 
-            if (player2._BattleArea[0, 0] == "O")
+            if (Player2.BattleArea[0, 0] == "O")
             {
                 A12.Text = "";
             }
-            if (player2._BattleArea[1, 0] == "O")
+            if (Player2.BattleArea[1, 0] == "O")
             {
                 B12.Text = "";
             }
-            if (player2._BattleArea[2, 0] == "O")
+            if (Player2.BattleArea[2, 0] == "O")
             {
                 C12.Text = "";
             }
-            if (player2._BattleArea[3, 0] == "O")
+            if (Player2.BattleArea[3, 0] == "O")
             {
                 D12.Text = "";
             }
-            if (player2._BattleArea[4, 0] == "O")
+            if (Player2.BattleArea[4, 0] == "O")
             {
                 E12.Text = "";
             }
-            if (player2._BattleArea[5, 0] == "O")
+            if (Player2.BattleArea[5, 0] == "O")
             {
                 F12.Text = "";
             }
-            if (player2._BattleArea[6, 0] == "O")
+            if (Player2.BattleArea[6, 0] == "O")
             {
                 G12.Text = "";
             }
-            if (player2._BattleArea[7, 0] == "O")
+            if (Player2.BattleArea[7, 0] == "O")
             {
                 H12.Text = "";
             }
-            if (player2._BattleArea[8, 0] == "O")
+            if (Player2.BattleArea[8, 0] == "O")
             {
                 I12.Text = "";
             }
 
-            if (player2._BattleArea[0, 1] == "O")
+            if (Player2.BattleArea[0, 1] == "O")
             {
                 A22.Text = "";
             }
-            if (player2._BattleArea[1, 1] == "O")
+            if (Player2.BattleArea[1, 1] == "O")
             {
                 B22.Text = "";
             }
-            if (player2._BattleArea[2, 1] == "O")
+            if (Player2.BattleArea[2, 1] == "O")
             {
                 C22.Text = "";
             }
-            if (player2._BattleArea[3, 1] == "O")
+            if (Player2.BattleArea[3, 1] == "O")
             {
                 D22.Text = "";
             }
-            if (player2._BattleArea[4, 1] == "O")
+            if (Player2.BattleArea[4, 1] == "O")
             {
                 E22.Text = "";
             }
-            if (player2._BattleArea[5, 1] == "O")
+            if (Player2.BattleArea[5, 1] == "O")
             {
                 F22.Text = "";
             }
-            if (player2._BattleArea[6, 1] == "O")
+            if (Player2.BattleArea[6, 1] == "O")
             {
                 G22.Text = "";
             }
-            if (player2._BattleArea[7, 1] == "O")
+            if (Player2.BattleArea[7, 1] == "O")
             {
                 H22.Text = "";
             }
-            if (player2._BattleArea[8, 1] == "O")
+            if (Player2.BattleArea[8, 1] == "O")
             {
                 I22.Text = "";
             }
 
-            if (player2._BattleArea[0, 2] == "O")
+            if (Player2.BattleArea[0, 2] == "O")
             {
                 A32.Text = "";
             }
-            if (player2._BattleArea[1, 2] == "O")
+            if (Player2.BattleArea[1, 2] == "O")
             {
                 B32.Text = "";
             }
-            if (player2._BattleArea[2, 2] == "O")
+            if (Player2.BattleArea[2, 2] == "O")
             {
                 C32.Text = "";
             }
-            if (player2._BattleArea[3, 2] == "O")
+            if (Player2.BattleArea[3, 2] == "O")
             {
                 D32.Text = "";
             }
-            if (player2._BattleArea[4, 2] == "O")
+            if (Player2.BattleArea[4, 2] == "O")
             {
                 E32.Text = "";
             }
-            if (player2._BattleArea[5, 2] == "O")
+            if (Player2.BattleArea[5, 2] == "O")
             {
                 F32.Text = "";
             }
-            if (player2._BattleArea[6, 2] == "O")
+            if (Player2.BattleArea[6, 2] == "O")
             {
                 G32.Text = "";
             }
-            if (player2._BattleArea[7, 2] == "O")
+            if (Player2.BattleArea[7, 2] == "O")
             {
                 H32.Text = "";
             }
-            if (player2._BattleArea[8, 2] == "O")
+            if (Player2.BattleArea[8, 2] == "O")
             {
                 I32.Text = "";
             }
 
-            if (player2._BattleArea[0, 3] == "O")
+            if (Player2.BattleArea[0, 3] == "O")
             {
                 A42.Text = "";
             }
-            if (player2._BattleArea[1, 3] == "O")
+            if (Player2.BattleArea[1, 3] == "O")
             {
                 B42.Text = "";
             }
-            if (player2._BattleArea[2, 3] == "O")
+            if (Player2.BattleArea[2, 3] == "O")
             {
                 C42.Text = "";
             }
-            if (player2._BattleArea[3, 3] == "O")
+            if (Player2.BattleArea[3, 3] == "O")
             {
                 D42.Text = "";
             }
-            if (player2._BattleArea[4, 3] == "O")
+            if (Player2.BattleArea[4, 3] == "O")
             {
                 E42.Text = "";
             }
-            if (player2._BattleArea[5, 3] == "O")
+            if (Player2.BattleArea[5, 3] == "O")
             {
                 F42.Text = "";
             }
-            if (player2._BattleArea[6, 3] == "O")
+            if (Player2.BattleArea[6, 3] == "O")
             {
                 G42.Text = "";
             }
-            if (player2._BattleArea[7, 3] == "O")
+            if (Player2.BattleArea[7, 3] == "O")
             {
                 H42.Text = "";
             }
-            if (player2._BattleArea[8, 3] == "O")
+            if (Player2.BattleArea[8, 3] == "O")
             {
                 I42.Text = "";
             }
 
-            if (player2._BattleArea[0, 4] == "O")
+            if (Player2.BattleArea[0, 4] == "O")
             {
                 A52.Text = "";
             }
-            if (player2._BattleArea[1, 4] == "O")
+            if (Player2.BattleArea[1, 4] == "O")
             {
                 B52.Text = "";
             }
-            if (player2._BattleArea[2, 4] == "O")
+            if (Player2.BattleArea[2, 4] == "O")
             {
                 C52.Text = "";
             }
-            if (player2._BattleArea[3, 4] == "O")
+            if (Player2.BattleArea[3, 4] == "O")
             {
                 D52.Text = "";
             }
-            if (player2._BattleArea[4, 4] == "O")
+            if (Player2.BattleArea[4, 4] == "O")
             {
                 E52.Text = "";
             }
-            if (player2._BattleArea[5, 4] == "O")
+            if (Player2.BattleArea[5, 4] == "O")
             {
                 F52.Text = "";
             }
-            if (player2._BattleArea[6, 4] == "O")
+            if (Player2.BattleArea[6, 4] == "O")
             {
                 G52.Text = "";
             }
-            if (player2._BattleArea[7, 4] == "O")
+            if (Player2.BattleArea[7, 4] == "O")
             {
                 H52.Text = "";
             }
-            if (player2._BattleArea[8, 4] == "O")
+            if (Player2.BattleArea[8, 4] == "O")
             {
                 I52.Text = "";
             }
 
-            if (player2._BattleArea[0, 5] == "O")
+            if (Player2.BattleArea[0, 5] == "O")
             {
                 A61.Text = "";
             }
-            if (player2._BattleArea[2, 5] == "O")
+            if (Player2.BattleArea[2, 5] == "O")
             {
                 B62.Text = "";
             }
-            if (player2._BattleArea[2, 5] == "O")
+            if (Player2.BattleArea[2, 5] == "O")
             {
                 C62.Text = "";
             }
-            if (player2._BattleArea[3, 5] == "O")
+            if (Player2.BattleArea[3, 5] == "O")
             {
                 D62.Text = "";
             }
-            if (player2._BattleArea[4, 5] == "O")
+            if (Player2.BattleArea[4, 5] == "O")
             {
                 E62.Text = "";
             }
-            if (player2._BattleArea[5, 5] == "O")
+            if (Player2.BattleArea[5, 5] == "O")
             {
                 F62.Text = "";
             }
-            if (player2._BattleArea[6, 5] == "O")
+            if (Player2.BattleArea[6, 5] == "O")
             {
                 G62.Text = "";
             }
-            if (player2._BattleArea[7, 5] == "O")
+            if (Player2.BattleArea[7, 5] == "O")
             {
                 H62.Text = "";
             }
-            if (player2._BattleArea[8, 5] == "O")
+            if (Player2.BattleArea[8, 5] == "O")
             {
                 I62.Text = "";
             }
 
-            if (player2._BattleArea[0, 6] == "O")
+            if (Player2.BattleArea[0, 6] == "O")
             {
                 A72.Text = "";
             }
-            if (player2._BattleArea[2, 6] == "O")
+            if (Player2.BattleArea[2, 6] == "O")
             {
                 B72.Text = "";
             }
-            if (player2._BattleArea[2, 6] == "O")
+            if (Player2.BattleArea[2, 6] == "O")
             {
                 C72.Text = "";
             }
-            if (player2._BattleArea[3, 6] == "O")
+            if (Player2.BattleArea[3, 6] == "O")
             {
                 D72.Text = "";
             }
-            if (player2._BattleArea[4, 6] == "O")
+            if (Player2.BattleArea[4, 6] == "O")
             {
                 E72.Text = "";
             }
-            if (player2._BattleArea[5, 6] == "O")
+            if (Player2.BattleArea[5, 6] == "O")
             {
                 F72.Text = "";
             }
-            if (player2._BattleArea[6, 6] == "O")
+            if (Player2.BattleArea[6, 6] == "O")
             {
                 G72.Text = "";
             }
-            if (player2._BattleArea[7, 6] == "O")
+            if (Player2.BattleArea[7, 6] == "O")
             {
                 H72.Text = "";
             }
-            if (player2._BattleArea[8, 6] == "O")
+            if (Player2.BattleArea[8, 6] == "O")
             {
                 I72.Text = "";
             }
 
-            if (player2._BattleArea[0, 7] == "O")
+            if (Player2.BattleArea[0, 7] == "O")
             {
                 A82.Text = "";
             }
-            if (player2._BattleArea[1, 7] == "O")
+            if (Player2.BattleArea[1, 7] == "O")
             {
                 B82.Text = "";
             }
-            if (player2._BattleArea[2, 7] == "O")
+            if (Player2.BattleArea[2, 7] == "O")
             {
                 C82.Text = "";
             }
-            if (player2._BattleArea[3, 7] == "O")
+            if (Player2.BattleArea[3, 7] == "O")
             {
                 D82.Text = "";
             }
-            if (player2._BattleArea[4, 7] == "O")
+            if (Player2.BattleArea[4, 7] == "O")
             {
                 E82.Text = "";
             }
-            if (player2._BattleArea[5, 7] == "O")
+            if (Player2.BattleArea[5, 7] == "O")
             {
                 F82.Text = "";
             }
-            if (player2._BattleArea[6, 7] == "O")
+            if (Player2.BattleArea[6, 7] == "O")
             {
                 G82.Text = "";
             }
-            if (player2._BattleArea[7, 7] == "O")
+            if (Player2.BattleArea[7, 7] == "O")
             {
                 H82.Text = "";
             }
-            if (player2._BattleArea[8, 7] == "O")
+            if (Player2.BattleArea[8, 7] == "O")
             {
                 I82.Text = "";
             }
 
-            if (player2._BattleArea[0, 8] == "O")
+            if (Player2.BattleArea[0, 8] == "O")
             {
                 A92.Text = "";
             }
-            if (player2._BattleArea[1, 8] == "O")
+            if (Player2.BattleArea[1, 8] == "O")
             {
                 B92.Text = "";
             }
-            if (player2._BattleArea[2, 8] == "O")
+            if (Player2.BattleArea[2, 8] == "O")
             {
                 C92.Text = "";
             }
-            if (player2._BattleArea[3, 8] == "O")
+            if (Player2.BattleArea[3, 8] == "O")
             {
                 D92.Text = "";
             }
-            if (player2._BattleArea[4, 8] == "O")
+            if (Player2.BattleArea[4, 8] == "O")
             {
                 E92.Text = "";
             }
-            if (player2._BattleArea[5, 8] == "O")
+            if (Player2.BattleArea[5, 8] == "O")
             {
                 F92.Text = "";
             }
-            if (player2._BattleArea[6, 8] == "O")
+            if (Player2.BattleArea[6, 8] == "O")
             {
                 G92.Text = "";
             }
-            if (player2._BattleArea[7, 8] == "O")
+            if (Player2.BattleArea[7, 8] == "O")
             {
                 H92.Text = "";
             }
-            if (player2._BattleArea[8, 8] == "O")
+            if (Player2.BattleArea[8, 8] == "O")
             {
                 I92.Text = "";
             }
@@ -4262,188 +4261,188 @@ namespace Spielesammlung
         {
             if (Player == 1)    //Dem Array des Spieler 1 werden seine Koordinaten zugewiesen
             {
-                A11.Text = player1._BattleArea[0, 0];
-                A21.Text = player1._BattleArea[0, 1];
-                A31.Text = player1._BattleArea[0, 2];
-                A41.Text = player1._BattleArea[0, 3];
-                A51.Text = player1._BattleArea[0, 4];
-                A61.Text = player1._BattleArea[0, 5];
-                A71.Text = player1._BattleArea[0, 6];
-                A81.Text = player1._BattleArea[0, 7];
-                A91.Text = player1._BattleArea[0, 8];
+                A11.Text = Player1.BattleArea[0, 0];
+                A21.Text = Player1.BattleArea[0, 1];
+                A31.Text = Player1.BattleArea[0, 2];
+                A41.Text = Player1.BattleArea[0, 3];
+                A51.Text = Player1.BattleArea[0, 4];
+                A61.Text = Player1.BattleArea[0, 5];
+                A71.Text = Player1.BattleArea[0, 6];
+                A81.Text = Player1.BattleArea[0, 7];
+                A91.Text = Player1.BattleArea[0, 8];
 
-                B11.Text = player1._BattleArea[1, 0];
-                B21.Text = player1._BattleArea[1, 1];
-                B31.Text = player1._BattleArea[1, 2];
-                B41.Text = player1._BattleArea[1, 3];
-                B51.Text = player1._BattleArea[1, 4];
-                B61.Text = player1._BattleArea[1, 5];
-                B71.Text = player1._BattleArea[1, 6];
-                B81.Text = player1._BattleArea[1, 7];
-                B91.Text = player1._BattleArea[1, 8];
+                B11.Text = Player1.BattleArea[1, 0];
+                B21.Text = Player1.BattleArea[1, 1];
+                B31.Text = Player1.BattleArea[1, 2];
+                B41.Text = Player1.BattleArea[1, 3];
+                B51.Text = Player1.BattleArea[1, 4];
+                B61.Text = Player1.BattleArea[1, 5];
+                B71.Text = Player1.BattleArea[1, 6];
+                B81.Text = Player1.BattleArea[1, 7];
+                B91.Text = Player1.BattleArea[1, 8];
 
-                C11.Text = player1._BattleArea[2, 0];
-                C21.Text = player1._BattleArea[2, 1];
-                C31.Text = player1._BattleArea[2, 2];
-                C41.Text = player1._BattleArea[2, 3];
-                C51.Text = player1._BattleArea[2, 4];
-                C61.Text = player1._BattleArea[2, 5];
-                C71.Text = player1._BattleArea[2, 6];
-                C81.Text = player1._BattleArea[2, 7];
-                C91.Text = player1._BattleArea[2, 8];
+                C11.Text = Player1.BattleArea[2, 0];
+                C21.Text = Player1.BattleArea[2, 1];
+                C31.Text = Player1.BattleArea[2, 2];
+                C41.Text = Player1.BattleArea[2, 3];
+                C51.Text = Player1.BattleArea[2, 4];
+                C61.Text = Player1.BattleArea[2, 5];
+                C71.Text = Player1.BattleArea[2, 6];
+                C81.Text = Player1.BattleArea[2, 7];
+                C91.Text = Player1.BattleArea[2, 8];
 
-                D11.Text = player1._BattleArea[3, 0];
-                D21.Text = player1._BattleArea[3, 1];
-                D31.Text = player1._BattleArea[3, 2];
-                D41.Text = player1._BattleArea[3, 3];
-                D51.Text = player1._BattleArea[3, 4];
-                D61.Text = player1._BattleArea[3, 5];
-                D71.Text = player1._BattleArea[3, 6];
-                D81.Text = player1._BattleArea[3, 7];
-                D91.Text = player1._BattleArea[3, 8];
+                D11.Text = Player1.BattleArea[3, 0];
+                D21.Text = Player1.BattleArea[3, 1];
+                D31.Text = Player1.BattleArea[3, 2];
+                D41.Text = Player1.BattleArea[3, 3];
+                D51.Text = Player1.BattleArea[3, 4];
+                D61.Text = Player1.BattleArea[3, 5];
+                D71.Text = Player1.BattleArea[3, 6];
+                D81.Text = Player1.BattleArea[3, 7];
+                D91.Text = Player1.BattleArea[3, 8];
 
-                E11.Text = player1._BattleArea[4, 0];
-                E21.Text = player1._BattleArea[4, 1];
-                E31.Text = player1._BattleArea[4, 2];
-                E41.Text = player1._BattleArea[4, 3];
-                E51.Text = player1._BattleArea[4, 4];
-                E61.Text = player1._BattleArea[4, 5];
-                E71.Text = player1._BattleArea[4, 6];
-                E81.Text = player1._BattleArea[4, 7];
-                E91.Text = player1._BattleArea[4, 8];
+                E11.Text = Player1.BattleArea[4, 0];
+                E21.Text = Player1.BattleArea[4, 1];
+                E31.Text = Player1.BattleArea[4, 2];
+                E41.Text = Player1.BattleArea[4, 3];
+                E51.Text = Player1.BattleArea[4, 4];
+                E61.Text = Player1.BattleArea[4, 5];
+                E71.Text = Player1.BattleArea[4, 6];
+                E81.Text = Player1.BattleArea[4, 7];
+                E91.Text = Player1.BattleArea[4, 8];
 
-                F11.Text = player1._BattleArea[5, 0];
-                F21.Text = player1._BattleArea[5, 1];
-                F31.Text = player1._BattleArea[5, 2];
-                F41.Text = player1._BattleArea[5, 3];
-                F51.Text = player1._BattleArea[5, 4];
-                F61.Text = player1._BattleArea[5, 5];
-                F71.Text = player1._BattleArea[5, 6];
-                F81.Text = player1._BattleArea[5, 7];
-                F91.Text = player1._BattleArea[5, 8];
+                F11.Text = Player1.BattleArea[5, 0];
+                F21.Text = Player1.BattleArea[5, 1];
+                F31.Text = Player1.BattleArea[5, 2];
+                F41.Text = Player1.BattleArea[5, 3];
+                F51.Text = Player1.BattleArea[5, 4];
+                F61.Text = Player1.BattleArea[5, 5];
+                F71.Text = Player1.BattleArea[5, 6];
+                F81.Text = Player1.BattleArea[5, 7];
+                F91.Text = Player1.BattleArea[5, 8];
 
-                G11.Text = player1._BattleArea[6, 0];
-                G21.Text = player1._BattleArea[6, 1];
-                G31.Text = player1._BattleArea[6, 2];
-                G41.Text = player1._BattleArea[6, 3];
-                G51.Text = player1._BattleArea[6, 4];
-                G61.Text = player1._BattleArea[6, 5];
-                G71.Text = player1._BattleArea[6, 6];
-                G81.Text = player1._BattleArea[6, 7];
-                G91.Text = player1._BattleArea[6, 8];
+                G11.Text = Player1.BattleArea[6, 0];
+                G21.Text = Player1.BattleArea[6, 1];
+                G31.Text = Player1.BattleArea[6, 2];
+                G41.Text = Player1.BattleArea[6, 3];
+                G51.Text = Player1.BattleArea[6, 4];
+                G61.Text = Player1.BattleArea[6, 5];
+                G71.Text = Player1.BattleArea[6, 6];
+                G81.Text = Player1.BattleArea[6, 7];
+                G91.Text = Player1.BattleArea[6, 8];
 
-                H11.Text = player1._BattleArea[7, 0];
-                H21.Text = player1._BattleArea[7, 1];
-                H31.Text = player1._BattleArea[7, 2];
-                H41.Text = player1._BattleArea[7, 3];
-                H51.Text = player1._BattleArea[7, 4];
-                H61.Text = player1._BattleArea[7, 5];
-                H71.Text = player1._BattleArea[7, 6];
-                H81.Text = player1._BattleArea[7, 7];
-                H91.Text = player1._BattleArea[7, 8];
+                H11.Text = Player1.BattleArea[7, 0];
+                H21.Text = Player1.BattleArea[7, 1];
+                H31.Text = Player1.BattleArea[7, 2];
+                H41.Text = Player1.BattleArea[7, 3];
+                H51.Text = Player1.BattleArea[7, 4];
+                H61.Text = Player1.BattleArea[7, 5];
+                H71.Text = Player1.BattleArea[7, 6];
+                H81.Text = Player1.BattleArea[7, 7];
+                H91.Text = Player1.BattleArea[7, 8];
 
-                I11.Text = player1._BattleArea[8, 0];
-                I21.Text = player1._BattleArea[8, 1];
-                I31.Text = player1._BattleArea[8, 2];
-                I41.Text = player1._BattleArea[8, 3];
-                I51.Text = player1._BattleArea[8, 4];
-                I61.Text = player1._BattleArea[8, 5];
-                I71.Text = player1._BattleArea[8, 6];
-                I81.Text = player1._BattleArea[8, 7];
-                I91.Text = player1._BattleArea[8, 8];
+                I11.Text = Player1.BattleArea[8, 0];
+                I21.Text = Player1.BattleArea[8, 1];
+                I31.Text = Player1.BattleArea[8, 2];
+                I41.Text = Player1.BattleArea[8, 3];
+                I51.Text = Player1.BattleArea[8, 4];
+                I61.Text = Player1.BattleArea[8, 5];
+                I71.Text = Player1.BattleArea[8, 6];
+                I81.Text = Player1.BattleArea[8, 7];
+                I91.Text = Player1.BattleArea[8, 8];
             }
 
             else if (Player == 2)
             {
-                A12.Text = player2._BattleArea[0, 0];
-                A22.Text = player2._BattleArea[0, 1];
-                A32.Text = player2._BattleArea[0, 2];
-                A42.Text = player2._BattleArea[0, 3];
-                A52.Text = player2._BattleArea[0, 4];
-                A62.Text = player2._BattleArea[0, 5];
-                A72.Text = player2._BattleArea[0, 6];
-                A82.Text = player2._BattleArea[0, 7];
-                A92.Text = player2._BattleArea[0, 8];
+                A12.Text = Player2.BattleArea[0, 0];
+                A22.Text = Player2.BattleArea[0, 1];
+                A32.Text = Player2.BattleArea[0, 2];
+                A42.Text = Player2.BattleArea[0, 3];
+                A52.Text = Player2.BattleArea[0, 4];
+                A62.Text = Player2.BattleArea[0, 5];
+                A72.Text = Player2.BattleArea[0, 6];
+                A82.Text = Player2.BattleArea[0, 7];
+                A92.Text = Player2.BattleArea[0, 8];
 
-                B12.Text = player2._BattleArea[1, 0];
-                B22.Text = player2._BattleArea[1, 1];
-                B32.Text = player2._BattleArea[1, 2];
-                B42.Text = player2._BattleArea[1, 3];
-                B52.Text = player2._BattleArea[1, 4];
-                B62.Text = player2._BattleArea[1, 5];
-                B72.Text = player2._BattleArea[1, 6];
-                B82.Text = player2._BattleArea[1, 7];
-                B92.Text = player2._BattleArea[1, 8];
+                B12.Text = Player2.BattleArea[1, 0];
+                B22.Text = Player2.BattleArea[1, 1];
+                B32.Text = Player2.BattleArea[1, 2];
+                B42.Text = Player2.BattleArea[1, 3];
+                B52.Text = Player2.BattleArea[1, 4];
+                B62.Text = Player2.BattleArea[1, 5];
+                B72.Text = Player2.BattleArea[1, 6];
+                B82.Text = Player2.BattleArea[1, 7];
+                B92.Text = Player2.BattleArea[1, 8];
 
-                C12.Text = player2._BattleArea[2, 0];
-                C22.Text = player2._BattleArea[2, 1];
-                C32.Text = player2._BattleArea[2, 2];
-                C42.Text = player2._BattleArea[2, 3];
-                C52.Text = player2._BattleArea[2, 4];
-                C62.Text = player2._BattleArea[2, 5];
-                C72.Text = player2._BattleArea[2, 6];
-                C82.Text = player2._BattleArea[2, 7];
-                C92.Text = player2._BattleArea[2, 8];
+                C12.Text = Player2.BattleArea[2, 0];
+                C22.Text = Player2.BattleArea[2, 1];
+                C32.Text = Player2.BattleArea[2, 2];
+                C42.Text = Player2.BattleArea[2, 3];
+                C52.Text = Player2.BattleArea[2, 4];
+                C62.Text = Player2.BattleArea[2, 5];
+                C72.Text = Player2.BattleArea[2, 6];
+                C82.Text = Player2.BattleArea[2, 7];
+                C92.Text = Player2.BattleArea[2, 8];
 
-                D12.Text = player2._BattleArea[3, 0];
-                D22.Text = player2._BattleArea[3, 1];
-                D32.Text = player2._BattleArea[3, 2];
-                D42.Text = player2._BattleArea[3, 3];
-                D52.Text = player2._BattleArea[3, 4];
-                D62.Text = player2._BattleArea[3, 5];
-                D72.Text = player2._BattleArea[3, 6];
-                D82.Text = player2._BattleArea[3, 7];
-                D92.Text = player2._BattleArea[3, 8];
+                D12.Text = Player2.BattleArea[3, 0];
+                D22.Text = Player2.BattleArea[3, 1];
+                D32.Text = Player2.BattleArea[3, 2];
+                D42.Text = Player2.BattleArea[3, 3];
+                D52.Text = Player2.BattleArea[3, 4];
+                D62.Text = Player2.BattleArea[3, 5];
+                D72.Text = Player2.BattleArea[3, 6];
+                D82.Text = Player2.BattleArea[3, 7];
+                D92.Text = Player2.BattleArea[3, 8];
 
-                E12.Text = player2._BattleArea[4, 0];
-                E22.Text = player2._BattleArea[4, 1];
-                E32.Text = player2._BattleArea[4, 2];
-                E42.Text = player2._BattleArea[4, 3];
-                E52.Text = player2._BattleArea[4, 4];
-                E62.Text = player2._BattleArea[4, 5];
-                E72.Text = player2._BattleArea[4, 6];
-                E82.Text = player2._BattleArea[4, 7];
-                E92.Text = player2._BattleArea[4, 8];
+                E12.Text = Player2.BattleArea[4, 0];
+                E22.Text = Player2.BattleArea[4, 1];
+                E32.Text = Player2.BattleArea[4, 2];
+                E42.Text = Player2.BattleArea[4, 3];
+                E52.Text = Player2.BattleArea[4, 4];
+                E62.Text = Player2.BattleArea[4, 5];
+                E72.Text = Player2.BattleArea[4, 6];
+                E82.Text = Player2.BattleArea[4, 7];
+                E92.Text = Player2.BattleArea[4, 8];
 
-                F12.Text = player2._BattleArea[5, 0];
-                F22.Text = player2._BattleArea[5, 1];
-                F32.Text = player2._BattleArea[5, 2];
-                F42.Text = player2._BattleArea[5, 3];
-                F52.Text = player2._BattleArea[5, 4];
-                F62.Text = player2._BattleArea[5, 5];
-                F72.Text = player2._BattleArea[5, 6];
-                F82.Text = player2._BattleArea[5, 7];
-                F92.Text = player2._BattleArea[5, 8];
+                F12.Text = Player2.BattleArea[5, 0];
+                F22.Text = Player2.BattleArea[5, 1];
+                F32.Text = Player2.BattleArea[5, 2];
+                F42.Text = Player2.BattleArea[5, 3];
+                F52.Text = Player2.BattleArea[5, 4];
+                F62.Text = Player2.BattleArea[5, 5];
+                F72.Text = Player2.BattleArea[5, 6];
+                F82.Text = Player2.BattleArea[5, 7];
+                F92.Text = Player2.BattleArea[5, 8];
 
-                G12.Text = player2._BattleArea[6, 0];
-                G22.Text = player2._BattleArea[6, 1];
-                G32.Text = player2._BattleArea[6, 2];
-                G42.Text = player2._BattleArea[6, 3];
-                G52.Text = player2._BattleArea[6, 4];
-                G62.Text = player2._BattleArea[6, 5];
-                G72.Text = player2._BattleArea[6, 6];
-                G82.Text = player2._BattleArea[6, 7];
-                G92.Text = player2._BattleArea[6, 8];
+                G12.Text = Player2.BattleArea[6, 0];
+                G22.Text = Player2.BattleArea[6, 1];
+                G32.Text = Player2.BattleArea[6, 2];
+                G42.Text = Player2.BattleArea[6, 3];
+                G52.Text = Player2.BattleArea[6, 4];
+                G62.Text = Player2.BattleArea[6, 5];
+                G72.Text = Player2.BattleArea[6, 6];
+                G82.Text = Player2.BattleArea[6, 7];
+                G92.Text = Player2.BattleArea[6, 8];
 
-                H12.Text = player2._BattleArea[7, 0];
-                H22.Text = player2._BattleArea[7, 1];
-                H32.Text = player2._BattleArea[7, 2];
-                H42.Text = player2._BattleArea[7, 3];
-                H52.Text = player2._BattleArea[7, 4];
-                H62.Text = player2._BattleArea[7, 5];
-                H72.Text = player2._BattleArea[7, 6];
-                H82.Text = player2._BattleArea[7, 7];
-                H92.Text = player2._BattleArea[7, 8];
+                H12.Text = Player2.BattleArea[7, 0];
+                H22.Text = Player2.BattleArea[7, 1];
+                H32.Text = Player2.BattleArea[7, 2];
+                H42.Text = Player2.BattleArea[7, 3];
+                H52.Text = Player2.BattleArea[7, 4];
+                H62.Text = Player2.BattleArea[7, 5];
+                H72.Text = Player2.BattleArea[7, 6];
+                H82.Text = Player2.BattleArea[7, 7];
+                H92.Text = Player2.BattleArea[7, 8];
 
-                I12.Text = player2._BattleArea[8, 0];
-                I22.Text = player2._BattleArea[8, 1];
-                I32.Text = player2._BattleArea[8, 2];
-                I42.Text = player2._BattleArea[8, 3];
-                I52.Text = player2._BattleArea[8, 4];
-                I62.Text = player2._BattleArea[8, 5];
-                I72.Text = player2._BattleArea[8, 6];
-                I82.Text = player2._BattleArea[8, 7];
-                I92.Text = player2._BattleArea[8, 8];
+                I12.Text = Player2.BattleArea[8, 0];
+                I22.Text = Player2.BattleArea[8, 1];
+                I32.Text = Player2.BattleArea[8, 2];
+                I42.Text = Player2.BattleArea[8, 3];
+                I52.Text = Player2.BattleArea[8, 4];
+                I62.Text = Player2.BattleArea[8, 5];
+                I72.Text = Player2.BattleArea[8, 6];
+                I82.Text = Player2.BattleArea[8, 7];
+                I92.Text = Player2.BattleArea[8, 8];
             }
 
         }
@@ -4457,9 +4456,9 @@ namespace Spielesammlung
         /// </summary>
         public void buttonlock_AdS()    //button lock nach Festlegung der Spieler (AdS - Anzahl der Spieler)
         {
-            player2.AmountOfShipsInTotal = player1.AmountOfShipsInTotal;  //Weißt dem 2. Spieler ebensoviel Schiffe zu wie dem 1. Spieler
-            counter.AmountOfShipsInTotal = player1.AmountOfShipsInTotal;  //Gibt auch dem Counter die Anzahl der Schiffe
-            Ausgabe.Text = "Sie haben " + player1.AmountOfShipsInTotal + " Schiffe ausgewählt.\nGeben sie jetzt die Längen der Schiffe in beliebiger Reihenfolge an."; //Gibt Text im Ausgabefenster aus
+            Player2.AmountOfShipsInTotal = Player1.AmountOfShipsInTotal;  //Weißt dem 2. Spieler ebensoviel Schiffe zu wie dem 1. Spieler
+            Counter.AmountOfShipsInTotal = Player1.AmountOfShipsInTotal;  //Gibt auch dem Counter die Anzahl der Schiffe
+            Ausgabe.Text = "Sie haben " + Player1.AmountOfShipsInTotal + " Schiffe ausgewählt.\nGeben sie jetzt die Längen der Schiffe in beliebiger Reihenfolge an."; //Gibt Text im Ausgabefenster aus
             AdS_3.Enabled = false;  //Buttons werden geperrt
             AdS_4.Enabled = false;
             AdS_5.Enabled = false;
@@ -4477,11 +4476,11 @@ namespace Spielesammlung
         public void buttonlock_GdS()    //button lock nach Festlegung der Größen der Schiffe (GdS - Größe der Schiffe)
         {
             Ausgabe.Text = AnzeigePlayer1.Text + ", platziere nun deine Schiffe auf deinem Spielfeld.\n";
-            if (counter.AmountOfShipsLength3 == 0 && counter.AmountOfShipsLength4 == 0)
+            if (Counter.AmountOfShipsLength3 == 0 && Counter.AmountOfShipsLength4 == 0)
             {
                 Ausgabe.Text = Ausgabe.Text + "Zunächst ein 5 Feld Schiff.\n Verwenden sie die Optionen 'vertikal nach unten' und 'horizontal nach rechts' um die Orientierung fest zu legen.\n";
             }
-            else if (counter.AmountOfShipsLength3 == 0)
+            else if (Counter.AmountOfShipsLength3 == 0)
             {
                 Ausgabe.Text = Ausgabe.Text + "Zunächst ein 4 Feld Schiff.\n Verwenden sie die Optionen 'vertikal nach unten' und 'horizontal nach rechts' um die Orientierung fest zu legen.\n";
             }
@@ -4506,11 +4505,11 @@ namespace Spielesammlung
         public void buttonlock_SPP1()   //button lock nach Platzierung der Schiffe des Spieler 1 (SPP1 - Schiffe platziert Player 1)
         {
             Ausgabe.Text = AnzeigePlayer2.Text + ", platziere nun deine Schiffe auf deinem Spielfeld.\n";
-            if (counter.AmountOfShipsLength3 == 0 && counter.AmountOfShipsLength4 == 0)
+            if (Counter.AmountOfShipsLength3 == 0 && Counter.AmountOfShipsLength4 == 0)
             {
                 Ausgabe.Text = Ausgabe.Text + "Zunächst ein 5 Feld Schiff.\n Verwenden sie die Optionen 'vertikal nach unten' und 'horizontal nach rechts' um die Orientierung fest zu legen.\n";
             }
-            else if (counter.AmountOfShipsLength3 == 0)
+            else if (Counter.AmountOfShipsLength3 == 0)
             {
                 Ausgabe.Text = Ausgabe.Text + "Zunächst ein 4 Feld Schiff.\n Verwenden sie die Optionen 'vertikal nach unten' und 'horizontal nach rechts' um die Orientierung fest zu legen.\n";
             }
@@ -4536,8 +4535,8 @@ namespace Spielesammlung
             option1_button.Text = "Zug beginnen";
             option2_button.Text = "Zug beenden";
             option2_button.Enabled = false;
-            gamestage.number = 1;
-            turn.number = 1;
+            Gamestage.Number = 1;
+            Turn.Number = 1;
         }
 
         #endregion
@@ -4550,35 +4549,35 @@ namespace Spielesammlung
         /// <param name="Länge">Ist die Länge eines Schiffes</param>
         private void SetLengthOfShip(int Länge)
         {
-            Ausgabe.Text = "Wähle die länge des " + (player1.AmountOfShipsLength3 + player1.AmountOfShipsLength4 + player1.AmountOfShipsLength5 + 1) + ". Schiffes aus.";   //Neue Anweisungim Ausgabe Fenster
+            Ausgabe.Text = "Wähle die länge des " + (Player1.AmountOfShipsLength3 + Player1.AmountOfShipsLength4 + Player1.AmountOfShipsLength5 + 1) + ". Schiffes aus.";   //Neue Anweisungim Ausgabe Fenster
             switch (Länge)
             {
                 case 3:
-                    player2.AmountOfShipsLength3 = player1.AmountOfShipsLength3;  //Spieler 2 hat dementsprechend auch eins
-                    counter.AmountOfShipsLength3 = player1.AmountOfShipsLength3;  //Counter erhält auch die Anzahl
-                    Schiff3FP1.Text = Convert.ToString(player1.AmountOfShipsLength3);  //Die Anzeige im Fenster des 1. Spielers wird akutalisiert
-                    Schiff3FP2.Text = Convert.ToString(player2.AmountOfShipsLength3);  //Die Anzeige im Fenster des 2. Spielers wird akutalisiert
-                    if (player1.AmountOfShipsInTotal == player1.AmountOfShipsLength3 + player1.AmountOfShipsLength4 + player1.AmountOfShipsLength5) //Wenn allen Schiffen Längen zugeordnet wurden
+                    Player2.AmountOfShipsLength3 = Player1.AmountOfShipsLength3;  //Spieler 2 hat dementsprechend auch eins
+                    Counter.AmountOfShipsLength3 = Player1.AmountOfShipsLength3;  //Counter erhält auch die Anzahl
+                    Schiff3FP1.Text = Convert.ToString(Player1.AmountOfShipsLength3);  //Die Anzeige im Fenster des 1. Spielers wird akutalisiert
+                    Schiff3FP2.Text = Convert.ToString(Player2.AmountOfShipsLength3);  //Die Anzeige im Fenster des 2. Spielers wird akutalisiert
+                    if (Player1.AmountOfShipsInTotal == Player1.AmountOfShipsLength3 + Player1.AmountOfShipsLength4 + Player1.AmountOfShipsLength5) //Wenn allen Schiffen Längen zugeordnet wurden
                     {
                         buttonlock_GdS();   //Sperrt und entperrt Buttons
                     }
                     break;
                 case 4:
-                    player2.AmountOfShipsLength4 = player1.AmountOfShipsLength4;
-                    counter.AmountOfShipsLength4 = player1.AmountOfShipsLength4;
-                    Schiff4FP1.Text = Convert.ToString(player1.AmountOfShipsLength4);
-                    Schiff4FP2.Text = Convert.ToString(player2.AmountOfShipsLength4);
-                    if (player1.AmountOfShipsInTotal == player1.AmountOfShipsLength3 + player1.AmountOfShipsLength4 + player1.AmountOfShipsLength5)
+                    Player2.AmountOfShipsLength4 = Player1.AmountOfShipsLength4;
+                    Counter.AmountOfShipsLength4 = Player1.AmountOfShipsLength4;
+                    Schiff4FP1.Text = Convert.ToString(Player1.AmountOfShipsLength4);
+                    Schiff4FP2.Text = Convert.ToString(Player2.AmountOfShipsLength4);
+                    if (Player1.AmountOfShipsInTotal == Player1.AmountOfShipsLength3 + Player1.AmountOfShipsLength4 + Player1.AmountOfShipsLength5)
                     {
                         buttonlock_GdS();
                     }
                     break;
                 case 5:
-                    player2.AmountOfShipsLength5 = player1.AmountOfShipsLength5;
-                    counter.AmountOfShipsLength5 = player1.AmountOfShipsLength5;
-                    Schiff5FP1.Text = Convert.ToString(player1.AmountOfShipsLength5);
-                    Schiff5FP2.Text = Convert.ToString(player2.AmountOfShipsLength5);
-                    if (player1.AmountOfShipsInTotal == player1.AmountOfShipsLength3 + player1.AmountOfShipsLength4 + player1.AmountOfShipsLength5)
+                    Player2.AmountOfShipsLength5 = Player1.AmountOfShipsLength5;
+                    Counter.AmountOfShipsLength5 = Player1.AmountOfShipsLength5;
+                    Schiff5FP1.Text = Convert.ToString(Player1.AmountOfShipsLength5);
+                    Schiff5FP2.Text = Convert.ToString(Player2.AmountOfShipsLength5);
+                    if (Player1.AmountOfShipsInTotal == Player1.AmountOfShipsLength3 + Player1.AmountOfShipsLength4 + Player1.AmountOfShipsLength5)
                     {
                         buttonlock_GdS();
                     }
@@ -4592,11 +4591,11 @@ namespace Spielesammlung
         /// <returns>Ist die Länge des zu platzierenden Schiffes</returns>
         private int GetLengthOfShip()
         {
-            if (counter.AmountOfShipsLength3 == 0 && counter.AmountOfShipsLength4 == 0)
+            if (Counter.AmountOfShipsLength3 == 0 && Counter.AmountOfShipsLength4 == 0)
             {
                 return 5;
             }
-            else if (counter.AmountOfShipsLength3 == 0)
+            else if (Counter.AmountOfShipsLength3 == 0)
             {
                 return 4;
             }
@@ -4618,12 +4617,12 @@ namespace Spielesammlung
         {
             if (CollisionCheck(X, Y, Player, Länge) == true)
             {
-                if (horizontalvertical.number == 0)
+                if (Horizontalvertical.Number == 0)
                 {
                     Ausgabe.Text = "Wähle zuerst aus, ob du dein Schiff vertikal oder horizontal platzieren möchtest.";
                     return false;
                 }
-                else if (horizontalvertical.number == 1)
+                else if (Horizontalvertical.Number == 1)
                 {
 
                     if (Player == 1)
@@ -4631,7 +4630,7 @@ namespace Spielesammlung
 
                         for (int i = 0; i < Länge; i++) //Das Schiff ist 3 Koordinaten lang und wird so platziert
                         {
-                            player1._BattleArea[X + i, Y] = "O";  //An den Koordinaten wird ein O für das Schiff gesetzt, jedoch nur im Array des Spielers
+                            Player1.BattleArea[X + i, Y] = "O";  //An den Koordinaten wird ein O für das Schiff gesetzt, jedoch nur im Array des Spielers
                         }
 
                     }
@@ -4639,7 +4638,7 @@ namespace Spielesammlung
                     {
                         for (int i = 0; i < Länge; i++) //Das Schiff ist 3 Koordinaten lang und wird so platziert
                         {
-                            player2._BattleArea[X + i, Y] = "O";  //An den Koordinaten wird ein O für das Schiff gesetzt, jedoch nur im Array des Spielers 
+                            Player2.BattleArea[X + i, Y] = "O";  //An den Koordinaten wird ein O für das Schiff gesetzt, jedoch nur im Array des Spielers 
                         }
                     }
 
@@ -4650,14 +4649,14 @@ namespace Spielesammlung
                     {
                         for (int i = 0; i < Länge; i++) //Das Schiff ist 3 Koordinaten lang und wird so platziert
                         {
-                            player1._BattleArea[X, Y + i] = "O";  //An den Koordinaten wird ein O für das Schiff gesetzt, jedoch nur im Array des Spielers 
+                            Player1.BattleArea[X, Y + i] = "O";  //An den Koordinaten wird ein O für das Schiff gesetzt, jedoch nur im Array des Spielers 
                         }
                     }
                     else
                     {
                         for (int i = 0; i < Länge; i++) //Das Schiff ist 3 Koordinaten lang und wird so platziert
                         {
-                            player2._BattleArea[X, Y + i] = "O";  //An den Koordinaten wird ein O für das Schiff gesetzt, jedoch nur im Array des Spielers 
+                            Player2.BattleArea[X, Y + i] = "O";  //An den Koordinaten wird ein O für das Schiff gesetzt, jedoch nur im Array des Spielers 
                         }
                     }
                 }
@@ -4679,7 +4678,7 @@ namespace Spielesammlung
         /// <returns>Gibt zurück, ob das Schiff platziert werden kann oder nicht (true = passt, false = passt nicht) </returns>
         public bool CollisionCheck(int X, int Y, int Player, int Länge)
         {
-            if (horizontalvertical.number == 1) //horizontale Platzierung
+            if (Horizontalvertical.Number == 1) //horizontale Platzierung
             {
                 if (Player == 1)
                 {
@@ -4691,7 +4690,7 @@ namespace Spielesammlung
 
                     for (int i = 0; i < Länge; i++)
                     {
-                        if (player1._BattleArea[X + i, Y] == "O")
+                        if (Player1.BattleArea[X + i, Y] == "O")
                         {
                             return false;
                         }
@@ -4706,7 +4705,7 @@ namespace Spielesammlung
 
                     for (int i = 0; i < Länge; i++)
                     {
-                        if (player2._BattleArea[X + i, Y] == "O")
+                        if (Player2.BattleArea[X + i, Y] == "O")
                         {
                             return false;
                         }
@@ -4724,7 +4723,7 @@ namespace Spielesammlung
 
                     for (int i = 0; i < Länge; i++)
                     {
-                        if (player1._BattleArea[X, Y + i] == "O")
+                        if (Player1.BattleArea[X, Y + i] == "O")
                         {
                             return false;
                         }
@@ -4739,7 +4738,7 @@ namespace Spielesammlung
 
                     for (int i = 0; i < Länge; i++)
                     {
-                        if (player2._BattleArea[X, Y + i] == "O")
+                        if (Player2.BattleArea[X, Y + i] == "O")
                         {
                             return false;
                         }
@@ -4757,21 +4756,21 @@ namespace Spielesammlung
         /// <param name="Player">Ist der Spieler, auf dessen Feld die Koordinate ausgewählt wurde</param>
         private void CoordinateScanner(int X, int Y, int Player)
         {
-            if (gamestage.number == 0)
+            if (Gamestage.Number == 0)
             {
                 switch (GetLengthOfShip())
                 {
                     case 3:
                         if (PlacingAttempt(X, Y, Player, 3) == true) //Wenn true zurückgegeben, Platzierung erfolgreich
                         {
-                            counter.AmountOfShipsInTotal -= 1;
-                            counter.AmountOfShipsLength3 -= 1;
+                            Counter.AmountOfShipsInTotal -= 1;
+                            Counter.AmountOfShipsLength3 -= 1;
 
-                            if (counter.AmountOfShipsLength3 > 0)
+                            if (Counter.AmountOfShipsLength3 > 0)
                             {
                                 Ausgabe.Text = "Platzieren Sie ein weiteres Schiff der Länge 3";
                             }
-                            else if (counter.AmountOfShipsLength4 > 0)
+                            else if (Counter.AmountOfShipsLength4 > 0)
                             {
                                 Ausgabe.Text = "Platzieren Sie ein weiteres Schiff der Länge 4";
                             }
@@ -4796,13 +4795,13 @@ namespace Spielesammlung
                     case 4:
                         if (PlacingAttempt(X, Y, Player, 4) == true)
                         {
-                            counter.AmountOfShipsInTotal -= 1;
-                            counter.AmountOfShipsLength4 -= 1;
-                            if (counter.AmountOfShipsLength3 > 0)
+                            Counter.AmountOfShipsInTotal -= 1;
+                            Counter.AmountOfShipsLength4 -= 1;
+                            if (Counter.AmountOfShipsLength3 > 0)
                             {
                                 Ausgabe.Text = "Platzieren Sie ein weiteres Schiff der Länge 3";
                             }
-                            else if (counter.AmountOfShipsLength4 > 0)
+                            else if (Counter.AmountOfShipsLength4 > 0)
                             {
                                 Ausgabe.Text = "Platzieren Sie ein weiteres Schiff der Länge 4";
                             }
@@ -4829,13 +4828,13 @@ namespace Spielesammlung
                     case 5:
                         if (PlacingAttempt(X, Y, Player, 5) == true)
                         {
-                            counter.AmountOfShipsInTotal -= 1;
-                            counter.AmountOfShipsLength5 -= 1;
-                            if (counter.AmountOfShipsLength3 > 0)
+                            Counter.AmountOfShipsInTotal -= 1;
+                            Counter.AmountOfShipsLength5 -= 1;
+                            if (Counter.AmountOfShipsLength3 > 0)
                             {
                                 Ausgabe.Text = "Platzieren Sie ein weiteres Schiff der Länge 3";
                             }
-                            else if (counter.AmountOfShipsLength4 > 0)
+                            else if (Counter.AmountOfShipsLength4 > 0)
                             {
                                 Ausgabe.Text = "Platzieren Sie ein weiteres Schiff der Länge 4";
                             }
@@ -4860,12 +4859,12 @@ namespace Spielesammlung
                         ShowAllData(2);
                         break;
                 }
-                if (counter.AmountOfShipsInTotal == 0)
+                if (Counter.AmountOfShipsInTotal == 0)
                 {
-                    counter.AmountOfShipsLength3 = player1.AmountOfShipsLength3;
-                    counter.AmountOfShipsLength4 = player1.AmountOfShipsLength4;
-                    counter.AmountOfShipsLength5 = player1.AmountOfShipsLength5;
-                    counter.AmountOfShipsInTotal = player1.AmountOfShipsInTotal;
+                    Counter.AmountOfShipsLength3 = Player1.AmountOfShipsLength3;
+                    Counter.AmountOfShipsLength4 = Player1.AmountOfShipsLength4;
+                    Counter.AmountOfShipsLength5 = Player1.AmountOfShipsLength5;
+                    Counter.AmountOfShipsInTotal = Player1.AmountOfShipsInTotal;
                     if (Player == 1)
                     {
                         Ausgabe.Text = AnzeigePlayer2.Text + " darf nun seine Schiffe platzieren.";
@@ -4878,31 +4877,31 @@ namespace Spielesammlung
                     }
                 }
             }
-            else if (gamestage.number == 1)
+            else if (Gamestage.Number == 1)
             {
                 if (Player == 1)
                 {
-                    if (player1._BattleArea[X, Y] == "O")
+                    if (Player1.BattleArea[X, Y] == "O")
                     {
-                        player1._BattleArea[X, Y] = "X";
+                        Player1.BattleArea[X, Y] = "X";
                         Ausgabe.Text = "Treffer!";
                     }
                     else
                     {
-                        player1._BattleArea[X, Y] = "U";
+                        Player1.BattleArea[X, Y] = "U";
                         Ausgabe.Text = "Kein Treffer";
                     }
                 }
                 else if (Player == 2)
                 {
-                    if (player2._BattleArea[X, Y] == "O")
+                    if (Player2.BattleArea[X, Y] == "O")
                     {
-                        player2._BattleArea[X, Y] = "X";
+                        Player2.BattleArea[X, Y] = "X";
                         Ausgabe.Text = "Treffer!";
                     }
                     else
                     {
-                        player2._BattleArea[X, Y] = "U";
+                        Player2.BattleArea[X, Y] = "U";
                         Ausgabe.Text = "Kein Treffer";
                     }
                 }
@@ -4939,7 +4938,7 @@ namespace Spielesammlung
                 {
                     for (int j = 0; j < 9; j++)
                     {
-                        if (player1._BattleArea[i, j] == "O")
+                        if (Player1.BattleArea[i, j] == "O")
                         {
                             return;
                         }
@@ -4950,7 +4949,7 @@ namespace Spielesammlung
                 option2_button.Enabled = true;
                 option1_button.Text = "Erneut spielen?";
                 option2_button.Text = "Spiel verlassen";
-                gamestage.number = 2;
+                Gamestage.Number = 2;
                 Disablecoordinates(0);
             }
             if (Player == 2)
@@ -4959,7 +4958,7 @@ namespace Spielesammlung
                 {
                     for (int j = 0; j < 9; j++)
                     {
-                        if (player2._BattleArea[i, j] == "O")
+                        if (Player2.BattleArea[i, j] == "O")
                         {
                             return;
                         }
@@ -4970,7 +4969,7 @@ namespace Spielesammlung
                 option2_button.Enabled = true;
                 option1_button.Text = "Erneut spielen?";
                 option2_button.Text = "Spiel verlassen";
-                gamestage.number = 2;
+                Gamestage.Number = 2;
                 Disablecoordinates(0);
             }
         }
@@ -4980,21 +4979,21 @@ namespace Spielesammlung
         /// </summary>
         public void Reset()
         {
-            player1.AmountOfShipsInTotal = 0;
-            player1.AmountOfShipsLength3 = 0;
-            player1.AmountOfShipsLength4 = 0;
-            player1.AmountOfShipsLength5 = 0;
-            player2.AmountOfShipsInTotal = 0;
-            player2.AmountOfShipsLength3 = 0;
-            player2.AmountOfShipsLength4 = 0;
-            player2.AmountOfShipsLength5 = 0;
-            counter.AmountOfShipsInTotal = 0;
-            counter.AmountOfShipsLength3 = 0;
-            counter.AmountOfShipsLength4 = 0;
-            counter.AmountOfShipsLength5 = 0;
-            turn.number = 0;
-            horizontalvertical.number = 0;
-            gamestage.number = 0;
+            Player1.AmountOfShipsInTotal = 0;
+            Player1.AmountOfShipsLength3 = 0;
+            Player1.AmountOfShipsLength4 = 0;
+            Player1.AmountOfShipsLength5 = 0;
+            Player2.AmountOfShipsInTotal = 0;
+            Player2.AmountOfShipsLength3 = 0;
+            Player2.AmountOfShipsLength4 = 0;
+            Player2.AmountOfShipsLength5 = 0;
+            Counter.AmountOfShipsInTotal = 0;
+            Counter.AmountOfShipsLength3 = 0;
+            Counter.AmountOfShipsLength4 = 0;
+            Counter.AmountOfShipsLength5 = 0;
+            Turn.Number = 0;
+            Horizontalvertical.Number = 0;
+            Gamestage.Number = 0;
             option1_button.Enabled = false;
             option2_button.Enabled = false;
             option1_button.Text = "";
@@ -5033,8 +5032,8 @@ namespace Spielesammlung
             {
                 for (int j = 0; j < 9; j++)
                 {
-                    player1._BattleArea[i, j] = "";
-                    player2._BattleArea[i, j] = "";
+                    Player1.BattleArea[i, j] = "";
+                    Player2.BattleArea[i, j] = "";
                 }
             }
             Unshow(0);

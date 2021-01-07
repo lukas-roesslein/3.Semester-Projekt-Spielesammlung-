@@ -374,7 +374,6 @@ namespace Spielesammlung
         }
         #endregion
 
-
         #region
 
         /// <summary>
@@ -382,7 +381,7 @@ namespace Spielesammlung
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void timer1_Tick(object sender, EventArgs e)
+        private void Timer1_Tick(object sender, EventArgs e)
         {
             if (moveLeft == true && Player.Left > 0)             // BoolVariable ist true und linke grenze von Player gräßer Null 
             {
@@ -416,7 +415,6 @@ namespace Spielesammlung
         }
 
         #endregion
-
 
         #region
         /// <summary>
@@ -516,12 +514,11 @@ namespace Spielesammlung
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void spielVerlassenToolStripMenuItem_Click(object sender, EventArgs e)
+        private void SpielVerlassenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close(); // Wenn auf der Grafischen Oberfläche im oberen linken Eck auf Spielverlassen geklickt wird soll sich dieses Fenster schließen
         }
         #endregion
-
 
         #region
         /// <summary>
@@ -529,7 +526,7 @@ namespace Spielesammlung
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void neuesSpielToolStripMenuItem_Click(object sender, EventArgs e)
+        private void NeuesSpielToolStripMenuItem_Click(object sender, EventArgs e)
         {
             GameReset();  // Wenn auf der Grafischen Oberfläche im oberen linken Eck auf neues Spiel geklickt wird soll sich dieses Fenster reseten
         }

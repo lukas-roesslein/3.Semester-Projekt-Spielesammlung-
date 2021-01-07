@@ -89,7 +89,7 @@ namespace Spielesammlung
             /// <summary>
             /// Ist das Spielfeld (Koordinaten) eines Spielers
             /// </summary>
-            public string[,] _BattleArea { get; set; } = new string[9, 9];  //Erstellt ein Array, welches das Spielfeld eines Spielers repräsentiert
+            public string[,] BattleArea { get; set; } = new string[9, 9];  //Erstellt ein Array, welches das Spielfeld eines Spielers repräsentiert
         }  
         /// <summary>
         /// Erstellt eine int Variable, die im Laufe des Spiels geändert werden kann
@@ -99,14 +99,14 @@ namespace Spielesammlung
             /// <summary>
             /// Ist die int Variable die verwendet werden kann
             /// </summary>
-            private int _number = 0;  //Der Wert, den die Einstellung haben soll
+            private int _Number = 0;  //Der Wert, den die Einstellung haben soll
             /// <summary>
             /// set-get einer Variable 
             /// </summary>
-            public int number //Zugriff auf den Wert
+            public int Number //Zugriff auf den Wert
             {
-                set { _number = value; }
-                get { return _number; }
+                set { _Number = value; }
+                get { return _Number; }
             }
         }
 
@@ -114,72 +114,72 @@ namespace Spielesammlung
         /// <summary>
         /// Eine erste Spielrunde wird erstellt
         /// </summary>
-        GameData counter = new GameData();
+        GameData Counter = new GameData();
         /// <summary>
         /// Spieler1 wird erstellt
         /// </summary>
-        Player player1 = new Player();
+        Player Player1 = new Player();
         /// <summary>
         /// Spieler2 wird erstellt
         /// </summary>
-        Player player2 = new Player();
+        Player Player2 = new Player();
         /// <summary>
         /// Stellt beim Schiffeplatzieren ein ob horizontal oder vertikal platziert werden soll
         /// </summary>
-        Property horizontalvertical = new Property();
+        Property Horizontalvertical = new Property();
         /// <summary>
         /// Gibt in welcher Phase sich das Spiel gerade befindet
         /// </summary>
-        Property gamestage = new Property();
+        Property Gamestage = new Property();
         /// <summary>
         /// Gibt an welcher Spieler gerade an der Reihe ist
         /// </summary>
-        Property turn = new Property(); 
+        Property Turn = new Property(); 
         /// <summary>
         /// Erstellt ein Infofenster
         /// </summary>
-        Info infowindow = new Info();           
+        Info Infowindow = new Info();           
 
         #region set amount of ships
 
         private void AdS_3_Click(object sender, EventArgs e)
         {
-            player1.AmountOfShipsInTotal = 3; //Legt die Anzahl der Schiffe eines Spielers fest
+            Player1.AmountOfShipsInTotal = 3; //Legt die Anzahl der Schiffe eines Spielers fest
             AdS_3.BackColor = System.Drawing.Color.Gray;
             buttonlock_AdS();   //Sperrt und Entsperrt Buttons, führt Operationen aus
         }
 
         private void AdS_4_Click(object sender, EventArgs e)
         {
-            player1.AmountOfShipsInTotal = 4;
+            Player1.AmountOfShipsInTotal = 4;
             AdS_4.BackColor = System.Drawing.Color.Gray;
             buttonlock_AdS();
         }
 
         private void AdS_5_Click(object sender, EventArgs e)
         {
-            player1.AmountOfShipsInTotal = 5;
+            Player1.AmountOfShipsInTotal = 5;
             AdS_5.BackColor = System.Drawing.Color.Gray;
             buttonlock_AdS();
         }
 
         private void AdS_6_Click(object sender, EventArgs e)
         {
-            player1.AmountOfShipsInTotal = 6;
+            Player1.AmountOfShipsInTotal = 6;
             AdS_6.BackColor = System.Drawing.Color.Gray;
             buttonlock_AdS();
         }
 
         private void AdS_7_Click(object sender, EventArgs e)
         {
-            player1.AmountOfShipsInTotal = 7;
+            Player1.AmountOfShipsInTotal = 7;
             AdS_7.BackColor = System.Drawing.Color.Gray;
             buttonlock_AdS();
         }
 
         private void AdS_8_Click(object sender, EventArgs e)
         {
-            player1.AmountOfShipsInTotal = 8;
+            Player1.AmountOfShipsInTotal = 8;
             AdS_8.BackColor = System.Drawing.Color.Gray;
             buttonlock_AdS();
         }
@@ -190,19 +190,19 @@ namespace Spielesammlung
 
         private void GdS_3_Click(object sender, EventArgs e)
         {
-            player1.AmountOfShipsLength3 += 1; //Spieler 1 definiert 1 Schiff als 3 Koordinaten (Felder) lang
+            Player1.AmountOfShipsLength3 += 1; //Spieler 1 definiert 1 Schiff als 3 Koordinaten (Felder) lang
             SetLengthOfShip(3);
         }
 
         private void GdS_4_Click(object sender, EventArgs e)
         {
-            player1.AmountOfShipsLength4 += 1;
+            Player1.AmountOfShipsLength4 += 1;
             SetLengthOfShip(4);
         }
 
         private void GdS_5_Click(object sender, EventArgs e)
         {
-            player1.AmountOfShipsLength5 += 1;
+            Player1.AmountOfShipsLength5 += 1;
             SetLengthOfShip(5);
         }
 
@@ -210,23 +210,23 @@ namespace Spielesammlung
 
         #region option Buttons (vertical, horizontal placing - turn start, end - game end, restart)
 
-        private void option1_Button_Click(object sender, EventArgs e)
+        private void Option1_Button_Click(object sender, EventArgs e)
         {
-            if (gamestage.number == 0)
+            if (Gamestage.Number == 0)
             {
                 option1_button.BackColor = System.Drawing.Color.Gray; //Button wird grau (ausgewählt)
                 option2_button.BackColor = System.Drawing.Color.White;  //anderer Button wird weiß
-                horizontalvertical.number = 1;    //Die Einstellung wird als vertikal eingestellt
+                Horizontalvertical.Number = 1;    //Die Einstellung wird als vertikal eingestellt
             }
-            else if (gamestage.number == 1)
+            else if (Gamestage.Number == 1)
             {
-                if (turn.number == 1)
+                if (Turn.Number == 1)
                 {
                     Enablecoordinates(2);
                     Disablecoordinates(1);
                     ShowAllData(1);
                 }
-                else if (turn.number==2)
+                else if (Turn.Number==2)
                 {
                     Enablecoordinates(1);
                     Disablecoordinates(2);
@@ -234,37 +234,37 @@ namespace Spielesammlung
                 }
                 Ausgabe.Text = "Drücke auf eine Koordinate im gegnerischem Feld um darauf zu schießen.";
             }
-            else if (gamestage.number==2)
+            else if (Gamestage.Number==2)
             {
                 Reset();
             }
         }
 
-        private void option2_Button_Click(object sender, EventArgs e)
+        private void Option2_Button_Click(object sender, EventArgs e)
         {
-            if (gamestage.number==0)
+            if (Gamestage.Number==0)
             {
                 option2_button.BackColor = System.Drawing.Color.Gray;   //Button wird grau (ausgewählt)
                 option1_button.BackColor = System.Drawing.Color.White;    //anderer Button wird weiß
-                horizontalvertical.number = 2;    //Die Einstellung wird als horizontal eingestellt
+                Horizontalvertical.Number = 2;    //Die Einstellung wird als horizontal eingestellt
             }
-            else if (gamestage.number==1)
+            else if (Gamestage.Number==1)
             {
                 HideShips();
                 option1_button.Enabled = true;
                 option2_button.Enabled = false;
-                if(turn.number == 1)
+                if(Turn.Number == 1)
                 {
-                    turn.number = 2;
+                    Turn.Number = 2;
                     Ausgabe.Text = Ausgabe.Text + "\n" + AnzeigePlayer2.Text + " ist nun an der Reihe\n " + AnzeigePlayer1.Text + " wegschauen.";
                 }
-                else if (turn.number == 2)
+                else if (Turn.Number == 2)
                 {
-                    turn.number = 1;
+                    Turn.Number = 1;
                     Ausgabe.Text = Ausgabe.Text + "\n" + AnzeigePlayer1.Text + " ist nun an der Reihe\nSpieler 2 wegschauen.";
                 }
             }
-            else if (gamestage.number == 2)
+            else if (Gamestage.Number == 2)
             {
                 Close();
             }
@@ -1091,21 +1091,20 @@ namespace Spielesammlung
         #endregion
 
         #region menu bar
-        private void spielBeendenToolStripMenuItem_Click(object sender, EventArgs e)
+        private void SpielBeendenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Reset();
         }
 
-        private void spielBeendenToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void SpielBeendenToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Close();
         }
 
-        private void infoToolStripMenuItem_Click(object sender, EventArgs e)
+        private void InfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            infowindow.Show();
+            Infowindow.Show();
         }
-
         #endregion
     }
 }
