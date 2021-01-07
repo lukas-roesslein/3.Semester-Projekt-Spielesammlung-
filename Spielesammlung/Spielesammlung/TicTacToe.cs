@@ -15,13 +15,15 @@ namespace Spielesammlung
         private string symbol = "X";
         private string[,] spieleMatrix = new string[3, 3];
 
-
+        public TicTacToe() : this("Spieler 1", "Spieler 2") { }
+        
         public TicTacToe(string Name1,string Name2)
         {
             InitializeComponent();
 
             L_Name1.Text = Name1;
             L_Name2.Text = Name2;
+            statistikEinblendenToolStripMenuItem.Visible = false;
         }
 
         #region Forms-Methoden
@@ -51,6 +53,8 @@ namespace Spielesammlung
             L_Unentschieden_Int.Show();
             L_Zuege_String.Show();
             L_Zuege_Int.Show();
+            statistikEinblendenToolStripMenuItem.Visible = false;
+            statistikAusblendenToolStripMenuItem.Visible = true;
         }
 
         /// <summary>
@@ -69,6 +73,8 @@ namespace Spielesammlung
             L_Unentschieden_Int.Hide();
             L_Zuege_String.Hide();
             L_Zuege_Int.Hide();
+            statistikEinblendenToolStripMenuItem.Visible = true;
+            statistikAusblendenToolStripMenuItem.Visible = false;
         }
 
         /// <summary>
