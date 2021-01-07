@@ -56,11 +56,11 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Cross Game\CrossGame.Designer.cs" />
-    <Compile Include="Schiffe Versenken\Info.cs">
+    <Compile Include="Schiffe Versenken\SchiffeversenkenInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Schiffe Versenken\Info.Designer.cs">
-      <DependentUpon>Info.cs</DependentUpon>
+    <Compile Include="Schiffe Versenken\SchiffeversenkenInfo.Designer.cs">
+      <DependentUpon>SchiffeversenkenInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="Vier_Gewinnt\Form1.cs">
       <SubType>Form</SubType>
@@ -85,8 +85,8 @@
       <DependentUpon>AuswahlSpiel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CrossGame.resx" />
-    <EmbeddedResource Include="Schiffe Versenken\Info.resx">
-      <DependentUpon>Info.cs</DependentUpon>
+    <EmbeddedResource Include="Schiffe Versenken\SchiffeversenkenInfo.resx">
+      <DependentUpon>SchiffeversenkenInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vier_Gewinnt\Form1.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">

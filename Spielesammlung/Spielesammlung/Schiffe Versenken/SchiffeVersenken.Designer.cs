@@ -2109,19 +2109,6 @@ namespace Spielesammlung
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Blue;
             this.ClientSize = new System.Drawing.Size(1284, 661);
-            this.Controls.Add(this.SchiffeimEinsatz);
-            this.Controls.Add(this.Feld5P2);
-            this.Controls.Add(this.Feld4P2);
-            this.Controls.Add(this.Feld3P2);
-            this.Controls.Add(this.Feld5P1);
-            this.Controls.Add(this.Feld4P1);
-            this.Controls.Add(this.Feld3P1);
-            this.Controls.Add(this.Schiff5FP2);
-            this.Controls.Add(this.Schiff5FP1);
-            this.Controls.Add(this.Schiff4FP2);
-            this.Controls.Add(this.Schiff4FP1);
-            this.Controls.Add(this.Schiff3FP2);
-            this.Controls.Add(this.Schiff3FP1);
             this.Controls.Add(this.option2_button);
             this.Controls.Add(this.option1_button);
             this.Controls.Add(this.GdS_5);
@@ -2501,19 +2488,6 @@ namespace Spielesammlung
         private System.Windows.Forms.Label GrößeDerSchiffeInFelder;
         private System.Windows.Forms.Button option1_button;
         private System.Windows.Forms.Button option2_button;
-        private System.Windows.Forms.Label Feld3P1;
-        private System.Windows.Forms.Label Feld4P1;
-        private System.Windows.Forms.Label Feld5P1;
-        private System.Windows.Forms.Label Feld3P2;
-        private System.Windows.Forms.Label Feld4P2;
-        private System.Windows.Forms.Label Feld5P2;
-        private System.Windows.Forms.Label SchiffeimEinsatz;
-        private System.Windows.Forms.Label Schiff5FP2;
-        private System.Windows.Forms.Label Schiff5FP1;
-        private System.Windows.Forms.Label Schiff4FP2;
-        private System.Windows.Forms.Label Schiff4FP1;
-        private System.Windows.Forms.Label Schiff3FP2;
-        private System.Windows.Forms.Label Schiff3FP1;
         private System.Windows.Forms.RichTextBox Ausgabe;
         private System.Windows.Forms.MenuStrip menuStripSchiffeVersenken;
         private System.Windows.Forms.ToolStripMenuItem spielToolStripMenuItem;
@@ -4542,8 +4516,6 @@ namespace Spielesammlung
                 case 3:
                     Player2.AmountOfShipsLength3 = Player1.AmountOfShipsLength3;  //Spieler 2 hat dementsprechend auch eins
                     Counter.AmountOfShipsLength3 = Player1.AmountOfShipsLength3;  //Counter erhält auch die Anzahl
-                    Schiff3FP1.Text = Convert.ToString(Player1.AmountOfShipsLength3);  //Die Anzeige im Fenster des 1. Spielers wird akutalisiert
-                    Schiff3FP2.Text = Convert.ToString(Player2.AmountOfShipsLength3);  //Die Anzeige im Fenster des 2. Spielers wird akutalisiert
                     if (Player1.AmountOfShipsInTotal == Player1.AmountOfShipsLength3 + Player1.AmountOfShipsLength4 + Player1.AmountOfShipsLength5) //Wenn allen Schiffen Längen zugeordnet wurden
                     {
                         buttonlock_GdS();   //Sperrt und entperrt Buttons
@@ -4552,8 +4524,6 @@ namespace Spielesammlung
                 case 4:
                     Player2.AmountOfShipsLength4 = Player1.AmountOfShipsLength4;
                     Counter.AmountOfShipsLength4 = Player1.AmountOfShipsLength4;
-                    Schiff4FP1.Text = Convert.ToString(Player1.AmountOfShipsLength4);
-                    Schiff4FP2.Text = Convert.ToString(Player2.AmountOfShipsLength4);
                     if (Player1.AmountOfShipsInTotal == Player1.AmountOfShipsLength3 + Player1.AmountOfShipsLength4 + Player1.AmountOfShipsLength5)
                     {
                         buttonlock_GdS();
@@ -4562,8 +4532,6 @@ namespace Spielesammlung
                 case 5:
                     Player2.AmountOfShipsLength5 = Player1.AmountOfShipsLength5;
                     Counter.AmountOfShipsLength5 = Player1.AmountOfShipsLength5;
-                    Schiff5FP1.Text = Convert.ToString(Player1.AmountOfShipsLength5);
-                    Schiff5FP2.Text = Convert.ToString(Player2.AmountOfShipsLength5);
                     if (Player1.AmountOfShipsInTotal == Player1.AmountOfShipsLength3 + Player1.AmountOfShipsLength4 + Player1.AmountOfShipsLength5)
                     {
                         buttonlock_GdS();
@@ -4994,18 +4962,6 @@ namespace Spielesammlung
             AdS_7.BackColor = System.Drawing.Color.White;
             AdS_8.BackColor = System.Drawing.Color.White;
             Ausgabe.Text = "Bitte Anzahl der Schiffe pro Spieler auswählen";
-            Schiff3FP1.Text = "";
-            Schiff4FP1.Text = "";
-            Schiff5FP1.Text = "";
-            Schiff3FP2.Text = "";
-            Schiff4FP2.Text = "";
-            Schiff5FP2.Text = "";
-            Schiff3FP1.BackColor = System.Drawing.Color.White;
-            Schiff4FP1.BackColor = System.Drawing.Color.White;
-            Schiff5FP1.BackColor = System.Drawing.Color.White;
-            Schiff3FP2.BackColor = System.Drawing.Color.White;
-            Schiff4FP2.BackColor = System.Drawing.Color.White;
-            Schiff5FP2.BackColor = System.Drawing.Color.White;
             AdS_3.Enabled = true;
             AdS_4.Enabled = true;
             AdS_5.Enabled = true;

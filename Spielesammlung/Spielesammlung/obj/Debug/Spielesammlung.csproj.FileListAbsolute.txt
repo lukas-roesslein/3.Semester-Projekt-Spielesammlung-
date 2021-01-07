@@ -6,7 +6,6 @@ D:\_Dokumente\• Studium\3. Semester\Datenverarbeitung und Programmierung\Proje
 D:\_Dokumente\• Studium\3. Semester\Datenverarbeitung und Programmierung\Projekt\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.CrossGame.resources
 D:\_Dokumente\• Studium\3. Semester\Datenverarbeitung und Programmierung\Projekt\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.Info.resources
 D:\_Dokumente\• Studium\3. Semester\Datenverarbeitung und Programmierung\Projekt\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.Properties.Resources.resources
-D:\_Dokumente\• Studium\3. Semester\Datenverarbeitung und Programmierung\Projekt\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.SchiffeVersenken.resources
 D:\_Dokumente\• Studium\3. Semester\Datenverarbeitung und Programmierung\Projekt\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.TicTacToe.resources
 D:\_Dokumente\• Studium\3. Semester\Datenverarbeitung und Programmierung\Projekt\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.csproj.GenerateResource.cache
 D:\_Dokumente\• Studium\3. Semester\Datenverarbeitung und Programmierung\Projekt\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.csproj.CoreCompileInputs.cache
@@ -27,3 +26,5 @@ C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\Spi
 C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.Vier_Gewinnt.Form1.resources
 C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.Schiffe_Versenken.SchiffeVersenken.resources
 C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.CrossGame.resources
+D:\_Dokumente\• Studium\3. Semester\Datenverarbeitung und Programmierung\Projekt\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.Vier_Gewinnt.Form1.resources
+D:\_Dokumente\• Studium\3. Semester\Datenverarbeitung und Programmierung\Projekt\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.Schiffe_Versenken.SchiffeVersenken.resources

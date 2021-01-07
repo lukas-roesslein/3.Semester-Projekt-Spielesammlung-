@@ -135,10 +135,6 @@ namespace Spielesammlung
         /// Gibt an welcher Spieler gerade an der Reihe ist
         /// </summary>
         Property Turn = new Property(); 
-        /// <summary>
-        /// Erstellt ein Infofenster
-        /// </summary>
-        Info InfoSchiffeVersenken = new Info();           
 
         #region set amount of ships
 
@@ -1103,6 +1099,10 @@ namespace Spielesammlung
 
         private void InfoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            /// <summary>
+            /// Erstellt ein Infofenster
+            /// </summary>
+            Info InfoSchiffeVersenken = new Info();
             InfoSchiffeVersenken.Show();
         }
         #endregion
