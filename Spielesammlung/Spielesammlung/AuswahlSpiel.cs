@@ -24,6 +24,7 @@ namespace Spielesammlung
             string Spieler2 = TB_Name2.Text;
             if (CheckNamen() == 1)  //Übergabe an eine Methode zur Überprüfung der Namen
             {
+
                 this.Hide();    //Auswahl Spiel Fenster wird verborgen
                 //IF-Abfrage um festzustellen welches Spiel in der Combobox ausgewählt wurde
                 if (CB_NameSpiel.Text=="TIC TAC TOE")
@@ -36,13 +37,19 @@ namespace Spielesammlung
                     SchiffeVersenken schiffeVersenken = new SchiffeVersenken(Spieler1, Spieler2);
                     schiffeVersenken.ShowDialog();   //Macht die Form sichtbar                 
                 }
-                //else if()
-                //{
-                     //Vier Gewinnt   
-                //}
+                else if (CB_NameSpiel.Text == "Vier Gewinnt")
+                {
+                    TCC viergewinnt = new TCC(Spieler1, Spieler2);
+                    viergewinnt.ShowDialog();       //Macht die Form sichtbar                 
+                }
+                else if(CB_NameSpiel.Text == "Cross Game")
+                {
+                    CrossGame crossGame = new CrossGame();
+                    crossGame.ShowDialog();
+                }
                 else
                 {
-
+                    MessageBox.Show("Bitte wählen Sie zunächst ein Spiel aus.");
                 }
                 this.Show();    //Macht das Auswahl Spiel Fenster wieder sichtbar
 
@@ -107,10 +114,14 @@ namespace Spielesammlung
         {
             string _Name1 = TB_Name1.Text;
             string _Name2 = TB_Name2.Text;
-
-            if(_Name1==_Name2)
+            if(_Name1=="" && _Name2=="")
             {
-                MessageBox.Show("Die Names dürfen nicht gleich lauten!");
+                MessageBox.Show("Bitte zuerst Spielernamen eingeben.");
+                return -1;
+            }
+            else if(_Name1==_Name2)
+            {
+                MessageBox.Show("Die Namen dürfen nicht gleich lauten!");
                 return -1;
             }
             else if(_Name1==""||_Name2=="")

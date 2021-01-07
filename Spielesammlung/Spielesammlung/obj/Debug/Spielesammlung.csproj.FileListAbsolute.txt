@@ -12,3 +12,18 @@ D:\_Dokumente\• Studium\3. Semester\Datenverarbeitung und Programmierung\Proje
 D:\_Dokumente\• Studium\3. Semester\Datenverarbeitung und Programmierung\Projekt\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.csproj.CoreCompileInputs.cache
 D:\_Dokumente\• Studium\3. Semester\Datenverarbeitung und Programmierung\Projekt\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.exe
 D:\_Dokumente\• Studium\3. Semester\Datenverarbeitung und Programmierung\Projekt\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.pdb
+C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\bin\Debug\Spielesammlung.exe.config
+C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\bin\Debug\Spielesammlung.exe
+C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\bin\Debug\Spielesammlung.pdb
+C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.csprojAssemblyReference.cache
+C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.AuswahlSpiel.resources
+C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.Info.resources
+C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.Properties.Resources.resources
+C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.TicTacToe.resources
+C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.csproj.GenerateResource.cache
+C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.csproj.CoreCompileInputs.cache
+C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.exe
+C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.pdb
+C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.Vier_Gewinnt.Form1.resources
+C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.Schiffe_Versenken.SchiffeVersenken.resources
+C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.CrossGame.resources
