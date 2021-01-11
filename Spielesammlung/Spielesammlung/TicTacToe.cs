@@ -99,6 +99,17 @@ namespace Spielesammlung
             this.Close();
 
         }
+
+        /// <summary>
+        /// Öffnet das Informationsfenster, wobei das Spielefenster geöffnet bleibt
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void hilfeToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Info_TTT Info_TTT = new Info_TTT();
+            Info_TTT.Show();
+        }
         #endregion
 
         /// <summary>
@@ -304,6 +315,5 @@ namespace Spielesammlung
             //Anzahl Zuege auf 0 setzen
             L_Zuege_Int.Text = "0";
         }
-
     }
 }

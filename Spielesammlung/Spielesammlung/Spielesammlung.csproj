@@ -56,6 +56,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Cross Game\CrossGame.Designer.cs" />
+    <Compile Include="Info_TTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Info_TTT.Designer.cs">
+      <DependentUpon>Info_TTT.cs</DependentUpon>
+    </Compile>
     <Compile Include="Schiffe Versenken\SchiffeversenkenInfo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -85,6 +91,9 @@
       <DependentUpon>AuswahlSpiel.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CrossGame.resx" />
+    <EmbeddedResource Include="Info_TTT.resx">
+      <DependentUpon>Info_TTT.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Schiffe Versenken\SchiffeversenkenInfo.resx">
       <DependentUpon>SchiffeversenkenInfo.cs</DependentUpon>
     </EmbeddedResource>

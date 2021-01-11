@@ -43,10 +43,10 @@ namespace Spielesammlung
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 16.2F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(53, 360);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(528, 35);
+            this.label1.Size = new System.Drawing.Size(565, 38);
             this.label1.TabIndex = 0;
             this.label1.Text = "Welches Spiel möchtest du spielen?";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -105,9 +105,9 @@ namespace Spielesammlung
             // B_Start
             // 
             this.B_Start.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.B_Start.Location = new System.Drawing.Point(483, 542);
+            this.B_Start.Location = new System.Drawing.Point(483, 429);
             this.B_Start.Name = "B_Start";
-            this.B_Start.Size = new System.Drawing.Size(152, 50);
+            this.B_Start.Size = new System.Drawing.Size(152, 59);
             this.B_Start.TabIndex = 9;
             this.B_Start.Text = "START";
             this.B_Start.UseVisualStyleBackColor = true;
@@ -117,20 +117,20 @@ namespace Spielesammlung
             // 
             this.L_Titel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.L_Titel.AutoSize = true;
-            this.L_Titel.Font = new System.Drawing.Font("MV Boli", 24F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.L_Titel.Location = new System.Drawing.Point(241, 26);
+            this.L_Titel.Font = new System.Drawing.Font("MV Boli", 28.2F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.L_Titel.Location = new System.Drawing.Point(202, 26);
             this.L_Titel.Name = "L_Titel";
-            this.L_Titel.Size = new System.Drawing.Size(321, 52);
+            this.L_Titel.Size = new System.Drawing.Size(383, 63);
             this.L_Titel.TabIndex = 10;
             this.L_Titel.Text = "Spielesammlung";
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 15F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Font = new System.Drawing.Font("MS Reference Sans Serif", 18F, System.Drawing.FontStyle.Underline, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(53, 130);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(306, 32);
+            this.label2.Size = new System.Drawing.Size(370, 38);
             this.label2.TabIndex = 11;
             this.label2.Text = "Bitte Namen eingeben:";
             this.label2.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -139,7 +139,8 @@ namespace Spielesammlung
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 643);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(800, 507);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.L_Titel);
             this.Controls.Add(this.B_Start);
