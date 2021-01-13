@@ -528,7 +528,7 @@ namespace Spielesammlung
         /// <param name="e"></param>
         private void NeuesSpielToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            GameReset();  // Wenn auf der Grafischen Oberfläche im oberen linken Eck auf neues Spiel geklickt wird soll sich dieses Fenster reseten
+            this.GameReset();  // Wenn auf der Grafischen Oberfläche im oberen linken Eck auf neues Spiel geklickt wird soll sich dieses Fenster reseten
         }
         #endregion
     }

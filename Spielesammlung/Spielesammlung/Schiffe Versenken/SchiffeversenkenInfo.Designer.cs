@@ -1,7 +1,7 @@
 ﻿
 namespace Spielesammlung
 {
-    partial class Info_TTT
+    partial class Info
     {
         /// <summary>
         /// Erforderliche Designervariable.
@@ -28,7 +28,7 @@ namespace Spielesammlung
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Info_TTT));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Info));
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.logoPictureBox = new System.Windows.Forms.PictureBox();
             this.labelProductName = new System.Windows.Forms.Label();

@@ -9,9 +9,9 @@ using System.Windows.Forms;
 
 namespace Spielesammlung
 {
-    partial class Info_TTT : Form
+    partial class Info : Form
     {
-        public Info_TTT()
+        public Info()
         {
             InitializeComponent();
         }

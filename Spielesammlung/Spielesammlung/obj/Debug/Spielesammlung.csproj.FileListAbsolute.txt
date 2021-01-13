@@ -43,3 +43,4 @@ C:\Users\jonas.leh\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\Spielesam
 C:\Users\jonas.leh\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.csproj.CoreCompileInputs.cache
 C:\Users\jonas.leh\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.exe
 C:\Users\jonas.leh\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.pdb
+C:\Users\Michael Stöckl\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.Info_TTT.resources

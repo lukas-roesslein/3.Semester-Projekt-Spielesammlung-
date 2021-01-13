@@ -21,31 +21,36 @@ namespace Spielesammlung
             InitializeComponent();
         }
 
-        //Click Event zum Starten eines Spieles
+        
+        /// <summary>
+        /// Click Event zum Starten des ausgewählten Spieles
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         private void B_Start_Click(object sender, EventArgs e)
         {
             string Spieler1 = TB_Name1.Text;   //Die Spielernamen werden aus der jeweiligen Textbox geholt
             string Spieler2 = TB_Name2.Text;
-            if (CheckNamen(Spieler1,Spieler2) == 1)  //Übergabe an eine Methode zur Überprüfung der Namen
+            if (CheckNamen(Spieler1,Spieler2))  //Übergabe an eine Methode zur Überprüfung der Namen
             {
                 this.Hide();    //Auswahl-Spiel Fenster wird verborgen
                 //IF-Abfrage um festzustellen welches Spiel in der Combobox ausgewählt wurde
-                if (CB_NameSpiel.Text=="TIC TAC TOE")
+                if (String.Equals(CB_NameSpiel.Text, "TIC TAC TOE"))
                 {                  
                     TicTacToe tictactoe = new TicTacToe(Spieler1, Spieler2);  //Objekt wird instanziert
                     tictactoe.ShowDialog();   //Macht die Form sichtbar                    
                 }
-                else if (CB_NameSpiel.Text == "Schiffe Versenken")
+                else if (String.Equals(CB_NameSpiel.Text, "Schiffe Versenken"))
                 {      
                     SchiffeVersenken schiffeVersenken = new SchiffeVersenken(Spieler1, Spieler2);
-                    schiffeVersenken.ShowDialog();   //Macht die Form sichtbar                 
+                    schiffeVersenken.ShowDialog();                   
                 }
-                else if (CB_NameSpiel.Text == "Vier Gewinnt")
+                else if (String.Equals(CB_NameSpiel.Text, "Vier Gewinnt"))
                 {
                     TCC viergewinnt = new TCC(Spieler1, Spieler2);
-                    viergewinnt.ShowDialog();       //Macht die Form sichtbar                 
+                    viergewinnt.ShowDialog();                    
                 }
-                else if(CB_NameSpiel.Text == "Cross Game")
+                else if(String.Equals(CB_NameSpiel.Text, "Cross Game") )
                 {
                     CrossGame crossGame = new CrossGame();
                     crossGame.ShowDialog();
@@ -66,29 +71,33 @@ namespace Spielesammlung
         /// <param name="Name1">Name des 1.Spielers</param>
         /// <param name="Name2">Name des 2.Spielers</param>
         /// <returns>Error Code</returns>
-        private int CheckNamen(string Name1, string Name2)
+        private bool CheckNamen(string Name1, string Name2)
         {
-            if(Name1=="" && Name2=="")        //Es wurden noch keine Namen eingegeben
+            if(String.IsNullOrWhiteSpace(Name1) && String.IsNullOrWhiteSpace(Name2))        //Es wurden noch keine Namen eingegeben
             {
                 MessageBox.Show("Bitte zuerst Spielernamen eingeben.");
-                return -1;
+                return false;
             }
-            else if(Name1==Name2)         //Es wurden zwei identische Namen eingegeben
+            else if(String.Equals(Name1, Name2))         //Es wurden zwei identische Namen eingegeben
             {
                 MessageBox.Show("Die Namen dürfen nicht gleich lauten!");
-                return -1;
+                return false;
             }
-            else if(Name1==""||Name2=="")     //Es wurde nur ein Name eingegeben
+            else if(String.IsNullOrWhiteSpace(Name1) || String.IsNullOrWhiteSpace(Name2))     //Es wurde nur ein Name eingegeben
             {
                 MessageBox.Show("Es wurde nur ein Name angegeben!");
-                return -1;
+                return false;
+            }
+            else if (Name1.Length>15 || Name2.Length>15)    //Einer der Namen war zu lang
+            {
+                MessageBox.Show("Einer der Namen war zu lang (Max. 15 Zeichen).");
+                return false;
             }
             else        //Es wurden zwei unterschiedliche Namen eingegeben
             {
-                return 1;
+                return true;
             }
         }
-
      
     }
 }

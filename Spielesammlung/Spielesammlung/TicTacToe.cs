@@ -107,8 +107,8 @@ namespace Spielesammlung
         /// <param name="e"></param>
         private void informationenToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Info_TTT Info_TTT = new Info_TTT();
-            Info_TTT.Show();
+            Info_TTT info_ttt = new Info_TTT();
+            info_ttt.Show();
         }
         #endregion
 

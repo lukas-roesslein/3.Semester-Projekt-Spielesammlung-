@@ -1102,7 +1102,7 @@ namespace Spielesammlung
             /// <summary>
             /// Erstellt ein Infofenster
             /// </summary>
-            Info_TTT InfoSchiffeVersenken = new Info_TTT();
+            Info InfoSchiffeVersenken = new Info();
             InfoSchiffeVersenken.Show();
         }
         #endregion
