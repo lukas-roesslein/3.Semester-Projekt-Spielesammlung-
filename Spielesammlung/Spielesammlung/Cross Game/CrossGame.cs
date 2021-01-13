@@ -16,7 +16,7 @@ namespace Spielesammlung
         int speed = 15;                                  // Variable für die Geschwindigkeit 
         int Goldworth = 0;                               // Wert der Goldnuggets
 
-
+        //Konstruktor
         #region
         /// <summary>
         /// Basis Konstruktor 
@@ -34,6 +34,8 @@ namespace Spielesammlung
         }
         #endregion 
 
+
+        //Win-Methode
         #region
         /// <summary>
         /// Methode damit überprüft wird ob der Spieler gewonnen hat oder nicht 
@@ -42,41 +44,49 @@ namespace Spielesammlung
         /// </summary>
         void Sieg()
         {
-            
-            if (Player.Bounds.IntersectsWith(Save2.Bounds))
-            {
-                if (Goldworth <=3)                // weder Gewonnen noch Verloren das Spiel geht weiter
-                {
-                    Winning.Visible = false;
-                    timer1.Enabled = true;
-                    labelRetry.Visible = false;
-                    Player.Visible = true;
-                }
-                if (Goldworth >=7)             // Maximale Punktzahl
-                {
-                
-                    lblmax.Visible = true;
-                    timer1.Enabled = false;
-                    Winning.Visible = false;
-                    Player.Visible = false;
-                    End.Visible = false;
-                    labelRetry.Visible = true;
-                }
-                if(Goldworth >3 && Goldworth< 7)         // Gewonnen  
-                {
-                           timer1.Enabled = false;
-                           Winning.Visible = true;
-                           Player.Visible = false;
-                           End.Visible = false;
-                           labelRetry.Visible = true;
-                }
+            try {
 
+                if (Player.Bounds.IntersectsWith(Save2.Bounds))
+                {
+                    if (Goldworth <= 3)                // weder Gewonnen noch Verloren das Spiel geht weiter
+                    {
+                        Winning.Visible = false;
+                        timer1.Enabled = true;
+                        labelRetry.Visible = false;
+                        Player.Visible = true;
+                    }
+                    if (Goldworth >= 7)             // Maximale Punktzahl
+                    {
 
+                        lblmax.Visible = true;
+                        timer1.Enabled = false;
+                        Winning.Visible = false;
+                        Player.Visible = false;
+                        End.Visible = false;
+                        labelRetry.Visible = true;
+                    }
+                    if (Goldworth > 3 && Goldworth < 7)         // Gewonnen  
+                    {
+                        timer1.Enabled = false;
+                        Winning.Visible = true;
+                        Player.Visible = false;
+                        End.Visible = false;
+                        labelRetry.Visible = true;
+                    }
+
+                }
             }
-            
+            catch (Exception e)
+            {
+                Console.WriteLine("Es ist ein Fehler aufgetreten:" + e);
+                    // In der Konsole erscheint der erscheint die jeweilige Ausnahme
+            }
+
         }
         #endregion
 
+
+        //Gameover-Methode
         #region
         /// <summary>
         /// Methode zur Bestimmmung des Gameover
@@ -204,6 +214,8 @@ namespace Spielesammlung
         }
         #endregion
 
+
+       // Reset ingame-Methode
         #region
         /// <summary>
         /// Methode für den Reset 
@@ -227,6 +239,8 @@ namespace Spielesammlung
         }
         #endregion
 
+
+        //Gegner-Methode
         #region
 
         /// <summary>
@@ -240,67 +254,77 @@ namespace Spielesammlung
         /// </param>
         void Enemy(int Speed)
         {
-            if (Enemyd1.Top >= 426)
-            { Enemyd1.Top = 27; }
-            else { Enemyd1.Top += Speed; }
+            try
+            {
 
-            if (Enemyd2.Top >= 426)
-            { Enemyd2.Top = 27; }
-            else { Enemyd2.Top += Speed; }
+                if (Enemyd1.Top >= 426)
+                { Enemyd1.Top = 27; }
+                else { Enemyd1.Top += Speed; }
 
-            if (Enemyd3.Top >= 426)
-            { Enemyd3.Top = 27; }
-            else { Enemyd3.Top += Speed; }
+                if (Enemyd2.Top >= 426)
+                { Enemyd2.Top = 27; }
+                else { Enemyd2.Top += Speed; }
 
-            if (Enemyd4.Top >= 426)
-            { Enemyd4.Top = 27; }
-            else { Enemyd4.Top += Speed; }
+                if (Enemyd3.Top >= 426)
+                { Enemyd3.Top = 27; }
+                else { Enemyd3.Top += Speed; }
 
-            if (Enemyd5.Top >= 426)                           //Enemys going down
-            { Enemyd5.Top = 27; }
-            else { Enemyd5.Top += Speed; }
+                if (Enemyd4.Top >= 426)
+                { Enemyd4.Top = 27; }
+                else { Enemyd4.Top += Speed; }
 
-            if (Enemyd6.Top >= 426)
-            { Enemyd6.Top = 27; }
-            else { Enemyd6.Top += Speed; }
+                if (Enemyd5.Top >= 426)                           //Enemys going down
+                { Enemyd5.Top = 27; }
+                else { Enemyd5.Top += Speed; }
 
-
-
-            if (Enemyu1.Bottom <= 27)
-            { Enemyu1.Top = 426; }
-            else { Enemyu1.Top -= Speed; }
-
-            if (Enemyu2.Bottom <= 27)
-            { Enemyu2.Top = 426; }
-            else { Enemyu2.Top -= Speed; }
-
-            if (Enemyu3.Bottom <= 27)
-            { Enemyu3.Top = 426; }                           //Enemys going up
-            else { Enemyu3.Top -= Speed; }
-
-            if (Enemyu4.Bottom <= 27)
-            { Enemyu4.Top = 426; }
-            else { Enemyu4.Top -= Speed; }
-
-            if (Enemyu5.Bottom <= 27)
-            { Enemyu5.Top = 426; }
-            else { Enemyu5.Top -= Speed; }
-
-            if (Enemyu6.Bottom <= 27)
-            { Enemyu6.Top = 426; }
-            else { Enemyu6.Top -= Speed; }
+                if (Enemyd6.Top >= 426)
+                { Enemyd6.Top = 27; }
+                else { Enemyd6.Top += Speed; }
 
 
-            if (EnemyL1.Left >= 666)
-            { EnemyL1.Left = 0; }
-            else { EnemyL1.Left += Speed; }         // Enemys going sideways 
 
-            if (EnemyR1.Left <= 0)
-            { EnemyR1.Left = 666; }
-            else { EnemyR1.Left -= Speed; }
+                if (Enemyu1.Bottom <= 27)
+                { Enemyu1.Top = 426; }
+                else { Enemyu1.Top -= Speed; }
+
+                if (Enemyu2.Bottom <= 27)
+                { Enemyu2.Top = 426; }
+                else { Enemyu2.Top -= Speed; }
+
+                if (Enemyu3.Bottom <= 27)
+                { Enemyu3.Top = 426; }                           //Enemys going up
+                else { Enemyu3.Top -= Speed; }
+
+                if (Enemyu4.Bottom <= 27)
+                { Enemyu4.Top = 426; }
+                else { Enemyu4.Top -= Speed; }
+
+                if (Enemyu5.Bottom <= 27)
+                { Enemyu5.Top = 426; }
+                else { Enemyu5.Top -= Speed; }
+
+                if (Enemyu6.Bottom <= 27)
+                { Enemyu6.Top = 426; }
+                else { Enemyu6.Top -= Speed; }
+
+
+                if (EnemyL1.Left >= 666)
+                { EnemyL1.Left = 0; }
+                else { EnemyL1.Left += Speed; }         // Enemys going sideways 
+
+                if (EnemyR1.Left <= 0)
+                { EnemyR1.Left = 666; }
+                else { EnemyR1.Left -= Speed; }
+            }catch( Exception e)
+            {
+                Console.WriteLine("Es ist ein Fehler aufgetreten:" + e);
+                // In der Konsole erscheint der erscheint die jeweilige Ausnahme
+            }
         }
         #endregion
 
+
+        //Punktestand-Methode
         #region
         /// <summary>
         /// Methode um den Punktestand zu ermitteln bzw zu erhöhen 
@@ -308,72 +332,83 @@ namespace Spielesammlung
         /// Wenn die jeweilige Picturebox(Goldnugget) berührt wird, wird es unsichtbar
         /// </value>
         /// </summary>
-        
+
         void Score()
         {
-            foreach( Control x in this.Controls) // für jedes control(taste gedrückt) in x Richtung
+            try
             {
-                if (x is PictureBox && ( string) x.Tag == "object" ) // sofern in diesem x eine Picturebox ist und in dem tag object steht 
+
+
+                foreach (Control x in this.Controls) // für jedes control(taste gedrückt) in x Richtung
                 {
-                    
-                       if (Player.Bounds.IntersectsWith(x.Bounds)&& x.Visible == Visible) // und wenn der Spieler mit dem x kollidiert
+                    if (x is PictureBox && (string)x.Tag == "object") // sofern in diesem x eine Picturebox ist und in dem tag object steht 
+                    {
+
+                        if (Player.Bounds.IntersectsWith(x.Bounds) && x.Visible == Visible) // und wenn der Spieler mit dem x kollidiert
                         {
 
-                           // dann soll der Wert der Variable Goldworth inkrementiert werden und zu einem string konvertiert werden
-                            Points.Text = "score: 0" + Goldworth.ToString(); 
-                            Goldworth++; 
-                         
+                            // dann soll der Wert der Variable Goldworth inkrementiert werden und zu einem string konvertiert werden
+                            Points.Text = "score: 0" + Goldworth.ToString();
+                            Goldworth++;
+
 
                         }
-                   
-                        
-                   
+
+
+
+                    }
                 }
-            }
-            if (Player.Bounds.IntersectsWith(Gold1.Bounds)) // Wenn Grenzen des Spielers und der goldenen Picturebox(Gold1) kollidieren
+                if (Player.Bounds.IntersectsWith(Gold1.Bounds)) // Wenn Grenzen des Spielers und der goldenen Picturebox(Gold1) kollidieren
+                {
+                    Gold1.Visible = false;                  // dann soll dieses unsichtbar werden 
+                }
+
+                if (Player.Bounds.IntersectsWith(Gold2.Bounds))// Wenn Grenzen des Spielers und der goldenen Picturebox(Gold2) kollidieren
+
+                {
+                    Gold2.Visible = false;                   // dann soll dieses unsichtbar werden 
+                }
+
+                if (Player.Bounds.IntersectsWith(Gold3.Bounds))// Wenn Grenzen des Spielers und der goldenen Picturebox(Gold3) kollidieren
+
+                {
+                    Gold3.Visible = false;                  // dann soll dieses unsichtbar werden 
+                }
+
+                if (Player.Bounds.IntersectsWith(Gold4.Bounds))// Wenn Grenzen des Spielers und der goldenen Picturebox(Gold4) kollidieren
+
+                {
+                    Gold4.Visible = false;                  // dann soll dieses unsichtbar werden 
+                }
+
+                if (Player.Bounds.IntersectsWith(Gold5.Bounds))// Wenn Grenzen des Spielers und der goldenen Picturebox(Gold5) kollidieren
+
+                {
+                    Gold5.Visible = false;                  // dann soll dieses unsichtbar werden 
+                }
+
+                if (Player.Bounds.IntersectsWith(Gold6.Bounds))// Wenn Grenzen des Spielers und der goldenen Picturebox(Gold6) kollidieren
+
+                {
+                    Gold6.Visible = false;                 // dann soll dieses unsichtbar werden 
+                }
+
+                if (Player.Bounds.IntersectsWith(Gold7.Bounds))// Wenn Grenzen des Spielers und der goldenen Picturebox(Gold7) kollidieren
+
+                {
+
+                    Gold7.Visible = false;                  // dann soll dieses unsichtbar werden 
+                }
+            }catch(Exception e)
             {
-                Gold1.Visible = false;                  // dann soll dieses unsichtbar werden 
-            }
-          
-            if (Player.Bounds.IntersectsWith(Gold2.Bounds))// Wenn Grenzen des Spielers und der goldenen Picturebox(Gold2) kollidieren
-
-            {
-                Gold2.Visible = false;                   // dann soll dieses unsichtbar werden 
-            }
-
-            if (Player.Bounds.IntersectsWith(Gold3.Bounds))// Wenn Grenzen des Spielers und der goldenen Picturebox(Gold3) kollidieren
-
-            {
-                Gold3.Visible = false;                  // dann soll dieses unsichtbar werden 
-            }
-
-            if (Player.Bounds.IntersectsWith(Gold4.Bounds))// Wenn Grenzen des Spielers und der goldenen Picturebox(Gold4) kollidieren
-
-            {
-                Gold4.Visible = false;                  // dann soll dieses unsichtbar werden 
-            }
-
-            if (Player.Bounds.IntersectsWith(Gold5.Bounds))// Wenn Grenzen des Spielers und der goldenen Picturebox(Gold5) kollidieren
-
-            {
-                Gold5.Visible = false;                  // dann soll dieses unsichtbar werden 
-            }
-
-            if (Player.Bounds.IntersectsWith(Gold6.Bounds))// Wenn Grenzen des Spielers und der goldenen Picturebox(Gold6) kollidieren
-
-            {
-                Gold6.Visible = false;                 // dann soll dieses unsichtbar werden 
-            }
-
-            if (Player.Bounds.IntersectsWith(Gold7.Bounds))// Wenn Grenzen des Spielers und der goldenen Picturebox(Gold7) kollidieren
-
-            {
-
-                Gold7.Visible = false;                  // dann soll dieses unsichtbar werden 
+                Console.WriteLine("Es ist ein Fehler aufgetreten:" + e);
+                // In der Konsole erscheint der erscheint die jeweilige Ausnahme
             }
         }
         #endregion
 
+
+        //Timer
         #region
 
         /// <summary>
@@ -416,6 +451,8 @@ namespace Spielesammlung
 
         #endregion
 
+
+        //Tasten nicht gedrückt
         #region
         /// <summary>
         /// Methode um fest zu legen was geschieht wenn Pfeiltasten nicht gedrückt sind 
@@ -442,8 +479,12 @@ namespace Spielesammlung
                 moveDown = false;
             }
         }
+
+
         #endregion
 
+
+        //Tasten nicht gedrückt
         #region
 
         /// <summary>
@@ -508,7 +549,10 @@ namespace Spielesammlung
         }
         #endregion
 
+
+        //Exit
         #region
+
         /// <summary>
         /// Methode für ein Untermenü der Hauptmenüleiste an dem oberen Rand des Forms
         /// </summary>
@@ -520,6 +564,8 @@ namespace Spielesammlung
         }
         #endregion
 
+
+        //Reset im oberen Menü
         #region
         /// <summary>
         /// Methode für ein Untermenü der Hauptmenüleiste an dem oberen Rand des Forms
