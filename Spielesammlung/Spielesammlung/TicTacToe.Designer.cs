@@ -61,6 +61,7 @@ namespace Spielesammlung
             this.L_Zuege_String = new System.Windows.Forms.Label();
             this.L_Zuege_Int = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.informationenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -235,6 +236,8 @@ namespace Spielesammlung
             // 
             // hilfeToolStripMenuItem
             // 
+            this.hilfeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.informationenToolStripMenuItem});
             this.hilfeToolStripMenuItem.Name = "hilfeToolStripMenuItem";
             this.hilfeToolStripMenuItem.Size = new System.Drawing.Size(30, 24);
             this.hilfeToolStripMenuItem.Text = "?";
@@ -377,6 +380,13 @@ namespace Spielesammlung
             this.label1.TabIndex = 25;
             this.label1.Text = "TicTacToe";
             // 
+            // informationenToolStripMenuItem
+            // 
+            this.informationenToolStripMenuItem.Name = "informationenToolStripMenuItem";
+            this.informationenToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.informationenToolStripMenuItem.Text = "Informationen";
+            this.informationenToolStripMenuItem.Click += new System.EventHandler(this.informationenToolStripMenuItem_Click);
+            // 
             // TicTacToe
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -453,5 +463,6 @@ namespace Spielesammlung
         private System.Windows.Forms.Label L_Zuege_String;
         private System.Windows.Forms.Label L_Zuege_Int;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.ToolStripMenuItem informationenToolStripMenuItem;
     }
 }

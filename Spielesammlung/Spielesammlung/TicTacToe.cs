@@ -105,7 +105,7 @@ namespace Spielesammlung
         /// </summary>
         /// <param name="sender"></param>
         /// <param name="e"></param>
-        private void hilfeToolStripMenuItem1_Click(object sender, EventArgs e)
+        private void informationenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             Info_TTT Info_TTT = new Info_TTT();
             Info_TTT.Show();
