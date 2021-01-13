@@ -65,7 +65,7 @@ namespace Spielesammlung
                         End.Visible = false;
                         labelRetry.Visible = true;
                     }
-                    if (Goldworth > 3 && Goldworth < 7)         // Gewonnen  
+                    if (Goldworth > 3 && Goldworth < 7)         // Normaler Gewinn
                     {
                         timer1.Enabled = false;
                         Winning.Visible = true;
