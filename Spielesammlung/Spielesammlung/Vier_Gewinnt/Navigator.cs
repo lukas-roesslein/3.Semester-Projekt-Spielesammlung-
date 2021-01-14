@@ -8,7 +8,7 @@ using System.Drawing;
 
 
 
-namespace Spielesammlung
+namespace _4_Gewinnt_Campus_Projekt
 {
     /// <summary>
     /// Wertet das Spielgeschehen aus

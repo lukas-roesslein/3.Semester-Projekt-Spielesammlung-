@@ -1,4 +1,4 @@
-﻿namespace Spielesammlung
+﻿namespace _4_Gewinnt_Campus_Projekt
 {
     partial class TCC
     {

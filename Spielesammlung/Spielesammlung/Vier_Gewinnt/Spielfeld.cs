@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Drawing; //Zum Zeichnen eingebunden
 
-namespace Spielesammlung
+namespace _4_Gewinnt_Campus_Projekt
 {
     /// <summary>
     /// Zeichnet das Spielfeld und die Token auf
