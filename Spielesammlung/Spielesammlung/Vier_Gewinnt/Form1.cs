@@ -29,7 +29,7 @@ namespace Spielesammlung
          
 
             Spielauswertung = new Spielauswertung();
-            Spielauswertung.NewSpiel(this, 7, 6, 70, 155, 100);
+            Spielauswertung.NewSpiel(this, 7, 6, 70, 50, 100);
             label1.Visible = false;
             label1.Text = "Gewinn Label";
             label3.Text = "Rot";
@@ -61,10 +61,16 @@ namespace Spielesammlung
                 {
                     if (Spielauswertung.GetWinner() == 0)
                         label1.Text = "Unentschieden!";
+                        label2.Visible = false;
+                        label3.Visible = false;
                     if (Spielauswertung.GetWinner() == 1)
                         label1.Text = Name_Player_1.Text + " hat gewonnen!";
+                        label2.Visible = false;
+                        label3.Visible = false;
                     if (Spielauswertung.GetWinner() == 2)
                         label1.Text = Name_Player_2.Text + " hat gewonnen!";
+                        label2.Visible = false;
+                        label3.Visible = false;
                     label1.Visible = true;
                 }
             }
@@ -99,10 +105,10 @@ namespace Spielesammlung
             // 
             // btnNewGame
             // 
-            this.btnNewGame.Location = new System.Drawing.Point(0, 0);
+            this.btnNewGame.Location = new System.Drawing.Point(780, 120);
             this.btnNewGame.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewGame.Name = "btnNewGame";
-            this.btnNewGame.Size = new System.Drawing.Size(100, 100);
+            this.btnNewGame.Size = new System.Drawing.Size(300, 70);
             this.btnNewGame.TabIndex = 0;
             this.btnNewGame.Text = "Neues Spiel";
             this.btnNewGame.UseVisualStyleBackColor = true;
@@ -111,9 +117,9 @@ namespace Spielesammlung
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.Color.White;
-            this.label1.Location = new System.Drawing.Point(200, 780);
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.Color.Black;
+            this.label1.Location = new System.Drawing.Point(50, 682);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(143, 25);
@@ -125,8 +131,8 @@ namespace Spielesammlung
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(11, 682);
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(50, 682);
             this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 25);
@@ -139,7 +145,7 @@ namespace Spielesammlung
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Red;
-            this.label3.Location = new System.Drawing.Point(200, 682);
+            this.label3.Location = new System.Drawing.Point(240, 682);
             this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(45, 25);
@@ -149,11 +155,11 @@ namespace Spielesammlung
             // 
             // Form1
             // 
-            this.MaximumSize = new System.Drawing.Size(1300, 900);
-            this.MinimumSize = new System.Drawing.Size(1300, 900);
+            this.MaximumSize = new System.Drawing.Size(1300, 800);
+            this.MinimumSize = new System.Drawing.Size(1300, 800);
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.Blue;
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.ClientSize = new System.Drawing.Size(1042, 702);
             this.Controls.Add(this.label9);
@@ -181,7 +187,7 @@ namespace Spielesammlung
             this.Name_Player_1.AutoSize = true;
             this.Name_Player_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name_Player_1.ForeColor = System.Drawing.Color.Red;
-            this.Name_Player_1.Location = new System.Drawing.Point(0, 200);
+            this.Name_Player_1.Location = new System.Drawing.Point(580, 210);
             this.Name_Player_1.Name = "Name_Player_1";
             this.Name_Player_1.Size = new System.Drawing.Size(48, 13);
             this.Name_Player_1.TabIndex = 0;
@@ -192,7 +198,7 @@ namespace Spielesammlung
             this.Name_Player_2.AutoSize = true;
             this.Name_Player_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name_Player_2.ForeColor = System.Drawing.Color.Yellow;
-            this.Name_Player_2.Location = new System.Drawing.Point(0, 250);
+            this.Name_Player_2.Location = new System.Drawing.Point(580, 250);
             this.Name_Player_2.Name = "Name_Player_2";
             this.Name_Player_2.Size = new System.Drawing.Size(48, 13);
             this.Name_Player_2.TabIndex = 1;
@@ -211,22 +217,22 @@ namespace Spielesammlung
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 30F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(250, 30);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 35F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.ForeColor = System.Drawing.Color.Black;
+            this.label6.Location = new System.Drawing.Point(100, 25);
             this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(92, 25);
             this.label6.TabIndex = 2;
-            this.label6.Text = "4-Gewinnt TCC";
+            this.label6.Text = "Vier-Gewinnt TCC";
             this.label6.Visible = true;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(0, 150);
+            this.label7.ForeColor = System.Drawing.Color.Black;
+            this.label7.Location = new System.Drawing.Point(580, 170);
             this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(92, 25);
@@ -238,8 +244,8 @@ namespace Spielesammlung
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(680, 150);
+            this.label8.ForeColor = System.Drawing.Color.Black;
+            this.label8.Location = new System.Drawing.Point(580, 320);
             this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label8.Name = "label7";
             this.label8.Size = new System.Drawing.Size(92, 25);
@@ -251,17 +257,16 @@ namespace Spielesammlung
             // 
             this.label9.AutoSize = true;
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(680, 200);
+            this.label9.ForeColor = System.Drawing.Color.Black;
+            this.label9.Location = new System.Drawing.Point(580, 370);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label7";
             this.label9.Size = new System.Drawing.Size(92, 25);
             this.label9.TabIndex = 2;
             this.label9.Text =   "-Spiel beginnen oder erneut spielen?\r\n" +
-                                 "->`Neues Spiel`-Button betätigen!\r\n\n" +
+                                 "-> `Neues Spiel `-Button betätigen!\r\n\n" +
                                  "-Bringen Sie 4 gleiche Steine \r\n" +
-                                 " in eine Reihe, um das Spiel\r\n" +
-                                 " zu gewinnen!\r\n" +
+                                 " in eine Reihe, um das Spiel zu gewinnen!\r\n" +
                                  " Möglichkeiten: horizontal/vertikal/diagonal\r\n\n" +
                                  "-Viel Spaß!";
             this.label9.Visible = true;

@@ -26,7 +26,7 @@ namespace Spielesammlung
             FieldCountX = aFieldCountX;
             FieldCountY = aFieldCountY;
 
-            PenPlayground = new System.Drawing.Pen(System.Drawing.Color.White, 2);
+            PenPlayground = new System.Drawing.Pen(System.Drawing.Color.Black, 2);
             formGraphic = Form.CreateGraphics();
             formGraphic.Clear(System.Drawing.SystemColors.ActiveCaption);
             int LocationEndX = LocationX + FieldCountX * FieldSize;
@@ -66,7 +66,7 @@ namespace Spielesammlung
             int CircleLocationX = LocationX + (aFieldCountX - 1) * FieldSize + ((FieldSize - CircleRadius) / 2);
             int CircleLocationY = LocationY + (aFieldCountY - 1) * FieldSize + ((FieldSize - CircleRadius) / 2);
 
-            System.Drawing.SolidBrush BrushPlayground = new System.Drawing.SolidBrush(System.Drawing.Color.White);
+            System.Drawing.SolidBrush BrushPlayground = new System.Drawing.SolidBrush(System.Drawing.Color.Black);
             formGraphic.FillEllipse(BrushPlayground, CircleLocationX - 2, CircleLocationY - 2, CircleRadius + 4, CircleRadius + 4);
             BrushPlayground.Color = aColor;
             formGraphic.FillEllipse(BrushPlayground, CircleLocationX, CircleLocationY, CircleRadius, CircleRadius);
