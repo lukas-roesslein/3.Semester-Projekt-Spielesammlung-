@@ -4777,8 +4777,14 @@ namespace Spielesammlung
                         {
                             Ausgabe.Text = "Fehler! Wenn du das Schiff so platzierst, dann überlappt sich das Schiff mit einem anderen oder verlässt das Spielfeld! Bitte erneut auswählen!";
                         }
-                        ShowAllData(1);
-                        ShowAllData(2);
+                        if (Player == 1)
+                        {
+                            ShowAllData(1);
+                        }
+                        else if (Player == 2)
+                        {
+                            ShowAllData(2);
+                        }
                         break;
                     case 5:
                         if (PlacingAttempt(X, Y, Player, 5) == true)
@@ -4810,8 +4816,14 @@ namespace Spielesammlung
                         {
                             Ausgabe.Text = "Fehler! Wenn du das Schiff so platzierst, dann überlappt sich das Schiff mit einem anderen oder verlässt das Spielfeld! Bitte erneut auswählen!";
                         }
-                        ShowAllData(1);
-                        ShowAllData(2);
+                        if (Player == 1)
+                        {
+                            ShowAllData(1);
+                        }
+                        else if (Player == 2)
+                        {
+                            ShowAllData(2);
+                        }
                         break;
                 }
                 if (Counter.AmountOfShipsInTotal == 0)
