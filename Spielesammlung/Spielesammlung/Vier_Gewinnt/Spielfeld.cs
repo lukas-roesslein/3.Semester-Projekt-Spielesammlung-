@@ -1,11 +1,7 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Drawing; //Zum Zeichnen eingebunden
 
-namespace _4_Gewinnt_Campus_Projekt
+namespace Spielesammlung
 {
     /// <summary>
     /// Zeichnet das Spielfeld und die Token auf
@@ -32,7 +28,7 @@ namespace _4_Gewinnt_Campus_Projekt
 
             PenPlayground = new System.Drawing.Pen(System.Drawing.Color.White, 2);
             formGraphic = Form.CreateGraphics();
-            formGraphic.Clear(System.Drawing.Color.Blue);
+            formGraphic.Clear(System.Drawing.SystemColors.ActiveCaption);
             int LocationEndX = LocationX + FieldCountX * FieldSize;
             int LocationEndY = LocationY + FieldCountY * FieldSize;
 
@@ -64,13 +60,13 @@ namespace _4_Gewinnt_Campus_Projekt
         /// <param name="aFieldCountY">Koordinate in Y</param>
         public void PrintCircle(Color aColor, int aFieldCountX, int aFieldCountY) //Kreis/Spieltoken zeichenen 
         {
-            int CircleRadius = FieldSize * 80 / 100; // Kreis 80% entspricht der Feldgröße 
+            int CircleRadius = FieldSize * 80 / 100; // Kreis 80
 
             // Mitttige Ausrichtung
             int CircleLocationX = LocationX + (aFieldCountX - 1) * FieldSize + ((FieldSize - CircleRadius) / 2);
             int CircleLocationY = LocationY + (aFieldCountY - 1) * FieldSize + ((FieldSize - CircleRadius) / 2);
 
-            System.Drawing.SolidBrush BrushPlayground = new System.Drawing.SolidBrush(System.Drawing.Color.Black);
+            System.Drawing.SolidBrush BrushPlayground = new System.Drawing.SolidBrush(System.Drawing.Color.White);
             formGraphic.FillEllipse(BrushPlayground, CircleLocationX - 2, CircleLocationY - 2, CircleRadius + 4, CircleRadius + 4);
             BrushPlayground.Color = aColor;
             formGraphic.FillEllipse(BrushPlayground, CircleLocationX, CircleLocationY, CircleRadius, CircleRadius);

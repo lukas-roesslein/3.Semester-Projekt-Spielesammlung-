@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace _4_Gewinnt_Campus_Projekt
+namespace Spielesammlung
 {
     /// <summary>
     /// Fenster des Spiels
@@ -37,7 +37,9 @@ namespace _4_Gewinnt_Campus_Projekt
             label3.Visible = true;
             label2.Visible = true;
             label6.Visible = true;
-
+            label7.Visible = true;
+            label8.Visible = true;
+            label9.Visible = true;
         }
 
         private void Form1_MouseClick(object sender, MouseEventArgs e)
@@ -73,12 +75,11 @@ namespace _4_Gewinnt_Campus_Projekt
             Spielauswertung = null;
         }
 
-        private void label1_Click(object sender, EventArgs e)
-        {
 
-        }
 
         #region Windows Form Designer generated code
+
+
 
         /// <summary>
         /// Required method for Designer support - do not modify
@@ -91,6 +92,9 @@ namespace _4_Gewinnt_Campus_Projekt
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnNewGame
@@ -98,7 +102,7 @@ namespace _4_Gewinnt_Campus_Projekt
             this.btnNewGame.Location = new System.Drawing.Point(0, 0);
             this.btnNewGame.Margin = new System.Windows.Forms.Padding(4);
             this.btnNewGame.Name = "btnNewGame";
-            this.btnNewGame.Size = new System.Drawing.Size(100, 28);
+            this.btnNewGame.Size = new System.Drawing.Size(100, 100);
             this.btnNewGame.TabIndex = 0;
             this.btnNewGame.Text = "Neues Spiel";
             this.btnNewGame.UseVisualStyleBackColor = true;
@@ -116,7 +120,6 @@ namespace _4_Gewinnt_Campus_Projekt
             this.label1.TabIndex = 1;
             this.label1.Text = "Gewinn Label";
             this.label1.Visible = false;
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // label2
             // 
@@ -129,7 +132,7 @@ namespace _4_Gewinnt_Campus_Projekt
             this.label2.Size = new System.Drawing.Size(92, 25);
             this.label2.TabIndex = 2;
             this.label2.Text = "Am Zug:";
-            this.label2.Visible = false;
+            this.label2.Visible = true;
             // 
             // label3
             // 
@@ -146,11 +149,16 @@ namespace _4_Gewinnt_Campus_Projekt
             // 
             // Form1
             // 
+            this.MaximumSize = new System.Drawing.Size(1300, 900);
+            this.MinimumSize = new System.Drawing.Size(1300, 900);
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Blue;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(1056, 702);
+            this.ClientSize = new System.Drawing.Size(1042, 702);
+            this.Controls.Add(this.label9);
+            this.Controls.Add(this.label8);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
@@ -173,7 +181,7 @@ namespace _4_Gewinnt_Campus_Projekt
             this.Name_Player_1.AutoSize = true;
             this.Name_Player_1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name_Player_1.ForeColor = System.Drawing.Color.Red;
-            this.Name_Player_1.Location = new System.Drawing.Point(700, 100);
+            this.Name_Player_1.Location = new System.Drawing.Point(0, 200);
             this.Name_Player_1.Name = "Name_Player_1";
             this.Name_Player_1.Size = new System.Drawing.Size(48, 13);
             this.Name_Player_1.TabIndex = 0;
@@ -184,7 +192,7 @@ namespace _4_Gewinnt_Campus_Projekt
             this.Name_Player_2.AutoSize = true;
             this.Name_Player_2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Name_Player_2.ForeColor = System.Drawing.Color.Yellow;
-            this.Name_Player_2.Location = new System.Drawing.Point(700, 150);
+            this.Name_Player_2.Location = new System.Drawing.Point(0, 250);
             this.Name_Player_2.Name = "Name_Player_2";
             this.Name_Player_2.Size = new System.Drawing.Size(48, 13);
             this.Name_Player_2.TabIndex = 1;
@@ -192,14 +200,13 @@ namespace _4_Gewinnt_Campus_Projekt
             // 
             // TCC
             // 
-            this.BackColor = System.Drawing.Color.Blue;
-            this.ClientSize = new System.Drawing.Size(897, 738);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(1000, 738);
             this.Controls.Add(this.Name_Player_2);
             this.Controls.Add(this.Name_Player_1);
             this.Name = "TCC";
             this.ResumeLayout(false);
             this.PerformLayout();
-
             // 
             // label6
             // 
@@ -212,12 +219,55 @@ namespace _4_Gewinnt_Campus_Projekt
             this.label6.Size = new System.Drawing.Size(92, 25);
             this.label6.TabIndex = 2;
             this.label6.Text = "4-Gewinnt TCC";
-            this.label6.Visible = false;
-
-
+            this.label6.Visible = true;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(0, 150);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(92, 25);
+            this.label7.TabIndex = 2;
+            this.label7.Text = "Spieler:";
+            this.label7.Visible = true;
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(680, 150);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label7";
+            this.label8.Size = new System.Drawing.Size(92, 25);
+            this.label8.TabIndex = 2;
+            this.label8.Text = "Anleitung:";
+            this.label8.Visible = true;
+            // 
+            // label8
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.ForeColor = System.Drawing.Color.White;
+            this.label9.Location = new System.Drawing.Point(680, 200);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label7";
+            this.label9.Size = new System.Drawing.Size(92, 25);
+            this.label9.TabIndex = 2;
+            this.label9.Text =   "-Spiel beginnen oder erneut spielen?\r\n" +
+                                 "->`Neues Spiel`-Button betätigen!\r\n\n" +
+                                 "-Bringen Sie 4 gleiche Steine \r\n" +
+                                 " in eine Reihe, um das Spiel\r\n" +
+                                 " zu gewinnen!\r\n" +
+                                 " Möglichkeiten: horizontal/vertikal/diagonal\r\n\n" +
+                                 "-Viel Spaß!";
+            this.label9.Visible = true;
         }
         #endregion
-
+        
         #region Windows Form Designer generated code
 
         private System.Windows.Forms.Label label1;
@@ -227,7 +277,9 @@ namespace _4_Gewinnt_Campus_Projekt
         private System.Windows.Forms.Label Name_Player_1;
         private System.Windows.Forms.Label Name_Player_2;
         private System.Windows.Forms.Label label6;
-
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label8; 
+        private System.Windows.Forms.Label label9;
 
 
 

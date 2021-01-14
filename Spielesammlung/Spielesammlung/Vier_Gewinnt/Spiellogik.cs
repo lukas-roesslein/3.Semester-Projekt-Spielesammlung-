@@ -5,14 +5,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace _4_Gewinnt_Campus_Projekt
+namespace Spielesammlung
 {
     /// <summary>
     /// Auswertung des Spielfeldes
     /// </summary>
     class Spiellogik
     {
-        // ---------- Eigenschaften ----------
+        //Eigenschaften
         private int[,] Arry;
         private int Spielzugcounter = 0;      // Anzahl gespielte Runden, für Unentschieden beim letzten Move nötig
         private int _Spielzug;          // Welcher Spieler dran ist (1 = Spieler 1, 2 = Spieler 2)

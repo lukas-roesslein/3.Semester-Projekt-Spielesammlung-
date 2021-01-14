@@ -1,4 +1,4 @@
-﻿namespace _4_Gewinnt_Campus_Projekt
+﻿namespace Spielesammlung
 {
     partial class TCC
     {
@@ -19,7 +19,5 @@
             }
             base.Dispose(disposing);
         }
-
-        private System.Windows.Forms.Label label5;
     }
 }

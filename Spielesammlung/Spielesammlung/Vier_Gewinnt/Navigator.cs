@@ -8,7 +8,7 @@ using System.Drawing;
 
 
 
-namespace _4_Gewinnt_Campus_Projekt
+namespace Spielesammlung
 {
     /// <summary>
     /// Wertet das Spielgeschehen aus
@@ -23,7 +23,10 @@ namespace _4_Gewinnt_Campus_Projekt
             Spielfeld = null;
             Spiel = null;
         }
-
+        /// <summary>
+        /// Klickevent für die X Spalte
+        /// </summary>
+       
         public void PlayerClick(MouseEventArgs e)
         {
             if (Spielfeld.ValidSpielfeldCoordinate(e.X, e.Y))
