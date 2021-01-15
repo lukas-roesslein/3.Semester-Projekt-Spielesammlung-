@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{9A54637E-A35B-4575-A352-BD14F8466D26}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Spielesammlung</RootNamespace>
+    <AssemblyName>Spielesammlung</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AuswahlSpiel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AuswahlSpiel.Designer.cs">
+      <DependentUpon>AuswahlSpiel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Cross Game\CrossGame.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cross Game\CrossGame.Designer.cs" />
+    <Compile Include="Info_TTT.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Info_TTT.Designer.cs">
+      <DependentUpon>Info_TTT.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Schiffe Versenken\SchiffeversenkenInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Schiffe Versenken\SchiffeversenkenInfo.Designer.cs">
+      <DependentUpon>SchiffeversenkenInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Vier_Gewinnt\Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vier_Gewinnt\Form1.Designer.cs" />
+    <Compile Include="Vier_Gewinnt\Navigator.cs" />
+    <Compile Include="Vier_Gewinnt\Spielfeld.cs" />
+    <Compile Include="Vier_Gewinnt\Spiellogik.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Schiffe Versenken\SchiffeVersenken.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Schiffe Versenken\SchiffeVersenken.Designer.cs" />
+    <Compile Include="TicTacToe.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TicTacToe.Designer.cs">
+      <DependentUpon>TicTacToe.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AuswahlSpiel.resx">
+      <DependentUpon>AuswahlSpiel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CrossGame.resx" />
+    <EmbeddedResource Include="Info_TTT.resx">
+      <DependentUpon>Info_TTT.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Schiffe Versenken\SchiffeversenkenInfo.resx">
+      <DependentUpon>SchiffeversenkenInfo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vier_Gewinnt\Form1.resx" />
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Schiffe Versenken\SchiffeVersenken.resx" />
+    <EmbeddedResource Include="TicTacToe.resx">
+      <DependentUpon>TicTacToe.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

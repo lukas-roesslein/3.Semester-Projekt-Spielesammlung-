@@ -94,3 +94,16 @@ C:\Users\Alex\Desktop\Test\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spi
 C:\Users\Alex\Desktop\Test\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.csproj.CoreCompileInputs.cache
 C:\Users\Alex\Desktop\Test\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.exe
 C:\Users\Alex\Desktop\Test\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.pdb
+C:\Users\Michael Stöckl\Desktop\Spielesammlung2\Spielesammlung\obj\Debug\Spielesammlung.csprojAssemblyReference.cache
+C:\Users\Michael Stöckl\Desktop\Spielesammlung2\Spielesammlung\obj\Debug\Spielesammlung.AuswahlSpiel.resources
+C:\Users\Michael Stöckl\Desktop\Spielesammlung2\Spielesammlung\obj\Debug\Spielesammlung.CrossGame.resources
+C:\Users\Michael Stöckl\Desktop\Spielesammlung2\Spielesammlung\obj\Debug\Spielesammlung.Info_TTT.resources
+C:\Users\Michael Stöckl\Desktop\Spielesammlung2\Spielesammlung\obj\Debug\Spielesammlung.Properties.Resources.resources
+C:\Users\Michael Stöckl\Desktop\Spielesammlung2\Spielesammlung\obj\Debug\Spielesammlung.TicTacToe.resources
+C:\Users\Michael Stöckl\Desktop\Spielesammlung2\Spielesammlung\obj\Debug\Spielesammlung.csproj.GenerateResource.cache
+C:\Users\Michael Stöckl\Desktop\Spielesammlung2\Spielesammlung\obj\Debug\Spielesammlung.csproj.CoreCompileInputs.cache
+C:\Users\Michael Stöckl\Desktop\Spielesammlung2\Spielesammlung\obj\Debug\Spielesammlung.exe
+C:\Users\Michael Stöckl\Desktop\Spielesammlung2\Spielesammlung\obj\Debug\Spielesammlung.pdb
+C:\Users\Michael Stöckl\Desktop\Spielesammlung2\Spielesammlung\bin\Debug\Spielesammlung.exe.config
+C:\Users\Michael Stöckl\Desktop\Spielesammlung2\Spielesammlung\bin\Debug\Spielesammlung.exe
+C:\Users\Michael Stöckl\Desktop\Spielesammlung2\Spielesammlung\bin\Debug\Spielesammlung.pdb

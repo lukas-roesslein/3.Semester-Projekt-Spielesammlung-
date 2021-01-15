@@ -52,35 +52,38 @@
     <Compile Include="AuswahlSpiel.Designer.cs">
       <DependentUpon>AuswahlSpiel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Cross Game\CrossGame.cs">
+    <Compile Include="CrossGame.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Cross Game\CrossGame.Designer.cs" />
+    <Compile Include="CrossGame.designer.cs">
+      <DependentUpon>CrossGame.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VierGewinnt.cs">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Info_TTT.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Info_TTT.Designer.cs">
       <DependentUpon>Info_TTT.cs</DependentUpon>
     </Compile>
-    <Compile Include="Schiffe Versenken\SchiffeversenkenInfo.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Schiffe Versenken\SchiffeversenkenInfo.Designer.cs">
-      <DependentUpon>SchiffeversenkenInfo.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Vier_Gewinnt\Form1.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Vier_Gewinnt\Form1.Designer.cs" />
-    <Compile Include="Vier_Gewinnt\Navigator.cs" />
-    <Compile Include="Vier_Gewinnt\Spielfeld.cs" />
-    <Compile Include="Vier_Gewinnt\Spiellogik.cs" />
+    <Compile Include="Navigator.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Schiffe Versenken\SchiffeVersenken.cs">
+    <Compile Include="SchiffeVersenken.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Schiffe Versenken\SchiffeVersenken.Designer.cs" />
+    <Compile Include="SchiffeVersenken.Designer.cs">
+      <DependentUpon>SchiffeVersenken.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SchiffeversenkenInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SchiffeversenkenInfo.Designer.cs">
+      <DependentUpon>SchiffeversenkenInfo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Spielfeld.cs" />
+    <Compile Include="Spiellogik.cs" />
     <Compile Include="TicTacToe.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,14 +93,12 @@
     <EmbeddedResource Include="AuswahlSpiel.resx">
       <DependentUpon>AuswahlSpiel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="CrossGame.resx" />
+    <EmbeddedResource Include="CrossGame.resx">
+      <DependentUpon>CrossGame.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Info_TTT.resx">
       <DependentUpon>Info_TTT.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Schiffe Versenken\SchiffeversenkenInfo.resx">
-      <DependentUpon>SchiffeversenkenInfo.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Vier_Gewinnt\Form1.resx" />
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -107,10 +108,10 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="Schiffe Versenken\SchiffeVersenken.resx" />
     <EmbeddedResource Include="TicTacToe.resx">
       <DependentUpon>TicTacToe.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="Cross Game\SpaceSpielraum.Image.jpg" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

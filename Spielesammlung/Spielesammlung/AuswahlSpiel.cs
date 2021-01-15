@@ -43,14 +43,14 @@ namespace Spielesammlung
                     tictactoe.ShowDialog();   //Macht die Form sichtbar                    
                 }
                 else if (String.Equals(CB_NameSpiel.Text, "Schiffe Versenken"))
-                {      
+                {
                     SchiffeVersenken schiffeVersenken = new SchiffeVersenken(Spieler1, Spieler2);
-                    schiffeVersenken.ShowDialog();                   
+                    schiffeVersenken.ShowDialog();
                 }
                 else if (String.Equals(CB_NameSpiel.Text, "Vier Gewinnt"))
                 {
                     TCC viergewinnt = new TCC(Spieler1, Spieler2);
-                    viergewinnt.ShowDialog();                    
+                    viergewinnt.ShowDialog();
                 }
                 else if(String.Equals(CB_NameSpiel.Text, "Cross Game") )
                 {
