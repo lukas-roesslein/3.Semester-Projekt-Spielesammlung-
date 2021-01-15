@@ -82,8 +82,13 @@ namespace Spielesammlung
             Spielauswertung = null;
         }
 
-
-
+        private void button1_Click(object sender, EventArgs e)
+        {
+            if (label9.Visible == true)
+                label9.Visible = false;
+            else
+                label9.Visible = true;
+        }
     }
 }
 

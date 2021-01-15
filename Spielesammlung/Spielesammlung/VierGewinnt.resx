@@ -117,6 +117,18 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="label9.Text" xml:space="preserve">
+    <value>-Spiel beginnen oder erneut spielen?
+-&gt; `Neues Spiel `-Button betätigen!
+
+-Bringen Sie 4 gleiche Steine 
+ in eine Reihe, um das Spiel zu gewinnen!
+ Möglichkeiten: horizontal/vertikal/diagonal
+
+Am Zug: gibt aus wer gerade seinen Stein setzen darf!
+
+-Viel Spaß!</value>
+  </data>
   <metadata name="$this.Locked" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
     <value>True</value>
   </metadata>

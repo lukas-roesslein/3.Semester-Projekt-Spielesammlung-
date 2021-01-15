@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Drawing;
+using System.Threading;
 
 
 
@@ -84,6 +85,7 @@ namespace Spielesammlung
         /// <returns>1 wenn Spieler 1 am Zug ist, ansonsten Spieler 2</returns>
         public int GetTurn()
         {
+            Thread.Sleep(500); //Mir ist leider erst kurz vor Abgabe aufgefallen, das bei schneller eingabe mein Array Probleme kriegen kann:/
             return Spiel.Spielzug;
         }
     }
