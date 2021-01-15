@@ -77,3 +77,4 @@ C:\Users\Sebastian_Lippert\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\S
 C:\Users\Sebastian_Lippert\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.csproj.CoreCompileInputs.cache
 C:\Users\Sebastian_Lippert\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.exe
 C:\Users\Sebastian_Lippert\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.pdb
+C:\Users\jonas.leh\Documents\GitHub\3.Semester-Projekt-Spielesammlung-\Spielesammlung\Spielesammlung\obj\Debug\Spielesammlung.Info_TTT.resources

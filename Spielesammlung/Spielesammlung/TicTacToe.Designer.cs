@@ -47,7 +47,6 @@ namespace Spielesammlung
             this.spielStatistikZurücksetzenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.spielVerlassenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.hilfeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.informationenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.L_Statistik = new System.Windows.Forms.Label();
             this.L_SiegeX_String = new System.Windows.Forms.Label();
             this.L_SiegeO_String = new System.Windows.Forms.Label();
@@ -236,18 +235,10 @@ namespace Spielesammlung
             // 
             // hilfeToolStripMenuItem
             // 
-            this.hilfeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.informationenToolStripMenuItem});
             this.hilfeToolStripMenuItem.Name = "hilfeToolStripMenuItem";
             this.hilfeToolStripMenuItem.Size = new System.Drawing.Size(30, 24);
             this.hilfeToolStripMenuItem.Text = "?";
-            // 
-            // informationenToolStripMenuItem
-            // 
-            this.informationenToolStripMenuItem.Name = "informationenToolStripMenuItem";
-            this.informationenToolStripMenuItem.Size = new System.Drawing.Size(186, 26);
-            this.informationenToolStripMenuItem.Text = "Informationen";
-            this.informationenToolStripMenuItem.Click += new System.EventHandler(this.informationenToolStripMenuItem_Click);
+            this.hilfeToolStripMenuItem.Click += new System.EventHandler(this.informationenToolStripMenuItem_Click);
             // 
             // L_Statistik
             // 
@@ -463,6 +454,5 @@ namespace Spielesammlung
         private System.Windows.Forms.Label L_Zuege_String;
         private System.Windows.Forms.Label L_Zuege_Int;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ToolStripMenuItem informationenToolStripMenuItem;
     }
 }
