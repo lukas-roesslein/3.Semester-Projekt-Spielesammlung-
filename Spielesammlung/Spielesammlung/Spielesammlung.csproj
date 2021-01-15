@@ -107,7 +107,11 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="SchiffeversenkenInfo.resx">
+      <DependentUpon>SchiffeversenkenInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TicTacToe.resx">
       <DependentUpon>TicTacToe.cs</DependentUpon>
     </EmbeddedResource>
@@ -124,6 +128,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="logoPictureBox.Image.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

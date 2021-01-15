@@ -28,7 +28,6 @@ namespace Spielesammlung
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Info));
             this.tableLayoutPanel = new System.Windows.Forms.TableLayoutPanel();
             this.logoPictureBox = new System.Windows.Forms.PictureBox();
             this.labelProductName = new System.Windows.Forms.Label();
@@ -70,7 +69,8 @@ namespace Spielesammlung
             // logoPictureBox
             // 
             this.logoPictureBox.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.logoPictureBox.Image = ((System.Drawing.Image)(resources.GetObject("logoPictureBox.Image")));
+            this.logoPictureBox.Image = global::Spielesammlung.Properties.Resources.logoPictureBox_Image;
+            this.logoPictureBox.InitialImage = global::Spielesammlung.Properties.Resources.logoPictureBox_Image;
             this.logoPictureBox.Location = new System.Drawing.Point(4, 4);
             this.logoPictureBox.Margin = new System.Windows.Forms.Padding(4);
             this.logoPictureBox.Name = "logoPictureBox";
