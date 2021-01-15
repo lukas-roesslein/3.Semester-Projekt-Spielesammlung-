@@ -29,9 +29,11 @@ namespace Spielesammlung
         /// <param name="e"></param>
         private void B_Start_Click(object sender, EventArgs e)
         {
+            bool Namenscheck = CheckNamen(TB_Name1.Text, TB_Name2.Text);    //Überprüfung der eingegebenen Namen
             string Spieler1 = TB_Name1.Text;   //Die Spielernamen werden aus der jeweiligen Textbox geholt
             string Spieler2 = TB_Name2.Text;
-            if (CheckNamen(Spieler1,Spieler2))  //Übergabe an eine Methode zur Überprüfung der Namen
+            
+            if (Namenscheck)  
             {
                 this.Hide();    //Auswahl-Spiel Fenster wird verborgen
                 //IF-Abfrage um festzustellen welches Spiel in der Combobox ausgewählt wurde
@@ -73,10 +75,11 @@ namespace Spielesammlung
         /// <returns>Error Code</returns>
         private bool CheckNamen(string Name1, string Name2)
         {
-            if(String.IsNullOrWhiteSpace(Name1) && String.IsNullOrWhiteSpace(Name2))        //Es wurden noch keine Namen eingegeben
+            if(String.IsNullOrWhiteSpace(Name1) && String.IsNullOrWhiteSpace(Name2))        //Falls keine Namen eingegeben wurden, werden Standardnamen vergeben
             {
-                MessageBox.Show("Bitte zuerst Spielernamen eingeben.");
-                return false;
+                TB_Name1.Text = "Player 1";
+                TB_Name2.Text = "Player 2";
+                return true;
             }
             else if(String.Equals(Name1, Name2))         //Es wurden zwei identische Namen eingegeben
             {
