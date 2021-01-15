@@ -49,7 +49,7 @@ namespace Spielesammlung
                 }
                 else if (String.Equals(CB_NameSpiel.Text, "Vier Gewinnt"))
                 {
-                    TCC viergewinnt = new TCC(Spieler1, Spieler2);
+                    VierGewinnt viergewinnt = new VierGewinnt(Spieler1, Spieler2);
                     viergewinnt.ShowDialog();
                 }
                 else if(String.Equals(CB_NameSpiel.Text, "Cross Game") )

@@ -10,12 +10,12 @@ namespace Spielesammlung
     /// <summary>
     /// Fenster des Spiels
     /// </summary>
-    public partial class TCC : Form
+    public partial class VierGewinnt : Form
     {
         Spielauswertung Spielauswertung;
-        public TCC() : this("Player 1", "Player 2")
+        public VierGewinnt() : this("Player 1", "Player 2")
         { }
-        public TCC(string Name_Player1, string Name_Player2)
+        public VierGewinnt(string Name_Player1, string Name_Player2)
         {
             Initialize();
             Name_Player_1.Text = Name_Player1;
@@ -173,7 +173,7 @@ namespace Spielesammlung
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Vier Gewinnt TCC";
+            this.Text = "Vier Gewinnt VierGewinnt";
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.Form1_FormClosed);
             this.MouseClick += new System.Windows.Forms.MouseEventHandler(this.Form1_MouseClick);
             this.ResumeLayout(false);
@@ -204,13 +204,13 @@ namespace Spielesammlung
             this.Name_Player_2.TabIndex = 1;
             this.Name_Player_2.Text = "Spieler 2";
             // 
-            // TCC
+            // VierGewinnt
             // 
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(1000, 738);
             this.Controls.Add(this.Name_Player_2);
             this.Controls.Add(this.Name_Player_1);
-            this.Name = "TCC";
+            this.Name = "VierGewinnt";
             this.ResumeLayout(false);
             this.PerformLayout();
             // 
@@ -224,7 +224,7 @@ namespace Spielesammlung
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(92, 25);
             this.label6.TabIndex = 2;
-            this.label6.Text = "Vier-Gewinnt TCC";
+            this.label6.Text = "Vier-Gewinnt VierGewinnt";
             this.label6.Visible = true;
             // 
             // label7

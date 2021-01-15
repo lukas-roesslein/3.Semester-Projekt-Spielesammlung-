@@ -90,6 +90,9 @@
     <Compile Include="TicTacToe.Designer.cs">
       <DependentUpon>TicTacToe.cs</DependentUpon>
     </Compile>
+    <Compile Include="VierGewinnt.Designer.cs">
+      <DependentUpon>VierGewinnt.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AuswahlSpiel.resx">
       <DependentUpon>AuswahlSpiel.cs</DependentUpon>
     </EmbeddedResource>
@@ -114,6 +117,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="TicTacToe.resx">
       <DependentUpon>TicTacToe.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VierGewinnt.resx">
+      <DependentUpon>VierGewinnt.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
