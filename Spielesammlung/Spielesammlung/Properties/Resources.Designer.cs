@@ -69,5 +69,15 @@ namespace Spielesammlung.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Sucht eine lokalisierte Ressource vom Typ System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap SpaceSpielraum_Image {
+            get {
+                object obj = ResourceManager.GetObject("SpaceSpielraum.Image", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

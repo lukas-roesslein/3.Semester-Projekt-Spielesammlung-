@@ -115,7 +115,6 @@
     <EmbeddedResource Include="TicTacToe.resx">
       <DependentUpon>TicTacToe.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Cross Game\SpaceSpielraum.Image.jpg" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -131,6 +130,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="logoPictureBox.Image.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="SpaceSpielraum.Image.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
