@@ -66,12 +66,12 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.spielToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.neuesSpielToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.spielStatistikZurücksetzenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.statistikAusblendenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            //this.spielStatistikZurücksetzenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            //this.statistikAusblendenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.spielVerlassenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
-            this.überUnsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            //this.überUnsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.SpaceSpielraum = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.lblmax = new System.Windows.Forms.Label();
@@ -415,7 +415,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(122, 13);
             this.label2.TabIndex = 33;
-            this.label2.Text = "Moving:   Arrowkeys";
+            this.label2.Text = "Moving:   Arrow keys";
             // 
             // labelRetry
             // 
@@ -438,7 +438,7 @@
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(193, 13);
             this.label3.TabIndex = 34;
-            this.label3.Text = "Goal: Get at least 4 Goldnuggets";
+            this.label3.Text = "Goal: Get at least 3 Goldnuggets";
             // 
             // menuStrip1
             // 
@@ -456,8 +456,8 @@
             // 
             this.spielToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.neuesSpielToolStripMenuItem,
-            this.spielStatistikZurücksetzenToolStripMenuItem,
-            this.statistikAusblendenToolStripMenuItem,
+           // this.spielStatistikZurücksetzenToolStripMenuItem,
+            //this.statistikAusblendenToolStripMenuItem,
             this.toolStripSeparator1,
             this.spielVerlassenToolStripMenuItem});
             this.spielToolStripMenuItem.Name = "spielToolStripMenuItem";
@@ -473,15 +473,15 @@
             // 
             // spielStatistikZurücksetzenToolStripMenuItem
             // 
-            this.spielStatistikZurücksetzenToolStripMenuItem.Name = "spielStatistikZurücksetzenToolStripMenuItem";
-            this.spielStatistikZurücksetzenToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
-            this.spielStatistikZurücksetzenToolStripMenuItem.Text = "Spiel-Statistik zurücksetzen";
+            //this.spielStatistikZurücksetzenToolStripMenuItem.Name = "spielStatistikZurücksetzenToolStripMenuItem";
+            //this.spielStatistikZurücksetzenToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            //this.spielStatistikZurücksetzenToolStripMenuItem.Text = "Spiel-Statistik zurücksetzen";
             // 
             // statistikAusblendenToolStripMenuItem
             // 
-            this.statistikAusblendenToolStripMenuItem.Name = "statistikAusblendenToolStripMenuItem";
-            this.statistikAusblendenToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
-            this.statistikAusblendenToolStripMenuItem.Text = "Statistik ausblenden";
+            //this.statistikAusblendenToolStripMenuItem.Name = "statistikAusblendenToolStripMenuItem";
+            //this.statistikAusblendenToolStripMenuItem.Size = new System.Drawing.Size(216, 22);
+            //this.statistikAusblendenToolStripMenuItem.Text = "Statistik ausblenden";
             // 
             // toolStripSeparator1
             // 
@@ -497,17 +497,17 @@
             // 
             // toolStripMenuItem1
             // 
-            this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.überUnsToolStripMenuItem});
-            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(24, 20);
-            this.toolStripMenuItem1.Text = "?";
+            //this.toolStripMenuItem1.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+           // this.überUnsToolStripMenuItem});
+            //this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            //this.toolStripMenuItem1.Size = new System.Drawing.Size(24, 20);
+            //this.toolStripMenuItem1.Text = "?";
             // 
             // überUnsToolStripMenuItem
             // 
-            this.überUnsToolStripMenuItem.Name = "überUnsToolStripMenuItem";
-            this.überUnsToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
-            this.überUnsToolStripMenuItem.Text = "Über uns";
+            //this.überUnsToolStripMenuItem.Name = "überUnsToolStripMenuItem";
+            //this.überUnsToolStripMenuItem.Size = new System.Drawing.Size(121, 22);
+            //this.überUnsToolStripMenuItem.Text = "Über uns";
             // 
             // SpaceSpielraum
             // 
@@ -663,12 +663,12 @@
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem spielToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem neuesSpielToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem spielStatistikZurücksetzenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem statistikAusblendenToolStripMenuItem;
+       // private System.Windows.Forms.ToolStripMenuItem spielStatistikZurücksetzenToolStripMenuItem;
+        //private System.Windows.Forms.ToolStripMenuItem statistikAusblendenToolStripMenuItem;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem spielVerlassenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
-        private System.Windows.Forms.ToolStripMenuItem überUnsToolStripMenuItem;
+        //private System.Windows.Forms.ToolStripMenuItem überUnsToolStripMenuItem;
         private System.Windows.Forms.PictureBox SpaceSpielraum;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Label lblmax;

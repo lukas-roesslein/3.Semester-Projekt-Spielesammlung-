@@ -16,8 +16,8 @@ namespace Spielesammlung
         int speed = 15;                                  // Variable für die Geschwindigkeit 
         int Goldworth = 0;                               // Wert der Goldnuggets
 
-        //Konstruktor
-        #region
+        
+        #region Basis Konstruktor
         /// <summary>
         /// Basis Konstruktor 
         /// </summary>
@@ -35,8 +35,8 @@ namespace Spielesammlung
         #endregion 
 
 
-        //Win-Methode
-        #region
+        
+        #region Gewinn-Methode
         /// <summary>
         /// Methode damit überprüft wird ob der Spieler gewonnen hat oder nicht 
         /// <para> Solange weniger als 3 Nuggets eingesammelt wurden kann der Spieler nicht gewinnen
@@ -86,8 +86,8 @@ namespace Spielesammlung
         #endregion
 
 
-        //Gameover-Methode
-        #region
+        
+        #region Gameover-Methode
         /// <summary>
         /// Methode zur Bestimmmung des Gameover
         /// <para> Mittels Kollision der Grenzen 
@@ -215,8 +215,8 @@ namespace Spielesammlung
         #endregion
 
 
-       // Reset ingame-Methode
-        #region
+        
+        #region Reset ingame-Methode
         /// <summary>
         /// Methode für den Reset 
         /// <value>
@@ -240,8 +240,8 @@ namespace Spielesammlung
         #endregion
 
 
-        //Gegner-Methode
-        #region
+        
+        #region Gegner-Methode
 
         /// <summary>
         /// Methode, die für die Bewegung der Gegner benutzt wird 
@@ -324,8 +324,8 @@ namespace Spielesammlung
         #endregion
 
 
-        //Punktestand-Methode
-        #region
+      
+        #region Punktestand-Methode
         /// <summary>
         /// Methode um den Punktestand zu ermitteln bzw zu erhöhen 
         /// <value>
@@ -408,8 +408,8 @@ namespace Spielesammlung
         #endregion
 
 
-        //Timer
-        #region
+        
+        #region Timer
 
         /// <summary>
         /// Methode um sich in alle Richtungen zu bewegen
@@ -452,8 +452,8 @@ namespace Spielesammlung
         #endregion
 
 
-        //Tasten nicht gedrückt
-        #region
+        
+        #region Tasten nicht gedrückt
         /// <summary>
         /// Methode um fest zu legen was geschieht wenn Pfeiltasten nicht gedrückt sind 
         /// </summary>
@@ -484,8 +484,8 @@ namespace Spielesammlung
         #endregion
 
 
-        //Tasten nicht gedrückt
-        #region
+       
+        #region Tasten gedrückt
 
         /// <summary>
         /// Methode um fest zu legen was geschieht wenn Pfeiltasten oder Entertaste gedrückt sind 
@@ -550,8 +550,8 @@ namespace Spielesammlung
         #endregion
 
 
-        //Exit
-        #region
+        
+        #region Spiel verlassen
 
         /// <summary>
         /// Methode für ein Untermenü der Hauptmenüleiste an dem oberen Rand des Forms
@@ -565,8 +565,8 @@ namespace Spielesammlung
         #endregion
 
 
-        //Reset im oberen Menü
-        #region
+        
+        #region Spiel neu starten
         /// <summary>
         /// Methode für ein Untermenü der Hauptmenüleiste an dem oberen Rand des Forms
         /// </summary>
